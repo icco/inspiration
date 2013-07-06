@@ -1,0 +1,9 @@
+---
+:orm: none
+:test: none
+:mock: none
+:script: jquery
+:renderer: erb
+:stylesheet: scss
+:namespace: Inspiration
+:migration_format: number
