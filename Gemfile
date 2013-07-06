@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Project requirements
-gem 'activerecord', :require => "active_record"
+gem 'activerecord', '~> 3.0', :require => "active_record"
 gem 'erubis', "~> 2.7.0"
 gem 'minitest', :require => 'minitest/autorun', :group => 'test'
 gem 'pg'
@@ -13,7 +13,7 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'thin'
 
 # Padrino Stable Gem
-gem 'padrino', '>= 0.11'
+gem 'padrino', '~> 0.11'
 
 # For dev
 group :development do
