@@ -9,7 +9,7 @@ Inspiration::App.controllers  do
       end
     end
 
-    File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
+    File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.sort.join("\n")) }
 
     render :index
   end
