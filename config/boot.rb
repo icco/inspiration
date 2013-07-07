@@ -7,8 +7,9 @@ require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)
 
-require 'rss'
 require 'open-uri'
+require 'rss'
+require 'set'
 
 ## Enable devel logging
 Padrino::Logger::Config[:development][:log_level]  = :devel
