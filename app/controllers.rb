@@ -10,7 +10,7 @@ Inspiration::App.controllers  do
     end
 
     all_images = @images.delete_if {|i| i.empty? }.to_a.sort
-    @images = all_images.slice(0..300)
+    @images = all_images.sample(300)
 
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(all_images.to_a.join("\n")) }
 
