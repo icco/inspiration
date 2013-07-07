@@ -9,9 +9,10 @@ Inspiration::App.controllers  do
       end
     end
 
-    @images = @images.delete_if {|i| i.empty? }.to_a.sort
+    all_images = @images.delete_if {|i| i.empty? }.to_a.sort
+    @images = all_images.slice(0..300)
 
-    File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
+    File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(all_images.to_a.join("\n")) }
 
     render :index
   end
