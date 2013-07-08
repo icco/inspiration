@@ -56,6 +56,7 @@ GEM
     rack-protection (1.5.0)
       rack
     rake (10.1.0)
+    redcarpet (2.3.0)
     sass (3.2.9)
     shotgun (0.9)
       rack (>= 1.0)
@@ -86,6 +87,7 @@ DEPENDENCIES
   oj
   padrino (~> 0.11)
   rake
+  redcarpet
   sass
   shotgun
   thin

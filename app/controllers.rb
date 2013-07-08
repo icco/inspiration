@@ -1,4 +1,14 @@
 Inspiration::App.controllers  do
+  layout :main
+
+  get :about, :cache => true do
+    expires_in 3600 # 1 hr
+
+    @text = partial :about
+
+    render :about
+  end
+
   get :index, :cache => true do
     expires_in 3600 # 1 hr
 
@@ -12,7 +22,7 @@ Inspiration::App.controllers  do
     end
 
     all_images = @images.delete_if {|i| i.empty? }.to_a.sort
-    @images = all_images.sample(300)
+    @images = all_images.sample(100)
 
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(all_images.to_a.join("\n")) }
 
