@@ -12,7 +12,7 @@ $('.embed').each(function(index, value) {
     var img = $('<img>');
     var div = $('<div class="item">');
 
-    var title = '"' + images.title '" by ' + images.author_name;
+    var title = '"' + images.title + '" by ' + images.author_name;
 
     img.attr('src', images.thumbnail_url);
     img.attr('alt', title);
