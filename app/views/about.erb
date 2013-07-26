@@ -3,5 +3,16 @@
   <a href="/">Back...</a>
   <hr />
 
-  <%= @text %>
+  <div class="large-7 columns">
+    <%= @text %>
+  </div>
+
+  <div class="large-3 columns">
+    <h5>Top artists favorited</h5>
+    <ol>
+      <% @stats[0...10].each do |author, count| %>
+        <li><a href="http://<%= author %>.deviantart.com" title="deviant art page"><%= author %></a>: <%= count %>
+      <% end %>
+    </ol>
+  </div>
 </div>

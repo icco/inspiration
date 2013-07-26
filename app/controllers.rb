@@ -4,7 +4,16 @@ Inspiration::App.controllers  do
   get :about, :cache => true do
     expires_in 3600 # 1 hr
 
+    @images = build_image_db
     @text = partial :about
+    @stats = Hash.new(0)
+
+    @images.each do |url|
+      matches = url.match(/.+:\/\/(.+)\.deviantart/)
+      name = matches[1]
+      @stats[name] += 1
+    end
+    @stats = @stats.to_a.sort {|a,b| b[1] <=> a[1] }
 
     render :about
   end
@@ -18,9 +27,12 @@ Inspiration::App.controllers  do
   end
 
   get :all do
+    require 'json'
+
     @images = build_image_db
 
-    render :index
+    content_type :json
+    @images.to_json
   end
 end
 
