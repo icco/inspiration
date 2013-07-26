@@ -12,11 +12,13 @@ $('.embed').each(function(index, value) {
     var img = $('<img>');
     var div = $('<div class="item">');
 
+    var title = '"' + images.title '" by ' + images.author_name;
+
     img.attr('src', images.thumbnail_url);
-    img.attr('alt', images.title);
+    img.attr('alt', title);
 
     a.attr('href', url);
-    a.attr('title', images.title);
+    a.attr('title', title);
 
     a.append(img);
     div.append(a);
