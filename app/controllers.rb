@@ -21,7 +21,7 @@ Inspiration::App.controllers  do
   get :index, :cache => true do
     expires_in 3600 # 1 hr
 
-    @images = build_image_db.sample(100)
+    @images = build_image_db.sample(150)
 
     render :index
   end
