@@ -20,9 +20,10 @@ $('.embed').each(function(index, value) {
     a.attr('href', url);
     a.attr('title', title);
 
-    a.append(img);
-    div.append(a);
-
-    $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
+    if (images.title != undefined) {
+      a.append(img);
+      div.append(a);
+      $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
+    }
   });
 });
