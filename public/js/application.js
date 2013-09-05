@@ -17,7 +17,11 @@ $('.embed').each(function(index, value) {
 
       var title = '"' + images.title + '" by ' + images.player.name;
 
-      img.attr('src', images.image_teaser_url);
+      if (images.image_400_url != undefined) {
+        img.attr('src', images.image_400_url);
+      } else {
+        img.attr('src', images.image_teaser_url);
+      }
       img.attr('alt', title);
 
       a.attr('href', url);
