@@ -46,6 +46,9 @@ def build_image_db
     end
   end
 
+  data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/icco/shots/likes", :query => {:per_page => 50}))
+  data.map {|s| s.url }.each {|l| @images.add l }
+
   all_images = images.delete_if {|i| i.empty? }.to_a.sort
   File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(all_images.to_a.join("\n")) }
 
