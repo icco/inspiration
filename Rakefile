@@ -15,7 +15,7 @@ task :get_old => :environment do
 
   (0..6000).step(60) do |offset|
     rss_url = "http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
-    puts rss_url
+    p ({ :deviant => "calvin166", :offset => offset })
     open(rss_url) do |rss|
       feed = RSS::Parser.parse(rss)
       feed.items.each do |item|
@@ -30,8 +30,9 @@ task :get_old => :environment do
   dribbble_per_page = 30
   page_count = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", {:per_page => dribbble_per_page})).pages
   (0..page_count).each do |page|
+    p ({ :player => dribbble_user, :page => page })
     data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", {:page => page, :per_page => dribbble_per_page}))
-    @images = @images.merge Set.new(data.map {|s| s.short_url })
+    @images.merge Set.new(data.map {|s| s.short_url })
 
     puts "Images: #{@images.count}"
   end
