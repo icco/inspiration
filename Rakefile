@@ -26,6 +26,16 @@ task :get_old => :environment do
     puts "Images: #{@images.count}"
   end
 
+  dribbble_user = "icco"
+  dribbble_per_page = 30
+  page_count = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", {:per_page => dribbble_per_page})).pages
+  (0..page_count).each do |page|
+    data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", {:page => page, :per_page => dribbble_per_page}))
+    @images = @images.merge Set.new(data.map {|s| s.short_url })
+
+    puts "Images: #{@images.count}"
+  end
+
   @images = @images.delete_if {|i| i.empty? }.to_a.sort
 
   File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
