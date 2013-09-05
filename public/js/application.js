@@ -20,10 +20,12 @@ $('.embed').each(function(index, value) {
     a.attr('href', url);
     a.attr('title', title);
 
-    if (images.title != undefined) {
+    if (images.thumbnail_url != undefined && images.title != undefined) {
       a.append(img);
       div.append(a);
       $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
+    } else {
+      console.log(images);
     }
   });
 });
