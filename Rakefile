@@ -28,11 +28,12 @@ task :get_old => :environment do
 
   dribbble_user = "icco"
   dribbble_per_page = 30
-  page_count = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", {:per_page => dribbble_per_page})).pages
-  (0..page_count).each do |page|
+  page_count = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", :query => {:per_page => dribbble_per_page})).pages
+  (1..page_count).each do |page|
     p ({ :player => dribbble_user, :page => page })
-    data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", {:page => page, :per_page => dribbble_per_page}))
-    @images.merge Set.new(data.map {|s| s.short_url })
+    data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", :query => {:page => page, :per_page => dribbble_per_page}))
+    array = data.map {|s| s.url }
+    array.each {|l| @images.add l }
 
     puts "Images: #{@images.count}"
   end
