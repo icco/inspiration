@@ -6,6 +6,7 @@ gem 'padrino', '~> 0.11'
 gem 'rake'
 gem 'redcarpet'
 gem 'sass'
+gem 'swish'
 gem 'thin'
 
 # For dev
