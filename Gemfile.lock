@@ -9,6 +9,7 @@ GEM
     daemons (1.1.9)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    flickraw (0.9.6)
     http_router (0.11.0)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -86,6 +87,7 @@ PLATFORMS
 
 DEPENDENCIES
   erubis (~> 2.7)
+  flickraw
   oj
   padrino (~> 0.11)
   rake
