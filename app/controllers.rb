@@ -6,14 +6,6 @@ Inspiration::App.controllers  do
 
     @images = build_image_db
     @text = partial :about
-    @stats = Hash.new(0)
-
-    @images.each do |url|
-      matches = url.match(/.+:\/\/(.+)\.deviantart/)
-      name = matches[1]
-      @stats[name] += 1
-    end
-    @stats = @stats.to_a.sort {|a,b| b[1] <=> a[1] }
 
     render :about
   end
