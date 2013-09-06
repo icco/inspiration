@@ -38,10 +38,6 @@ task :get_old => :environment do
     puts "Images: #{@images.count}"
   end
 
-  FlickRaw.api_key = "5c282af934cd475695e1f727dd0404a9"
-  FlickRaw.shared_secret = "49b3b77e99947328"
-  FlickRaw.secure = true
-
   # http://www.flickr.com/services/api/misc.urls.html
   (1..25).each do |page|
     p ({ :flickr => '42027916@N00', :page => page })

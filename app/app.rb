@@ -19,4 +19,8 @@ module Inspiration
   end
 
   LINK_FILE = Padrino.root("links.txt")
+
+  FlickRaw.api_key = "5c282af934cd475695e1f727dd0404a9"
+  FlickRaw.shared_secret = "49b3b77e99947328"
+  FlickRaw.secure = true
 end
