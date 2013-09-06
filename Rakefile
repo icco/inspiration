@@ -38,6 +38,13 @@ task :get_old => :environment do
     puts "Images: #{@images.count}"
   end
 
+  FlickRaw.api_key="5c282af934cd475695e1f727dd0404a9"
+  FlickRaw.shared_secret="49b3b77e99947328"
+  FlickRaw.secure = true
+
+  favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00')
+
+
   @images = @images.delete_if {|i| i.empty? }.to_a.sort
 
   File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
