@@ -528,6 +528,15 @@ http://dribbble.com/shots/1077958-Dribbble-Debut
 http://dribbble.com/shots/1077984-McGregor-Real-Estate-Logo-Concept
 http://dribbble.com/shots/1078007-Thank-You
 http://dribbble.com/shots/1078190-Project-ArmaDillo
+http://dribbble.com/shots/1109120-iOS7-Inspired-Web
+http://dribbble.com/shots/1115625-Personal-mark-is-going-flat
+http://dribbble.com/shots/1116550-Alternative-Upstart-Mark
+http://dribbble.com/shots/1127688-Flat-icon-iPhone
+http://dribbble.com/shots/1129402-Ios-style
+http://dribbble.com/shots/1139496-Fiction-Introd
+http://dribbble.com/shots/1162671-Rejected
+http://dribbble.com/shots/1167957-K-Mark
+http://dribbble.com/shots/1175954-Koda
 http://dribbble.com/shots/1194300-Feeling-Lazy-GIF
 http://dribbble.com/shots/1209316-workspace-icon
 http://dribbble.com/shots/1216728-The-Master
@@ -1050,6 +1059,7 @@ http://hagalaz.deviantart.com/art/Karp-26426731
 http://hail-nekoyasha.deviantart.com/art/MythBusters-Porcum-Iacio-42761395
 http://hakanphotography.deviantart.com/art/All-About-Victoria-Yun-15-71968051
 http://hakanphotography.deviantart.com/art/Bloomwood-399942618
+http://hakanphotography.deviantart.com/art/Bloomwood-400822294
 http://hakanphotography.deviantart.com/art/Japan-From-The-Eye-Of-Fish-13-77265994
 http://hakanphotography.deviantart.com/art/Japan-From-The-Eye-Of-Fish-9-56355594
 http://hakanphotography.deviantart.com/art/Power-less-2-39342686
@@ -1079,6 +1089,8 @@ http://hideki.deviantart.com/art/cyborg32-52966177
 http://hideki.deviantart.com/art/i-cant-smile-23914458
 http://hideki.deviantart.com/art/pepper-winter-74855107
 http://hiraistrange.deviantart.com/art/what-25913466
+http://hitogata.deviantart.com/art/Evolution-of-Pixel-Vignette2-400818629
+http://hitogata.deviantart.com/art/Pixel-Vignette-First-Meeting-400473002
 http://hitsukuya.deviantart.com/art/Painter-282891352
 http://hoon.deviantart.com/art/Alien-Palm-Reading-Manuscript-106104446
 http://hoon.deviantart.com/art/Ampzillaaaa-guitar-hero-181076448
@@ -2689,6 +2701,14 @@ http://www.flickr.com/photos/23659159@N00/9377096949
 http://www.flickr.com/photos/23659159@N00/9379477782
 http://www.flickr.com/photos/23659159@N00/9379478694
 http://www.flickr.com/photos/23659159@N00/9431247345
+http://www.flickr.com/photos/23659159@N00/9695198066
+http://www.flickr.com/photos/23659159@N00/9695199070
+http://www.flickr.com/photos/23659159@N00/9695250092
+http://www.flickr.com/photos/23659159@N00/9741463737
+http://www.flickr.com/photos/23659159@N00/9741465651
+http://www.flickr.com/photos/23659159@N00/9743579378
+http://www.flickr.com/photos/23659159@N00/9743579696
+http://www.flickr.com/photos/23659159@N00/9743679012
 http://www.flickr.com/photos/23668591@N00/2265157206
 http://www.flickr.com/photos/23766028@N00/2562816523
 http://www.flickr.com/photos/23787468@N00/2294804481
@@ -3118,6 +3138,7 @@ http://www.flickr.com/photos/42537025@N00/8298485645
 http://www.flickr.com/photos/42537025@N00/8339222854
 http://www.flickr.com/photos/42537025@N00/8583344699
 http://www.flickr.com/photos/42537025@N00/9465025391
+http://www.flickr.com/photos/42537025@N00/9466165771
 http://www.flickr.com/photos/42537025@N00/9467799674
 http://www.flickr.com/photos/42537025@N00/9467803100
 http://www.flickr.com/photos/42537025@N00/9467808578
