@@ -21,7 +21,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25)
-    multi_json (1.7.9)
+    multi_json (1.8.0)
     multi_xml (0.5.5)
     oj (2.1.4)
     padrino (0.11.3)
@@ -59,7 +59,7 @@ GEM
       rack
     rake (10.1.0)
     redcarpet (3.0.0)
-    safe_yaml (0.9.5)
+    safe_yaml (0.9.7)
     sass (3.2.10)
     shotgun (0.9)
       rack (>= 1.0)
