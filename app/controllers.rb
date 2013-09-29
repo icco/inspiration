@@ -28,12 +28,18 @@ Inspiration::App.controllers  do
   end
 
   get :all do
-    require 'json'
-
     idb = ImageDb.new
     @images = idb.images
 
     content_type :json
     @images.to_json
+  end
+
+  post :cache do
+    idb = ImageDb.new
+    ret = idb.cache(params[:favorite], params[:image])
+
+    content_type :json
+    ret.to_json
   end
 end

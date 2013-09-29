@@ -1,6 +1,13 @@
 class ImageDb
   def initialize
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map {|l| l.strip })
+
+    cache_contents = File.read(Inspiration::CACHE_FILE)
+    if not cache_contents.empty?
+      @cache = JSON.parse(cache_contents)
+    else
+      @cache = {}
+    end
   end
 
   def images
@@ -67,5 +74,19 @@ class ImageDb
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
 
     return true
+  end
+
+  def cache favorite_link, image_link
+    if @images.exists? favorite_link
+      @cache[favorite_link] = image_link
+      write_cache
+      return true
+    end
+
+    return false
+  end
+
+  def write_cache
+    File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@cache.to_json) }
   end
 end

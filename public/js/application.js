@@ -16,7 +16,7 @@ $('.embed').each(function(index, value) {
     }).complete(function() {
       var a = $('<a>');
       var img = $('<img class="dribbble">');
-      var div = $('<div class="item">');
+      var div = $('<div class="item uncached">');
 
       var title = '"' + images.title + '" by ' + images.player.name;
 
@@ -46,7 +46,7 @@ $('.embed').each(function(index, value) {
     }).complete(function() {
       var a = $('<a>');
       var img = $('<img>');
-      var div = $('<div class="item">');
+      var div = $('<div class="item uncached">');
 
       var title = '"' + images.title + '" by ' + images.author_name;
 
@@ -72,7 +72,7 @@ $('.embed').each(function(index, value) {
     }).complete(function() {
       var a = $('<a>');
       var img = $('<img>');
-      var div = $('<div class="item">');
+      var div = $('<div class="item uncached">');
 
       var title = '"' + images.title + '" by ' + images.author_name;
       if (images.thumbnail_url != undefined) {
@@ -96,4 +96,10 @@ $('.embed').each(function(index, value) {
   } else {
     console.log("Unkown: " + url);
   }
+
+  $('.uncached').each(function(index, value) {
+    console.log(value);
+    // $.post('/cache', { favorite: ""
+
+  });
 });
