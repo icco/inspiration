@@ -5,7 +5,7 @@ Inspiration::App.controllers  do
     expires_in 3600 # 1 hr
 
     idb = ImageDb.new
-    @images = idb.images.sample(150)
+    @images = idb.images
     @text = partial :about
 
     @stats = Hash.new(0)
@@ -22,7 +22,7 @@ Inspiration::App.controllers  do
 
   get :index do
     idb = ImageDb.new
-    @images = idb.images.sample(150)
+    @images = idb.images.sample(100)
 
     render :index
   end
