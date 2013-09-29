@@ -1,8 +1,10 @@
 class ImageDb
-  attr_reader :images
-
   def initialize
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map {|l| l.strip })
+  end
+
+  def images
+    return @images.to_a
   end
 
   def update
@@ -10,7 +12,7 @@ class ImageDb
     open(rss_url) do |rss|
       feed = RSS::Parser.parse(rss)
       feed.items.each do |item|
-        images.add item.link
+        @images.add item.link
       end
     end
 
@@ -18,12 +20,12 @@ class ImageDb
     data.map {|s| s.url }.each {|l| images.add l }
 
     favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00', :extras => 'url_n').map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
-    favorites.each {|l| images.add l }
+    favorites.each {|l| @images.add l }
 
-    all_images = images.delete_if {|i| i.empty? }.to_a.sort
+    all_images = @images.delete_if {|i| i.empty? }.to_a.sort
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(all_images.to_a.join("\n")) }
 
-    return all_images
+    return true
   end
 
   def full_update
@@ -63,5 +65,7 @@ class ImageDb
     @images = @images.delete_if {|i| i.empty? }.to_a.sort
 
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
+
+    return true
   end
 end
