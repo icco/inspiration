@@ -17,7 +17,7 @@ class ImageDb
     end
 
     data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/icco/shots/likes", :query => {:per_page => 50}))
-    data.map {|s| s.url }.each {|l| images.add l }
+    data.map {|s| s.url }.each {|l| @images.add l }
 
     favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00', :extras => 'url_n').map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
     favorites.each {|l| @images.add l }
