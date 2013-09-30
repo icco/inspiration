@@ -20,5 +20,5 @@
 
 <div class="small-12 columns">
   <hr />
-  <p><%= @images.count %> images.</p>
+  <p><%= @images.count %> images. <%= @images.delete_if {|i| @idb.cached? i }.count %> uncached.</p>
 </div>

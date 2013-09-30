@@ -77,9 +77,7 @@ $(document).ready(function() {
 });
 
 function cache(source, img) {
-  $.when(requests).done(function(){
-    $.post('/cache', { 'favorite': source, 'image': img });
-  });
+  $.post('/cache', { 'favorite': source, 'image': img });
 }
 
 function build_element(image, link, title, div) {
@@ -98,8 +96,10 @@ function build_element(image, link, title, div) {
     $(div).addClass('item');
     $(div).removeClass('embed');
     $('#container').isotope('insert', $(div));
+
+    // Cache!
+    cache(link, image);
   }).each(function() {
     if(this.complete) $(this).load();
   });
-  // cache(link, image);
 }

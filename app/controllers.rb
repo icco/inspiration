@@ -22,7 +22,7 @@ Inspiration::App.controllers  do
 
   get :index do
     @idb = ImageDb.new
-    @images = @idb.images.sample(100)
+    @images = @idb.images.sample(Inspiration::PER_PAGE)
 
     render :index
   end

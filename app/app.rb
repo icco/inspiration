@@ -24,6 +24,7 @@ module Inspiration
 
   LINK_FILE = Padrino.root("links.txt")
   CACHE_FILE = Padrino.root("cache.json")
+  PER_PAGE = 150
 
   FlickRaw.api_key = "5c282af934cd475695e1f727dd0404a9"
   FlickRaw.shared_secret = "49b3b77e99947328"
