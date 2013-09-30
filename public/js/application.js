@@ -1,9 +1,8 @@
 $(document).ready(function() {
-  $('#container').imagesLoaded(function(){
-    $('#container').isotope({
-      itemSelector : '.item',
-      masonry: { },
-      animationEngine : 'css' });
+  $('#container').isotope({
+    animationEngine : 'css',
+    itemSelector : '.item',
+    masonry: { },
   });
 
   // http://stackoverflow.com/questions/7270947/rails-3-1-csrf-ignored
@@ -74,11 +73,21 @@ $(document).ready(function() {
 
     requests.push(request);
   });
-});
 
-function cache(source, img) {
-  $.post('/cache', { 'favorite': source, 'image': img });
-}
+  $.when(requests).done(function() {
+    $('#container').imagesLoaded(function() {
+      data = [];
+      $('div.uncached img').each(function() {
+        img = $(this).attr('src');
+        src = $(this).parents('.embed').data('embed');
+        if (src != undefined && img != undefined) {
+          data.push([img, src]);
+        }
+      });
+      $.post('/cache', { 'pairs': data });
+    });
+  });
+});
 
 function build_element(image, link, title, div) {
   var a = $('<a>');
@@ -95,9 +104,6 @@ function build_element(image, link, title, div) {
     $(div).addClass('item');
     $(div).removeClass('embed');
     $('#container').isotope('insert', $(div));
-
-    // Cache!
-    cache(link, image);
   }).each(function() {
     if(this.complete) $(this).load();
   });
