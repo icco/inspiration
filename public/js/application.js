@@ -92,7 +92,6 @@ function build_element(image, link, title, div) {
 
   // Preload
   $(img).one('load', function() {
-    console.log('loaded');
     $(div).addClass('item');
     $(div).removeClass('embed');
     $('#container').isotope('insert', $(div));
