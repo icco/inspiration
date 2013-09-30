@@ -1,9 +1,8 @@
 $(document).ready(function() {
-  $('#container').imagesLoaded(function(){
-    $('#container').isotope({
-      itemSelector : '.item',
-      masonry: { },
-      animationEngine : 'css' });
+  $('#container').isotope({
+    animationEngine : 'css',
+    itemSelector : '.item',
+    masonry: { },
   });
 
   // http://stackoverflow.com/questions/7270947/rails-3-1-csrf-ignored
