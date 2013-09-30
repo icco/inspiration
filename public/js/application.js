@@ -46,7 +46,7 @@ $('.embed').each(function(index, value) {
         a.append(img);
         div.append(a);
         $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
-        cache(url, img.src);
+        cache(url, img.attr('src'));
       } else {
         // Not a valid dribbble
         // console.log(images);
@@ -73,7 +73,7 @@ $('.embed').each(function(index, value) {
         a.append(img);
         div.append(a);
         $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
-        cache(url, images.thumbnail_url);
+        cache(url, img.attr('src'));
       } else {
         // Not an image deviation.
         // console.log(images);
@@ -102,7 +102,7 @@ $('.embed').each(function(index, value) {
         a.append(img);
         div.append(a);
         $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
-        cache(url, image_url);
+        cache(url, img.attr('src'));
       } else {
         // Not a flickr photo.
         // console.log(images);
