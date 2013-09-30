@@ -37,7 +37,15 @@ Inspiration::App.controllers  do
 
   post :cache do
     idb = ImageDb.new
+    ret = false
+    if params[:favorite] and params[:image]
     ret = idb.cache(params[:favorite], params[:image])
+    elsif params[:pairs]
+      params[:pairs].each do |key, pair|
+        src, img = pair
+        ret = idb.cache(src, img)
+      end
+    end
 
     content_type :json
     ret.to_json
