@@ -96,7 +96,7 @@ function build_element(image, link, title, div) {
   $(div).append(a);
 
   // Preload
-  $("img").one('load', function() {
+  $(img).one('load', function() {
     console.log('loaded');
     $(div).addClass('item');
     $(div).removeClass('embed');
