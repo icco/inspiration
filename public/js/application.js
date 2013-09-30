@@ -1,11 +1,8 @@
 $(document).ready(function() {
-  $(document).foundation();
   $('#container').imagesLoaded(function(){
     $('#container').isotope({
       itemSelector : '.item',
-      masonry: {
-        columnWidth: 310
-      },
+      masonry: { },
       animationEngine : 'css' });
   });
 
