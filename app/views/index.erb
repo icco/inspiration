@@ -6,7 +6,15 @@
 
 <div id="container" class="large-12 columns">
   <% @images.each do |url| %>
-    <div class="embed" data-embed="<%= url %>"></div>
+    <% if @idb.cached? url %>
+      <div class="item">
+        <a href="<%= url %>">
+          <img src="<%= @idb.get_image url %>" />
+        </a>
+      </div>
+    <% else %>
+      <div class="embed" data-embed="<%= url %>"></div>
+    <% end %>
   <% end %>
 </div>
 

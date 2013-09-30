@@ -2,6 +2,14 @@ $(document).foundation();
 $('#container').isotope({ itemSelector : '.item' });
 $('#container').isotope('shuffle');
 
+// http://stackoverflow.com/questions/7270947/rails-3-1-csrf-ignored
+$.ajaxSetup({
+  beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-CSRF-Token',
+                  $('meta[name="csrf-token"]').attr('content'));
+              }
+});
+
 // http://api.jquery.com/jQuery.when/
 var requests = [];
 
@@ -38,6 +46,7 @@ $('.embed').each(function(index, value) {
         a.append(img);
         div.append(a);
         $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
+        cache(url, img.src);
       } else {
         // Not a valid dribbble
         // console.log(images);
@@ -64,6 +73,7 @@ $('.embed').each(function(index, value) {
         a.append(img);
         div.append(a);
         $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
+        cache(url, images.thumbnail_url);
       } else {
         // Not an image deviation.
         // console.log(images);
@@ -92,6 +102,7 @@ $('.embed').each(function(index, value) {
         a.append(img);
         div.append(a);
         $('#container').imagesLoaded(function(){ $('#container').isotope('insert', div); });
+        cache(url, image_url);
       } else {
         // Not a flickr photo.
         // console.log(images);
@@ -104,14 +115,8 @@ $('.embed').each(function(index, value) {
   requests.push(request);
 });
 
-console.log(requests.length);
-
-$.when(requests).done(function(){
-  $('#container').imagesLoaded(function(){
-    console.log('images loaded, requests done');
-    $('.uncached').each(function(index, value) {
-      console.log(value);
-      // $.post('/cache', { favorite: ""
-    });
+function cache(source, img) {
+  $.when(requests).done(function(){
+    $.post('/cache', { 'favorite': source, 'image': img });
   });
-});
+}

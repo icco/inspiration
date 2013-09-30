@@ -16,6 +16,10 @@ module Inspiration
     ##
     # Application configuration options
     set :logging, true            # Logging in STDOUT for development and file for production (default only for development)
+
+    set :protection, true
+    set :protect_from_csrf, true
+    set :allow_disabled_csrf, true
   end
 
   LINK_FILE = Padrino.root("links.txt")

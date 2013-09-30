@@ -76,8 +76,16 @@ class ImageDb
     return true
   end
 
+  def get_image favorite_link
+    return @cache[favorite_link]
+  end
+
+  def cached? link
+    return (not @cache[link].nil?)
+  end
+
   def cache favorite_link, image_link
-    if @images.exists? favorite_link
+    if @images.include? favorite_link
       @cache[favorite_link] = image_link
       write_cache
       return true
@@ -87,6 +95,6 @@ class ImageDb
   end
 
   def write_cache
-    File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@cache.to_json) }
+    File.open(Inspiration::CACHE_FILE, 'w') {|file| file.write(@cache.to_json) }
   end
 end

@@ -21,8 +21,8 @@ Inspiration::App.controllers  do
   end
 
   get :index do
-    idb = ImageDb.new
-    @images = idb.images.sample(100)
+    @idb = ImageDb.new
+    @images = @idb.images.sample(100)
 
     render :index
   end
