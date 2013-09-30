@@ -12,6 +12,7 @@ $.ajaxSetup({
 
 // http://api.jquery.com/jQuery.when/
 var requests = [];
+var images = [];
 
 $('.embed').each(function(index, value) {
   var url = $(value).data('embed');
@@ -45,7 +46,7 @@ $('.embed').each(function(index, value) {
       if (images.image_teaser_url != undefined) {
         a.append(img);
         div.append(a);
-        $('#container').imagesLoaded(function(){ $('#container').isotope('appended', div); });
+        images.push(div);
         cache(url, img.src);
       } else {
         // Not a valid dribbble
@@ -72,7 +73,7 @@ $('.embed').each(function(index, value) {
       if (images.thumbnail_url != undefined && images.title != undefined) {
         a.append(img);
         div.append(a);
-        $('#container').imagesLoaded(function(){ $('#container').isotope('appended', div); });
+        images.push(div);
         cache(url, images.thumbnail_url);
       } else {
         // Not an image deviation.
@@ -101,7 +102,8 @@ $('.embed').each(function(index, value) {
       if (images.thumbnail_url != undefined && images.title != undefined) {
         a.append(img);
         div.append(a);
-        $('#container').imagesLoaded(function(){ $('#container').isotope('appended', div); });
+        $('#container').append(div);
+        images.push(div);
         cache(url, image_url);
       } else {
         // Not a flickr photo.
@@ -113,6 +115,13 @@ $('.embed').each(function(index, value) {
   }
 
   requests.push(request);
+});
+
+$('#container').imagesLoaded(function(){
+  $('.uncached').each(function(i, value) {
+    value.show();
+    $('#container').isotope('appended', value);
+  });
 });
 
 function cache(source, img) {
