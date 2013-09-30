@@ -3,9 +3,13 @@ class ImageDb
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map {|l| l.strip })
 
     cache_contents = File.read(Inspiration::CACHE_FILE)
-    if not cache_contents.empty?
-      @cache = JSON.parse(cache_contents)
-    else
+    begin
+      if not cache_contents.empty?
+        @cache = JSON.parse(cache_contents)
+      else
+        @cache = {}
+      end
+    rescue
       @cache = {}
     end
   end
