@@ -95,6 +95,6 @@ class ImageDb
   end
 
   def write_cache
-    File.open(Inspiration::CACHE_FILE, 'w') {|file| file.write(@cache.to_json) }
+    File.open(Inspiration::CACHE_FILE, 'w') {|f| f << JSON.pretty_generate(@cache) }
   end
 end
