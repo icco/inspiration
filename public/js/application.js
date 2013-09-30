@@ -2,16 +2,20 @@ $(document).foundation();
 $('#container').isotope({ itemSelector : '.item' });
 $('#container').isotope('shuffle');
 
+// http://api.jquery.com/jQuery.when/
+var requests = [];
+
 $('.embed').each(function(index, value) {
   var url = $(value).data('embed');
 
   var dribbble_re = /http\:\/\/dribbble\.com\/shots\//;
   var deviant_re = /deviantart\.com/
   var flickr_re = /www\.flickr\.com/
+  var request;
 
   if (dribbble_re.test(url)) {
     var oembed_url = 'http://api.dribbble.com/shots/' + url.replace(dribbble_re, "") + '?callback=?';
-    $.getJSON(oembed_url, function(data) {
+    request = $.getJSON(oembed_url, function(data) {
       images = data;
     }).complete(function() {
       var a = $('<a>');
@@ -41,7 +45,7 @@ $('.embed').each(function(index, value) {
     });
   } else if (deviant_re.test(url)) {
     var oembed_url = 'http://backend.deviantart.com/oembed?url=' + encodeURIComponent(url) + '&format=jsonp&callback=?';
-    $.getJSON(oembed_url, function(data) {
+    request = $.getJSON(oembed_url, function(data) {
       images = data;
     }).complete(function() {
       var a = $('<a>');
@@ -67,7 +71,7 @@ $('.embed').each(function(index, value) {
     });
   } else if (flickr_re.test(url)) {
     var oembed_url = 'http://www.flickr.com/services/oembed?url=' + encodeURIComponent(url) + '&format=json&&maxwidth=300&jsoncallback=?';
-    $.getJSON(oembed_url, function(data) {
+    request = $.getJSON(oembed_url, function(data) {
       images = data;
     }).complete(function() {
       var a = $('<a>');
@@ -97,9 +101,17 @@ $('.embed').each(function(index, value) {
     console.log("Unkown: " + url);
   }
 
-  $('.uncached').each(function(index, value) {
-    console.log(value);
-    // $.post('/cache', { favorite: ""
+  requests.push(request);
+});
 
+console.log(requests.length);
+
+$.when(requests).done(function(){
+  $('#container').imagesLoaded(function(){
+    console.log('images loaded, requests done');
+    $('.uncached').each(function(index, value) {
+      console.log(value);
+      // $.post('/cache', { favorite: ""
+    });
   });
 });
