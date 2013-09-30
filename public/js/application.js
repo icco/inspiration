@@ -17,7 +17,7 @@ $('.embed').each(function(index, value) {
     var oembed_url = 'http://api.dribbble.com/shots/' + url.replace(dribbble_re, "") + '?callback=?';
     request = $.getJSON(oembed_url, function(data) {
       images = data;
-    }).complete(function() {
+    }).done(function() {
       var a = $('<a>');
       var img = $('<img class="dribbble">');
       var div = $('<div class="item uncached">');
@@ -47,7 +47,7 @@ $('.embed').each(function(index, value) {
     var oembed_url = 'http://backend.deviantart.com/oembed?url=' + encodeURIComponent(url) + '&format=jsonp&callback=?';
     request = $.getJSON(oembed_url, function(data) {
       images = data;
-    }).complete(function() {
+    }).done(function() {
       var a = $('<a>');
       var img = $('<img>');
       var div = $('<div class="item uncached">');
@@ -73,7 +73,7 @@ $('.embed').each(function(index, value) {
     var oembed_url = 'http://www.flickr.com/services/oembed?url=' + encodeURIComponent(url) + '&format=json&&maxwidth=300&jsoncallback=?';
     request = $.getJSON(oembed_url, function(data) {
       images = data;
-    }).complete(function() {
+    }).done(function() {
       var a = $('<a>');
       var img = $('<img>');
       var div = $('<div class="item uncached">');
