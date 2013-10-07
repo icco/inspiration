@@ -39,11 +39,13 @@ Inspiration::App.controllers  do
     idb = ImageDb.new
     ret = false
     if params[:favorite] and params[:image]
-    ret = idb.cache(params[:favorite], params[:image])
+      ret = idb.cache(params[:favorite], params[:image])
     elsif params[:pairs]
+      ret = []
+      p params[:pairs]
       params[:pairs].each do |key, pair|
         src, img = pair
-        ret = idb.cache(src, img)
+        ret.push idb.cache(src, img)
       end
     end
 
