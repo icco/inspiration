@@ -74,12 +74,12 @@ $(document).ready(function() {
     requests.push(request);
   });
 
-  $.when(requests).done(function() {
-    $('#container').imagesLoaded(function() {
+  $.when.apply($, requests).done(function() {
+    $('div.uncached img').imagesLoaded(function() {
       data = [];
-      $('div.uncached img').each(function() {
+      $(this).each(function() {
         img = $(this).attr('src');
-        src = $(this).parents('.embed').data('embed');
+        src = $(this).parents('div').data('embed');
         if (src != undefined && img != undefined) {
           data.push([img, src]);
         }
