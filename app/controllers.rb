@@ -42,13 +42,13 @@ Inspiration::App.controllers  do
       ret = idb.cache(params[:favorite], params[:image])
     elsif params[:pairs]
       ret = []
-      p params[:pairs]
       params[:pairs].each do |key, pair|
         src, img = pair
         ret.push idb.cache(src, img)
       end
     end
 
+    status 400 if not ret
     content_type :json
     ret.to_json
   end
