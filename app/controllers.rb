@@ -38,6 +38,7 @@ Inspiration::App.controllers  do
   post :cache do
     idb = ImageDb.new
     ret = false
+
     if params[:favorite] and params[:image]
       ret = idb.cache(params[:favorite], params[:image])
     elsif params[:pairs]
@@ -48,7 +49,7 @@ Inspiration::App.controllers  do
       end
     end
 
-    status 400 if not ret
+    status 400 if (not ret) or (ret and ret.include? false)
     content_type :json
     ret.to_json
   end

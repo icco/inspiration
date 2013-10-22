@@ -89,6 +89,7 @@ class ImageDb
   end
 
   def cache favorite_link, image_link
+    p @images.count
     if @images.include? favorite_link
       @cache[favorite_link] = image_link
       write_cache
