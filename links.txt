@@ -811,6 +811,7 @@ http://dribbble.com/shots/1305504-Chat-screen
 http://dribbble.com/shots/1305964-Concepts
 http://dribbble.com/shots/1306856-LayerVault-Homepage
 http://dribbble.com/shots/1307032-New-Portfolio
+http://dribbble.com/shots/1307799-2do-app-icon
 http://dribbble.com/shots/143575-Monome-Arc
 http://dribbble.com/shots/190540-Colorful-Alfred
 http://dribbble.com/shots/197780-Console
@@ -3159,6 +3160,7 @@ http://www.flickr.com/photos/25125125@N00/3954675439
 http://www.flickr.com/photos/25203582@N05/3848922583
 http://www.flickr.com/photos/25244148@N08/5400073635
 http://www.flickr.com/photos/25266170@N02/5379284614
+http://www.flickr.com/photos/25338714@N00/8201347642
 http://www.flickr.com/photos/25363247@N00/2457556702
 http://www.flickr.com/photos/25419820@N00/10717022525
 http://www.flickr.com/photos/25419820@N00/10720120625
@@ -3856,6 +3858,7 @@ http://www.flickr.com/photos/58148052@N00/90439478
 http://www.flickr.com/photos/58249839@N00/4330391238
 http://www.flickr.com/photos/58249839@N00/4396417226
 http://www.flickr.com/photos/58358930@N00/3734764542
+http://www.flickr.com/photos/58513626@N04/10378729773
 http://www.flickr.com/photos/58746120@N00/1057613629
 http://www.flickr.com/photos/58792736@N00/28510613
 http://www.flickr.com/photos/58828651@N05/7574049916
