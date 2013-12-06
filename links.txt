@@ -902,6 +902,11 @@ http://dribbble.com/shots/1334173-Weather-Dashboard-WWL-Stage-2
 http://dribbble.com/shots/1334368-Oil-whale
 http://dribbble.com/shots/1334369-Mochila-Mail-manufactured
 http://dribbble.com/shots/1335215-Wander
+http://dribbble.com/shots/1335352-Spot-Illustration
+http://dribbble.com/shots/1335567-Xmas
+http://dribbble.com/shots/1335782-Pay-Screen
+http://dribbble.com/shots/1335945-TTC-Wash-Tag
+http://dribbble.com/shots/1336122-Run-Data-Exploration
 http://dribbble.com/shots/143575-Monome-Arc
 http://dribbble.com/shots/190540-Colorful-Alfred
 http://dribbble.com/shots/197780-Console
@@ -2051,6 +2056,7 @@ http://nebezial.deviantart.com/art/aphrodite-9-new-stylin-406347435
 http://nebezial.deviantart.com/art/comission-warhammer-chaos-marine-407601525
 http://nebezial.deviantart.com/art/savage-cyclops-aawww-yeeeaahh-399555430
 http://nebezial.deviantart.com/art/sdcc-comission-original-titans-383564296
+http://nebezial.deviantart.com/art/so-it-turns-out-it-was-daenerys-who-knew-XD-417835985
 http://nebezial.deviantart.com/art/some-style-tests-for-a-future-project-404851555
 http://nebezial.deviantart.com/art/that-moment-when-u-realise-you-just-drew-a-pokemon-412406315
 http://nefar007.deviantart.com/art/the-new-Prince-93139988
@@ -2929,6 +2935,7 @@ http://www.flickr.com/photos/10282387@N00/4928338325
 http://www.flickr.com/photos/10294193@N06/8660261312
 http://www.flickr.com/photos/10360813@N08/2279982897
 http://www.flickr.com/photos/10363765@N00/8584868063
+http://www.flickr.com/photos/103780334@N04/11048457916
 http://www.flickr.com/photos/10403459@N00/9649815203
 http://www.flickr.com/photos/10517943@N02/3443486941
 http://www.flickr.com/photos/10563296@N00/1427460291
@@ -3544,6 +3551,7 @@ http://www.flickr.com/photos/35333775@N00/1811595620
 http://www.flickr.com/photos/35333775@N00/377137097
 http://www.flickr.com/photos/35361533@N00/6215671283
 http://www.flickr.com/photos/35378667@N08/4139513318
+http://www.flickr.com/photos/35409814@N00/11227910724
 http://www.flickr.com/photos/35410967@N08/5303460859
 http://www.flickr.com/photos/35468140272@N01/6177972
 http://www.flickr.com/photos/35468140272@N01/6319800
@@ -3777,6 +3785,7 @@ http://www.flickr.com/photos/44822758@N00/2326469809
 http://www.flickr.com/photos/44836615@N00/3092857743
 http://www.flickr.com/photos/44836615@N00/9040037
 http://www.flickr.com/photos/44880848@N04/4497761488
+http://www.flickr.com/photos/44920727@N08/11138522145
 http://www.flickr.com/photos/45047006@N00/1457121504
 http://www.flickr.com/photos/45047006@N00/1558618196
 http://www.flickr.com/photos/45047006@N00/1736799823
@@ -3896,6 +3905,7 @@ http://www.flickr.com/photos/51384812@N00/2890347288
 http://www.flickr.com/photos/51449386@N00/4929821408
 http://www.flickr.com/photos/51487460@N00/124768440
 http://www.flickr.com/photos/51678297@N07/10493977746
+http://www.flickr.com/photos/51739479@N02/11227780564
 http://www.flickr.com/photos/51944105@N04/5926101994
 http://www.flickr.com/photos/52008794@N00/48682373
 http://www.flickr.com/photos/52283562@N00/8515784469
@@ -4614,6 +4624,7 @@ http://www.flickr.com/photos/94893753@N00/616182910
 http://www.flickr.com/photos/94895876@N00/4001062656
 http://www.flickr.com/photos/95141439@N00/4676841043
 http://www.flickr.com/photos/95167605@N00/3269402622
+http://www.flickr.com/photos/95362858@N03/9672906588
 http://www.flickr.com/photos/95492938@N00/445091217
 http://www.flickr.com/photos/95493205@N06/10110599906
 http://www.flickr.com/photos/95597086@N00/3356994469
@@ -4637,6 +4648,7 @@ http://www.flickr.com/photos/95928247@N00/4392095506
 http://www.flickr.com/photos/9595378@N08/2131781774
 http://www.flickr.com/photos/9605545@N06/4334217451
 http://www.flickr.com/photos/96061899@N00/964703013
+http://www.flickr.com/photos/96419267@N00/11174474295
 http://www.flickr.com/photos/96599350@N00/3928095561
 http://www.flickr.com/photos/9662713@N02/2249264000
 http://www.flickr.com/photos/96679304@N00/171218959
@@ -4686,6 +4698,7 @@ http://xetobyte.deviantart.com/art/Self-Deception-363519226
 http://xhoop.deviantart.com/art/Dock-wallpaper-265093020
 http://xhoop.deviantart.com/art/t-b-o-t-sea-wallpaper-261022670
 http://xmegalopolisx.deviantart.com/art/A-Moment-Suspended-In-Time-49319626
+http://xmegalopolisx.deviantart.com/art/Brooklyn-Bridge-417925192
 http://xmegalopolisx.deviantart.com/art/City-of-Neon-Lights-III-375660965
 http://xmegalopolisx.deviantart.com/art/Dark-side-of-TOKYO-206854702
 http://xmegalopolisx.deviantart.com/art/Hong-Kong-Giants-208174355
