@@ -7,9 +7,7 @@ $(document).ready(function() {
 
   // http://stackoverflow.com/questions/7270947/rails-3-1-csrf-ignored
   $.ajaxSetup({
-    beforeSend: function(xhr) {
-                  xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-                }
+    beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')); }
   });
 
   // http://api.jquery.com/jQuery.when/
