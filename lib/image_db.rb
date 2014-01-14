@@ -5,7 +5,8 @@ class ImageDb
     cache_contents = File.read(Inspiration::CACHE_FILE)
     begin
       if not cache_contents.empty?
-        @cache = JSON.parse(cache_contents)
+        @cache = JSON.parse(cache_contents).delete_if {|a,b| a.empty? || b.empty? }
+        write_cache
       else
         @cache = {}
       end
