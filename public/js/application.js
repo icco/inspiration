@@ -73,6 +73,12 @@ $(document).ready(function() {
   });
 
   $.when.apply($, requests).done(function() {
+    $("img").unveil(200, function() {
+      $(this).load(function() {
+        $('#container').isotope('reLayout')
+      });
+    });
+
     $('div.uncached img').imagesLoaded(function() {
       data = [];
       $(this).each(function() {
@@ -92,7 +98,7 @@ function build_element(image, link, title, div) {
   var img = $('<img>');
   a.attr('href', link);
   a.attr('title', title);
-  img.attr('src', image);
+  img.attr('data-src', image);
   img.attr('alt', title);
   a.append(img);
   $(div).append(a);

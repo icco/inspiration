@@ -8,9 +8,7 @@
   <% @images.each do |url| %>
     <% if @idb.cached? url %>
       <div class="item">
-        <a href="<%= url %>">
-          <img src="<%= @idb.get_image url %>" />
-        </a>
+        <a href="<%= url %>"><img src="<%= @idb.get_image url %>" /></a>
       </div>
     <% else %>
       <div class="embed uncached" data-embed="<%= url %>"></div>
