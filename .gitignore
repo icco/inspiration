@@ -1,9 +1,10 @@
+!vendor/gems/cache/
 .DS_Store
+.bundle
+.sass-cache/*
+bin/*
+db/*.db
 log/**/*
 log/*.log
 tmp/**/*
-bin/*
 vendor/gems/*
-!vendor/gems/cache/
-.sass-cache/*
-db/*.db

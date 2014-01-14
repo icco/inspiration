@@ -5,7 +5,8 @@ class ImageDb
     cache_contents = File.read(Inspiration::CACHE_FILE)
     begin
       if not cache_contents.empty?
-        @cache = JSON.parse(cache_contents)
+        @cache = JSON.parse(cache_contents).delete_if {|a,b| a.empty? || b.empty? }
+        write_cache
       else
         @cache = {}
       end
@@ -88,8 +89,7 @@ class ImageDb
     return (not @cache[link].nil?)
   end
 
-  def cache favorite_link, image_link
-    p @images.count
+  def cache image_link, favorite_link
     if @images.include? favorite_link
       @cache[favorite_link] = image_link
       write_cache

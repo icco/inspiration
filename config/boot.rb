@@ -17,6 +17,7 @@ require 'set'
 Padrino::Logger::Config[:development][:log_static] = true
 
 ## Configure your I18n
+I18n.enforce_available_locales = false
 I18n.default_locale = :en
 
 ##
