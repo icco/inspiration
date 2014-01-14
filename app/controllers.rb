@@ -9,12 +9,6 @@ Inspiration::App.controllers  do
     @text = partial :about
 
     @stats = Hash.new(0)
-
-    # @images.each do |url|
-    #   matches = url.match(/.+:\/\/(.+)\.deviantart/)
-    #   name = matches[1]
-    #   @stats[name] += 1
-    # end
     @stats = @stats.to_a.sort {|a,b| b[1] <=> a[1] }
 
     render :about
@@ -22,7 +16,7 @@ Inspiration::App.controllers  do
 
   get :index do
     @idb = ImageDb.new
-    @images = @idb.images.sample(Inspiration::PER_PAGE)
+    @images, @cached = @idb.sample(Inspiration::PER_PAGE)
 
     render :index
   end

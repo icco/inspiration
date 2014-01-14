@@ -19,6 +19,13 @@ class ImageDb
     return @images.to_a
   end
 
+  def sample count
+    images = @images.to_a.delete_if {|i| cached? i }.sample(count)
+    cached = @images.to_a.delete_if {|i| !cached? i }.sample(count - images.count)
+
+    return [images,cached]
+  end
+
   def update
     rss_url = 'http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation'
     open(rss_url) do |rss|

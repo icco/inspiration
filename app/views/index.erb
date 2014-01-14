@@ -6,19 +6,17 @@
 
 <div id="container" class="large-12 columns">
   <% @images.each do |url| %>
-    <% if @idb.cached? url %>
-      <div class="item">
-        <a href="<%= url %>">
-          <img src="<%= @idb.get_image url %>" />
-        </a>
-      </div>
-    <% else %>
-      <div class="embed uncached" data-embed="<%= url %>"></div>
-    <% end %>
+    <div class="embed uncached" data-embed="<%= url %>"></div>
+  <% end %>
+
+  <% @cached.each do |url| %>
+    <div class="item">
+      <a href="<%= url %>"><img src="<%= @idb.get_image url %>" /></a>
+    </div>
   <% end %>
 </div>
 
 <div class="small-12 columns">
   <hr />
-  <p><%= @images.count %> images. <%= @images.delete_if {|i| @idb.cached? i }.count %> uncached.</p>
+  <p><%= @images.count %> images. <%= @cached.count %> cached.</p>
 </div>
