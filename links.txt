@@ -665,6 +665,8 @@ http://dribbble.com/shots/1129402-Ios-style
 http://dribbble.com/shots/1132266-DBX-Slide-Icons
 http://dribbble.com/shots/1135853-Shield-Fingerprints-logo-design
 http://dribbble.com/shots/1139496-Fiction-Introd
+http://dribbble.com/shots/1145019-Hulk
+http://dribbble.com/shots/1147117-Flat-Camera
 http://dribbble.com/shots/1151704-Discovery
 http://dribbble.com/shots/1159732-Price-Tables
 http://dribbble.com/shots/1161206-Potion-Fairy
@@ -1083,6 +1085,7 @@ http://dribbble.com/shots/1370060-New-app-coming-soon
 http://dribbble.com/shots/1370174-Wayfaring-App
 http://dribbble.com/shots/1370966-Tips
 http://dribbble.com/shots/1371986-Backpack-Icon
+http://dribbble.com/shots/1372083-Floral-Icons
 http://dribbble.com/shots/1372086-NeonMob-Story-Card
 http://dribbble.com/shots/1372114-Homies-help-homies-always
 http://dribbble.com/shots/1372148-N-Y-C
@@ -1102,6 +1105,13 @@ http://dribbble.com/shots/1375608-interface-design-in-ios7
 http://dribbble.com/shots/1376058-Padbury-Clock-Screen-Saver
 http://dribbble.com/shots/1377035-Revitalize
 http://dribbble.com/shots/1377072-UI-Widgets
+http://dribbble.com/shots/1379108-TrackDrop-Map-Animation
+http://dribbble.com/shots/1379438-Abstract-03
+http://dribbble.com/shots/1379543-Squirrel
+http://dribbble.com/shots/1379608-Stock-Mfg-Co
+http://dribbble.com/shots/1379776-Quartz-Composer-Analog-Clock-Kit
+http://dribbble.com/shots/1379925--GIF-milee-co-Portfolio-Website
+http://dribbble.com/shots/1381413-Flat-Icon-Set
 http://dribbble.com/shots/143575-Monome-Arc
 http://dribbble.com/shots/190540-Colorful-Alfred
 http://dribbble.com/shots/197780-Console
