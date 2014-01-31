@@ -61,7 +61,7 @@ GEM
     rake (10.1.1)
     redcarpet (3.0.0)
     safe_yaml (0.9.7)
-    sass (3.2.13)
+    sass (3.2.14)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.4)
