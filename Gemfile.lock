@@ -24,7 +24,7 @@ GEM
     mime-types (1.25.1)
     multi_json (1.8.4)
     multi_xml (0.5.5)
-    oj (2.5.3)
+    oj (2.5.4)
     padrino (0.11.4)
       padrino-admin (= 0.11.4)
       padrino-cache (= 0.11.4)
@@ -56,7 +56,7 @@ GEM
       padrino-core (= 0.11.4)
     polyglot (0.3.3)
     rack (1.5.2)
-    rack-protection (1.5.1)
+    rack-protection (1.5.2)
       rack
     rake (10.1.1)
     redcarpet (3.0.0)
