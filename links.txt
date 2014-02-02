@@ -1168,6 +1168,9 @@ http://dribbble.com/shots/1400446--GIF-Saturn-V-Launch
 http://dribbble.com/shots/1400470-Florence-Full
 http://dribbble.com/shots/1400538-Card-View
 http://dribbble.com/shots/1401236-Sanchez-Color-Palette
+http://dribbble.com/shots/1402067-Ml-Maybe
+http://dribbble.com/shots/1402418-Think-Industries-Alt
+http://dribbble.com/shots/1402652-Illustration-for-Offscreen
 http://dribbble.com/shots/143575-Monome-Arc
 http://dribbble.com/shots/190540-Colorful-Alfred
 http://dribbble.com/shots/197780-Console
@@ -3914,6 +3917,7 @@ http://www.flickr.com/photos/31583009@N00/5367558486
 http://www.flickr.com/photos/31679616@N08/8536591401
 http://www.flickr.com/photos/31696265@N04/3320633366
 http://www.flickr.com/photos/31729003@N02/10136132524
+http://www.flickr.com/photos/31869623@N04/12164482545
 http://www.flickr.com/photos/31869623@N04/4747911218
 http://www.flickr.com/photos/31869623@N04/4788953293
 http://www.flickr.com/photos/31869623@N04/4789581564
@@ -4033,6 +4037,9 @@ http://www.flickr.com/photos/35468159247@N01/4805456413
 http://www.flickr.com/photos/35468159247@N01/7005351841
 http://www.flickr.com/photos/35507621@N04/5120018634
 http://www.flickr.com/photos/35527037@N02/4707902934
+http://www.flickr.com/photos/35591378@N03/12241511633
+http://www.flickr.com/photos/35591378@N03/12241805496
+http://www.flickr.com/photos/35591378@N03/12241962416
 http://www.flickr.com/photos/35591378@N03/5062810575
 http://www.flickr.com/photos/35591378@N03/5075924943
 http://www.flickr.com/photos/35591378@N03/8341893038
@@ -4179,6 +4186,7 @@ http://www.flickr.com/photos/42537025@N00/10538055083
 http://www.flickr.com/photos/42537025@N00/11541845735
 http://www.flickr.com/photos/42537025@N00/11541966176
 http://www.flickr.com/photos/42537025@N00/11542005723
+http://www.flickr.com/photos/42537025@N00/12261468256
 http://www.flickr.com/photos/42537025@N00/2783981073
 http://www.flickr.com/photos/42537025@N00/3212647869
 http://www.flickr.com/photos/42537025@N00/3212648309
