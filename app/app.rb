@@ -11,7 +11,6 @@ module Inspiration
     # Caching support
     register Padrino::Cache
     enable :caching
-    set :cache, Padrino::Cache::Store::Memory.new(50)
 
     ##
     # Application configuration options
