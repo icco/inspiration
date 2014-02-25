@@ -109,6 +109,7 @@ http://alicexz.deviantart.com/art/Rebirth-359300671
 http://alicexz.deviantart.com/art/The-Girl-Who-Waited-260181933
 http://alicexz.deviantart.com/art/The-Shade-262552523
 http://alicexz.deviantart.com/art/The-Song-of-Your-Sadness-330534169
+http://alicexz.deviantart.com/art/The-Storm-Inside-426534429
 http://alicexz.deviantart.com/art/The-Turn-of-the-Universe-413896800
 http://alicexz.deviantart.com/art/The-Waltz-272334009
 http://alicexz.deviantart.com/art/Virtuoso-256536410
@@ -666,6 +667,7 @@ http://dribbble.com/shots/1058890-Portfolio-Redesign
 http://dribbble.com/shots/1058906-Timer
 http://dribbble.com/shots/1058945-Geometry-Simplicity
 http://dribbble.com/shots/1058973-Marcus-Hollman
+http://dribbble.com/shots/105922-Nintendo-Nes-Controller
 http://dribbble.com/shots/1059533-Walkthrough
 http://dribbble.com/shots/1059951-Dropbox-DBX-Save-The-Date
 http://dribbble.com/shots/1068411-Music-Box
@@ -1229,7 +1231,17 @@ http://dribbble.com/shots/1427991-Personal-website
 http://dribbble.com/shots/1428010-Newport-beach-festival
 http://dribbble.com/shots/1428554-Personal-Site
 http://dribbble.com/shots/1428693-Fun-Run
+http://dribbble.com/shots/1429948-Dodgeball
+http://dribbble.com/shots/1430153-OKDOTHIS-User-Profile
+http://dribbble.com/shots/1431824-ThoughtLeadr-logo
+http://dribbble.com/shots/1432888-Desk
+http://dribbble.com/shots/1433128-Greeting-Card-Illustration
+http://dribbble.com/shots/1433291-Am-lie-Poulain
 http://dribbble.com/shots/143575-Monome-Arc
+http://dribbble.com/shots/1436273-Dynamic-effect
+http://dribbble.com/shots/1436409-Close-App-Web-Sketch-to-Design
+http://dribbble.com/shots/1436785-Fez-Final-Sneak
+http://dribbble.com/shots/1436877-Factory-Final
 http://dribbble.com/shots/190540-Colorful-Alfred
 http://dribbble.com/shots/197780-Console
 http://dribbble.com/shots/231453-Bedini
@@ -2567,6 +2579,8 @@ http://noah-kh.deviantart.com/art/Nessarose-49312254
 http://noahsamuelmosko.deviantart.com/art/mr-smith-404687894
 http://noiaillustration.deviantart.com/art/Bird-flying-study-413567905
 http://nonohara-susu.deviantart.com/art/Amie-Village-406111030
+http://norbface.deviantart.com/art/Golem-397872359
+http://norbface.deviantart.com/art/True-Detective-Rust-435638478
 http://norinker.deviantart.com/art/Buoy-ashore-14644756
 http://norrington1.deviantart.com/art/Watching-the-autumn-dies-slowly-418527772
 http://novum1.deviantart.com/art/The-War-Fairy-416489858
@@ -3900,6 +3914,7 @@ http://www.flickr.com/photos/25338714@N00/8201347642
 http://www.flickr.com/photos/25363247@N00/2457556702
 http://www.flickr.com/photos/25419820@N00/10717022525
 http://www.flickr.com/photos/25419820@N00/10720120625
+http://www.flickr.com/photos/25419820@N00/12682211795
 http://www.flickr.com/photos/25419820@N00/1285325421
 http://www.flickr.com/photos/25419820@N00/1525168459
 http://www.flickr.com/photos/25419820@N00/2258668255
@@ -3973,6 +3988,7 @@ http://www.flickr.com/photos/28593510@N05/3093960727
 http://www.flickr.com/photos/28593510@N05/3094803060
 http://www.flickr.com/photos/28694794@N02/2976669221
 http://www.flickr.com/photos/28736058@N04/11229407394
+http://www.flickr.com/photos/28736058@N04/12618404765
 http://www.flickr.com/photos/28736058@N04/3348339004
 http://www.flickr.com/photos/28736058@N04/4309789792
 http://www.flickr.com/photos/28736058@N04/4313370052
@@ -4817,6 +4833,9 @@ http://www.flickr.com/photos/62487754@N00/346068113
 http://www.flickr.com/photos/62773394@N00/528865728
 http://www.flickr.com/photos/62956260@N00/4493728212
 http://www.flickr.com/photos/63156791@N00/109833891
+http://www.flickr.com/photos/63174430@N02/11139772526
+http://www.flickr.com/photos/63174430@N02/12727094535
+http://www.flickr.com/photos/63174430@N02/12727564674
 http://www.flickr.com/photos/63174430@N02/6989127125
 http://www.flickr.com/photos/63174430@N02/8393477595
 http://www.flickr.com/photos/63174430@N02/8425563364
