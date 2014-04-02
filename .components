@@ -1,9 +1,7 @@
 ---
 :orm: none
-:test: none
+:test: minitest
 :mock: none
-:script: jquery
+:script: none
 :renderer: erb
 :stylesheet: scss
-:namespace: Inspiration
-:migration_format: number

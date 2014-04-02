@@ -1,5 +1,6 @@
 module Inspiration
   class App < Padrino::Application
+    register SassInitializer
     register ScssInitializer
     register Padrino::Rendering
     register Padrino::Mailer
