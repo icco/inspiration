@@ -74,7 +74,7 @@ class ImageDb
     end
 
     # http://www.flickr.com/services/api/misc.urls.html
-    (1..25).each do |page|
+    (1..30).each do |page|
       p ({ :flickr => '42027916@N00', :page => page })
       favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00', :extras => 'url_n', :page => page).map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
       favorites.each {|l| @images.add l }
