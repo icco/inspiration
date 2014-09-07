@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
 gem 'erubis', '~> 2.7'
 gem 'flickraw'
 gem 'oj'
