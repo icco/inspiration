@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.1.3'
 
 gem 'erubis', '~> 2.7'
 gem 'flickraw'
