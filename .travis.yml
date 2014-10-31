@@ -9,3 +9,5 @@ deploy:
   app: icco-mood
   on:
     repo: icco/inspiration
+bundler_args: --without development
+cache: bundler
