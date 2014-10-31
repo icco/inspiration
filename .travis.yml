@@ -4,7 +4,7 @@ rvm:
 deploy:
   provider: heroku
   api_key:
-    secure: LMoYvx15F/djuti+6QxcO4WGOHXxYMIOepDYyPvF3eim7aGWgkbq4W2Jk095km6FZrLsidVcWP1UGcdKYe/y6GW0MR8Tt4RWXtxEl60TGeKgtEo27X9V/CnL9eUpLcpXXNNEUTrrmJFC94cQwq1cikZSL22gRjkfQMQnJ8oz1Fo=
+    secure: Fh6rIeoaGD8gy9d8oeEh4Zc8mK4hPhoMZKHTTU/xjl16sAmymi1fCBsv0yy7KwLaK9za1OnPul7njyNL1xjtciH3OTJ9iwcZVHV6VcXsoETSRRiN3s2G/ue2dGys76uJ3yRkXV+ayGuc4PZnHTrr3G3+qDVP16xHkPMy3SwquLc=
   app: icco-mood
   on:
     repo: icco/inspiration
