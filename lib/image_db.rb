@@ -19,14 +19,18 @@ class ImageDb
     return @images.to_a
   end
 
+  # Returns an array with two entries. Index 0 is an array of images. Index 1
+  # is an array of images which are cached.
   def sample count
-    images = @images.to_a.delete_if {|i| cached? i }
-    cached = @images.to_a.delete_if {|i| !cached? i }
+    #images = @images.to_a.delete_if {|i| cached? i }
+    #cached = @images.to_a.delete_if {|i| !cached? i }
 
-    cached = cached.sample([count/2, cached.size].min)
-    images = cached.sample([count/2, images.size, count-cached.size].min)
+    #cached = cached.sample([count/2, cached.size].min)
+    #images = cached.sample([count/2, images.size, count-cached.size].min)
 
-    return [images,cached]
+    i = @images.to_a.sample count
+
+    return [i, []]
   end
 
   def update
