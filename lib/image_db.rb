@@ -56,7 +56,8 @@ class ImageDb
     (1..3).each do |page|
       p ({ :flickr => '42027916@N00', :set => '72157601200827657', :page => page })
       begin
-        favorites = flickr.photosets.getPhotos(:photoset_id => '72157601200827657', :extras => 'url_n', :page => page)["photo"].map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
+        resp = flickr.photosets.getPhotos(:photoset_id => '72157601200827657', :extras => 'url_n', :page => page)
+        favorites = resp["photo"].map {|p| "http://www.flickr.com/photos/#{resp["owner"]}/#{p["id"]}"}
         favorites.each {|l| @images.add l }
         puts "Images: #{@images.count}"
       rescue
