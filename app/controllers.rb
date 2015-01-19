@@ -17,6 +17,7 @@ Inspiration::App.controllers  do
   get :index do
     @idb = ImageDb.new
     @images, @cached = @idb.sample(Inspiration::PER_PAGE)
+    @count = { i: @idb.images.count, c: @idb.images.to_a.delete_if {|i| !@idb.cached? i }.count }
 
     render :index
   end
