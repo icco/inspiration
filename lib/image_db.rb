@@ -20,8 +20,11 @@ class ImageDb
   end
 
   def sample count
-    images = @images.to_a.delete_if {|i| cached? i }.sample(count)
-    cached = @images.to_a.delete_if {|i| !cached? i }.sample(count - images.count)
+    images = @images.to_a.delete_if {|i| cached? i }
+    cached = @images.to_a.delete_if {|i| !cached? i }
+
+    cached = cached.sample([count/2, cached.size].min)
+    images = cached.sample([count/2, images.size, count-cached.size].min)
 
     return [images,cached]
   end
