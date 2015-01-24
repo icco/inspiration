@@ -44,7 +44,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     netrc (0.10.2)
-    oj (2.11.3)
+    oj (2.11.4)
     padrino (0.12.4)
       padrino-admin (= 0.12.4)
       padrino-cache (= 0.12.4)
