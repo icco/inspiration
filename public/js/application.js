@@ -23,9 +23,9 @@ $(document).ready(function() {
 
     if (dribbble_re.test(url)) {
       var oembed_url = 'http://api.dribbble.com/shots/' + url.replace(dribbble_re, "") + '?callback=?';
-      request = $.getJSON(oembed_url, function(data) {
-        images = data;
-      }).done(function() {
+      request = $.getJSON(oembed_url, function() {
+        // Don't do anything until we're done.
+      }).done(function(images) {
         var title = '"' + images.title + '" by ' + images.player.name;
         var image_link = "";
 
@@ -38,12 +38,14 @@ $(document).ready(function() {
         if (images.image_teaser_url != undefined) {
           build_element(image_link, url, title, $(embed_div));
         }
+      }).fail(function(data) {
+        console.log("Error reading dribbble response.", data);
       });
     } else if (deviant_re.test(url)) {
       var oembed_url = 'http://backend.deviantart.com/oembed?url=' + encodeURIComponent(url) + '&format=jsonp&callback=?';
-      request = $.getJSON(oembed_url, function(data) {
-        images = data;
-      }).done(function() {
+      request = $.getJSON(oembed_url, function() {
+        // Don't do anything until we're done.
+      }).done(function(images) {
         var title = '"' + images.title + '" by ' + images.author_name;
 
         if (images.thumbnail_url != undefined && images.title != undefined) {
@@ -53,8 +55,8 @@ $(document).ready(function() {
     } else if (flickr_re.test(url)) {
       var oembed_url = 'http://www.flickr.com/services/oembed?url=' + encodeURIComponent(url) + '&format=json&&maxwidth=300&jsoncallback=?';
       request = $.getJSON(oembed_url, function(data) {
-        images = data;
-      }).done(function() {
+        // Don't do anything until we're done.
+      }).done(function(images) {
         var title = '"' + images.title + '" by ' + images.author_name;
         var image_url = "";
         if (images.thumbnail_url != undefined) {
