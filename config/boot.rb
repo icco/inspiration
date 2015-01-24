@@ -12,9 +12,9 @@ require 'open-uri'
 require 'rss'
 require 'set'
 
-## Enable devel logging
-#Padrino::Logger::Config[:development][:log_level] = :devel
-Padrino::Logger::Config[:development][:log_static] = true
+logging_to_stdout = { :log_level => :devel, :stream => :stdout, :format_datetime => ' ', :log_static => true }
+Padrino::Logger::Config[:development].merge!(logging_to_stdout)
+Padrino::Logger::Config[:production].merge!(logging_to_stdout)
 
 ## Configure your I18n
 I18n.enforce_available_locales = false
