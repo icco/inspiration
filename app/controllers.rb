@@ -32,7 +32,8 @@ Inspiration::App.controllers  do
 
   get :all do
     @idb = ImageDb.new
-    @images, @cached = @idb.sample(@idb.images.count)
+    @images = @idb.images.shuffle
+    @cached = []
     @count = { i: @idb.images.count, c: @idb.images.to_a.delete_if {|i| !@idb.cached? i }.count }
 
     render :index
