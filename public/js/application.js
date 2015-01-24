@@ -13,22 +13,21 @@ $(document).ready(function() {
   // http://api.jquery.com/jQuery.when/
   var requests = [];
 
-  var dribbble_count = 0;
+  var count = 0;
   $('.embed').each(function(index, embed_div) {
     var url = $(embed_div).data('embed');
 
+    count += 1;
+    var timeout = Math.min(60000, count * count);
     var dribbble_re = /http\:\/\/dribbble\.com\/shots\//;
     var deviant_re = /deviantart\.com/;
     var flickr_re = /www\.flickr\.com/;
     var request;
 
-    if (dribbble_re.test(url)) {
-      var oembed_url = 'http://api.dribbble.com/shots/' + url.replace(dribbble_re, "") + '?callback=?';
-      dribbble_count += 1;
-      var timeout = 500 * dribbble_count;
+    setTimeout(function() {
+      if (dribbble_re.test(url)) {
+        var oembed_url = 'http://api.dribbble.com/shots/' + url.replace(dribbble_re, "") + '?callback=?';
 
-      setTimeout(function() {
-        if (timeout > 0) { console.log("delayed"); }
         request = $.getJSON(oembed_url, function() {
           // Don't do anything until we're done.
         }).done(function(images) {
@@ -47,53 +46,56 @@ $(document).ready(function() {
         }).fail(function(data) {
           console.log("Error reading dribbble response.", data);
         });
-      }, timeout);
-    } else if (deviant_re.test(url)) {
-      var oembed_url = 'http://backend.deviantart.com/oembed?url=' + encodeURIComponent(url) + '&format=jsonp&callback=?';
-      request = $.getJSON(oembed_url, function() {
-        // Don't do anything until we're done.
-      }).done(function(images) {
-        var title = '"' + images.title + '" by ' + images.author_name;
+      } else if (deviant_re.test(url)) {
+        var oembed_url = 'http://backend.deviantart.com/oembed?url=' + encodeURIComponent(url) + '&format=jsonp&callback=?';
+        request = $.getJSON(oembed_url, function() {
+          // Don't do anything until we're done.
+        }).done(function(images) {
+          var title = '"' + images.title + '" by ' + images.author_name;
 
-        if (images.thumbnail_url != undefined && images.title != undefined) {
-          element = build_element(images.thumbnail_url, url, title, $(embed_div));
-        }
-      });
-    } else if (flickr_re.test(url)) {
-      var oembed_url = 'http://www.flickr.com/services/oembed?url=' + encodeURIComponent(url) + '&format=json&&maxwidth=300&jsoncallback=?';
-      request = $.getJSON(oembed_url, function(data) {
-        // Don't do anything until we're done.
-      }).done(function(images) {
-        var title = '"' + images.title + '" by ' + images.author_name;
-        var image_url = "";
-        if (images.thumbnail_url != undefined) {
-          image_url = images.thumbnail_url.replace(/\_s\./, "_n.");
-        }
+          if (images.thumbnail_url != undefined && images.title != undefined) {
+            element = build_element(images.thumbnail_url, url, title, $(embed_div));
+          }
+        });
+      } else if (flickr_re.test(url)) {
+        var oembed_url = 'http://www.flickr.com/services/oembed?url=' + encodeURIComponent(url) + '&format=json&&maxwidth=300&jsoncallback=?';
+        request = $.getJSON(oembed_url, function(data) {
+          // Don't do anything until we're done.
+        }).done(function(images) {
+          var title = '"' + images.title + '" by ' + images.author_name;
+          var image_url = "";
+          if (images.thumbnail_url != undefined) {
+            image_url = images.thumbnail_url.replace(/\_s\./, "_n.");
+          }
 
-        if (images.thumbnail_url != undefined && images.title != undefined) {
-          element = build_element(image_url, url, title, $(embed_div));
-        }
-      });
-    } else {
-      console.log("Unkown: " + url);
-    }
+          if (images.thumbnail_url != undefined && images.title != undefined) {
+            element = build_element(image_url, url, title, $(embed_div));
+          }
+        });
+      } else {
+        console.log("Unkown: " + url);
+      }
+    }, timeout);
+    console.log(timeout);
 
     requests.push(request);
   });
 
-  $.when.apply($, requests).done(function() {
-    $('div.uncached img').imagesLoaded(function() {
-      data = [];
-      $(this).each(function() {
-        img = $(this).attr('src');
-        src = $(this).parents('div').data('embed');
-        if (src != undefined && img != undefined) {
-          data.push([img, src]);
-        }
+  setTimeout(function () {
+    $.when.apply($, requests).done(function() {
+      $('div.uncached img').imagesLoaded(function() {
+        data = [];
+        $(this).each(function() {
+          img = $(this).attr('src');
+          src = $(this).parents('div').data('embed');
+          if (src != undefined && img != undefined) {
+            data.push([img, src]);
+          }
+        });
+        $.post('/cache', { 'pairs': data });
       });
-      $.post('/cache', { 'pairs': data });
-    });
-  });
+    })
+  }, 2000);
 });
 
 function build_element(image, link, title, div) {
