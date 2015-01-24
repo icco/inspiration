@@ -13,6 +13,7 @@ $(document).ready(function() {
   // http://api.jquery.com/jQuery.when/
   var requests = [];
 
+  var dribbble_count = 0;
   $('.embed').each(function(index, embed_div) {
     var url = $(embed_div).data('embed');
 
@@ -23,24 +24,30 @@ $(document).ready(function() {
 
     if (dribbble_re.test(url)) {
       var oembed_url = 'http://api.dribbble.com/shots/' + url.replace(dribbble_re, "") + '?callback=?';
-      request = $.getJSON(oembed_url, function() {
-        // Don't do anything until we're done.
-      }).done(function(images) {
-        var title = '"' + images.title + '" by ' + images.player.name;
-        var image_link = "";
+      dribbble_count += 1;
+      var timeout = 500 * dribbble_count;
 
-        if (images.image_400_url != undefined) {
-          image_link = images.image_400_url;
-        } else {
-          image_link = images.image_teaser_url;
-        }
+      setTimeout(function() {
+        if (timeout > 0) { console.log("delayed"); }
+        request = $.getJSON(oembed_url, function() {
+          // Don't do anything until we're done.
+        }).done(function(images) {
+          var title = '"' + images.title + '" by ' + images.player.name;
+          var image_link = "";
 
-        if (images.image_teaser_url != undefined) {
-          build_element(image_link, url, title, $(embed_div));
-        }
-      }).fail(function(data) {
-        console.log("Error reading dribbble response.", data);
-      });
+          if (images.image_400_url != undefined) {
+            image_link = images.image_400_url;
+          } else {
+            image_link = images.image_teaser_url;
+          }
+
+          if (images.image_teaser_url != undefined) {
+            build_element(image_link, url, title, $(embed_div));
+          }
+        }).fail(function(data) {
+          console.log("Error reading dribbble response.", data);
+        });
+      }, timeout);
     } else if (deviant_re.test(url)) {
       var oembed_url = 'http://backend.deviantart.com/oembed?url=' + encodeURIComponent(url) + '&format=jsonp&callback=?';
       request = $.getJSON(oembed_url, function() {
