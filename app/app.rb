@@ -16,6 +16,10 @@ module Inspiration
     # Application configuration options
     set :logging, true            # Logging in STDOUT for development and file for production (default only for development)
 
+    # Assets
+    set :css_asset_folder, 'css'
+    set :js_asset_folder, 'js'
+
     set :protection, true
     set :protect_from_csrf, true
     set :allow_disabled_csrf, true

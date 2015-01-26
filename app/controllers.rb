@@ -22,12 +22,21 @@ Inspiration::App.controllers  do
     render :index
   end
 
-  get :all do
+  get "/all.json" do
     idb = ImageDb.new
     @images = idb.images
 
     content_type :json
     @images.to_json
+  end
+
+  get :all do
+    @idb = ImageDb.new
+    @images = @idb.images.shuffle
+    @cached = []
+    @count = { i: @idb.images.count, c: @idb.images.to_a.delete_if {|i| !@idb.cached? i }.count }
+
+    render :index
   end
 
   post :cache do
