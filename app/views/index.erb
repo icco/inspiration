@@ -1,10 +1,9 @@
-<div class="small-12 columns">
-  <hr />
-  <p>Nat's Inspiration page. <a href="/about">About</a>.</p>
-  <hr />
-</div>
-
-<div id="container" class="large-12 columns">
+<div id="container" class="">
+  <div style="width: 300px;" class="item isotope-item">
+    <p>Nat's Inspiration page.</p>
+    <p><a href="/about">About</a>.</p>
+    <p>Displaying <%= @images.count %> uncached images and <%= @cached.count %> cached. The library has <%= @count[:i] %> images, <%= @count[:c] %> of which are cached.</p>
+  </div>
   <% @images.each do |url| %>
     <div class="embed uncached" data-embed="<%= url %>"></div>
   <% end %>
@@ -14,9 +13,4 @@
       <a href="<%= url %>"><img src="<%= @idb.get_image url %>" /></a>
     </div>
   <% end %>
-</div>
-
-<div class="small-12 columns">
-  <hr />
-  <p>Displaying <%= @images.count %> uncached images and <%= @cached.count %> cached. The library has <%= @count[:i] %> images, <%= @count[:c] %> of which are cached.</p>
 </div>
