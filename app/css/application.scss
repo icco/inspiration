@@ -16,17 +16,6 @@
   display: none;
 }
 
-/**** disabling Isotope CSS3 transitions ****/
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
-}
-
 .column, .columns {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
