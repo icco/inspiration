@@ -1,3 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#intro {
+  font-weight: 300;
+}
+
 .item {
   padding: 5px;
   border: 1px solid #CCC;
@@ -8,8 +18,18 @@
   border-color: #2BA6CB;
 }
 
-.item img, .item p {
-  width: 342px;
+.item {
+  p:first-of-type {
+    margin-top: 2px;
+  }
+
+  p {
+    margin-bottom: 2px;
+  }
+
+  img, p {
+    width: 342px;
+  }
 }
 
 .embed {
