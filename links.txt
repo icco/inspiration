@@ -1937,6 +1937,7 @@ http://dribbble.com/shots/1877692-Client-Logo-2
 http://dribbble.com/shots/1879280-The-James-Golick-Grant-for-Women-in-Computology
 http://dribbble.com/shots/1879316-NYT-Upshot
 http://dribbble.com/shots/1879377-Signs-of-the-Time-Printed
+http://dribbble.com/shots/1880649-Lost-in-the-Woods
 http://dribbble.com/shots/1882555-Begin-Transmission-Mix-DesignersMX
 http://dribbble.com/shots/1884783-Travel-Time
 http://dribbble.com/shots/1885316-AthleteReadiness
@@ -1953,9 +1954,11 @@ http://dribbble.com/shots/1886157-New-Business-Cards
 http://dribbble.com/shots/1886194-Grafaite-crown-logo-design
 http://dribbble.com/shots/1886249-Stories
 http://dribbble.com/shots/1886507-New-business-cards
+http://dribbble.com/shots/1887053-Take-me-to-the-bridge
 http://dribbble.com/shots/1887122-New-Thing-Coming
 http://dribbble.com/shots/1892122-Ironman
 http://dribbble.com/shots/1892662-Workspace
+http://dribbble.com/shots/1892790-Turtlepaw-Ltd
 http://dribbble.com/shots/1893055-Homebrew-Beer-Labels
 http://dribbble.com/shots/1894928-Beedrill-Pokemon-reimagined-as-company-logos
 http://dribbble.com/shots/1894987-Kudos
@@ -1999,8 +2002,32 @@ http://dribbble.com/shots/1901175-Chat-Animation
 http://dribbble.com/shots/1901268-Flat-Pop-up-Design
 http://dribbble.com/shots/1901595-Personal-Portfolio
 http://dribbble.com/shots/1901725-Personal-Site-Homepage-Concept
+http://dribbble.com/shots/1901779-86ad-Journal-Shot
+http://dribbble.com/shots/1901915-Cisco-Devices
 http://dribbble.com/shots/1902046-R-mark
+http://dribbble.com/shots/1903676-Cisco-Devices
+http://dribbble.com/shots/1903742-Bookish
+http://dribbble.com/shots/1904205-Bald-Knight
+http://dribbble.com/shots/1905018-Analytics-Dashboard
 http://dribbble.com/shots/190540-Colorful-Alfred
+http://dribbble.com/shots/1905861-Bullitt-review-page
+http://dribbble.com/shots/1906419-K-C-pt-IV
+http://dribbble.com/shots/1906663-Medical-Dashboard
+http://dribbble.com/shots/1906883-Invoice-Sherpa-Customer-Portal-Mailing
+http://dribbble.com/shots/1907030-Home-Logo-Design
+http://dribbble.com/shots/1907055-Take-The-Moment-Bestake
+http://dribbble.com/shots/1907086-Cosmo-UI-Kit-PSD
+http://dribbble.com/shots/1907146-Peep-Feed
+http://dribbble.com/shots/1907166-KMCC
+http://dribbble.com/shots/1907171-Pencil-Catch
+http://dribbble.com/shots/1907195-ON-Monogram
+http://dribbble.com/shots/1907197-M-E-Wedding-Set
+http://dribbble.com/shots/1907251--Form
+http://dribbble.com/shots/1907349-New-404-page
+http://dribbble.com/shots/1907417-Polar-Bear
+http://dribbble.com/shots/1907452-Statue-Of-Liberty-New-York
+http://dribbble.com/shots/1907514-Design-Services-Iconography
+http://dribbble.com/shots/1907639-Pixel-Slayer
 http://dribbble.com/shots/197780-Console
 http://dribbble.com/shots/231453-Bedini
 http://dribbble.com/shots/251025-Velocity-Stage-2
@@ -2392,6 +2419,7 @@ http://eyue.deviantart.com/art/Chinese-Monster-Zodiac-Sheep-70538810
 http://ezorenier.deviantart.com/art/minuet-441621532
 http://fabianmonk.deviantart.com/art/Seam-Ripper-16534640
 http://fabianmonk.deviantart.com/art/Storm-406611573
+http://fabio-barboni.deviantart.com/art/FEZ-Six-Cross-Scout-168160331
 http://fabiolagarza.deviantart.com/art/Doorway-to-Spring-308463177
 http://fableblades.deviantart.com/art/Elvish-Knives-by-Fable-Blades-380738330
 http://faboarts.deviantart.com/art/Un-Pinguino-47663685
@@ -2983,6 +3011,7 @@ http://justinchristenbery.deviantart.com/art/The-Abandonment-of-Doubt-482564806
 http://justinderosa.deviantart.com/art/Stay-For-Good-This-Time-187288981
 http://justinoaksford.deviantart.com/art/Seed-Environment-7-304333486
 http://juuhanna.deviantart.com/art/Spellweaver-395776645
+http://juuhanna.deviantart.com/art/The-Water-Bearer-170022367
 http://jxbp.deviantart.com/art/Misaka-Mikoto-389087954
 http://jyoujo.deviantart.com/art/Happily-never-after-209695760
 http://jyoujo.deviantart.com/art/Sometimes-the-Stars-210127422
@@ -3451,6 +3480,7 @@ http://merimask.deviantart.com/art/Fancy-Kitsune-Mask-Bronze-300383442
 http://merl1ncz.deviantart.com/art/Battleships-433327933
 http://meru-chan.deviantart.com/art/KH2-Roxas-X-Sora-31182963
 http://merydev.deviantart.com/art/Pure-for-AIMP3-255449523
+http://metaa.deviantart.com/art/Pisces-252061343
 http://metienne.deviantart.com/art/Bercy-and-Sherbrooke-287241154
 http://metindemiralay.deviantart.com/art/xcc-12-172008206
 http://mezamero.deviantart.com/art/Sun-262526631
@@ -3598,6 +3628,7 @@ http://nanomortis.deviantart.com/art/Innervision-498469910
 http://nanomortis.deviantart.com/art/Let-me-show-you-Secrets-507287673
 http://nanomortis.deviantart.com/art/Lonely-Lullaby-350655638
 http://nanomortis.deviantart.com/art/Love-Gone-Dry-412562694
+http://nanomortis.deviantart.com/art/Melody-Of-Agony-510410378
 http://nanomortis.deviantart.com/art/Rejected-Reflection-506055054
 http://nanomortis.deviantart.com/art/Ripping-422804094
 http://nanomortis.deviantart.com/art/Rockzilla-381666104
@@ -3878,6 +3909,7 @@ http://pascalcampion.deviantart.com/art/When-the-world-belongs-to-me-473158840
 http://pascalcampion.deviantart.com/art/White-cat-black-cat-508765727
 http://patbremer.deviantart.com/art/Maria-Bonita-419621611
 http://patriartis.deviantart.com/art/The-Journey-Continues-Even-Further-415147320
+http://patriciabrennan.deviantart.com/art/Aquarius-129098789
 http://patrickbrown.deviantart.com/art/The-Last-of-Us-Tutorial-446678035
 http://patrickbrown.deviantart.com/art/The-Witcher-3-483461541
 http://paulamcollins.deviantart.com/art/Insomnia-375430139
@@ -4214,6 +4246,7 @@ http://sandara.deviantart.com/art/river-282659319
 http://sandas04.deviantart.com/art/A-glas-of-wine-373096881
 http://sandrita-87.deviantart.com/art/Sunshowers-167469345
 http://sandrorybak.deviantart.com/art/Destiny-Fanart-416484025
+http://sandrorybak.deviantart.com/art/Swamp-Ghost-510355615
 http://sandrum.deviantart.com/art/Akatsuki-Gundam-s-Destiny-83366824
 http://sandrum.deviantart.com/art/Crossbone-X1-ID-43240180
 http://sandrum.deviantart.com/art/Custom-Hazel-Gundam-27339074
@@ -4245,6 +4278,7 @@ http://sashas.deviantart.com/art/Heart-70710898
 http://sashas.deviantart.com/art/Hector-Lineart-46025551
 http://sashas.deviantart.com/art/Phantasmagoria-65250573
 http://sashas.deviantart.com/art/Summer-Daze-180795959
+http://sashasinichka.deviantart.com/art/pisces-504671175
 http://satiiiva.deviantart.com/art/birdie-403676405
 http://saturdayx.deviantart.com/art/bittersweet-78167166
 http://saturdayx.deviantart.com/art/if-only-66766734
@@ -4517,6 +4551,7 @@ http://sudlice.deviantart.com/art/Golden-Hour-at-the-Station-413891399
 http://sudor.deviantart.com/art/THE-PIANIST-413562605
 http://suhona.deviantart.com/art/Danse-Macabre-275067609
 http://suihara.deviantart.com/art/Adventure-Time-320277664
+http://suihowl.deviantart.com/art/The-magician-504197703
 http://sumiobunnya.deviantart.com/art/Morning-shade-402293607
 http://sumirehaikuxna.deviantart.com/art/Arbiter-381637101
 http://sunflorii.deviantart.com/art/C-chibizoo-423178914
@@ -4782,8 +4817,10 @@ http://ukitakumuki.deviantart.com/art/WYVERN-GX2-16337017
 http://ulisesfarinas.deviantart.com/art/Stroll-on-Tatooine-197988030
 http://ungdi-sea.deviantart.com/art/We-ll-Loot-that-Mountain-Dungeon-Thing-Next-438178555
 http://uniquetechnique.deviantart.com/art/Possessed-Hannya-Mask-310228242
+http://unodu.deviantart.com/art/Aquarius-263778885
 http://unodu.deviantart.com/art/In-Clear-Waters-509616897
 http://unodu.deviantart.com/art/LostKids-contest-171598629
+http://unodu.deviantart.com/art/Pisces-271084003
 http://unodu.deviantart.com/art/The-Gentle-Wave-212579779
 http://up-ame.deviantart.com/art/AME-Gakuensai-Teaser-2-65677992
 http://uponthoufaircat.deviantart.com/art/The-Candy-Social-391626993
@@ -7365,6 +7402,7 @@ http://yufei.deviantart.com/art/Abandoned-house-379457736
 http://yugatakisu.deviantart.com/art/Campfire-Idk-509111867
 http://yukihomu.deviantart.com/art/MAGE-hunting-ground-350556674
 http://yukihomu.deviantart.com/art/morning-market-363984602
+http://yukosan2.deviantart.com/art/aquarius-193414770
 http://yuliaspesivtseva.deviantart.com/art/Mary-II-445772482
 http://yumedust.deviantart.com/art/12-Gauge-DevID-85624416
 http://yumedust.deviantart.com/art/Blackthorn-Morgana-412141836
