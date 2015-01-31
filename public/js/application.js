@@ -18,7 +18,7 @@ $(document).ready(function() {
     var url = $(embed_div).data('embed');
 
     count += 1;
-    var timeout = Math.min(60000 + count, count * count);
+    var timeout = Math.min(20000 + count, count * count);
     var dribbble_re = /http\:\/\/dribbble\.com\/shots\//;
     var deviant_re = /deviantart\.com/;
     var flickr_re = /www\.flickr\.com/;
@@ -76,7 +76,7 @@ $(document).ready(function() {
         console.log("Unkown: " + url);
       }
     }, timeout);
-    console.log(timeout);
+    console.log(timeout / 1000.0);
 
     requests.push(request);
   });

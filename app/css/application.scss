@@ -1,3 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px;
+}
+
+#intro {
+  font-weight: 300;
+}
+
 .item {
   padding: 5px;
   border: 1px solid #CCC;
@@ -8,26 +19,32 @@
   border-color: #2BA6CB;
 }
 
-.item img {
-  width: 300px;
+.item {
+  p:first-of-type {
+    margin-top: 2px;
+  }
+
+  p {
+    margin-bottom: 2px;
+  }
+
+  img, p {
+    width: 342px;
+  }
 }
 
 .embed {
   display: none;
 }
 
-/**** disabling Isotope CSS3 transitions ****/
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
-}
-
 .column, .columns {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+#about {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: justify;
 }

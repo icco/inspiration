@@ -1,9 +1,7 @@
 Inspiration::App.controllers  do
   layout :main
 
-  get :about, :cache => true do
-    expires_in 3600 # 1 hr
-
+  get :about do
     idb = ImageDb.new
     @images = idb.images
     @text = partial :about
