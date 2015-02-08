@@ -2044,6 +2044,7 @@ http://dribbble.com/shots/1907417-Polar-Bear
 http://dribbble.com/shots/1907452-Statue-Of-Liberty-New-York
 http://dribbble.com/shots/1907514-Design-Services-Iconography
 http://dribbble.com/shots/1907639-Pixel-Slayer
+http://dribbble.com/shots/1917390-License-to-Kale
 http://dribbble.com/shots/197780-Console
 http://dribbble.com/shots/231453-Bedini
 http://dribbble.com/shots/251025-Velocity-Stage-2
@@ -5710,6 +5711,7 @@ http://www.flickr.com/photos/34085095@N07/9119217854
 http://www.flickr.com/photos/34086724@N02/5697500846
 http://www.flickr.com/photos/34086724@N02/6071952419
 http://www.flickr.com/photos/34114814@N00/10185211315
+http://www.flickr.com/photos/34114814@N00/14737735518
 http://www.flickr.com/photos/34114814@N00/9032778538
 http://www.flickr.com/photos/34114814@N00/9212705747
 http://www.flickr.com/photos/34178660@N03/15437701386
