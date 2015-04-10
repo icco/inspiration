@@ -55,12 +55,12 @@ http://acayth.deviantart.com/art/Young-companionship-Sketch-456149913
 http://acidlullaby.deviantart.com/art/Kana-39273620
 http://aconnoll.deviantart.com/art/Tough-Runt-457176085
 http://acrymat.deviantart.com/art/Teatime-473303653
+http://adam-varga.deviantart.com/art/The-Monorail-Station-377849918
 http://adamburn.deviantart.com/art/Armada-Wars-Steal-from-the-Devil-413729518
 http://adamburn.deviantart.com/art/Edge-of-Solace-447501923
 http://adelhaid.deviantart.com/art/Elizabeth-449073821
 http://adella.deviantart.com/art/Sleeping-Beauty-39322136
 http://adella.deviantart.com/art/The-Zelda-Project-Zoras-River-174000820
-http://adimono.deviantart.com/art/The-Monorail-Station-377849918
 http://adlovett.deviantart.com/art/Mulan-459409857
 http://adlovett.deviantart.com/art/Self-Portrait-412684377
 http://adn-pera.deviantart.com/art/TRASLASIERRA-310182699
@@ -279,8 +279,6 @@ http://aracton.deviantart.com/art/Dragon-Age-Inquisition-alternative-449341260
 http://arashicat.deviantart.com/art/Sherlock-and-John-are-one-418959639
 http://arbebuk.deviantart.com/art/melting-point-286514763
 http://arbebuk.deviantart.com/art/unburied-past-193665886
-http://arbitrary-means.deviantart.com/art/Keep-Moving-Forward-512262468
-http://arbitrary-means.deviantart.com/art/You-Repulse-Me-the-least-511231353
 http://arcipello.deviantart.com/art/Her-Silent-Silhouette-4405722
 http://arehandora.deviantart.com/art/L-O-V-E-49123150
 http://arehandora.deviantart.com/art/Ouran-Koukou-Host-Club-54259903
@@ -486,7 +484,6 @@ http://benhickling.deviantart.com/art/All-Arwings-Report-280166641
 http://benlo.deviantart.com/art/subway-girl-77080108
 http://benoitpaille.deviantart.com/art/Portrait-276441796
 http://benqwek.deviantart.com/art/pepper-cutieland-75130999
-http://bentomlin.deviantart.com/art/Porfolio-Design-Contest-47958314
 http://berf.deviantart.com/art/Dia-de-los-Muertos-393601999
 http://berkozturk.deviantart.com/art/time-497547038
 http://beroberob.deviantart.com/art/Optimus-family-435290419
@@ -4698,6 +4695,8 @@ http://snikstencilstuff.deviantart.com/art/All-we-are-is-falling-407176232
 http://snow-chan.deviantart.com/art/Chrno-Crusade-23225847
 http://snowskadi.deviantart.com/art/Islands-374389977
 http://snowskadi.deviantart.com/art/White-Tower-69872081
+http://socha-nyx.deviantart.com/art/Keep-Moving-Forward-512262468
+http://socha-nyx.deviantart.com/art/You-Repulse-Me-the-least-511231353
 http://soft-h.deviantart.com/art/f65-418528716
 http://soft-h.deviantart.com/art/stalker-352440847
 http://soft-h.deviantart.com/art/vampires4-353548999
@@ -5740,6 +5739,7 @@ http://www.flickr.com/photos/25081250@N07/2502963121
 http://www.flickr.com/photos/25102254@N03/14279826251
 http://www.flickr.com/photos/25102254@N03/3919902896
 http://www.flickr.com/photos/25125125@N00/3954675439
+http://www.flickr.com/photos/25142355@N03/17100716302
 http://www.flickr.com/photos/25186605@N04/3589652595
 http://www.flickr.com/photos/25203582@N05/3848922583
 http://www.flickr.com/photos/25244148@N08/5400073635
@@ -6117,6 +6117,7 @@ http://www.flickr.com/photos/38327218@N05/5072059208
 http://www.flickr.com/photos/38349570@N04/14817600674
 http://www.flickr.com/photos/38462165@N05/5895809050
 http://www.flickr.com/photos/38593652@N03/10337417923
+http://www.flickr.com/photos/38614216@N08/17102330275
 http://www.flickr.com/photos/38665207@N07/15165480951
 http://www.flickr.com/photos/38687875@N00/3274000026
 http://www.flickr.com/photos/38687875@N00/3405752889
@@ -6834,6 +6835,7 @@ http://www.flickr.com/photos/60475145@N00/3891399062
 http://www.flickr.com/photos/60475224@N05/9655433834
 http://www.flickr.com/photos/60496694@N04/8762280979
 http://www.flickr.com/photos/60551467@N00/251912067
+http://www.flickr.com/photos/60606086@N07/16479914654
 http://www.flickr.com/photos/60717073@N00/3808248315
 http://www.flickr.com/photos/60717073@N00/4756137327
 http://www.flickr.com/photos/60781728@N00/11034216104
