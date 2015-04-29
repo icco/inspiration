@@ -1343,6 +1343,7 @@ http://dribbble.com/shots/1320336-Puffin-Illustration
 http://dribbble.com/shots/1320368-More-wasabi-please
 http://dribbble.com/shots/1321353-Mark-for-logo
 http://dribbble.com/shots/1324938-Drink-Drank-Drunk
+http://dribbble.com/shots/132547-Project-Senbazuru
 http://dribbble.com/shots/1325747-Day-Eight-Mount-McKinley
 http://dribbble.com/shots/1326440-Come-and-play-animated
 http://dribbble.com/shots/1326945-Lighter-Interface
@@ -2055,7 +2056,6 @@ http://dribbble.com/shots/1900846-Paragon-Packaging
 http://dribbble.com/shots/1900902-Collapsible-Nav-UI
 http://dribbble.com/shots/1900941--Writer-mobile-version
 http://dribbble.com/shots/1900973-Fire-icon
-http://dribbble.com/shots/1900989-iOS-Flow-Interactions
 http://dribbble.com/shots/1901175-Chat-Animation
 http://dribbble.com/shots/1901268-Flat-Pop-up-Design
 http://dribbble.com/shots/1901595-Personal-Portfolio
@@ -2134,10 +2134,21 @@ http://dribbble.com/shots/2017982-NY-Decks-Complete
 http://dribbble.com/shots/2019651-Unused-Icons
 http://dribbble.com/shots/2020084-Your-Favorite-Nonprofits
 http://dribbble.com/shots/2023006-Domains
+http://dribbble.com/shots/2028912-Rjday-Landing-page-design
 http://dribbble.com/shots/2029996-Google-Ventures-Embroidered-Badge
 http://dribbble.com/shots/2030828-Goodsticker
+http://dribbble.com/shots/2032257-Landing-page-upload
 http://dribbble.com/shots/2033406-Activity-App
+http://dribbble.com/shots/2034557-UI-Designer-Portfolio-Concept
 http://dribbble.com/shots/2035680-Thor-no-texture
+http://dribbble.com/shots/2036097-The-Outdoors
+http://dribbble.com/shots/2038167-Protectwise-MOAR
+http://dribbble.com/shots/2039188-Paris-Office
+http://dribbble.com/shots/2039473-Superfly
+http://dribbble.com/shots/2039634-Flags-of-Harmony
+http://dribbble.com/shots/2039987-Campaign-Wizard
+http://dribbble.com/shots/2040076-Typefight
+http://dribbble.com/shots/2040375-Protectwise-It-s-alive
 http://dribbble.com/shots/231453-Bedini
 http://dribbble.com/shots/251025-Velocity-Stage-2
 http://dribbble.com/shots/251747--A-Logo
@@ -3829,6 +3840,7 @@ http://nanomortis.deviantart.com/art/Blooming-Flames-486138273
 http://nanomortis.deviantart.com/art/BreakDown-304074863
 http://nanomortis.deviantart.com/art/Carry-You-280690978
 http://nanomortis.deviantart.com/art/Deep-Field-509565352
+http://nanomortis.deviantart.com/art/Deja-Vu-529511323
 http://nanomortis.deviantart.com/art/Down-The-Trap-Hole-340696773
 http://nanomortis.deviantart.com/art/Eye-for-an-Eye-459150941
 http://nanomortis.deviantart.com/art/Fed-Up-497123332
