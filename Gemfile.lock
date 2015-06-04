@@ -17,7 +17,7 @@ GEM
     eventmachine (1.0.7)
     excon (0.45.3)
     flickraw (0.9.8)
-    heroku (3.37.3)
+    heroku (3.37.6)
       heroku-api (>= 0.3.19)
       launchy (>= 0.3.2)
       multi_json (>= 1.10)
@@ -36,7 +36,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
-    json (1.8.2)
+    json (1.8.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     mail (2.5.4)
@@ -139,3 +139,6 @@ DEPENDENCIES
   shotgun
   swish
   thin
+
+BUNDLED WITH
+   1.10.2
