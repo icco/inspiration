@@ -2214,7 +2214,13 @@ http://dribbble.com/shots/2085628-Coming-Soon
 http://dribbble.com/shots/2085899-Newsletter
 http://dribbble.com/shots/2087815-React-Icons-Live-Demo
 http://dribbble.com/shots/2088625-Element-Skateboard-Evan-Smith-deck
+http://dribbble.com/shots/2089098-Horned-Frog
+http://dribbble.com/shots/2089226-Mad-About-Monkeys-Competition-2
 http://dribbble.com/shots/2090446-Element-Skateboard-Nick-Garcia-deck
+http://dribbble.com/shots/2091865-Interests
+http://dribbble.com/shots/2093785-Cheers-It-s-a-Cocktail-Hour-Poster
+http://dribbble.com/shots/2094092-Uber-Brand-Guide
+http://dribbble.com/shots/2094727-Personal-Website
 http://dribbble.com/shots/231453-Bedini
 http://dribbble.com/shots/251025-Velocity-Stage-2
 http://dribbble.com/shots/251747--A-Logo
@@ -2724,6 +2730,7 @@ http://fredrin.deviantart.com/art/Megumi-Stood-Up-497235052
 http://fredrin.deviantart.com/art/Meimi-Magical-Mysterious-Memories-368586662
 http://fredrin.deviantart.com/art/NekoMiho-and-KuroNekoPiro-533019952
 http://fredrin.deviantart.com/art/Ping-RWR-UP-496338729
+http://fredrin.deviantart.com/art/Pirogoeth-Hunting-In-The-Void-536787695
 http://fredrin.deviantart.com/art/UpAbove-Station-FarSystem-Captain-Miho-367224357
 http://fredrin.deviantart.com/art/Warm-Foxgirl-Cuddling-in-Leaves-488913560
 http://fredrin.deviantart.com/art/all-your-worlds-belong-to-me-173166672
@@ -3951,6 +3958,7 @@ http://nanomortis.deviantart.com/art/Rejected-Reflection-506055054
 http://nanomortis.deviantart.com/art/Ripping-422804094
 http://nanomortis.deviantart.com/art/Rockzilla-381666104
 http://nanomortis.deviantart.com/art/Savior-342840343
+http://nanomortis.deviantart.com/art/Stranger-of-Trust-537001829
 http://nanomortis.deviantart.com/art/Teardrop-480623104
 http://nanomortis.deviantart.com/art/Until-Springdom-Come-493133329
 http://nanomortis.deviantart.com/art/What-lurks-underneath-the-River-486803175
@@ -4144,6 +4152,7 @@ http://pacman23.deviantart.com/art/Akira-Kazama-491668775
 http://pacman23.deviantart.com/art/Antler-Girl-Wallpaper-401499841
 http://pacman23.deviantart.com/art/Astrogirl-462958539
 http://pacman23.deviantart.com/art/Astrogirl-Sci-fi-Helmet-492578162
+http://pacman23.deviantart.com/art/Bat-Gurrls-537233895
 http://pacman23.deviantart.com/art/Black-Science-Cover-Colors-456097503
 http://pacman23.deviantart.com/art/Bonsai-Helmet-323733240
 http://pacman23.deviantart.com/art/Captain-America-and-The-Mighty-Avengers-Cover-511915654
@@ -5781,7 +5790,14 @@ http://www.flickr.com/photos/23659159@N00/16113381026
 http://www.flickr.com/photos/23659159@N00/16138444152
 http://www.flickr.com/photos/23659159@N00/17781339102
 http://www.flickr.com/photos/23659159@N00/17781429542
+http://www.flickr.com/photos/23659159@N00/17966712964
+http://www.flickr.com/photos/23659159@N00/17966740794
+http://www.flickr.com/photos/23659159@N00/17968714713
 http://www.flickr.com/photos/23659159@N00/18322139335
+http://www.flickr.com/photos/23659159@N00/18401581648
+http://www.flickr.com/photos/23659159@N00/18401595648
+http://www.flickr.com/photos/23659159@N00/18401611558
+http://www.flickr.com/photos/23659159@N00/18562999256
 http://www.flickr.com/photos/23659159@N00/1976678758
 http://www.flickr.com/photos/23659159@N00/2096992472
 http://www.flickr.com/photos/23659159@N00/2435215483
@@ -6170,10 +6186,6 @@ http://www.flickr.com/photos/33953253@N00/5710939909
 http://www.flickr.com/photos/34085095@N07/9119217854
 http://www.flickr.com/photos/34086724@N02/5697500846
 http://www.flickr.com/photos/34086724@N02/6071952419
-http://www.flickr.com/photos/34114814@N00/10185211315
-http://www.flickr.com/photos/34114814@N00/14737735518
-http://www.flickr.com/photos/34114814@N00/9032778538
-http://www.flickr.com/photos/34114814@N00/9212705747
 http://www.flickr.com/photos/34178660@N03/15437701386
 http://www.flickr.com/photos/34178660@N03/15580215686
 http://www.flickr.com/photos/34178660@N03/3739223487
