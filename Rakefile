@@ -1,6 +1,3 @@
-# RAKE FILE for those tasks!
-#
-
 require 'bundler/setup'
 require 'padrino-core/cli/rake'
 
