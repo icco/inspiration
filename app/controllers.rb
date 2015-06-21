@@ -14,7 +14,7 @@ Inspiration::App.controllers  do
 
   get :index do
     @idb = ImageDb.new
-    @images = @idb.images.to_a.sample count
+    @images = @idb.images.to_a.sample(Inspiration::PER_PAGE)
     @cached = []
     @count = { i: @idb.images.count, c: 0 }
 
