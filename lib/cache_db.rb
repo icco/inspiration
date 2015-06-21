@@ -14,6 +14,9 @@ class CacheDB
 
     case url
     when dribbble_re
+      # Dribbble does not like us, go slow
+      sleep 1
+
       oembed_url = "https://api.dribbble.com/shots/#{url.gsub(dribbble_re, "")}"
       # p oembed_url
 
