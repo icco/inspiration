@@ -62,7 +62,7 @@ class CacheDB
       end
 
       if !data["thumbnail_url"]
-        logger.error "No Tumbnail: #{oembed_url}"
+        logger.error "No Tumbnail for #{url} at #{oembed_url}"
         return
       end
 
