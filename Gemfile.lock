@@ -16,6 +16,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.7)
     excon (0.45.3)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     flickraw (0.9.8)
     heroku (3.38.3)
       heroku-api (>= 0.3.19)
@@ -47,6 +49,7 @@ GEM
     moneta (0.7.20)
     multi_json (1.11.1)
     multi_xml (0.5.5)
+    multipart-post (2.0.0)
     netrc (0.10.3)
     oj (2.12.9)
     padrino (0.12.5)
@@ -129,6 +132,7 @@ PLATFORMS
 
 DEPENDENCIES
   erubis (~> 2.7)
+  faraday
   flickraw
   heroku
   oj

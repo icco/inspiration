@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.1'
 
 gem 'erubis', '~> 2.7'
+gem 'faraday'
 gem 'flickraw'
 gem 'oj'
 gem 'padrino'
