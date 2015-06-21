@@ -14,7 +14,8 @@ class CacheDB
 
     case url
     when dribbble_re
-      oembed_url = 'http://api.dribbble.com/shots/' + url.replace(dribbble_re, "")
+      oembed_url = "http://api.dribbble.com/shots/#{url.gsub(dribbble_re, "")}"
+      p oembed_url
 
       # get oembed_url
       # title = '"' + images.title + '" by ' + images.player.name
@@ -24,12 +25,13 @@ class CacheDB
       #   image_link = images.image_teaser_url
       # }
     when deviant_re
-      # oembed_url = 'http://backend.deviantart.com/oembed?url=' + encodeURIComponent(url) + '&format=jsonp&callback=?'
-      # title = '"' + images.title + '" by ' + images.author_name
-      # images.thumbnail_url
+      oembed_url = "http://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=jsonp"
+      p oembed_url
     when flickr_re
-      # oembed_url = 'http://www.flickr.com/services/oembed?url=' + encodeURIComponent(url) + '&format=json&&maxwidth=300&jsoncallback=?'
-      # var title = '"' + images.title + '" by ' + images.author_name
+      oembed_url = "http://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
+      p oembed_url
+
+      # title = '"' + images.title + '" by ' + images.author_name
       # image_url = images.thumbnail_url.replace(/\_s\./, "_n.")
     else
       logger.error "No idea what url this is: #{url}"
