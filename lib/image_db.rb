@@ -1,39 +1,15 @@
 class ImageDb
   def initialize
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map {|l| l.strip })
-
-    cache_contents = File.read(Inspiration::CACHE_FILE)
-    begin
-      if not cache_contents.empty?
-        @cache = JSON.parse(cache_contents).delete_if {|a,b| a.empty? || b.empty? }
-        write_cache
-      else
-        @cache = {}
-      end
-    rescue
-      @cache = {}
-    end
   end
 
   def images
     return @images.to_a
   end
 
-  # Returns an array with two entries. Index 0 is an array of images. Index 1
-  # is an array of images which are cached.
-  def sample count
-    #images = @images.to_a.delete_if {|i| cached? i }
-    #cached = @images.to_a.delete_if {|i| !cached? i }
-
-    #cached = cached.sample([count/2, cached.size].min)
-    #images = cached.sample([count/2, images.size, count-cached.size].min)
-
-    i = @images.to_a.sample count
-
-    return [i, []]
-  end
-
   def update
+
+    # DeviantArt
     rss_url = 'http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation'
     open(rss_url) do |rss|
       feed = RSS::Parser.parse(rss)
@@ -42,12 +18,15 @@ class ImageDb
       end
     end
 
+    # Dribbble
     data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/icco/shots/likes", :query => {:per_page => 50}))
     data.map {|s| s.url }.each {|l| @images.add l }
 
+    # Flickr
     favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00', :extras => 'url_n').map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
     favorites.each {|l| @images.add l }
 
+    # Write all image links to disk
     all_images = @images.delete_if {|i| i.empty? }.to_a.sort
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(all_images.to_a.join("\n")) }
 
@@ -110,27 +89,5 @@ class ImageDb
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
 
     return true
-  end
-
-  def get_image favorite_link
-    return @cache[favorite_link]
-  end
-
-  def cached? link
-    return (not @cache[link].nil?)
-  end
-
-  def cache image_link, favorite_link
-    if @images.include? favorite_link
-      @cache[favorite_link] = image_link
-      write_cache
-      return true
-    end
-
-    return false
-  end
-
-  def write_cache
-    File.open(Inspiration::CACHE_FILE, 'w') {|f| f << JSON.pretty_generate(@cache) }
   end
 end
