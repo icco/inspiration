@@ -8,6 +8,11 @@ class CacheDB
   end
 
   def cache url
+
+    if !needs_update? url
+      return true
+    end
+
     dribbble_re = %r{http://dribbble\.com/shots/}
     deviant_re = %r{deviantart\.com}
     flickr_re = %r{www\.flickr\.com}
@@ -71,7 +76,7 @@ class CacheDB
 
       image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
-      hash = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}}
+      hash = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}, modified: Time.now}
       @cache[url] = hash
     else
       logger.error "No idea what url this is: #{url}"
@@ -80,6 +85,13 @@ class CacheDB
 
   def get url
     return @cache[url]
+  end
+
+  def needs_update? url
+    data = get url
+
+    # ~10 days
+    return data.nil? or data[:modified].nil? or (Time.now - data[:modified] > 860000)
   end
 
   def write
