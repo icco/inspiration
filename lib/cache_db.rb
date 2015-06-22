@@ -95,9 +95,9 @@ class CacheDB
   def needs_update? url
     data = self.get url
 
-    p data
-
     return true if data.nil?
+
+    p data[:modified]
     return true if data[:modified].nil?
 
     # ~10 days
