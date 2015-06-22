@@ -4,6 +4,7 @@
 class CacheDB
 
   def initialize
+    Oj.default_options = {:mode => :compat }
     @cache_file_name = Inspiration::CACHE_FILE
     @keyfilter = /[\/:\.]/
   end
@@ -97,11 +98,11 @@ class CacheDB
 
     return true if data.nil?
 
-    p data[":modified"]
-    return true if data[":modified"].nil?
+    return true if data["modified"].nil?
 
     # ~10 days
-    p (Time.now - data[":modified"])
-    return (Time.now - data[":modified"]) > 860000
+    time = Time.parse(data["modified"])
+    p (Time.now - time)
+    return (Time.now - time) > 860000
   end
 end
