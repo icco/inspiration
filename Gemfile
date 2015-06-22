@@ -10,7 +10,7 @@ gem 'padrino'
 gem 'rake'
 gem 'redcarpet'
 gem 'sass'
-gem 'swish'
+gem 'swish', :git => 'https://github.com/icco/swish'
 gem 'thin'
 
 # For dev

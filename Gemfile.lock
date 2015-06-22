@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/icco/swish
+  revision: e5e3e0718fd362a1755144e99cccb0a42052b432
+  specs:
+    swish (0.8.1)
+      crack (>= 0.1.8)
+      httparty (>= 0.6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -106,9 +114,6 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
-    swish (0.8.1)
-      crack (>= 0.1.8)
-      httparty (>= 0.6.1)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
@@ -141,7 +146,7 @@ DEPENDENCIES
   redcarpet
   sass
   shotgun
-  swish
+  swish!
   thin
 
 BUNDLED WITH
