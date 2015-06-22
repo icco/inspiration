@@ -97,11 +97,11 @@ class CacheDB
 
     return true if data.nil?
 
-    p data[:modified]
-    return true if data[:modified].nil?
+    p data[":modified"]
+    return true if data[":modified"].nil?
 
     # ~10 days
-    p (Time.now - data[:modified])
-    return (Time.now - data[:modified]) > 860000
+    p (Time.now - data[":modified"])
+    return (Time.now - data[":modified"]) > 860000
   end
 end
