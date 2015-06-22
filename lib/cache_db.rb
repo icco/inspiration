@@ -23,8 +23,6 @@ class CacheDB
       sleep 1
 
       oembed_url = "https://api.dribbble.com/shots/#{url.gsub(dribbble_re, "")}"
-      # p oembed_url
-
       resp = Faraday.get oembed_url
       if resp.status == 200
         data = JSON.parse(resp.body)
@@ -40,12 +38,10 @@ class CacheDB
         image_link = data["image_teaser_url"]
       end
 
-      hash = {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
+      hash = {title: title, image: image_link, size: {width: data["width"], height: data["height"]}, modified: Time.now}
       @cache[url] = hash
     when deviant_re
       oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
-      # p oembed_url
-
       resp = Faraday.get oembed_url
       if resp.status == 200
         data = JSON.parse(resp.body)
@@ -55,12 +51,10 @@ class CacheDB
       end
 
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
-      hash = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}}
+      hash = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}, modified: Time.now}
       @cache[url] = hash
     when flickr_re
       oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
-      # p oembed_url
-      #
       resp = Faraday.get oembed_url
       if resp.status == 200
         data = JSON.parse(resp.body)
