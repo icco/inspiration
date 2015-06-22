@@ -17,6 +17,7 @@ task :build_cache => :environment do
 
   idb.images.to_a.shuffle.each do |i|
     cdb.cache i
+    cdb.write
   end
 
   cdb.write
