@@ -4,7 +4,8 @@
 class CacheDB
 
   def initialize
-    @cache = JSON.parse(File.read(Inspiration::CACHE_FILE))
+    @cache_file_name = Inspiration::CACHE_FILE
+    @keyfilter = /[\/:\.]/
   end
 
   def cache url
@@ -39,7 +40,7 @@ class CacheDB
       end
 
       hash = {title: title, image: image_link, size: {width: data["width"], height: data["height"]}, modified: Time.now}
-      @cache[url] = hash
+      set url, hash
     when deviant_re
       oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
       resp = Faraday.get oembed_url
@@ -52,7 +53,7 @@ class CacheDB
 
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
       hash = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}, modified: Time.now}
-      @cache[url] = hash
+      set url, hash
     when flickr_re
       oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
       resp = Faraday.get oembed_url
@@ -71,28 +72,36 @@ class CacheDB
       image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
       hash = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}, modified: Time.now}
-      @cache[url] = hash
+      set url, hash
     else
       logger.error "No idea what url this is: #{url}"
     end
   end
 
   def get url
-    return @cache[url]
+    key = url.gsub(@keyfilter, '')
+    return Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
+  end
+
+  def set url, data
+    key = url.gsub(@keyfilter, '')
+    file = Oj.load_file(@cache_file_name)
+    file[key] = data
+    Oj.to_file(@cache_file_name, file, indent: 2)
+
+    return true
   end
 
   def needs_update? url
-    data = get url
+    data = self.get url
+
+    p data
 
     return true if data.nil?
-
     return true if data[:modified].nil?
 
     # ~10 days
+    p (Time.now - data[:modified])
     return (Time.now - data[:modified]) > 860000
-  end
-
-  def write
-    File.open(Inspiration::CACHE_FILE, 'w') {|f| f << JSON.pretty_generate(@cache) }
   end
 end
