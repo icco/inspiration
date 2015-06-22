@@ -72,7 +72,6 @@ class CacheDB
       image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
       hash = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}}
-      p hash
       @cache[url] = hash
     else
       logger.error "No idea what url this is: #{url}"
