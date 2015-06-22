@@ -102,7 +102,6 @@ class CacheDB
 
     # ~10 days
     time = Time.parse(data["modified"])
-    p (Time.now - time)
     return (Time.now - time) > 860000
   end
 end
