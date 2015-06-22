@@ -90,8 +90,12 @@ class CacheDB
   def needs_update? url
     data = get url
 
+    return true if data.nil?
+
+    return true if data[:modified].nil?
+
     # ~10 days
-    return data.nil? or data[:modified].nil? or (Time.now - data[:modified] > 860000)
+    return (Time.now - data[:modified]) > 860000
   end
 
   def write
