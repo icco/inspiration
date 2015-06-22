@@ -22,3 +22,15 @@ task :build_cache => :environment do
 
   cdb.write
 end
+
+desc "Try to update 10 images in the cache."
+task :build_cache_random => :environment do
+  cdb = CacheDB.new
+  idb = ImageDb.new
+
+  idb.images.to_a.sample(10).each do |i|
+    cdb.cache i
+  end
+
+  cdb.write
+end
