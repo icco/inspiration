@@ -1,58 +1,52 @@
 Inspiration::App.controllers  do
   layout :main
 
+  COUNT = 400
+
   get :about do
-    idb = ImageDb.new
+    idb = ImageDB.new
     @images = idb.images
     @text = partial :about
-
-    @stats = Hash.new(0)
-    @stats = @stats.to_a.sort {|a,b| b[1] <=> a[1] }
 
     render :about
   end
 
   get :index do
-    @idb = ImageDb.new
-    @images, @cached = @idb.sample(Inspiration::PER_PAGE)
-    @count = { i: @idb.images.count, c: @idb.images.to_a.delete_if {|i| !@idb.cached? i }.count }
+    @images = COUNT
+    @idb = ImageDB.new
+    @library = @idb.images.count
 
     render :index
   end
 
-  get "/all.json" do
-    idb = ImageDb.new
-    @images = idb.images
+  get "/cache.json" do
+    @count = COUNT
+    @count = params["count"].to_i if params["count"]
+
+    @idb = ImageDB.new
+    @cdb = CacheDB.new
+    @images = @idb.sample(@count).map {|u| @cdb.get u }.delete_if {|d| d.nil? or d["image"].nil? }
 
     content_type :json
     @images.to_json
   end
 
-  get :all do
-    @idb = ImageDb.new
-    @images = @idb.images.shuffle
-    @cached = []
-    @count = { i: @idb.images.count, c: @idb.images.to_a.delete_if {|i| !@idb.cached? i }.count }
+  get "/sample.json" do
+    @count = COUNT
+    @count = params["count"].to_i if params["count"]
 
-    render :index
+    @cdb = CacheDB.new
+    @images = @cdb.sample(@count).delete_if {|d| d.nil? or d["image"].nil? }
+
+    content_type :json
+    @images.to_json
   end
 
-  post :cache do
-    idb = ImageDb.new
-    ret = false
+  get "/all.json" do
+    @idb = ImageDB.new
+    @cdb = CacheDB.new
 
-    if params[:favorite] and params[:image]
-      ret = idb.cache(params[:favorite], params[:image])
-    elsif params[:pairs]
-      ret = []
-      params[:pairs].each do |key, pair|
-        src, img = pair
-        ret.push idb.cache(src, img)
-      end
-    end
-
-    status 400 if (not ret) or (ret and ret.include? false)
     content_type :json
-    ret.to_json
+    @idb.images.to_json
   end
 end

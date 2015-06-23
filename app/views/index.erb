@@ -2,16 +2,7 @@
   <div class="item isotope-item" id="intro">
     <p>Nat's Inspiration page.</p>
     <p><a href="/about">About</a>.</p>
-    <p>Fetching <%= @images.count %> random uncached images and <%= @cached.count %> cached from the library. The library has <%= @count[:i] %> images, <%= @count[:c] %> of which are cached.</p>
+    <p>Fetching <%= @images %> random images from the library. The library has <%= @library %> images.</p>
     <p><small>Refresh for more.</small></p>
   </div>
-  <% @images.each do |url| %>
-    <div class="embed uncached" data-embed="<%= url %>"></div>
-  <% end %>
-
-  <% @cached.each do |url| %>
-    <div class="item">
-      <a href="<%= url %>"><img src="<%= @idb.get_image url %>" /></a>
-    </div>
-  <% end %>
 </div>

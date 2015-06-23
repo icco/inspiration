@@ -5,6 +5,8 @@ module Inspiration
     register Padrino::Mailer
     register Padrino::Helpers
 
+    use Rack::Deflater
+
     enable :sessions
 
     ##
