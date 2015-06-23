@@ -10,10 +10,11 @@ class CacheDB
   end
 
   def cache url
-
     if !needs_update? url
       return true
     end
+
+    hash = {url: url, modified: Time.now}
 
     dribbble_re = %r{http://dribbble\.com/shots/}
     deviant_re = %r{deviantart\.com}
@@ -40,8 +41,7 @@ class CacheDB
         image_link = data["image_teaser_url"]
       end
 
-      hash = {title: title, image: image_link, size: {width: data["width"], height: data["height"]}, modified: Time.now}
-      set url, hash
+      hash.merge! {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
     when deviant_re
       oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
       resp = Faraday.get oembed_url
@@ -53,8 +53,7 @@ class CacheDB
       end
 
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
-      hash = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}, modified: Time.now}
-      set url, hash
+      hash.merge! {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
     when flickr_re
       oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
       resp = Faraday.get oembed_url
@@ -72,11 +71,12 @@ class CacheDB
 
       image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
-      hash = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}, modified: Time.now}
-      set url, hash
+      hash.merge! {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
     else
       logger.error "No idea what url this is: #{url}"
     end
+
+    return set url, hash
   end
 
   def get url
