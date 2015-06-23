@@ -1,4 +1,4 @@
-class ImageDb
+class ImageDB
   def initialize
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map {|l| l.strip })
   end

@@ -1,40 +1,32 @@
 Inspiration::App.controllers  do
   layout :main
 
+  COUNT = 400
+
   get :about do
-    idb = ImageDb.new
+    idb = ImageDB.new
     @images = idb.images
     @text = partial :about
-
-    @stats = Hash.new(0)
-    @stats = @stats.to_a.sort {|a,b| b[1] <=> a[1] }
 
     render :about
   end
 
   get :index do
-    @idb = ImageDb.new
-    @images = @idb.images.to_a.sample(Inspiration::PER_PAGE)
-    @cached = []
-    @count = { i: @idb.images.count, c: 0 }
+    @images = COUNT
+    @idb = ImageDB.new
+    @library = @idb.images.count
 
     render :index
   end
 
-  get "/all.json" do
-    idb = ImageDb.new
-    @images = idb.images
+  get "/cache.json" do
+    @count = params["count"].to_i || COUNT
+
+    @idb = ImageDB.new
+    @cdb = CacheDB.new
+    @images = @idb.sample(@count).map {|u| @cdb.get u }
 
     content_type :json
     @images.to_json
-  end
-
-  get :all do
-    @idb = ImageDb.new
-    @images = @idb.images.shuffle
-    @cached = []
-    @count = { i: @idb.images.count, c: 0 }
-
-    render :index
   end
 end
