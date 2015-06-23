@@ -7,6 +7,10 @@ class ImageDB
     return @images.to_a
   end
 
+  def sample count
+    return self.images.sample count
+  end
+
   def update
 
     # DeviantArt

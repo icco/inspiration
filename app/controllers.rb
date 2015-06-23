@@ -20,7 +20,8 @@ Inspiration::App.controllers  do
   end
 
   get "/cache.json" do
-    @count = params["count"].to_i || COUNT
+    @count = COUNT
+    @count = params["count"].to_i if params["count"]
 
     @idb = ImageDB.new
     @cdb = CacheDB.new
@@ -28,5 +29,13 @@ Inspiration::App.controllers  do
 
     content_type :json
     @images.to_json
+  end
+
+  get "/all.json" do
+    @idb = ImageDB.new
+    @cdb = CacheDB.new
+
+    content_type :json
+    @idb.images.to_json
   end
 end
