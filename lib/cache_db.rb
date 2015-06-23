@@ -9,6 +9,11 @@ class CacheDB
     @keyfilter = /[\/:\.]/
   end
 
+  def sample count
+    file = Oj.load_file(@cache_file_name)
+    return file.values.sample(count)
+  end
+
   def cache url
     if !needs_update? url
       return true

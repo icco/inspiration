@@ -10,7 +10,7 @@ $(document).ready(function() {
     beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')); }
   });
 
-  $.get("/cache.json", function(data) {
+  $.get("/sample.json", function(data) {
     for (i in (data)) {
       console.log(data[i]);
       build_element(data[i]["image"], data[i]["url"], data[i]["title"]);

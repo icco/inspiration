@@ -31,6 +31,17 @@ Inspiration::App.controllers  do
     @images.to_json
   end
 
+  get "/sample.json" do
+    @count = COUNT
+    @count = params["count"].to_i if params["count"]
+
+    @cdb = CacheDB.new
+    @images = @cdb.sample(@count).delete_if {|d| d.nil? or d["image"].nil? }
+
+    content_type :json
+    @images.to_json
+  end
+
   get "/all.json" do
     @idb = ImageDB.new
     @cdb = CacheDB.new
