@@ -41,7 +41,8 @@ class CacheDB
         image_link = data["image_teaser_url"]
       end
 
-      hash.merge! {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
+      attrs = {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
+      hash.merge! attrs
     when deviant_re
       oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
       resp = Faraday.get oembed_url
@@ -53,7 +54,8 @@ class CacheDB
       end
 
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
-      hash.merge! {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
+      attrs = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}}
+      hash.merge! attrs
     when flickr_re
       oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
       resp = Faraday.get oembed_url
@@ -71,7 +73,8 @@ class CacheDB
 
       image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
       title = "\"#{data["title"]}\" by #{data["author_name"]}"
-      hash.merge! {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
+      attrs = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}}
+      hash.merge! attrs
     else
       logger.error "No idea what url this is: #{url}"
     end
