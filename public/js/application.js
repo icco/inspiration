@@ -10,15 +10,20 @@ $(document).ready(function() {
     beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')); }
   });
 
-  $.get("/sample.json", function(data) {
-    for (i in (data)) {
-      console.log(data[i]);
-      build_element(data[i]["image"], data[i]["url"], data[i]["title"]);
-    }
-  }).fail(function() {
-    console.error("Error getting data.");
-  });
+  var per_req = 9;
+  var total_wanted = 400;
+  for (var i = 0; i < total_wanted / per_req; i++) {
+    $.get("/sample.json?count=" + per_req, parse_cache_response).fail(function() {
+      console.error("Error getting data.");
+    });
+  }
 });
+
+function parse_cache_response(data) {
+  for (i in (data)) {
+    build_element(data[i]["image"], data[i]["url"], data[i]["title"]);
+  }
+}
 
 function build_element(image, link, title) {
   var a = $('<a>');
