@@ -18,6 +18,8 @@ task :build_cache => :environment do
   idb.images.to_a.shuffle.each do |i|
     cdb.cache i
   end
+
+  cdb.clean idb.images
 end
 
 desc "Try to update 10 images in the cache."

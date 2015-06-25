@@ -94,11 +94,23 @@ class CacheDB
 
   def set url, data
     key = url.gsub(@keyfilter, '')
-    file = Oj.load_file(@cache_file_name)
+    file = all
     file[key] = data
     Oj.to_file(@cache_file_name, file, indent: 2)
 
     return true
+  end
+
+  def delete key
+    file = all
+    file.delete key
+    Oj.to_file(@cache_file_name, file, indent: 2)
+
+    return true
+  end
+
+  def all
+    return Oj.load_file(@cache_file_name)
   end
 
   def needs_update? url
@@ -111,5 +123,17 @@ class CacheDB
     # ~10 days
     time = Time.parse(data["modified"])
     return (Time.now - time) > 860000
+  end
+
+  def clean images
+    valid_keys = images.map {|i| i.gsub(@keyfilter, '') }.to_set
+    current_keys = all.keys.to_set
+    to_delete = current_keys - valid_keys
+
+    to_delete.each do |k|
+      delete k
+    end
+
+    return to_delete.count
   end
 end
