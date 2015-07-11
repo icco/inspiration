@@ -4,7 +4,10 @@
 class CacheDB
 
   def initialize
-    Oj.default_options = {:mode => :compat }
+    Oj.default_options = {
+      mode: :compat,
+      indent: 2,
+    }
     @cache_file_name = Inspiration::CACHE_FILE
     @keyfilter = /[\/:\.]/
   end
@@ -96,7 +99,7 @@ class CacheDB
     key = url.gsub(@keyfilter, '')
     file = all
     file[key] = data
-    Oj.to_file(@cache_file_name, file, indent: 2)
+    Oj.to_file(@cache_file_name, file)
 
     return true
   end
@@ -104,7 +107,7 @@ class CacheDB
   def delete key
     file = all
     file.delete key
-    Oj.to_file(@cache_file_name, file, indent: 2)
+    Oj.to_file(@cache_file_name, file)
 
     return true
   end
