@@ -123,9 +123,9 @@ class CacheDB
 
     return true if data["modified"].nil?
 
-    # ~10 days
+    # ~10 days * a random float
     time = Time.parse(data["modified"])
-    return (Time.now - time) > 860000
+    return (Time.now - time) > (860000 * rand)
   end
 
   def clean images
