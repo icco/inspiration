@@ -40,6 +40,7 @@ class ImageDB
   def full_update
 
     # Flickr Personal Favorites Set
+    # NOTE: Page count verified 2015-07-22
     (1..3).each do |page|
       p ({ :flickr => '42027916@N00', :set => '72157601200827657', :page => page })
       begin
@@ -53,6 +54,7 @@ class ImageDB
     end
 
     # DA Favorites
+    # NOTE: Offset count verified 2015-07-22
     (0..6000).step(60) do |offset|
       rss_url = "http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
       p ({ :deviant => "calvin166", :offset => offset })
@@ -68,7 +70,7 @@ class ImageDB
 
     # Dribbble
     dribbble_user = "icco"
-    dribbble_per_page = 30
+    dribbble_per_page = 50
     page_count = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", :query => {:per_page => dribbble_per_page})).pages
     (1..page_count).each do |page|
       p ({ :player => dribbble_user, :page => page })
@@ -81,6 +83,7 @@ class ImageDB
 
     # Flickr Favorites
     # http://www.flickr.com/services/api/misc.urls.html
+    # NOTE: Page count verified 2015-07-22
     (1..30).each do |page|
       p ({ :flickr => '42027916@N00', :page => page })
       favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00', :extras => 'url_n', :page => page).map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
