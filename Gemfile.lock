@@ -27,7 +27,7 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     flickraw (0.9.8)
-    heroku (3.39.5)
+    heroku (3.40.5)
       heroku-api (>= 0.3.19)
       launchy (>= 0.3.2)
       multi_json (>= 1.10)
@@ -150,4 +150,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.10.4
+   1.10.5
