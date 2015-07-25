@@ -31,7 +31,7 @@ class CacheDB
     case url
     when dribbble_re
       # Dribbble does not like us, go slow
-      sleep 1
+      sleep 1 + rand
 
       oembed_url = "https://api.dribbble.com/shots/#{url.gsub(dribbble_re, "")}"
       resp = Faraday.get oembed_url
