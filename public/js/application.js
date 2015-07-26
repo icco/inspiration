@@ -10,14 +10,25 @@ $(document).ready(function() {
     beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')); }
   });
 
-  var per_req = 9;
-  var total_wanted = 400;
-  for (var i = 0; i < total_wanted / per_req; i++) {
+  get_more(150);
+});
+
+window.onscroll = function(ev) {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    // you're at the bottom of the page
+    console.log("Bottom of the page, request 20 more.");
+    get_more(20);
+  }
+};
+
+function get_more(wanted) {
+  var per_req = 10;
+  for (var i = 0; i < wanted / per_req; i++) {
     $.get("/sample.json?count=" + per_req, parse_cache_response).fail(function() {
       console.error("Error getting data.");
     });
   }
-});
+}
 
 function parse_cache_response(data) {
   for (i in (data)) {
