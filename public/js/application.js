@@ -11,6 +11,8 @@ $(document).ready(function() {
   });
 
   get_more(150);
+
+  var intervalID = window.setInterval(update_count, 5000);
 });
 
 window.onscroll = function(ev) {
@@ -20,6 +22,11 @@ window.onscroll = function(ev) {
     get_more(20);
   }
 };
+
+function update_count() {
+  // Update about box.
+  $('#imgcount').text($('img').size());
+}
 
 function get_more(wanted) {
   var per_req = 10;
