@@ -75,6 +75,13 @@ class CacheDB
           return
         end
 
+        # Licenses are blocking embeding I think.
+        if data["type"] == "link"
+          # TODO: embed by scraping "/sizes/m/"
+          logger.info "Flickr won't let us embed this: #{url}."
+          return
+        end
+
         if !data["thumbnail_url"]
           logger.error "No Tumbnail for #{url} at #{oembed_url}"
           return
