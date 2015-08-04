@@ -59,7 +59,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     netrc (0.10.3)
-    oj (2.12.10)
+    oj (2.12.11)
     padrino (0.12.5)
       padrino-admin (= 0.12.5)
       padrino-cache (= 0.12.5)
@@ -150,4 +150,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
