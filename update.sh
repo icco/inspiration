@@ -1,4 +1,5 @@
 #! /bin/bash
+source /home/nat/.rvm/environments/ruby-2.2.2
 
 bundle update
 git ci Gemfile* -m 'bundle update'
