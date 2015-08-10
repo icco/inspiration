@@ -94,12 +94,13 @@ class CacheDB
         hash.merge! attrs
       when verygoods_re
         # VeryGoods does not support OEmbed as of 2015-08-10
-        oembed_url = "fake.verygoods.co"
-        resp = Faraday.get url
+        oembed_url = "https://verygoods.co/site-api-0.1"
+        oembed_url += URI(url).path.gsub(/product/, "products")
+        resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{url}"
+          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 

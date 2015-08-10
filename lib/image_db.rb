@@ -110,7 +110,7 @@ class ImageDB
       else
         url = nil
       end
-      products = data["_embedded"]["goods"].map {|g| domain + g["_links"]["product"]["href"] }
+      products = data["_embedded"]["goods"].map {|g| "http://verygoods.co" + g["_links"]["product"]["href"].gsub(/products/, 'product') }
       products.each {|p| @images.add p }
       puts "Images: #{@images.count}"
     end
