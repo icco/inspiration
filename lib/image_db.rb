@@ -34,6 +34,13 @@ class ImageDB
     all_images = @images.delete_if {|i| i.empty? }.to_a.sort
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(all_images.to_a.join("\n")) }
 
+    # VeryGoods.co
+    products = open 'https://verygoods.co/site-api-0.1/users/icco/goods?limit=20' do |j|
+      data = Oj.compat_load(j)
+      data["_embedded"]["goods"].map {|g| "https://verygoods.co/site-api-0.1#{g["_links"]["product"]["href"]}" }
+    end
+    products.each {|p| @images.add p }
+
     return true
   end
 
@@ -91,8 +98,27 @@ class ImageDB
       puts "Images: #{@images.count}"
     end
 
+    # VeryGoods.co
+    domain = "https://verygoods.co/site-api-0.1"
+    url = domain + "/users/icco/goods?limit=20"
+    while url do
+      p ({ :verygoods => url })
+      j = open url
+      data = Oj.compat_load(j)
+      if data["_links"]["next"]
+        url = domain + data["_links"]["next"]["href"]
+      else
+        url = nil
+      end
+      products = data["_embedded"]["goods"].map {|g| domain + g["_links"]["product"]["href"] }
+      products.each {|p| @images.add p }
+      puts "Images: #{@images.count}"
+    end
+
+    # Clean UP.
     @images = @images.delete_if {|i| i.empty? }.to_a.sort
 
+    # Write to file.
     File.open(Inspiration::LINK_FILE, 'w') {|file| file.write(@images.to_a.join("\n")) }
 
     return true

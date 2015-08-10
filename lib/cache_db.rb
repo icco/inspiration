@@ -27,6 +27,7 @@ class CacheDB
     dribbble_re = %r{http://dribbble\.com/shots/}
     deviant_re = %r{deviantart\.com}
     flickr_re = %r{www\.flickr\.com}
+    verygoods_re = %r{https://verygoods\.co/site-api-0\.1}
 
     begin
       case url
@@ -90,6 +91,22 @@ class CacheDB
         image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
         title = "\"#{data["title"]}\" by #{data["author_name"]}"
         attrs = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}}
+        hash.merge! attrs
+      when verygoods_re
+        # VeryGoods does not support OEmbed as of 2015-08-10
+        oembed_url = "fake.verygoods.co"
+        resp = Faraday.get url
+        if resp.status == 200
+          data = JSON.parse(resp.body)
+        else
+          logger.error "Code #{resp.status}: Hitting #{url}"
+          return
+        end
+
+        title = data["title"]
+        image_url = data["medium_image_url"]
+        size = {width: 400, height: nil} # TODO
+        attrs = {title: title, image: image_url, size: size}
         hash.merge! attrs
       else
         logger.error "No idea what url this is: #{url}"
