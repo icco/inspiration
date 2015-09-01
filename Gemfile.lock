@@ -27,7 +27,7 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     flickraw (0.9.8)
-    heroku (3.41.5)
+    heroku (3.41.4)
       heroku-api (>= 0.3.19)
       launchy (>= 0.3.2)
       multi_json (>= 1.10)
