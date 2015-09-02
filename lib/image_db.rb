@@ -11,6 +11,12 @@ class ImageDB
     return self.images.sample count
   end
 
+  def tmp
+    p Dribbble::Base.paginated_list(Dribbble::Base.get(
+      "/v1//users/icco/likes?access_token=13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479",
+      :query => {:page => 0, :per_page => 10}))
+  end
+
   def update
 
     # DeviantArt
@@ -79,6 +85,8 @@ class ImageDB
     dribbble_user = "icco"
     dribbble_per_page = 50
     page_count = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", :query => {:per_page => dribbble_per_page})).pages
+    page_count = 100 if page_count.nil?
+
     (1..page_count).each do |page|
       p ({ :player => dribbble_user, :page => page })
       data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", :query => {:page => page, :per_page => dribbble_per_page}))
