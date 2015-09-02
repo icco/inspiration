@@ -83,12 +83,12 @@ class CacheDB
           return
         end
 
-        if !data["thumbnail_url"]
+        if !data["url"]
           logger.error "No Tumbnail for #{url} at #{oembed_url}"
           return
         end
 
-        image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
+        image_url = data["url"]
         title = "\"#{data["title"]}\" by #{data["author_name"]}"
         attrs = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}}
         hash.merge! attrs
