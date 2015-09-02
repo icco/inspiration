@@ -11,10 +11,8 @@ class ImageDB
     return self.images.sample count
   end
 
-  def tmp
-    p Dribbble::Base.paginated_list(Dribbble::Base.get(
-      "/v1//users/icco/likes?access_token=13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479",
-      :query => {:page => 0, :per_page => 10}))
+  def self.dribbble_client
+    return Dribbble::Client.new token: '13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479'
   end
 
   def update
@@ -29,8 +27,8 @@ class ImageDB
     end
 
     # Dribbble
-    data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/icco/shots/likes", :query => {:per_page => 50}))
-    data.map {|s| s.url }.each {|l| @images.add l }
+    data = ImageDB.dribbble_client.get_user('icco').likes
+    data.each {|l| p l; @images.add l.html_url }
 
     # Flickr
     favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00', :extras => 'url_n').map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
@@ -82,16 +80,14 @@ class ImageDB
     end
 
     # Dribbble
+    # NOTE: Page count verified 2015-09-02
     dribbble_user = "icco"
-    dribbble_per_page = 50
-    page_count = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", :query => {:per_page => dribbble_per_page})).pages
-    page_count = 100 if page_count.nil?
+    page_count = 30
 
     (1..page_count).each do |page|
+      data = ImageDB.dribbble_client.get_user(dribbble_user).likes page: page
       p ({ :player => dribbble_user, :page => page })
-      data = Dribbble::Base.paginated_list(Dribbble::Base.get("/players/#{dribbble_user}/shots/likes", :query => {:page => page, :per_page => dribbble_per_page}))
-      array = data.map {|s| s.url }
-      array.each {|l| @images.add l }
+      data.each {|l| @images.add l.html_url }
 
       puts "Images: #{@images.count}"
     end

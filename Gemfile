@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
-gem 'dribbble'
+gem 'dribbble', '>= 1.0.0.beta1'
 gem 'erubis', '~> 2.7'
 gem 'faraday'
 gem 'flickraw'

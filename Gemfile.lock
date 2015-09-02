@@ -11,7 +11,7 @@ GEM
     daemons (1.2.3)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
-    dribbble (0.0.4)
+    dribbble (1.0.0.beta1)
       rest-client (~> 1.7)
     erubis (2.7.0)
     eventmachine (1.0.8)
@@ -127,7 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dribbble
+  dribbble (>= 1.0.0.beta1)
   erubis (~> 2.7)
   faraday
   flickraw
