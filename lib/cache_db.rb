@@ -119,11 +119,7 @@ class CacheDB
       end
 
       return set url, hash
-    rescue TypeError => e
-      raise e
-    rescue Interupt
-      exit
-    rescue Exception => e
+    rescue StandardError => e
       logger.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
     end
   end
