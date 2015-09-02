@@ -67,7 +67,7 @@ class CacheDB
         attrs = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}}
         hash.merge! attrs
       when flickr_re
-        oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
+        oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=500"
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
