@@ -24,7 +24,7 @@ class CacheDB
 
     hash = {url: url, modified: Time.now}
 
-    dribbble_re = %r{http://dribbble\.com/shots/}
+    dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = %r{deviantart\.com}
     flickr_re = %r{www\.flickr\.com}
     verygoods_re = %r{verygoods\.co}
@@ -67,7 +67,7 @@ class CacheDB
         attrs = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}}
         hash.merge! attrs
       when flickr_re
-        oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
+        oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=400"
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
@@ -83,12 +83,12 @@ class CacheDB
           return
         end
 
-        if !data["thumbnail_url"]
+        if !data["url"]
           logger.error "No Tumbnail for #{url} at #{oembed_url}"
           return
         end
 
-        image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
+        image_url = data["url"]
         title = "\"#{data["title"]}\" by #{data["author_name"]}"
         attrs = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}}
         hash.merge! attrs
