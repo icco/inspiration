@@ -10,11 +10,6 @@ task :get_old => :environment do
   idb.full_update
 end
 
-task :tmp => :environment do
-  idb = ImageDB.new
-  idb.tmp
-end
-
 desc "Build a cache of the image db."
 task :build_cache => :environment do
   cdb = CacheDB.new
