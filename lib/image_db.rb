@@ -28,7 +28,7 @@ class ImageDB
 
     # Dribbble
     data = ImageDB.dribbble_client.get_user('icco').likes
-    data.each {|l| p l; @images.add l.html_url }
+    data.each {|l| @images.add l.html_url }
 
     # Flickr
     favorites = flickr.favorites.getPublicList(:user_id => '42027916@N00', :extras => 'url_n').map {|p| "http://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}"}
