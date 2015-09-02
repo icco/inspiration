@@ -9,6 +9,11 @@ class CacheDB
       indent: 2,
     }
     @cache_file_name = Inspiration::CACHE_FILE
+
+    if !File.exists? @cache_file_name
+      File.open(@cache_file_name, "w+") { |file| file.write("{}") }
+    end
+
     @keyfilter = /[\/:\.]/
   end
 
@@ -114,6 +119,10 @@ class CacheDB
       end
 
       return set url, hash
+    rescue TypeError => e
+      raise e
+    rescue Interupt
+      exit
     rescue Exception => e
       logger.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
     end
@@ -121,7 +130,13 @@ class CacheDB
 
   def get url
     key = url.gsub(@keyfilter, '')
-    return Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
+    data = Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
+
+    if data.eql? []
+      return nil
+    else
+      return data
+    end
   end
 
   def set url, data
