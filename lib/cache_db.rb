@@ -24,7 +24,7 @@ class CacheDB
 
     hash = {url: url, modified: Time.now}
 
-    dribbble_re = %r{http://dribbble\.com/shots/}
+    dribbble_re = %r{dribbble\.com/shots/}
     deviant_re = %r{deviantart\.com}
     flickr_re = %r{www\.flickr\.com}
     verygoods_re = %r{verygoods\.co}
