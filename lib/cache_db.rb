@@ -164,7 +164,7 @@ class CacheDB
     return true if data["modified"].nil?
 
     # For Flickr wrong size stuff
-    return true if data["image"].match /_q/
+    return true if data["image"].nil? or data["image"].match /_q/
 
     # ~10 days * a random float
     time = Time.parse(data["modified"])
