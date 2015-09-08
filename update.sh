@@ -1,5 +1,5 @@
 #! /bin/bash
-source ~/.rvm/environments/ruby-2.2.2
+source ~/.rvm/environments/ruby-2.2.3
 
 bundle update
 git ci Gemfile* -m 'bundle update'
