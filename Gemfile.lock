@@ -132,6 +132,7 @@ DEPENDENCIES
   faraday
   flickraw
   heroku
+  minitest
   oj
   padrino
   rake

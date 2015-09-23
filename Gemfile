@@ -18,3 +18,7 @@ group :development do
   gem 'heroku'
   gem 'shotgun'
 end
+
+group :test do
+  gem 'minitest'
+end
