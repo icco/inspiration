@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.2.3'
 
+gem 'dribbble', '>= 1.0.0.beta1'
 gem 'erubis', '~> 2.7'
 gem 'faraday'
 gem 'flickraw'
@@ -10,7 +11,6 @@ gem 'padrino'
 gem 'rake'
 gem 'redcarpet'
 gem 'sass'
-gem 'swish', :git => 'https://github.com/icco/swish'
 gem 'thin'
 
 # For dev

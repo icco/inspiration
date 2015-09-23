@@ -9,6 +9,11 @@ class CacheDB
       indent: 2,
     }
     @cache_file_name = Inspiration::CACHE_FILE
+
+    if !File.exists? @cache_file_name
+      File.open(@cache_file_name, "w+") { |file| file.write("{}") }
+    end
+
     @keyfilter = /[\/:\.]/
   end
 
@@ -24,9 +29,10 @@ class CacheDB
 
     hash = {url: url, modified: Time.now}
 
-    dribbble_re = %r{http://dribbble\.com/shots/}
+    dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = %r{deviantart\.com}
     flickr_re = %r{www\.flickr\.com}
+    verygoods_re = %r{verygoods\.co}
 
     begin
       case url
@@ -66,7 +72,7 @@ class CacheDB
         attrs = {title: title, image: data["thumbnail_url"], size: {width: data["width"], height: data["height"]}}
         hash.merge! attrs
       when flickr_re
-        oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=300"
+        oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=400"
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
@@ -82,28 +88,51 @@ class CacheDB
           return
         end
 
-        if !data["thumbnail_url"]
+        if !data["url"]
           logger.error "No Tumbnail for #{url} at #{oembed_url}"
           return
         end
 
-        image_url = data["thumbnail_url"].gsub(/\_s\./, "_n.")
+        image_url = data["url"]
         title = "\"#{data["title"]}\" by #{data["author_name"]}"
         attrs = {title: title, image: image_url, size: {width: data["width"], height: data["height"]}}
+        hash.merge! attrs
+      when verygoods_re
+        # VeryGoods does not support OEmbed as of 2015-08-10
+        oembed_url = "https://verygoods.co/site-api-0.1"
+        oembed_url += URI(url).path.gsub(/product/, "products")
+        resp = Faraday.get oembed_url
+        if resp.status == 200
+          data = JSON.parse(resp.body)
+        else
+          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          return
+        end
+
+        title = data["title"]
+        image_url = data["medium_image_url"]
+        size = {width: 400, height: nil} # TODO
+        attrs = {title: title, image: image_url, size: size}
         hash.merge! attrs
       else
         logger.error "No idea what url this is: #{url}"
       end
 
       return set url, hash
-    rescue Exception => e
+    rescue StandardError => e
       logger.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
     end
   end
 
   def get url
     key = url.gsub(@keyfilter, '')
-    return Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
+    data = Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
+
+    if data.eql? []
+      return nil
+    else
+      return data
+    end
   end
 
   def set url, data
@@ -133,6 +162,9 @@ class CacheDB
     return true if data.nil?
 
     return true if data["modified"].nil?
+
+    # For Flickr wrong size stuff
+    return true if data["image"].nil? or data["image"].match /_q/
 
     # ~10 days * a random float
     time = Time.parse(data["modified"])
