@@ -16,7 +16,6 @@ class ImageDB
   end
 
   def update
-
     # DeviantArt
     rss_url = 'http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation'
     open(rss_url) do |rss|

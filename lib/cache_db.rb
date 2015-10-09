@@ -40,7 +40,7 @@ class CacheDB
         # Dribbble does not like us, go slow
         sleep rand
 
-        oembed_url = "https://api.dribbble.com/shots/#{url.gsub(dribbble_re, "")}"
+        oembed_url = "https://api.dribbble.com/shots/#{url.gsub(dribbble_re, "").split('-').first}"
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
@@ -49,14 +49,21 @@ class CacheDB
           return
         end
 
-        title = "\"#{data["title"]}\" by #{data["player"]["name"]}"
-        if data["image_400_url"]
-          image_link = data["image_400_url"]
+        title = "\"#{data["title"]}\" by #{data["user"]["username"]}"
+        if data["images"]["hidpi"]
+          image_link = data["images"]["hidpi"]
         else
-          image_link = data["image_teaser_url"]
+          image_link = data["images"]["normal"]
         end
 
-        attrs = {title: title, image: image_link, size: {width: data["width"], height: data["height"]}}
+        attrs = {
+          title: title,
+          image: image_link,
+          size: {
+            width: data["width"],
+            height: data["height"]
+          }
+        }
         hash.merge! attrs
       when deviant_re
         oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
