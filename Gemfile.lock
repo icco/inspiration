@@ -127,6 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   dribbble (>= 1.0.0.beta1)
   erubis (~> 2.7)
   faraday

@@ -15,6 +15,7 @@ gem 'thin'
 
 # For dev
 group :development do
+  gem 'bundler'
   gem 'heroku'
   gem 'shotgun'
 end
