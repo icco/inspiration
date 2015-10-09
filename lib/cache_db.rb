@@ -40,28 +40,22 @@ class CacheDB
         # Dribbble does not like us, go slow
         sleep rand
 
-        oembed_url = "https://api.dribbble.com/shots/#{url.gsub(dribbble_re, "").split('-').first}"
-        resp = Faraday.get oembed_url
-        if resp.status == 200
-          data = JSON.parse(resp.body)
-        else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
-          return
-        end
+        id = url.gsub(dribbble_re, "").split('-').first
+        data = ImageDB.dribbble_client.get_shot(id)
 
-        title = "\"#{data["title"]}\" by #{data["user"]["username"]}"
-        if data["images"]["hidpi"]
-          image_link = data["images"]["hidpi"]
+        title = "\"#{data.title}\" by #{data.user["username"]}"
+        if !data.images["hidpi"].nil?
+          image_link = data.images["hidpi"]
         else
-          image_link = data["images"]["normal"]
+          image_link = data.images["normal"]
         end
 
         attrs = {
           title: title,
           image: image_link,
           size: {
-            width: data["width"],
-            height: data["height"]
+            width: data.width,
+            height: data.height
           }
         }
         hash.merge! attrs
