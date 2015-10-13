@@ -31,3 +31,11 @@ task :build_cache_random => :environment do
     cdb.cache i
   end
 end
+
+desc "Remove unused images in cache."
+task :clean => :environment do
+  cdb = CacheDB.new
+  idb = ImageDB.new
+
+  cdb.clean idb.images
+end

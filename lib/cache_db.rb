@@ -216,7 +216,7 @@ class CacheDB
       file.delete key
       Oj.to_file(@cache_file_name, file)
     elsif sqlite?
-      Cache.where(key: key).delete
+      Cache.delete(Cache.where(key: key))
     else
       return false
     end
@@ -264,7 +264,7 @@ class CacheDB
 
     if sqlite?
       sql = "VACUUM FULL"
-      p ActiveRecord::Base.connection.execute(sql)
+      ActiveRecord::Base.connection.execute(sql)
     end
 
     return to_delete.count
