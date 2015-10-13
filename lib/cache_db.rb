@@ -14,7 +14,7 @@ class CacheDB
       File.open(@cache_file_name, "w+") { |file| file.write("{}") }
     end
 
-    @keyfilter = /[\/:\.]/
+    @keyfilter = /[\/:\.\-]/
   end
 
   def sample count
