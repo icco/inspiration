@@ -20,7 +20,6 @@ class CacheDB
     elsif File.extname(@cache_file_name).eql? ".db"
       @mode = "sqlite"
 
-      ActiveRecord::Base.logger = Logger.new(STDERR)
       ActiveRecord::Base.establish_connection(
         :adapter => "sqlite3",
         :database => @cache_file_name
