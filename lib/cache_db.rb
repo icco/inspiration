@@ -269,6 +269,15 @@ class CacheDB
 
     return to_delete.count
   end
+
+  def load_sql_to_json sqlite_filename
+    ActiveRecord::Base.establish_connection(
+      :adapter => "sqlite3",
+      :database => sqlite_filename
+    )
+
+    Oj.to_file(@cache_file_name, Cache.all_as_hash)
+  end
 end
 
 class CacheSerializer < ActiveModel::Serializer
@@ -282,5 +291,14 @@ class Cache < ActiveRecord::Base
       height: height,
       width: width,
     }
+  end
+
+  def self.all_as_hash
+    hash = {}
+    Cache.all.order(key: :asc).each do |c|
+      hash[c.key] = CacheSerializer.new(c)
+    end
+
+    return hash
   end
 end

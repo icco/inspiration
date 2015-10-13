@@ -29,7 +29,7 @@ module Inspiration
   end
 
   LINK_FILE = Padrino.root("links.txt")
-  CACHE_FILE = Padrino.root("cache.db")
+  CACHE_FILE = Padrino.root("cache.json")
   PER_PAGE = 400
 
   DRIBBBLE_TOKEN = '13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479'

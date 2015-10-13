@@ -39,3 +39,8 @@ task :clean => :environment do
 
   cdb.clean idb.images
 end
+
+task :import_sqlite => :environment do
+  cdb = CacheDB.new
+  cdb.load_sql_to_json "cache.db"
+end

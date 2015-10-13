@@ -13,7 +13,6 @@ gem 'padrino'
 gem 'rake'
 gem 'redcarpet'
 gem 'sass'
-gem 'sqlite3'
 gem 'thin'
 
 # For dev
@@ -21,6 +20,7 @@ group :development do
   gem 'bundler'
   gem 'heroku'
   gem 'shotgun'
+  gem 'sqlite3'
 end
 
 group :test do
