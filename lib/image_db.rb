@@ -12,7 +12,7 @@ class ImageDB
   end
 
   def self.dribbble_client
-    return Dribbble::Client.new token: Inpiration::DRIBBBLE_TOKEN
+    return Dribbble::Client.new token: Inspiration::DRIBBBLE_TOKEN
   end
 
   def update
