@@ -16,7 +16,8 @@ module Inspiration
 
     ##
     # Application configuration options
-    set :logging, true            # Logging in STDOUT for development and file for production (default only for development)
+    # Logging in STDOUT for development and file for production (default only for development)
+    set :logging, true
 
     # Assets
     set :css_asset_folder, 'css'
@@ -30,6 +31,8 @@ module Inspiration
   LINK_FILE = Padrino.root("links.txt")
   CACHE_FILE = Padrino.root("cache.db")
   PER_PAGE = 400
+
+  DRIBBBLE_TOKEN = '13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479'
 
   FlickRaw.api_key = "5c282af934cd475695e1f727dd0404a9"
   FlickRaw.shared_secret = "49b3b77e99947328"
