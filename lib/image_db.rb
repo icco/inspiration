@@ -12,7 +12,7 @@ class ImageDB
   end
 
   def self.dribbble_client
-    return Dribbble::Client.new token: '13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479'
+    return Dribbble::Client.new token: Inpiration::DRIBBBLE_TOKEN
   end
 
   def update

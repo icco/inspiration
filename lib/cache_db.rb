@@ -2,24 +2,63 @@
 # The key is the original url, the object contains information to render the
 # image.
 class CacheDB
-
   def initialize
+    @cache_file_name = Inspiration::CACHE_FILE
+
+    # Default Oj options
     Oj.default_options = {
       mode: :compat,
       indent: 2,
     }
-    @cache_file_name = Inspiration::CACHE_FILE
+    @keyfilter = /[\/:\.\\\-@]/
 
-    if !File.exists? @cache_file_name
-      File.open(@cache_file_name, "w+") { |file| file.write("{}") }
+    if File.extname(@cache_file_name).eql? ".json"
+      @mode = "json"
+      if !File.exists? @cache_file_name
+        File.open(@cache_file_name, "w+") { |file| file.write("{}") }
+      end
+    elsif File.extname(@cache_file_name).eql? ".db"
+      @mode = "sqlite"
+
+      ActiveRecord::Base.logger = Logger.new(STDERR)
+      ActiveRecord::Base.establish_connection(
+        :adapter => "sqlite3",
+        :database => @cache_file_name
+      )
+
+      unless ActiveRecord::Base.connection.table_exists?(:caches)
+        ActiveRecord::Migration.class_eval do
+          create_table :caches do |t|
+            t.string :key
+            t.string :url
+            t.string :image
+            t.datetime :modified
+            t.string :title
+            t.integer :width
+            t.integer :height
+          end
+        end
+      end
+    else
+      raise "Invalid Cache Type!"
     end
+  end
 
-    @keyfilter = /[\/:\.\-]/
+  def sqlite?
+    return @mode == "sqlite"
+  end
+
+  def json?
+    return @mode == "json"
   end
 
   def sample count
-    file = Oj.load_file(@cache_file_name)
-    return file.values.sample(count)
+    if json?
+      file = Oj.load_file(@cache_file_name)
+      return file.values.sample(count).delete_if {|d| d.nil? or d["image"].nil? }
+    elsif sqlite?
+      return Cache.where.not(image: nil).order('RANDOM()').limit(count).map {|c| CacheSerializer.new(c) }
+    end
   end
 
   def cache url
@@ -118,43 +157,82 @@ class CacheDB
       else
         logger.error "No idea what url this is: #{url}"
       end
-
-      return set url, hash
     rescue StandardError => e
       logger.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
     end
+
+    return set url, hash
   end
 
   def get url
     key = url.gsub(@keyfilter, '')
-    data = Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
 
-    if data.eql? []
-      return nil
+    if json?
+      data = Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
+
+      if data.eql? []
+        return nil
+      else
+        return data
+      end
+    elsif sqlite?
+      data = Cache.where(key: key).first
+      if data
+        # So our data looks the same no matter what
+        return Oj.compat_load(data.to_json)
+      else
+        return nil
+      end
     else
-      return data
+      return nil
     end
   end
 
   def set url, data
     key = url.gsub(@keyfilter, '')
-    file = all
-    file[key] = data
-    Oj.to_file(@cache_file_name, file)
+
+    if json?
+      file = all
+      file[key] = data
+      Oj.to_file(@cache_file_name, file)
+    elsif sqlite?
+      entry = Cache.find_or_create_by(key: key)
+      entry.title = data[:title]
+      entry.url = data[:url]
+      entry.image = data[:image]
+      entry.modified = data[:modified]
+      entry.width = data[:size][:width] if data[:size]
+      entry.height = data[:size][:height] if data[:size]
+      entry.save
+    else
+      return false
+    end
 
     return true
   end
 
   def delete key
-    file = all
-    file.delete key
-    Oj.to_file(@cache_file_name, file)
+    if json?
+      file = all
+      file.delete key
+      Oj.to_file(@cache_file_name, file)
+    elsif sqlite?
+      Cache.where(key: key).delete
+    else
+      return false
+    end
 
     return true
   end
 
   def all
-    return Oj.load_file(@cache_file_name)
+    if json?
+      return Oj.load_file(@cache_file_name)
+    elsif sqlite?
+      return Cache.all
+    else
+      return nil
+    end
   end
 
   def needs_update? url
@@ -174,13 +252,36 @@ class CacheDB
 
   def clean images
     valid_keys = images.map {|i| i.gsub(@keyfilter, '') }.to_set
-    current_keys = all.keys.to_set
+    if json?
+      current_keys = all.keys.to_set
+    elsif sqlite?
+      current_keys = Set.new(Cache.uniq.pluck(:key))
+    end
     to_delete = current_keys - valid_keys
 
     to_delete.each do |k|
       delete k
     end
 
+    if sqlite?
+      sql = "VACUUM FULL"
+      p ActiveRecord::Base.connection.execute(sql)
+    end
+
     return to_delete.count
+  end
+end
+
+class CacheSerializer < ActiveModel::Serializer
+  attributes :url, :title, :size, :image, :modified
+  root false
+end
+
+class Cache < ActiveRecord::Base
+  def size
+    return {
+      height: height,
+      width: width,
+    }
   end
 end
