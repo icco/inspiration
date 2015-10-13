@@ -29,7 +29,7 @@ function update_count() {
 }
 
 function get_more(wanted) {
-  var per_req = 10;
+  var per_req = 20;
   for (var i = 0; i < wanted / per_req; i++) {
     $.get("/sample.json?count=" + per_req, parse_cache_response).fail(function() {
       console.error("Error getting data.");
