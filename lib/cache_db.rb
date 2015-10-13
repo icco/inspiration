@@ -265,10 +265,9 @@ end
 
 class Cache < ActiveRecord::Base
   def to_json
-    data = self.to_hash
+    data = self.as_json
     data.delete("key")
     data.delete("id")
-    p data
     data[:size] = {width: data.delete("width"), height: data.delete("height")}
     return data.to_json
   end
