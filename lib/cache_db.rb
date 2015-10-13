@@ -201,8 +201,8 @@ class CacheDB
       entry.url = data[:url]
       entry.image = data[:image]
       entry.modified = data[:modified]
-      entry.width = data[:size][:width]
-      entry.height = data[:size][:height]
+      entry.width = data[:size][:width] if data[:size]
+      entry.height = data[:size][:height] if data[:size]
       entry.save
     else
       return false
@@ -252,11 +252,20 @@ class CacheDB
 
   def clean images
     valid_keys = images.map {|i| i.gsub(@keyfilter, '') }.to_set
-    current_keys = all.keys.to_set
+    if json?
+      current_keys = all.keys.to_set
+    elsif sqlite?
+      current_keys = Set.new(Cache.uniq.pluck(:key))
+    end
     to_delete = current_keys - valid_keys
 
     to_delete.each do |k|
       delete k
+    end
+
+    if sqlite?
+      sql = "VACUUM FULL"
+      p ActiveRecord::Base.connection.execute(sql)
     end
 
     return to_delete.count
