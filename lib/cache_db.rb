@@ -10,7 +10,7 @@ class CacheDB
       mode: :compat,
       indent: 2,
     }
-    @keyfilter = /[\/:\.\-]/
+    @keyfilter = /[\/:\.\\\-@]/
 
     if File.extname(@cache_file_name).eql? ".json"
       @mode = "json"
@@ -57,7 +57,7 @@ class CacheDB
       file = Oj.load_file(@cache_file_name)
       return file.values.sample(count).delete_if {|d| d.nil? or d["image"].nil? }
     elsif sqlite?
-      return Cache.where.not(image: nil).order('RANDOM()').limit(count).to_a.to_json
+      return Cache.where.not(image: nil).order('RANDOM()').limit(count).map {|c| CacheSerializer.new(c) }
     end
   end
 
@@ -272,12 +272,16 @@ class CacheDB
   end
 end
 
+class CacheSerializer < ActiveModel::Serializer
+  attributes :url, :title, :size, :image, :modified
+  root false
+end
+
 class Cache < ActiveRecord::Base
-  def to_json
-    data = self.as_json
-    data.delete("key")
-    data.delete("id")
-    data[:size] = {width: data.delete("width"), height: data.delete("height")}
-    return data.to_json
+  def size
+    return {
+      height: height,
+      width: width,
+    }
   end
 end
