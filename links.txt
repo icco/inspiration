@@ -2276,6 +2276,7 @@ http://ldimonl.deviantart.com/art/Got4523-564807345
 http://ldimonl.deviantart.com/art/Ice-Climbers-561672448
 http://ldimonl.deviantart.com/art/Landsapes-03-561890361
 http://ldimonl.deviantart.com/art/Landscapes-09-563463289
+http://ldimonl.deviantart.com/art/Landscapes-speedpaint-566027442
 http://ldimonl.deviantart.com/art/Red-carpet-561672933
 http://ldimonl.deviantart.com/art/Thumbnails-563463091
 http://ldimonl.deviantart.com/art/speedpaint-563021981
@@ -6570,7 +6571,6 @@ http://www.flickr.com/photos/60781728@N00/11878118084
 http://www.flickr.com/photos/60781728@N00/13321815133
 http://www.flickr.com/photos/60781728@N00/13375486754
 http://www.flickr.com/photos/60781728@N00/13741440643
-http://www.flickr.com/photos/60781728@N00/14024093659
 http://www.flickr.com/photos/60781728@N00/14062636619
 http://www.flickr.com/photos/60781728@N00/14262140184
 http://www.flickr.com/photos/60781728@N00/14352492739
@@ -9289,7 +9289,6 @@ https://dribbble.com/shots/886281-Chat-UI
 https://dribbble.com/shots/886310-Desert-Launch-Art-Print
 https://dribbble.com/shots/886330-Orioles-Art-Print
 https://dribbble.com/shots/886471-Trendkite-Responsive-Dashboard
-https://dribbble.com/shots/886548-From-the-trees
 https://dribbble.com/shots/886859-Foolious
 https://dribbble.com/shots/886985-Restaurant-Location
 https://dribbble.com/shots/887241-I-NY-SF
