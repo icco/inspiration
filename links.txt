@@ -4669,6 +4669,8 @@ http://verygoods.co/product/325715
 http://verygoods.co/product/325719
 http://verygoods.co/product/325734
 http://verygoods.co/product/325848
+http://verygoods.co/product/326228
+http://verygoods.co/product/326229
 http://verygoods.co/product/54839
 http://verygoods.co/product/55154
 http://verygoods.co/product/9385
@@ -7803,6 +7805,7 @@ https://dribbble.com/shots/1227340--Freebie-Coffee-Cup-icon
 https://dribbble.com/shots/1228866-Shade-for-iPhone
 https://dribbble.com/shots/1229124-Mountain
 https://dribbble.com/shots/1229209-Music-related-App-Logo
+https://dribbble.com/shots/1230378-YouTube-Creators
 https://dribbble.com/shots/1230867--havefun
 https://dribbble.com/shots/1231092-Brochure
 https://dribbble.com/shots/1235123-Dashboard
@@ -8581,6 +8584,7 @@ https://dribbble.com/shots/1789543-Sensai-Corp-Badge
 https://dribbble.com/shots/1790452-Pixel-Cloud
 https://dribbble.com/shots/1792626-Work-day
 https://dribbble.com/shots/1792841-Warlock
+https://dribbble.com/shots/1794676-Show-Me-Some-Bean
 https://dribbble.com/shots/1800077-Master-Vivi
 https://dribbble.com/shots/1800678-Energy-Predictions
 https://dribbble.com/shots/1805558--startuplife
