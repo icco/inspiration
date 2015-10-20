@@ -62,7 +62,7 @@ GEM
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     netrc (0.10.3)
-    oj (2.12.14)
+    oj (2.13.0)
     padrino (0.13.0)
       padrino-admin (= 0.13.0)
       padrino-cache (= 0.13.0)
