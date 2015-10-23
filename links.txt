@@ -7098,6 +7098,7 @@ http://www.flickr.com/photos/73557980@N00/19150326272
 http://www.flickr.com/photos/73557980@N00/21190968651
 http://www.flickr.com/photos/73557980@N00/21712131085
 http://www.flickr.com/photos/73557980@N00/21832948455
+http://www.flickr.com/photos/73557980@N00/22191954500
 http://www.flickr.com/photos/73557980@N00/9427463438
 http://www.flickr.com/photos/73557980@N00/9608366291
 http://www.flickr.com/photos/73557980@N00/9608367513
@@ -7858,7 +7859,6 @@ https://dribbble.com/shots/1236820-Weeekend-project
 https://dribbble.com/shots/1236894-Taasky-desktop-animation
 https://dribbble.com/shots/1237018-Donate-Button
 https://dribbble.com/shots/1237069-Mountains
-https://dribbble.com/shots/1237091-Icons
 https://dribbble.com/shots/1237148-Viber-for-Mac
 https://dribbble.com/shots/1237206-New-website-is-live
 https://dribbble.com/shots/1237236-Authentic-Weather-2-0
