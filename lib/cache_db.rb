@@ -12,16 +12,16 @@ class CacheDB
     }
     @keyfilter = /[\/:\.\\\-@]/
 
-    if File.extname(@cache_file_name).eql? '.json'
-      @mode = 'json'
+    if File.extname(@cache_file_name).eql? ".json"
+      @mode = "json"
       unless File.exist? @cache_file_name
-        File.open(@cache_file_name, 'w+') { |file| file.write('{}') }
+        File.open(@cache_file_name, "w+") { |file| file.write("{}") }
       end
-    elsif File.extname(@cache_file_name).eql? '.db'
-      @mode = 'sqlite'
+    elsif File.extname(@cache_file_name).eql? ".db"
+      @mode = "sqlite"
 
       ActiveRecord::Base.establish_connection(
-        adapter: 'sqlite3',
+        adapter: "sqlite3",
         database: @cache_file_name
       )
 
@@ -39,24 +39,24 @@ class CacheDB
         end
       end
     else
-      fail 'Invalid Cache Type!'
+      fail "Invalid Cache Type!"
     end
   end
 
   def sqlite?
-    @mode == 'sqlite'
+    @mode == "sqlite"
   end
 
   def json?
-    @mode == 'json'
+    @mode == "json"
   end
 
   def sample(count)
     if json?
       file = Oj.load_file(@cache_file_name)
-      return file.values.sample(count).delete_if { |d| d.nil? || d['image'].nil? }
+      return file.values.sample(count).delete_if { |d| d.nil? || d["image"].nil? }
     elsif sqlite?
-      return Cache.where.not(image: nil).order('RANDOM()').limit(count).map { |c| CacheSerializer.new(c) }
+      return Cache.where.not(image: nil).order("RANDOM()").limit(count).map { |c| CacheSerializer.new(c) }
     end
   end
 
@@ -76,14 +76,14 @@ class CacheDB
         # Dribbble does not like us, go slow
         sleep rand
 
-        id = url.gsub(dribbble_re, '').split('-').first
+        id = url.gsub(dribbble_re, "").split("-").first
         data = ImageDB.dribbble_client.get_shot(id)
 
         title = "\"#{data.title}\" by #{data.user['username']}"
-        if !data.images['hidpi'].nil?
-          image_link = data.images['hidpi']
+        if !data.images["hidpi"].nil?
+          image_link = data.images["hidpi"]
         else
-          image_link = data.images['normal']
+          image_link = data.images["normal"]
         end
 
         attrs = {
@@ -106,7 +106,7 @@ class CacheDB
         end
 
         title = "\"#{data['title']}\" by #{data['author_name']}"
-        attrs = { title: title, image: data['thumbnail_url'], size: { width: data['width'], height: data['height'] } }
+        attrs = { title: title, image: data["thumbnail_url"], size: { width: data["width"], height: data["height"] } }
         hash.merge! attrs
       when flickr_re
         oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=400"
@@ -119,25 +119,25 @@ class CacheDB
         end
 
         # Licenses are blocking embeding I think.
-        if data['type'] == 'link'
+        if data["type"] == "link"
           # TODO: embed by scraping "/sizes/m/"
           logger.info "Flickr won't let us embed this: #{url}."
           return
         end
 
-        unless data['url']
+        unless data["url"]
           logger.error "No Tumbnail for #{url} at #{oembed_url}"
           return
         end
 
-        image_url = data['url']
+        image_url = data["url"]
         title = "\"#{data['title']}\" by #{data['author_name']}"
-        attrs = { title: title, image: image_url, size: { width: data['width'], height: data['height'] } }
+        attrs = { title: title, image: image_url, size: { width: data["width"], height: data["height"] } }
         hash.merge! attrs
       when verygoods_re
         # VeryGoods does not support OEmbed as of 2015-08-10
-        oembed_url = 'https://verygoods.co/site-api-0.1'
-        oembed_url += URI(url).path.gsub(/product/, 'products')
+        oembed_url = "https://verygoods.co/site-api-0.1"
+        oembed_url += URI(url).path.gsub(/product/, "products")
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
@@ -146,8 +146,8 @@ class CacheDB
           return
         end
 
-        title = data['title']
-        image_url = data['medium_image_url']
+        title = data["title"]
+        image_url = data["medium_image_url"]
         size = { width: 400, height: nil } # TODO
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
@@ -162,7 +162,7 @@ class CacheDB
   end
 
   def get(url)
-    key = url.gsub(@keyfilter, '')
+    key = url.gsub(@keyfilter, "")
 
     if json?
       data = Oj::Doc.open_file(@cache_file_name) { |doc| doc.fetch "/#{key}" }
@@ -186,7 +186,7 @@ class CacheDB
   end
 
   def set(url, data)
-    key = url.gsub(@keyfilter, '')
+    key = url.gsub(@keyfilter, "")
 
     if json?
       file = all
@@ -237,18 +237,18 @@ class CacheDB
 
     return true if data.nil?
 
-    return true if data['modified'].nil?
+    return true if data["modified"].nil?
 
     # For Flickr wrong size stuff
-    return true if data['image'].nil? || data['image'].match(/_q/)
+    return true if data["image"].nil? || data["image"].match(/_q/)
 
     # ~10 days * a random float
-    time = Time.parse(data['modified'])
+    time = Time.parse(data["modified"])
     (Time.now - time) > (860_000 * rand)
   end
 
   def clean(images)
-    valid_keys = images.map { |i| i.gsub(@keyfilter, '') }.to_set
+    valid_keys = images.map { |i| i.gsub(@keyfilter, "") }.to_set
     if json?
       current_keys = all.keys.to_set
     elsif sqlite?
@@ -261,7 +261,7 @@ class CacheDB
     end
 
     if sqlite?
-      sql = 'VACUUM FULL'
+      sql = "VACUUM FULL"
       ActiveRecord::Base.connection.execute(sql)
     end
 
@@ -270,7 +270,7 @@ class CacheDB
 
   def load_sql_to_json(sqlite_filename)
     ActiveRecord::Base.establish_connection(
-      adapter: 'sqlite3',
+      adapter: "sqlite3",
       database: sqlite_filename
     )
 

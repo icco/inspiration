@@ -19,9 +19,9 @@ Inspiration::App.controllers do
     render :index
   end
 
-  get '/cache.json' do
+  get "/cache.json" do
     @count = COUNT
-    @count = params['count'].to_i if params['count']
+    @count = params["count"].to_i if params["count"]
 
     @idb = ImageDB.new
     @cdb = CacheDB.new
@@ -31,9 +31,9 @@ Inspiration::App.controllers do
     @images.to_json
   end
 
-  get '/sample.json' do
+  get "/sample.json" do
     @count = COUNT
-    @count = params['count'].to_i if params['count']
+    @count = params["count"].to_i if params["count"]
 
     @cdb = CacheDB.new
     @images = @cdb.sample(@count)
@@ -42,7 +42,7 @@ Inspiration::App.controllers do
     @images.to_json
   end
 
-  get '/all.json' do
+  get "/all.json" do
     @idb = ImageDB.new
     @cdb = CacheDB.new
 

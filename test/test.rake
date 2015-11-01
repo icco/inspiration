@@ -1,6 +1,6 @@
-require 'rake/testtask'
+require "rake/testtask"
 
-test_tasks = Dir['test/*/'].map { |d| File.basename(d) }
+test_tasks = Dir["test/*/"].map { |d| File.basename(d) }
 
 test_tasks.each do |folder|
   Rake::TestTask.new("test:#{folder}") do |test|
@@ -9,5 +9,5 @@ test_tasks.each do |folder|
   end
 end
 
-desc 'Run application test suite'
-task 'test' => test_tasks.map { |f| "test:#{f}" }
+desc "Run application test suite"
+task "test" => test_tasks.map { |f| "test:#{f}" }
