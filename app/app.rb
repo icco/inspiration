@@ -37,4 +37,9 @@ module Inspiration
   FlickRaw.api_key = "5c282af934cd475695e1f727dd0404a9"
   FlickRaw.shared_secret = "49b3b77e99947328"
   FlickRaw.secure = true
+
+  Instagram.configure do |config|
+    config.client_id = "696296edc81f417ea3418708c35485dd"
+    config.client_secret = "76e99607d14f48dda453fb9c6109d55b"
+  end
 end

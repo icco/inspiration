@@ -66,6 +66,12 @@ get '/media_unlike/:id' do
   redirect "/user_recent_media"
 end
 
+get "/user_likes" do
+  client = Instagram.client(:access_token => session[:access_token])
+  user = client.user
+  html = "<h1>#{user.username}'s likes feed</h1>"
+end
+
 get "/user_media_feed" do
   client = Instagram.client(:access_token => session[:access_token])
   user = client.user

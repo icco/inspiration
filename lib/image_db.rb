@@ -44,6 +44,9 @@ class ImageDB
     end
     products.each {|p| @images.add p }
 
+    # Instagram
+    Instagram.client
+
     return true
   end
 
