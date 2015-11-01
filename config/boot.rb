@@ -1,5 +1,5 @@
 # Defines our constants
-RACK_ENV ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(RACK_ENV)
+RACK_ENV ||= ENV['RACK_ENV'] ||= 'development' unless defined?(RACK_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 
 # Load our dependencies
@@ -12,13 +12,13 @@ require 'open-uri'
 require 'rss'
 require 'set'
 
-logging_to_stdout = {:stream => :stdout, :format_datetime => '', :log_static => true}
+logging_to_stdout = { stream: :stdout, format_datetime: '', log_static: true }
 Padrino::Logger::Config[:development].merge!(logging_to_stdout)
 Padrino::Logger::Config[:development][:log_level] = :devel
 Padrino::Logger::Config[:production].merge!(logging_to_stdout)
 Padrino::Logger::Config[:production][:log_level] = :info
 
-## Configure your I18n
+# # Configure your I18n
 I18n.enforce_available_locales = false
 I18n.default_locale = :en
 
