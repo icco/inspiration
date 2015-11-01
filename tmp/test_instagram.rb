@@ -31,6 +31,7 @@ get "/nav" do
     <ol>
       <li><a href='/user_recent_media'>User Recent Media</a> Calls user_recent_media - Get a list of a user's most recent media</li>
       <li><a href='/user_media_feed'>User Media Feed</a> Calls user_media_feed - Get the currently authenticated user's media feed uses pagination</li>
+      <li><a href='/user_likes'>User likes</a></li>
       <li><a href='/location_recent_media'>Location Recent Media</a> Calls location_recent_media - Get a list of recent media at a given location, in this case, the Instagram office</li>
       <li><a href='/media_search'>Media Search</a> Calls media_search - Get a list of media close to a given latitude and longitude</li>
       <li><a href='/media_popular'>Popular Media</a> Calls media_popular - Get a list of the overall most popular media items</li>
@@ -70,6 +71,10 @@ get "/user_likes" do
   client = Instagram.client(:access_token => session[:access_token])
   user = client.user
   html = "<h1>#{user.username}'s likes feed</h1>"
+  page_1 = client.user_liked_media count: 100
+  for media_item in page_1
+    html << "<img src='#{media_item.images.thumbnail.url}'>"
+  end
 end
 
 get "/user_media_feed" do
