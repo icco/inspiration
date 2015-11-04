@@ -131,7 +131,7 @@ class ImageDB
     user = ImageDB.instagram_client.user.username
     while true
       p ({ instagram: max_id, user: user })
-      data = ImageDB.instagram_client.user_liked_media(count: 200, max_like_id: max_id)
+      data = ImageDB.instagram_client.user_liked_media(max_like_id: max_id)
       data.each do |i|
         @images.add i.link
         max_id = i.id
