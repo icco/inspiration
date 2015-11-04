@@ -71,10 +71,11 @@ get "/user_likes" do
   client = Instagram.client(access_token: session[:access_token])
   user = client.user
   html = "<h1>#{user.username}'s likes feed</h1>"
-  page_1 = client.user_liked_media count: 100
-  for media_item in page_1
-    html << "<img src='#{media_item.images.thumbnail.url}'>"
+  client.user_liked_media.each do |i|
+    html << "<div style='float:left;'><a href='#{i.link}'><img title='#{i.link}' src='#{i.images.standard_resolution.url}'></a></div>"
   end
+
+  html
 end
 
 get "/user_media_feed" do
