@@ -42,4 +42,5 @@ module Inspiration
     config.client_id = "696296edc81f417ea3418708c35485dd"
     config.client_secret = "76e99607d14f48dda453fb9c6109d55b"
   end
+  INSTAGRAM_TOKEN = "2025166174.696296e.b8d7376606d04d38a745aea46d4284f5"
 end
