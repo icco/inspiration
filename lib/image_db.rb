@@ -128,11 +128,16 @@ class ImageDB
 
     # Instagram
     max_id = nil
-    ImageDB.instagram_client.user_liked_media(count: 200, max_like_id: max_like_id).each do |i|
-      # TODO: Add logic to add max id
-      # https://instagram.com/developer/endpoints/users/#get_users_feed_liked
-      # https://github.com/Instagram/instagram-ruby-gem
-      @images.add i.link
+    user = ImageDB.instagram_client.user.username
+    while true
+      p ({ instagram: max_id, user: user })
+      data = ImageDB.instagram_client.user_liked_media(count: 200, max_like_id: max_id)
+      data.each do |i|
+        @images.add i.link
+        max_id = i.id
+      end
+
+      break if data.count == 0
     end
     puts "Images: #{@images.count}"
 
