@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - "vendor/**/*"
     - "db/schema.rb"
+    - "tmp/*"
   UseCache: false
 Style/CollectionMethods:
   Description: Preferred collection methods.
