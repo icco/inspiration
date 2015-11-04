@@ -129,7 +129,7 @@ class ImageDB
     # Instagram
     max_id = nil
     user = ImageDB.instagram_client.user.username
-    while true
+    loop do
       p ({ instagram: max_id, user: user })
       data = ImageDB.instagram_client.user_liked_media(max_like_id: max_id)
       data.each do |i|
