@@ -49,7 +49,7 @@ get "/user_recent_media" do
   client = Instagram.client(access_token: session[:access_token])
   user = client.user
   html = "<h1>#{user.username}'s recent media</h1>"
-  for media_item in client.user_recent_media
+  client.user_recent_media.each do |media_item|
     html << "<div style='float:left;'><img src='#{media_item.images.thumbnail.url}'><br/> <a href='/media_like/#{media_item.id}'>Like</a>  <a href='/media_unlike/#{media_item.id}'>Un-Like</a>  <br/>LikesCount=#{media_item.likes[:count]}</div>"
   end
   html
@@ -87,11 +87,11 @@ get "/user_media_feed" do
   page_2_max_id = page_1.pagination.next_max_id
   page_2 = client.user_recent_media(777, max_id: page_2_max_id) unless page_2_max_id.nil?
   html << "<h2>Page 1</h2><br/>"
-  for media_item in page_1
+  page_1.each do |media_item|
     html << "<img src='#{media_item.images.thumbnail.url}'>"
   end
   html << "<h2>Page 2</h2><br/>"
-  for media_item in page_2
+  page_2.each do |media_item|
     html << "<img src='#{media_item.images.thumbnail.url}'>"
   end
   html
@@ -100,7 +100,7 @@ end
 get "/location_recent_media" do
   client = Instagram.client(access_token: session[:access_token])
   html = "<h1>Media from the Instagram Office</h1>"
-  for media_item in client.location_recent_media(514_276)
+  client.location_recent_media(514_276).each do |media_item|
     html << "<img src='#{media_item.images.thumbnail.url}'>"
   end
   html
@@ -109,7 +109,7 @@ end
 get "/media_search" do
   client = Instagram.client(access_token: session[:access_token])
   html = "<h1>Get a list of media close to a given latitude and longitude</h1>"
-  for media_item in client.media_search("37.7808851", "-122.3948632")
+  client.media_search("37.7808851", "-122.3948632").each do|media_item|
     html << "<img src='#{media_item.images.thumbnail.url}'>"
   end
   html
@@ -118,7 +118,7 @@ end
 get "/media_popular" do
   client = Instagram.client(access_token: session[:access_token])
   html = "<h1>Get a list of the overall most popular media items</h1>"
-  for media_item in client.media_popular
+  client.media_popular.each do |media_item|
     html << "<img src='#{media_item.images.thumbnail.url}'>"
   end
   html
