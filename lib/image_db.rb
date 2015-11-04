@@ -15,6 +15,10 @@ class ImageDB
     Dribbble::Client.new token: Inspiration::DRIBBBLE_TOKEN
   end
 
+  def self.instagram_client
+    client = Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
+  end
+
   def update
     # DeviantArt
     rss_url = "http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation"
@@ -45,7 +49,9 @@ class ImageDB
     products.each { |p| @images.add p }
 
     # Instagram
-    Instagram.client
+    ImageDB.instagram_client.user_liked_media.each do |i|
+      @images.add i.link
+    end
 
     true
   end
@@ -119,6 +125,16 @@ class ImageDB
       products.each { |p| @images.add p }
       puts "Images: #{@images.count}"
     end
+
+    # Instagram
+    max_id = nil
+    ImageDB.instagram_client.user_liked_media(count: 200, max_like_id: max_like_id).each do |i|
+      # TODO: Add logic to add max id
+      # https://instagram.com/developer/endpoints/users/#get_users_feed_liked
+      # https://github.com/Instagram/instagram-ruby-gem
+      @images.add i.link
+    end
+    puts "Images: #{@images.count}"
 
     # Clean UP.
     @images = @images.delete_if(&:empty?).to_a.sort
