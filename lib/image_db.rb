@@ -1,3 +1,5 @@
+require 'pp'
+
 class ImageDB
   def initialize
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map(&:strip))
@@ -132,6 +134,7 @@ class ImageDB
     loop do
       p ({ instagram: max_id, user: user })
       data = ImageDB.instagram_client.user_liked_media(max_like_id: max_id)
+      pp data
       data.each do |i|
         @images.add i.link
         max_id = i.id
