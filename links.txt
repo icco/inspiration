@@ -54,6 +54,7 @@ http://abcartattack.deviantart.com/art/Still-Waiting-For-The-Rain-325875753
 http://abcartattack.deviantart.com/art/Waiting-For-The-Rain-325155180
 http://abcartattack.deviantart.com/art/Water-Under-The-Bridge-349016944
 http://abcartattack.deviantart.com/art/Water-Under-The-Bridge-Streets-350508414
+http://abhishekjoshi.deviantart.com/art/Last-thoughts-505243179
 http://abigailmunoz.deviantart.com/art/Encounter-with-the-Carnivorous-Swamp-Rabbits-531124584
 http://abigbat.deviantart.com/art/Esther-470488019
 http://abuseim.deviantart.com/art/14-423553683
@@ -1722,7 +1723,6 @@ http://ilkela.deviantart.com/art/Titanium-Nouveau-Eyeglasses-348439879
 http://illbewaiting.deviantart.com/art/Be-My-Valentine-111673158
 http://illycia.deviantart.com/art/Totoro-Halcyon-Days-390284210
 http://ilwian.deviantart.com/art/The-Foundation-163559303
-http://image-heart.deviantart.com/art/Last-thoughts-505243179
 http://imaginateartwork.deviantart.com/art/The-Observatory-333923796
 http://imaginism.deviantart.com/art/Turtle-dove-419338236
 http://imladris517.deviantart.com/art/Kinkaku-ji-Temple-of-the-Golden-Pavilion-294226413
@@ -9266,9 +9266,6 @@ https://dribbble.com/shots/251025-Velocity-Stage-2
 https://dribbble.com/shots/251747--A-Logo
 https://dribbble.com/shots/292208-Kavak
 https://dribbble.com/shots/301631-My-Site-Rd2
-https://dribbble.com/shots/301840-Snap-Shot
-https://dribbble.com/shots/303878-Growl-Notification
-https://dribbble.com/shots/304135-Growl-Notification-Style
 https://dribbble.com/shots/311242-Cloud-for-Growl
 https://dribbble.com/shots/313850-Works-page
 https://dribbble.com/shots/342693-tooling-with-canvas
@@ -9296,7 +9293,6 @@ https://dribbble.com/shots/480453-Redacted-Name-Selection-and-Title
 https://dribbble.com/shots/489377-Logo-Concept
 https://dribbble.com/shots/518702-Calendar
 https://dribbble.com/shots/519785-Albums
-https://dribbble.com/shots/527056-Growl-Theme-2
 https://dribbble.com/shots/542089-Nosegrind-Cat
 https://dribbble.com/shots/542103-Nosegrind-Call-to-Action
 https://dribbble.com/shots/549055-a-logo
