@@ -133,11 +133,62 @@ class ImageDB
     user = ImageDB.instagram_client.user.username
     loop do
       p ({ instagram: max_id, user: user })
-      data = ImageDB.instagram_client.user_liked_media(max_like_id: max_id)
-      pp data
+#{"attribution"=>nil,
+#  "tags"=>[],
+#  "type"=>"image",
+#  "location"=>nil,
+#  "comments"=>
+#   {"count"=>39,
+#    "data"=>
+#     []},
+#  "filter"=>"Normal",
+#  "created_time"=>"1444147368",
+#  "link"=>"https://instagram.com/p/8gIv1sxfBR/",
+#  "likes"=>
+#   {"count"=>368,
+#    "data"=>
+#     []},
+#  "images"=>
+#   {"low_resolution"=>
+#     {"url"=>
+#       "https://scontent.cdninstagram.com/hphotos-xtp1/t51.2885-15/s320x320/e35/12142119_1675298606092560_226608513_n.jpg",
+#      "width"=>320,
+#      "height"=>320},
+#    "thumbnail"=>
+#     {"url"=>
+#       "https://scontent.cdninstagram.com/hphotos-xtp1/t51.2885-15/s150x150/e35/12142119_1675298606092560_226608513_n.jpg",
+#      "width"=>150,
+#      "height"=>150},
+#    "standard_resolution"=>
+#     {"url"=>
+#       "https://scontent.cdninstagram.com/hphotos-xtp1/t51.2885-15/s640x640/sh0.08/e35/12142119_1675298606092560_226608513_n.jpg",
+#      "width"=>640,
+#      "height"=>640}},
+#  "users_in_photo"=>[],
+#  "caption"=>
+#   {"created_time"=>"1444147368",
+#    "text"=>"B.L.T.",
+#    "from"=>
+#     {"username"=>"scanwiches",
+#      "profile_picture"=>
+#       "http://photos-g.ak.instagram.com/hphotos-ak-xfp1/t51.2885-19/11881677_708181915953302_475500755_a.jpg",
+#      "id"=>"970629475",
+#      "full_name"=>""},
+#    "id"=>"1089909584271111007"},
+#  "user_has_liked"=>true,
+#  "id"=>"1089909581670641745_970629475",
+#  "user"=>
+#   {"username"=>"scanwiches",
+#    "profile_picture"=>
+#     "http://photos-g.ak.instagram.com/hphotos-ak-xfp1/t51.2885-19/11881677_708181915953302_475500755_a.jpg",
+#    "id"=>"970629475",
+#    "full_name"=>""}},
+      args = {max_like_id: max_id}.delete_if {|k, v| v.nil? }
+      data = ImageDB.instagram_client.user_liked_media(args)
       data.each do |i|
         @images.add i.link
         max_id = i.id
+        p max_id
       end
 
       break if data.count == 0
