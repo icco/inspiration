@@ -1,4 +1,4 @@
-require 'pp'
+require "pp"
 
 class ImageDB
   def initialize
@@ -136,16 +136,16 @@ class ImageDB
     user = ImageDB.instagram_client.user.username
     loop do
       p ({ instagram: max_id, user: user })
-      args = {max_like_id: max_id}.delete_if {|k, v| v.nil? }
+      args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
       data = ImageDB.instagram_client.user_liked_media(args)
       data.each do |i|
         @images.add i.link
         max_id = i.id
       end
 
+      puts "Images: #{@images.count}"
       break if data.count == 0
     end
-    puts "Images: #{@images.count}"
 
     # Clean UP.
     @images = @images.delete_if(&:empty?).to_a.sort
