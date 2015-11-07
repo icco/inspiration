@@ -74,9 +74,6 @@ class CacheDB
     begin
       case url
       when dribbble_re
-        # Dribbble does not like us, go slow
-        sleep rand
-
         id = url.gsub(dribbble_re, "").split("-").first
         data = ImageDB.dribbble_client.get_shot(id)
 
