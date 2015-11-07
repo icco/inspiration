@@ -1,17 +1,17 @@
 desc "Update links."
-task :cron => :environment do
+task cron: :environment do
   idb = ImageDB.new
   idb.update
 end
 
 desc "Get all old favorites."
-task :get_old => :environment do
+task get_old: :environment do
   idb = ImageDB.new
   idb.full_update
 end
 
 desc "Build a cache of the image db."
-task :build_cache => :environment do
+task build_cache: :environment do
   cdb = CacheDB.new
   idb = ImageDB.new
 
@@ -23,7 +23,7 @@ task :build_cache => :environment do
 end
 
 desc "Try to update 10 images in the cache."
-task :build_cache_random => :environment do
+task build_cache_random: :environment do
   cdb = CacheDB.new
   idb = ImageDB.new
 
@@ -33,14 +33,14 @@ task :build_cache_random => :environment do
 end
 
 desc "Remove unused images in cache."
-task :clean => :environment do
+task clean: :environment do
   cdb = CacheDB.new
   idb = ImageDB.new
 
   cdb.clean idb.images
 end
 
-task :import_sqlite => :environment do
+task import_sqlite: :environment do
   cdb = CacheDB.new
   cdb.load_sql_to_json "cache.db"
 end

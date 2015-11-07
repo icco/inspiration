@@ -1,4 +1,4 @@
-Inspiration::App.controllers  do
+Inspiration::App.controllers do
   layout :main
 
   COUNT = 400
@@ -25,7 +25,7 @@ Inspiration::App.controllers  do
 
     @idb = ImageDB.new
     @cdb = CacheDB.new
-    @images = @idb.sample(@count).map {|u| @cdb.get u }
+    @images = @idb.sample(@count).map { |u| @cdb.get u }
 
     content_type :json
     @images.to_json
