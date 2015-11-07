@@ -47,7 +47,9 @@ class ImageDB
     # VeryGoods.co
     products = open "https://verygoods.co/site-api-0.1/users/icco/goods?limit=20" do |j|
       data = Oj.compat_load(j)
-      data["_embedded"]["goods"].map { |g| "https://verygoods.co/site-api-0.1#{g['_links']['product']['href']}" }
+      data["_embedded"]["goods"].map do |g|
+        "https://verygoods.co/site-api-0.1#{g['_links']['product']['href']}"
+      end
     end
     products.each { |p| @images.add p }
 
@@ -107,7 +109,8 @@ class ImageDB
     # NOTE: Page count verified 2015-07-22
     (1..30).each do |page|
       p ({ flickr: "42027916@N00", page: page })
-      favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page).map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
+      favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
+      favorites = favorites.map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
       favorites.each { |l| @images.add l }
       puts "Images: #{@images.count}"
     end
@@ -124,7 +127,10 @@ class ImageDB
       else
         url = nil
       end
-      products = data["_embedded"]["goods"].map { |g| "http://verygoods.co" + g["_links"]["product"]["href"].gsub(/products/, "product") }
+
+      products = data["_embedded"]["goods"].map do |g|
+        "http://verygoods.co#{g["_links"]["product"]["href"].gsub(/products/, "product")}"
+      end
       products.each { |p| @images.add p }
       puts "Images: #{@images.count}"
     end
