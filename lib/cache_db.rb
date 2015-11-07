@@ -63,7 +63,7 @@ class CacheDB
   def cache(url)
     return true unless needs_update? url
 
-    hash = { url: url, modified: Time.now }
+    hash = { url: url, modified: Time.now.utc }
 
     dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = /deviantart\.com/
@@ -259,7 +259,7 @@ class CacheDB
 
     # ~10 days * a random float
     time = Time.parse(data["modified"])
-    (Time.now - time) > (860_000 * rand)
+    (Time.now.utc - time) > (860_000 * rand)
   end
 
   def clean(images)
