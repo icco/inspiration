@@ -129,7 +129,7 @@ end
 get "/user_search" do
   client = Instagram.client(access_token: session[:access_token])
   html = "<h1>Search for users on instagram, by name or usernames</h1>"
-  for user in client.user_search("instagram")
+  client.user_search("instagram").each do |user|
     html << "<li> <img src='#{user.profile_picture}'> #{user.username} #{user.full_name}</li>"
   end
   html
@@ -138,7 +138,7 @@ end
 get "/location_search" do
   client = Instagram.client(access_token: session[:access_token])
   html = "<h1>Search for a location by lat/lng with a radius of 5000m</h1>"
-  for location in client.location_search("48.858844", "2.294351", "5000")
+  client.location_search("48.858844", "2.294351", "5000").each do |location|
     html << "<li> #{location.name} <a href='https://www.google.com/maps/preview/@#{location.latitude},#{location.longitude},19z'>Map</a></li>"
   end
   html
@@ -147,7 +147,7 @@ end
 get "/location_search_4square" do
   client = Instagram.client(access_token: session[:access_token])
   html = "<h1>Search for a location by Fousquare ID (v2)</h1>"
-  for location in client.location_search("3fd66200f964a520c5f11ee3")
+  client.location_search("3fd66200f964a520c5f11ee3").each do |location|
     html << "<li> #{location.name} <a href='https://www.google.com/maps/preview/@#{location.latitude},#{location.longitude},19z'>Map</a></li>"
   end
   html
@@ -158,7 +158,7 @@ get "/tags" do
   html = "<h1>Search for tags, get tag info and get media by tag</h1>"
   tags = client.tag_search("cat")
   html << "<h2>Tag Name = #{tags[0].name}. Media Count =  #{tags[0].media_count}. </h2><br/><br/>"
-  for media_item in client.tag_recent_media(tags[0].name)
+  client.tag_recent_media(tags[0].name.each do |media_item|
     html << "<img src='#{media_item.images.thumbnail.url}'>"
   end
   html
