@@ -129,7 +129,7 @@ class ImageDB
       end
 
       products = data["_embedded"]["goods"].map do |g|
-        "http://verygoods.co#{g["_links"]["product"]["href"].gsub(/products/, "product")}"
+        "http://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
       end
       products.each { |p| @images.add p }
       puts "Images: #{@images.count}"
