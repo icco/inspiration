@@ -68,6 +68,7 @@ class CacheDB
     dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = /deviantart\.com/
     flickr_re = /www\.flickr\.com/
+    insta_re = %r{https://instagram\.com/p/}
     verygoods_re = /verygoods\.co/
 
     begin
@@ -133,6 +134,20 @@ class CacheDB
         image_url = data["url"]
         title = "\"#{data['title']}\" by #{data['author_name']}"
         attrs = { title: title, image: image_url, size: { width: data["width"], height: data["height"] } }
+        hash.merge! attrs
+      when insta_re
+        # OEMBED for INSTAGRAM
+        oembed_url = "https://api.instagram.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
+        resp = Faraday.get oembed_url
+        if resp.status == 200
+          data = JSON.parse(resp.body)
+        else
+          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          return
+        end
+
+        title = "\"#{data['title']}\" by #{data['author_name']}"
+        attrs = { title: title, image: data["thumbnail_url"], size: { width: data["thumbnail_width"], height: data["thumbnail_height"] } }
         hash.merge! attrs
       when verygoods_re
         # VeryGoods does not support OEmbed as of 2015-08-10
