@@ -4,4 +4,6 @@
 
 A mood board I guess.
 
-This autodeploys to Heroku and is hosted on mood.natwelch.com.
+This autodeploys to Heroku and is hosted on http://mood.natwelch.com.
+
+![screenshot](http://cl.natw.me/dks1/d)
