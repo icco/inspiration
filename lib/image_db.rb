@@ -18,7 +18,7 @@ class ImageDB
   end
 
   def self.instagram_client
-    client = Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
+    Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
   end
 
   def update
