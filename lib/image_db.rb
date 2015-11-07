@@ -36,7 +36,8 @@ class ImageDB
     data.each { |l| @images.add l.html_url }
 
     # Flickr
-    favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n").map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
+    favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n")
+    favorites = favorites.map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
     favorites.each { |l| @images.add l }
 
     # Write all image links to disk
