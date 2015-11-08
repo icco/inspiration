@@ -4,10 +4,6 @@ Inspiration::App.controllers do
   COUNT = 400
 
   get :about do
-    idb = ImageDB.new
-    @images = idb.images
-    @text = partial :about
-
     render :about
   end
 
