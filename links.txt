@@ -1528,7 +1528,7 @@ http://getty.deviantart.com/art/On-the-Way-Home-109108098
 http://getty.deviantart.com/art/Tutorial-for-soft-cell-shading-27544088
 http://gevurah-studios.deviantart.com/art/Leona-Del-Rey-411892434
 http://gg-arts.deviantart.com/art/Section-C-383304926
-http://ghost-1515.deviantart.com/art/Minirickverse-557319619
+http://ghostillustrations.deviantart.com/art/Minirickverse-557319619
 http://giannysuki.deviantart.com/art/Bluemoon-269932444
 http://giftlee.deviantart.com/art/Peter-Pan-367986599
 http://gigicave.deviantart.com/art/BIANCA-418077940
@@ -5324,6 +5324,7 @@ http://www.flickr.com/photos/23659159@N00/2096992472
 http://www.flickr.com/photos/23659159@N00/21968505316
 http://www.flickr.com/photos/23659159@N00/22070124544
 http://www.flickr.com/photos/23659159@N00/22251197573
+http://www.flickr.com/photos/23659159@N00/22478365768
 http://www.flickr.com/photos/23659159@N00/2435215483
 http://www.flickr.com/photos/23659159@N00/2436020178
 http://www.flickr.com/photos/23659159@N00/2469909172
@@ -5460,6 +5461,7 @@ http://www.flickr.com/photos/24593697@N03/4040120070
 http://www.flickr.com/photos/24662369@N07/4440319873
 http://www.flickr.com/photos/24662369@N07/5750017807
 http://www.flickr.com/photos/24688530@N05/19196292726
+http://www.flickr.com/photos/24688530@N05/22466337198
 http://www.flickr.com/photos/24688530@N05/4101223493
 http://www.flickr.com/photos/24688530@N05/4102014182
 http://www.flickr.com/photos/24688530@N05/4547185011
@@ -9283,6 +9285,8 @@ https://dribbble.com/shots/2331328-Office-Frontdesk
 https://dribbble.com/shots/2331698-Mega-Mario
 https://dribbble.com/shots/2331836-New-Family-Member
 https://dribbble.com/shots/2332105-Seven-of-Diamonds
+https://dribbble.com/shots/2333466-2015-World-Usability-Day
+https://dribbble.com/shots/2333584-Mornin-Coffee
 https://dribbble.com/shots/2334121-Ceramics-Doodles
 https://dribbble.com/shots/2336284-Start-Strong-Finish-Strong
 https://dribbble.com/shots/2336314-Saltstack-Tutorial
@@ -9564,6 +9568,7 @@ https://instagram.com/p/8vOjZNkHWt/
 https://instagram.com/p/8wbVaKhk9m/
 https://instagram.com/p/8yW4keh2Fn/
 https://instagram.com/p/91cGdSSrGp/
+https://instagram.com/p/92mHtXBUiB/
 https://instagram.com/p/9BbS4sB2O1/
 https://instagram.com/p/9Top4eljwd/
 https://instagram.com/p/9URkAWh2GA/
