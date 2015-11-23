@@ -75,7 +75,7 @@ class CacheDB
       case url
       when dribbble_re
         id = url.gsub(dribbble_re, "").split("-").first
-        data = ImageDB.dribbble_client.get_shot(id)
+        data = Dribbble::Shot.find(Inspiration::DRIBBBLE_TOKEN, id)
 
         title = "\"#{data.title}\" by #{data.user['username']}"
         if !data.images["hidpi"].nil?

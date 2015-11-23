@@ -13,10 +13,6 @@ class ImageDB
     images.sample count
   end
 
-  def self.dribbble_client
-    Dribbble::Client.new token: Inspiration::DRIBBBLE_TOKEN
-  end
-
   def self.instagram_client
     Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
   end
