@@ -4,6 +4,10 @@ module Logging
     Logging.logger
   end
 
+  def logging
+    logger
+  end
+
   # Global, memoized, lazy initialized instance of a logger
   def self.logger
     @logger ||= Logger.new(STDOUT)
