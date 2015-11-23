@@ -12,6 +12,7 @@ gem "instagram"
 gem "oj"
 gem "rake"
 gem "sass"
+gem "sinatra", require: "sinatra/base"
 gem "thin"
 
 # For dev
