@@ -27,10 +27,18 @@ class ImageDB
       end
     end
 
+    # Write all image links to disk
+    all_images = @images.delete_if(&:empty?).to_a.sort
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
+
     # Dribbble
     user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
     data = user.likes
     data.each { |l| @images.add l.html_url }
+
+    # Write all image links to disk
+    all_images = @images.delete_if(&:empty?).to_a.sort
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
 
     # Flickr
     favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n")
@@ -39,7 +47,7 @@ class ImageDB
 
     # Write all image links to disk
     all_images = @images.delete_if(&:empty?).to_a.sort
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.to_a.join("\n")) }
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
 
     # VeryGoods.co
     products = open "https://verygoods.co/site-api-0.1/users/icco/goods?limit=20" do |j|
@@ -50,10 +58,18 @@ class ImageDB
     end
     products.each { |prod| @images.add prod }
 
+    # Write all image links to disk
+    all_images = @images.delete_if(&:empty?).to_a.sort
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
+
     # Instagram
     ImageDB.instagram_client.user_liked_media.each do |i|
       @images.add i.link
     end
+
+    # Write all image links to disk
+    all_images = @images.delete_if(&:empty?).to_a.sort
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
 
     true
   end
@@ -74,6 +90,9 @@ class ImageDB
       end
     end
 
+    # Write to file.
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
+
     # DA Favorites
     # NOTE: Offset count verified 2015-07-22
     (0..6000).step(60) do |offset|
@@ -90,6 +109,9 @@ class ImageDB
       logging.info "Images: #{@images.count}"
     end
 
+    # Write to file.
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
+
     # Dribbble
     # NOTE: Page count verified 2015-09-02
     dribbble_user = "icco"
@@ -105,6 +127,9 @@ class ImageDB
       logging.info "Images: #{@images.count}"
     end
 
+    # Write to file.
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
+
     # Flickr Favorites
     # http://www.flickr.com/services/api/misc.urls.html
     # NOTE: Page count verified 2015-07-22
@@ -117,6 +142,9 @@ class ImageDB
       favorites.each { |l| @images.add l }
       logging.info "Images: #{@images.count}"
     end
+
+    # Write to file.
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
 
     # VeryGoods.co
     domain = "https://verygoods.co/site-api-0.1"
@@ -139,6 +167,9 @@ class ImageDB
       products.each { |prod| @images.add prod }
       logging.info "Images: #{@images.count}"
     end
+
+    # Write to file.
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
 
     # Instagram
     #
