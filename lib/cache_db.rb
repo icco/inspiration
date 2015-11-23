@@ -56,7 +56,10 @@ class CacheDB
       file = Oj.load_file(@cache_file_name)
       return file.values.sample(count).delete_if { |d| d.nil? || d["image"].nil? }
     elsif sqlite?
-      return Cache.where.not(image: nil).order("RANDOM()").limit(count).map { |c| CacheSerializer.new(c) }
+      query = Cache.where.not(image: nil).order("RANDOM()").limit(count)
+      return query.map do |c|
+        CacheSerializer.new(c)
+      end
     end
   end
 
