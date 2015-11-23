@@ -147,7 +147,7 @@ DEPENDENCIES
   active_model_serializers
   activerecord
   bundler
-  dribbble (>= 1.0.0.beta1)
+  dribbble (>= 1.0.0)
   erubis (~> 2.7)
   faraday
   flickraw

@@ -32,7 +32,8 @@ class ImageDB
     end
 
     # Dribbble
-    data = ImageDB.dribbble_client.get_user("icco").likes
+    user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
+    data = user.likes
     data.each { |l| @images.add l.html_url }
 
     # Flickr
@@ -97,7 +98,8 @@ class ImageDB
     page_count = 30
 
     (1..page_count).each do |page|
-      data = ImageDB.dribbble_client.get_user(dribbble_user).likes page: page
+      user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
+      data = user.likes page: page
       p ({ player: dribbble_user, page: page })
       data.each { |l| @images.add l.html_url }
 

@@ -4,7 +4,7 @@ ruby "2.2.3"
 
 gem "active_model_serializers"
 gem "activerecord", require: "active_record"
-gem "dribbble", ">= 1.0.0.beta1"
+gem "dribbble", ">= 1.0.0"
 gem "erubis", "~> 2.7"
 gem "faraday"
 gem "flickraw"
