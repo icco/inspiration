@@ -10,7 +10,7 @@ class CacheDB
       mode: :compat,
       indent: 2
     }
-    @keyfilter = /[\/:\.\\\-@]/
+    @keyfilter = %r{[\/:\.\\\-@]}
 
     if File.extname(@cache_file_name).eql? ".json"
       @mode = "json"
