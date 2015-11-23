@@ -8,7 +8,13 @@ require "json"
 require "open-uri"
 require "rss"
 require "set"
-Dir[File.dirname(__FILE__) + "/lib/*.rb"].each { |file| require file }
+require "logger"
+
+require "./lib/logging.rb"
+require "./lib/scss_init.rb"
+
+require "./lib/cache_db.rb"
+require "./lib/image_db.rb"
 
 class Inspiration < Sinatra::Base
   register ScssInitializer
