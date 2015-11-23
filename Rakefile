@@ -1,4 +1,5 @@
 require "bundler/setup"
+require "./site"
 
 task :default do
   puts "No tests written."
@@ -10,19 +11,19 @@ task :local do
 end
 
 desc "Update links."
-task cron: :environment do
+task :cron do
   idb = ImageDB.new
   idb.update
 end
 
 desc "Get all old favorites."
-task get_old: :environment do
+task :get_old do
   idb = ImageDB.new
   idb.full_update
 end
 
 desc "Build a cache of the image db."
-task build_cache: :environment do
+task :build_cache do
   cdb = CacheDB.new
   idb = ImageDB.new
 
@@ -34,7 +35,7 @@ task build_cache: :environment do
 end
 
 desc "Try to update 10 images in the cache."
-task build_cache_random: :environment do
+task :build_cache_random do
   cdb = CacheDB.new
   idb = ImageDB.new
 
@@ -44,14 +45,14 @@ task build_cache_random: :environment do
 end
 
 desc "Remove unused images in cache."
-task clean: :environment do
+task :clean do
   cdb = CacheDB.new
   idb = ImageDB.new
 
   cdb.clean idb.images
 end
 
-task import_sqlite: :environment do
+task :import_sqlite do
   cdb = CacheDB.new
   cdb.load_sql_to_json "cache.db"
 end
