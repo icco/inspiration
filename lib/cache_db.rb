@@ -102,7 +102,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -115,19 +115,19 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
         # Licenses are blocking embeding I think.
         if data["type"] == "link"
           # TODO: embed by scraping "/sizes/m/"
-          logger.info "Flickr won't let us embed this: #{url}."
+          p "Flickr won't let us embed this: #{url}."
           return
         end
 
         unless data["url"]
-          logger.error "No Tumbnail for #{url} at #{oembed_url}"
+          p "No Tumbnail for #{url} at #{oembed_url}"
           return
         end
 
@@ -142,7 +142,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -157,7 +157,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -167,10 +167,10 @@ class CacheDB
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
       else
-        logger.error "No idea what url this is: #{url}"
+        p "No idea what url this is: #{url}"
       end
     rescue StandardError => e
-      logger.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
+      p "Failed #{oembed_url} for #{url}: #{e.inspect}"
     end
 
     set url, hash
