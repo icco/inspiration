@@ -62,7 +62,8 @@ class ImageDB
     # Flickr Personal Favorites Set
     # NOTE: Page count verified 2015-07-22
     (1..3).each do |page|
-      logging.info ({ flickr: "42027916@N00", set: "72157601200827657", page: page }.inspect)
+      print_data = { flickr: "42027916@N00", set: "72157601200827657", page: page }
+      logging.info print_data.inspect
       begin
         resp = flickr.photosets.getPhotos(photoset_id: "72157601200827657", extras: "url_n", page: page)
         favorites = resp["photo"].map { |p| "http://www.flickr.com/photos/#{resp['owner']}/#{p['id']}" }
@@ -77,7 +78,8 @@ class ImageDB
     # NOTE: Offset count verified 2015-07-22
     (0..6000).step(60) do |offset|
       rss_url = "http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
-      logging.info ({ deviant: "calvin166", offset: offset }.inspect)
+      print_data = { deviant: "calvin166", offset: offset }
+      logging.info print_data.inspect
       open(rss_url) do |rss|
         feed = RSS::Parser.parse(rss)
         feed.items.each do |item|
@@ -96,7 +98,8 @@ class ImageDB
     (1..page_count).each do |page|
       user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
       data = user.likes page: page
-      logging.info ({ player: dribbble_user, page: page }.inspect)
+      print_data = { player: dribbble_user, page: page }
+      logging.info print_data.inspect
       data.each { |l| @images.add l.html_url }
 
       logging.info "Images: #{@images.count}"
@@ -106,7 +109,9 @@ class ImageDB
     # http://www.flickr.com/services/api/misc.urls.html
     # NOTE: Page count verified 2015-07-22
     (1..30).each do |page|
-      logging.info ({ flickr: "42027916@N00", page: page }.inspect)
+      print_data = { flickr: "42027916@N00", page: page }
+      logging.info print_data.inspect
+
       favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
       favorites = favorites.map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
       favorites.each { |l| @images.add l }
@@ -117,7 +122,9 @@ class ImageDB
     domain = "https://verygoods.co/site-api-0.1"
     url = domain + "/users/icco/goods?limit=20"
     while url
-      logging.info ({ verygoods: url }.inspect)
+      print_data = { verygoods: url }
+      logging.info print_data.inspect
+
       j = open url
       data = Oj.compat_load(j)
       if data["_links"]["next"]
@@ -140,7 +147,9 @@ class ImageDB
     max_id = nil
     user = ImageDB.instagram_client.user.username
     loop do
-      logging.info({ instagram: max_id, user: user }.inspect)
+      print_data = { instagram: max_id, user: user }
+      logging.info print_data.inspect
+
       args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
       data = ImageDB.instagram_client.user_liked_media(args)
       data.each do |i|
