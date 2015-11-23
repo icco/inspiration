@@ -1,6 +1,6 @@
-require "pp"
-
 class ImageDB
+  include Logging
+
   def initialize
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map(&:strip))
   end
@@ -48,7 +48,7 @@ class ImageDB
         "https://verygoods.co/site-api-0.1#{g['_links']['product']['href']}"
       end
     end
-    products.each { |p| @images.add p }
+    products.each { |prod| @images.add prod }
 
     # Instagram
     ImageDB.instagram_client.user_liked_media.each do |i|
@@ -62,14 +62,14 @@ class ImageDB
     # Flickr Personal Favorites Set
     # NOTE: Page count verified 2015-07-22
     (1..3).each do |page|
-      p ({ flickr: "42027916@N00", set: "72157601200827657", page: page })
+      logging.info ({ flickr: "42027916@N00", set: "72157601200827657", page: page }.inspect)
       begin
         resp = flickr.photosets.getPhotos(photoset_id: "72157601200827657", extras: "url_n", page: page)
         favorites = resp["photo"].map { |p| "http://www.flickr.com/photos/#{resp['owner']}/#{p['id']}" }
         favorites.each { |l| @images.add l }
-        puts "Images: #{@images.count}"
+        logging.info "Images: #{@images.count}"
       rescue
-        puts "Failed to get."
+        logging.error "Failed to get."
       end
     end
 
@@ -77,7 +77,7 @@ class ImageDB
     # NOTE: Offset count verified 2015-07-22
     (0..6000).step(60) do |offset|
       rss_url = "http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
-      p ({ deviant: "calvin166", offset: offset })
+      logging.info ({ deviant: "calvin166", offset: offset }.inspect)
       open(rss_url) do |rss|
         feed = RSS::Parser.parse(rss)
         feed.items.each do |item|
@@ -85,7 +85,7 @@ class ImageDB
         end
       end
 
-      puts "Images: #{@images.count}"
+      logging.info "Images: #{@images.count}"
     end
 
     # Dribbble
@@ -96,28 +96,28 @@ class ImageDB
     (1..page_count).each do |page|
       user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
       data = user.likes page: page
-      p ({ player: dribbble_user, page: page })
+      logging.info ({ player: dribbble_user, page: page }.inspect)
       data.each { |l| @images.add l.html_url }
 
-      puts "Images: #{@images.count}"
+      logging.info "Images: #{@images.count}"
     end
 
     # Flickr Favorites
     # http://www.flickr.com/services/api/misc.urls.html
     # NOTE: Page count verified 2015-07-22
     (1..30).each do |page|
-      p ({ flickr: "42027916@N00", page: page })
+      logging.info ({ flickr: "42027916@N00", page: page }.inspect)
       favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
       favorites = favorites.map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
       favorites.each { |l| @images.add l }
-      puts "Images: #{@images.count}"
+      logging.info "Images: #{@images.count}"
     end
 
     # VeryGoods.co
     domain = "https://verygoods.co/site-api-0.1"
     url = domain + "/users/icco/goods?limit=20"
     while url
-      p ({ verygoods: url })
+      logging.info ({ verygoods: url }.inspect)
       j = open url
       data = Oj.compat_load(j)
       if data["_links"]["next"]
@@ -129,8 +129,8 @@ class ImageDB
       products = data["_embedded"]["goods"].map do |g|
         "http://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
       end
-      products.each { |p| @images.add p }
-      puts "Images: #{@images.count}"
+      products.each { |prod| @images.add prod }
+      logging.info "Images: #{@images.count}"
     end
 
     # Instagram
@@ -140,7 +140,7 @@ class ImageDB
     max_id = nil
     user = ImageDB.instagram_client.user.username
     loop do
-      p ({ instagram: max_id, user: user })
+      logging.info({ instagram: max_id, user: user }.inspect)
       args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
       data = ImageDB.instagram_client.user_liked_media(args)
       data.each do |i|
@@ -148,7 +148,7 @@ class ImageDB
         max_id = i.id
       end
 
-      puts "Images: #{@images.count}"
+      logging.info "Images: #{@images.count}"
       break if data.count == 0
     end
 

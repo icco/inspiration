@@ -2,6 +2,8 @@
 # The key is the original url, the object contains information to render the
 # image.
 class CacheDB
+  include Logging
+
   def initialize
     @cache_file_name = Inspiration::CACHE_FILE
 
@@ -102,7 +104,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -115,19 +117,19 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
         # Licenses are blocking embeding I think.
         if data["type"] == "link"
           # TODO: embed by scraping "/sizes/m/"
-          p "Flickr won't let us embed this: #{url}."
+          logging.error "Flickr won't let us embed this: #{url}."
           return
         end
 
         unless data["url"]
-          p "No Tumbnail for #{url} at #{oembed_url}"
+          logging.error "No Tumbnail for #{url} at #{oembed_url}"
           return
         end
 
@@ -142,7 +144,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -157,7 +159,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          p "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -167,10 +169,10 @@ class CacheDB
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
       else
-        p "No idea what url this is: #{url}"
+        logging.error "No idea what url this is: #{url}"
       end
     rescue StandardError => e
-      p "Failed #{oembed_url} for #{url}: #{e.inspect}"
+      logging.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
     end
 
     set url, hash
