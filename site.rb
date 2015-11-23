@@ -17,14 +17,8 @@ class Inspiration < Sinatra::Base
   layout :main
 
   configure do
-    enable :sessions
     enable :caching
     set :logging, true
-    set :css_asset_folder, "css"
-    set :js_asset_folder, "js"
-    set :session_secret, "a1c3ac57d4d692ee6e34bb11b49e60a4282e89f8df7722f7"
-    set :protection, true
-    set :protect_from_csrf, true
     set :protection, true
     set :protect_from_csrf, true
     set :allow_disabled_csrf, true
