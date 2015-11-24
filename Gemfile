@@ -10,10 +10,9 @@ gem "faraday"
 gem "flickraw"
 gem "instagram"
 gem "oj"
-gem "padrino"
 gem "rake"
-gem "redcarpet"
 gem "sass"
+gem "sinatra", require: "sinatra/base"
 gem "thin"
 
 # For dev

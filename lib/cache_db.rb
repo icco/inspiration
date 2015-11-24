@@ -2,6 +2,8 @@
 # The key is the original url, the object contains information to render the
 # image.
 class CacheDB
+  include Logging
+
   def initialize
     @cache_file_name = Inspiration::CACHE_FILE
 
@@ -10,7 +12,7 @@ class CacheDB
       mode: :compat,
       indent: 2
     }
-    @keyfilter = /[\/:\.\\\-@]/
+    @keyfilter = %r{[\/:\.\\\-@]}
 
     if File.extname(@cache_file_name).eql? ".json"
       @mode = "json"
@@ -56,7 +58,10 @@ class CacheDB
       file = Oj.load_file(@cache_file_name)
       return file.values.sample(count).delete_if { |d| d.nil? || d["image"].nil? }
     elsif sqlite?
-      return Cache.where.not(image: nil).order("RANDOM()").limit(count).map { |c| CacheSerializer.new(c) }
+      query = Cache.where.not(image: nil).order("RANDOM()").limit(count)
+      return query.map do |c|
+        CacheSerializer.new(c)
+      end
     end
   end
 
@@ -99,7 +104,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -112,19 +117,19 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
         # Licenses are blocking embeding I think.
         if data["type"] == "link"
           # TODO: embed by scraping "/sizes/m/"
-          logger.info "Flickr won't let us embed this: #{url}."
+          logging.error "Flickr won't let us embed this: #{url}."
           return
         end
 
         unless data["url"]
-          logger.error "No Tumbnail for #{url} at #{oembed_url}"
+          logging.error "No Tumbnail for #{url} at #{oembed_url}"
           return
         end
 
@@ -139,7 +144,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -154,7 +159,7 @@ class CacheDB
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
-          logger.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -164,10 +169,10 @@ class CacheDB
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
       else
-        logger.error "No idea what url this is: #{url}"
+        logging.error "No idea what url this is: #{url}"
       end
     rescue StandardError => e
-      logger.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
+      logging.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
     end
 
     set url, hash
