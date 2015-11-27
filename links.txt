@@ -2471,7 +2471,7 @@ http://lukeradl.deviantart.com/art/Rockwell-Spiderman-114704497
 http://luleiya.deviantart.com/art/Sakura-in-Wonderland-158532744
 http://luleiya.deviantart.com/art/Wizard-528697420
 http://lumnili.deviantart.com/art/Ryuko-461979791
-http://lux69aeterna.deviantart.com/art/Chile-Easter-Island-388348639
+http://lux69aeterna.deviantart.com/art/Chile-Rapa-Nui-388348639
 http://luxcosplay.deviantart.com/art/Aurora-555437604
 http://luxlucie.deviantart.com/art/Confluences-II-516883034
 http://lverin.deviantart.com/art/Million-engi-459198842
@@ -3607,6 +3607,7 @@ http://royalboiler.deviantart.com/art/Diehard-Rein-east-and-the-old-root-3562733
 http://royalboiler.deviantart.com/art/ECCC-program-cover-440151976
 http://royalboiler.deviantart.com/art/Island-magazine-1-534099833
 http://royalboiler.deviantart.com/art/Newmutants-545175463
+http://royalboiler.deviantart.com/art/Nura-s-morning-339851888
 http://royalboiler.deviantart.com/art/Wicked-509974907
 http://roze-hip-zero.deviantart.com/art/iSad-261992574
 http://ruanjia.deviantart.com/art/black-stone-rivers-395045594
@@ -4987,6 +4988,7 @@ http://www.flickr.com/photos/11638771@N05/4971321261
 http://www.flickr.com/photos/116816083@N04/14206444930
 http://www.flickr.com/photos/11683700@N04/10123043855
 http://www.flickr.com/photos/11694099@N00/48839559
+http://www.flickr.com/photos/11795892@N00/2165049616
 http://www.flickr.com/photos/11801916@N00/328016201
 http://www.flickr.com/photos/118695596@N06/18924979359
 http://www.flickr.com/photos/118695596@N06/19432742425
@@ -5030,6 +5032,7 @@ http://www.flickr.com/photos/124330522@N05/14830840889
 http://www.flickr.com/photos/12496112@N00/3952404504
 http://www.flickr.com/photos/125201706@N06/15888668174
 http://www.flickr.com/photos/125320262@N02/17141427859
+http://www.flickr.com/photos/125441937@N04/21401744044
 http://www.flickr.com/photos/126274132@N03/21014518344
 http://www.flickr.com/photos/126274132@N03/21016225893
 http://www.flickr.com/photos/126274132@N03/21450384099
@@ -5073,6 +5076,8 @@ http://www.flickr.com/photos/129391618@N08/21069935389
 http://www.flickr.com/photos/129391618@N08/21230555676
 http://www.flickr.com/photos/129391618@N08/21256805075
 http://www.flickr.com/photos/129701211@N08/19397857842
+http://www.flickr.com/photos/130023849@N08/23090144696
+http://www.flickr.com/photos/130396555@N03/18978609578
 http://www.flickr.com/photos/13053707@N00/282254319
 http://www.flickr.com/photos/130608600@N05/16236321533
 http://www.flickr.com/photos/130608600@N05/16549846194
@@ -6468,6 +6473,7 @@ http://www.flickr.com/photos/47916490@N06/8739335751
 http://www.flickr.com/photos/47965778@N00/2409745892
 http://www.flickr.com/photos/47965778@N00/3109801837
 http://www.flickr.com/photos/48060808@N02/11822248726
+http://www.flickr.com/photos/48075944@N06/17466218198
 http://www.flickr.com/photos/48099374@N05/6749703795
 http://www.flickr.com/photos/48219733@N08/5131731674
 http://www.flickr.com/photos/48272237@N00/7952418328
@@ -6617,6 +6623,7 @@ http://www.flickr.com/photos/54751723@N07/20745209696
 http://www.flickr.com/photos/54873020@N00/196573723
 http://www.flickr.com/photos/54873020@N00/229089974
 http://www.flickr.com/photos/54946500@N00/206991426
+http://www.flickr.com/photos/54962458@N07/21454634003
 http://www.flickr.com/photos/55038292@N00/2540595665
 http://www.flickr.com/photos/55059753@N00/220572975
 http://www.flickr.com/photos/55249939@N00/3851906680
@@ -6634,6 +6641,7 @@ http://www.flickr.com/photos/56174006@N05/15736794276
 http://www.flickr.com/photos/56184364@N00/4022394089
 http://www.flickr.com/photos/56326491@N02/10106972596
 http://www.flickr.com/photos/56362481@N06/15235484902
+http://www.flickr.com/photos/56414223@N04/23032246210
 http://www.flickr.com/photos/56469836@N00/43897144
 http://www.flickr.com/photos/56475123@N00/1262643374
 http://www.flickr.com/photos/56475123@N00/1327664840
@@ -6735,9 +6743,12 @@ http://www.flickr.com/photos/59825694@N06/5743829310
 http://www.flickr.com/photos/59825694@N06/5743830856
 http://www.flickr.com/photos/59825694@N06/9243678437
 http://www.flickr.com/photos/59950710@N05/15543453585
+http://www.flickr.com/photos/60013798@N04/11316731945
+http://www.flickr.com/photos/60013798@N04/15749198277
 http://www.flickr.com/photos/60144070@N00/22669835
 http://www.flickr.com/photos/60475145@N00/3891399062
 http://www.flickr.com/photos/60475224@N05/9655433834
+http://www.flickr.com/photos/60547391@N06/20490380068
 http://www.flickr.com/photos/60551467@N00/251912067
 http://www.flickr.com/photos/60606086@N07/16479914654
 http://www.flickr.com/photos/60717073@N00/3808248315
@@ -7437,6 +7448,7 @@ http://www.flickr.com/photos/84717426@N00/241564371
 http://www.flickr.com/photos/84717426@N00/2911640726
 http://www.flickr.com/photos/84745314@N00/4151121216
 http://www.flickr.com/photos/84806883@N00/376596293
+http://www.flickr.com/photos/84945604@N02/16746189615
 http://www.flickr.com/photos/8503013@N03/4975459333
 http://www.flickr.com/photos/85078470@N00/4491510125
 http://www.flickr.com/photos/8512891@N03/2315887570
@@ -9673,6 +9685,7 @@ https://instagram.com/p/92mHtXBUiB/
 https://instagram.com/p/98-DKIxfJJ/
 https://instagram.com/p/99HM0FIVR_/
 https://instagram.com/p/99SBmureML/
+https://instagram.com/p/99k41_kdoM/
 https://instagram.com/p/9BbS4sB2O1/
 https://instagram.com/p/9Top4eljwd/
 https://instagram.com/p/9URkAWh2GA/
