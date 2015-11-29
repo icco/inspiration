@@ -22,7 +22,7 @@ GEM
     daemons (1.2.3)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
-    dribbble (1.0.2)
+    dribbble (1.0.4)
       rest-client (~> 1.7)
     erubis (2.7.0)
     eventmachine (1.0.8)
