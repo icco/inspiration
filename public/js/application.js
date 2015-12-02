@@ -3,7 +3,7 @@ $(document).ready(function() {
   var columns = 1;
 
   if (width > 400) {
-    columns = Math.floor(width / 342);
+    columns = Math.floor(width / 357);
   }
 
   var column_width = (width / columns) - 12;
