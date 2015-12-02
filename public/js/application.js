@@ -3,10 +3,11 @@ $(document).ready(function() {
   var columns = 1;
 
   if (width > 400) {
-    columns = Math.floor(width / 357);
+    columns = Math.ceil(width / 357);
   }
 
-  var column_width = (width / columns) - 12;
+  // 5px padding, 1px margin on each image
+  var column_width = (width / columns) - (columns * 12);
 
   $('#container').isotope({
     animationEngine : 'css',
