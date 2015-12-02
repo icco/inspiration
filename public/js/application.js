@@ -1,8 +1,17 @@
 $(document).ready(function() {
+  var width = $('#container').width();
+  var columns = 1;
+
+  if (width > 400) {
+    columns = Math.floor(width / 342);
+  }
+
+  var column_width = (width / columns) - 12;
+
   $('#container').isotope({
     animationEngine : 'css',
     itemSelector : '.item',
-    masonry: { },
+    masonry: {},
   });
 
   // http://stackoverflow.com/questions/7270947/rails-3-1-csrf-ignored
@@ -10,7 +19,9 @@ $(document).ready(function() {
     beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')); }
   });
 
-  get_more(150);
+  $('.item').css('width', column_width);
+
+  get_more(150, column_width);
 
   var intervalID = window.setInterval(update_count, 5000);
 });
@@ -28,8 +39,9 @@ function update_count() {
   $('#imgcount').text($('img').size());
 }
 
-function get_more(wanted) {
+function get_more(wanted, column_width) {
   var per_req = 20;
+  var parse_cache_response = width_function_builder(column_width);
   for (var i = 0; i < wanted / per_req; i++) {
     $.get("/sample.json?count=" + per_req, parse_cache_response).fail(function() {
       console.error("Error getting data.");
@@ -37,13 +49,15 @@ function get_more(wanted) {
   }
 }
 
-function parse_cache_response(data) {
-  for (i in (data)) {
-    build_element(data[i]["image"], data[i]["url"], data[i]["title"]);
+function width_function_builder(column_width) {
+  return function(data) {
+    for (i in (data)) {
+      build_element(data[i]["image"], data[i]["url"], data[i]["title"], column_width);
+    }
   }
 }
 
-function build_element(image, link, title) {
+function build_element(image, link, title, column_width) {
   var a = $('<a>');
   var img = $('<img>');
   var div = $('<div>');
@@ -53,6 +67,7 @@ function build_element(image, link, title) {
 
   img.attr('src', image);
   img.attr('alt', title);
+  img.css('width', column_width);
 
   a.append(img);
   div.append(a);
