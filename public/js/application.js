@@ -3,16 +3,26 @@ $(document).ready(function() {
   var columns = 1;
 
   if (width > 400) {
-    columns = Math.ceil(width / 357);
+    columns = 2;
   }
 
-  // 5px padding, 1px margin on each image
-  var column_width = (width / columns) - (columns * 12);
+  if (width > 1000) {
+    columns = 4;
+  }
+
+  if (width > 2000) {
+    columns = 8;
+  }
+
+  // 5px padding, 1px margin on each image, 1px border
+  var column_width = (width / columns) - (columns * 14);
 
   $('#container').isotope({
     animationEngine : 'css',
     itemSelector : '.item',
-    masonry: {},
+    masonry: {
+      columnWidth: column_width + 14
+    },
   });
 
   // http://stackoverflow.com/questions/7270947/rails-3-1-csrf-ignored
@@ -20,7 +30,7 @@ $(document).ready(function() {
     beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')); }
   });
 
-  $('.item').css('width', column_width);
+  $('.item p').css('width', column_width);
 
   get_more(150, column_width);
 
