@@ -3,16 +3,19 @@ $(document).ready(function() {
   var columns = 1;
 
   if (width > 400) {
-    columns = Math.ceil(width / 357);
+    columns = 2
+  }
+
+  if (width > 1000) {
+    columns = 5;
   }
 
   // 5px padding, 1px margin on each image
   var column_width = (width / columns) - (columns * 12);
 
-  $('#container').isotope({
+  $('#container').masonry({
     animationEngine : 'css',
     itemSelector : '.item',
-    masonry: {},
   });
 
   // http://stackoverflow.com/questions/7270947/rails-3-1-csrf-ignored
@@ -78,7 +81,8 @@ function build_element(image, link, title, column_width) {
   // Preload
   $(img).one('load', function() {
     $(div).addClass('item');
-    $('#container').isotope('insert', $(div));
+    $('#container').append($(div));
+    $('#container').masonry('layout');
   }).each(function() {
     if(this.complete) $(this).load();
   });
