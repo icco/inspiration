@@ -6,10 +6,15 @@ $(document).ready(function() {
     columns = 2.0;
   }
 
+  if (width > 700) {
+    columns = 3.0;
+  }
+
   if (width > 1000) {
     columns = 4.0;
   }
 
+  // TODO: write simple formula so this scales forever
   if (width > 2000) {
     columns = 8.0;
   }
