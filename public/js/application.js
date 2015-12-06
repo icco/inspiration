@@ -15,7 +15,9 @@ $(document).ready(function() {
   }
 
   // 5px padding, 1px margin on each image, 1px border
-  var column_width = (width / columns) - (columns * 14);
+  var column_width = (width - (columns * 14)) / columns;
+
+  console.log(width, columns, column_width)
 
   $('#container').isotope({
     animationEngine : 'css',
