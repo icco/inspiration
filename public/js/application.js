@@ -41,16 +41,16 @@ $(document).ready(function() {
 
   get_more(150, column_width);
 
+  window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      // you're at the bottom of the page
+      console.log("Bottom of the page, request 20 more.");
+      get_more(20, column_width);
+    }
+  };
+
   var intervalID = window.setInterval(update_count, 5000);
 });
-
-window.onscroll = function(ev) {
-  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    // you're at the bottom of the page
-    console.log("Bottom of the page, request 20 more.");
-    get_more(20);
-  }
-};
 
 function update_count() {
   // Update about box.
