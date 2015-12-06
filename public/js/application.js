@@ -1,17 +1,17 @@
 $(document).ready(function() {
   var width = $('#container').width();
-  var columns = 1;
+  var columns = 1.0;
 
   if (width > 400) {
-    columns = 2;
+    columns = 2.0;
   }
 
   if (width > 1000) {
-    columns = 4;
+    columns = 4.0;
   }
 
   if (width > 2000) {
-    columns = 8;
+    columns = 8.0;
   }
 
   // 5px padding, 1px margin on each image, 1px border
