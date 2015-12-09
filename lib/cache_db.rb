@@ -73,7 +73,7 @@ class CacheDB
     dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = /deviantart\.com/
     flickr_re = /www\.flickr\.com/
-    insta_re = %r{https://instagram\.com/p/}
+    insta_re = %r{https://www.instagram\.com/p/}
     verygoods_re = /verygoods\.co/
 
     begin
