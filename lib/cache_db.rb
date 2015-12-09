@@ -139,7 +139,7 @@ class CacheDB
         hash.merge! attrs
       when insta_re
         # OEMBED for INSTAGRAM
-        oembed_url = "https://instagram.com/publicapi/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
+        oembed_url = "https://www.instagram.com/publicapi/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
