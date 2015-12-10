@@ -5632,7 +5632,6 @@ https://dribbble.com/shots/1689922-Side-Menu-Animation
 https://dribbble.com/shots/1695463-Color-Process-Illustration
 https://dribbble.com/shots/1696376-Circle-wave
 https://dribbble.com/shots/1697793-Weather-Dashboard-Block-layout
-https://dribbble.com/shots/1698902-NYC-Badge
 https://dribbble.com/shots/1699961-Hyperlapse-from-Instagram
 https://dribbble.com/shots/1700050-Few-Blades
 https://dribbble.com/shots/1701001-GIF-Exercise
@@ -7013,6 +7012,8 @@ https://verygoods.co/product/330022
 https://verygoods.co/product/330097
 https://verygoods.co/product/330116
 https://verygoods.co/product/330204
+https://verygoods.co/product/330283
+https://verygoods.co/product/330284
 https://verygoods.co/product/54839
 https://verygoods.co/product/55154
 https://verygoods.co/product/9385
