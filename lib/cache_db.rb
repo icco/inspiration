@@ -73,7 +73,7 @@ class CacheDB
     dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = /deviantart\.com/
     flickr_re = /www\.flickr\.com/
-    insta_re = %r{https://instagram\.com/p/}
+    insta_re = %r{https://www.instagram\.com/p/}
     verygoods_re = /verygoods\.co/
 
     begin
@@ -139,7 +139,7 @@ class CacheDB
         hash.merge! attrs
       when insta_re
         # OEMBED for INSTAGRAM
-        oembed_url = "https://instagram.com/publicapi/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
+        oembed_url = "https://www.instagram.com/publicapi/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)

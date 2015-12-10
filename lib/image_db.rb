@@ -19,7 +19,7 @@ class ImageDB
 
   def update
     # DeviantArt
-    rss_url = "http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation"
+    rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation"
     open(rss_url) do |rss|
       feed = RSS::Parser.parse(rss)
       feed.items.each do |item|
@@ -42,7 +42,7 @@ class ImageDB
 
     # Flickr
     favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n")
-    favorites = favorites.map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
+    favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
     favorites.each { |l| @images.add l }
 
     # Write all image links to disk
@@ -82,7 +82,7 @@ class ImageDB
       logging.info print_data.inspect
       begin
         resp = flickr.photosets.getPhotos(photoset_id: "72157601200827657", extras: "url_n", page: page)
-        favorites = resp["photo"].map { |p| "http://www.flickr.com/photos/#{resp['owner']}/#{p['id']}" }
+        favorites = resp["photo"].map { |p| "https://www.flickr.com/photos/#{resp['owner']}/#{p['id']}" }
         favorites.each { |l| @images.add l }
         logging.info "Images: #{@images.count}"
       rescue
@@ -96,7 +96,7 @@ class ImageDB
     # DA Favorites
     # NOTE: Offset count verified 2015-07-22
     (0..6000).step(60) do |offset|
-      rss_url = "http://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
+      rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
       print_data = { deviant: "calvin166", offset: offset }
       logging.info print_data.inspect
       open(rss_url) do |rss|
@@ -138,7 +138,7 @@ class ImageDB
       logging.info print_data.inspect
 
       favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
-      favorites = favorites.map { |p| "http://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
+      favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
       favorites.each { |l| @images.add l }
       logging.info "Images: #{@images.count}"
     end
@@ -162,7 +162,7 @@ class ImageDB
       end
 
       products = data["_embedded"]["goods"].map do |g|
-        "http://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
+        "https://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
       end
       products.each { |prod| @images.add prod }
       logging.info "Images: #{@images.count}"
