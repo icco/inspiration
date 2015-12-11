@@ -2510,6 +2510,7 @@ http://m0thart.deviantart.com/art/forward-206323036
 http://m0thart.deviantart.com/art/girl-from-the-valley-563563432
 http://m0thart.deviantart.com/art/montmartre-with-Martina-572758732
 http://m0thart.deviantart.com/art/rainbow-556496630
+http://m0thart.deviantart.com/art/solitude-577035201
 http://m0thart.deviantart.com/art/storm-556503979
 http://m0thart.deviantart.com/art/the-call-of-the-wild-141817853
 http://m0thart.deviantart.com/art/the-dejavu-of-the-day-153680186
@@ -4702,6 +4703,7 @@ http://yukihomu.deviantart.com/art/MAGE-hunting-ground-350556674
 http://yukihomu.deviantart.com/art/morning-market-363984602
 http://yukihomu.deviantart.com/art/wild-garden-502349528
 http://yukosan2.deviantart.com/art/aquarius-193414770
+http://yuliaspesivtseva.deviantart.com/art/Mary-444678060
 http://yuliaspesivtseva.deviantart.com/art/Mary-II-445772482
 http://yumemitsuki.deviantart.com/art/Dreamer-443291285
 http://yuruikarameru.deviantart.com/art/AT-KoHeath-431267498
@@ -6109,7 +6111,6 @@ https://dribbble.com/shots/2141487-Watch-Face
 https://dribbble.com/shots/2141542-Weather-Widget-Day-10
 https://dribbble.com/shots/2144145-Alarm-Clock
 https://dribbble.com/shots/2144170-Day-014-Location-Card
-https://dribbble.com/shots/2144392-Location-card
 https://dribbble.com/shots/2144646-Starfall
 https://dribbble.com/shots/2145232-Poly-Watch-Face
 https://dribbble.com/shots/2145613-Paranormal-Brewing-Site-Branding
@@ -6916,6 +6917,7 @@ https://verygoods.co/product/325693
 https://verygoods.co/product/325715
 https://verygoods.co/product/325719
 https://verygoods.co/product/325734
+https://verygoods.co/product/325769
 https://verygoods.co/product/325848
 https://verygoods.co/product/326228
 https://verygoods.co/product/326229
@@ -7012,8 +7014,24 @@ https://verygoods.co/product/330022
 https://verygoods.co/product/330097
 https://verygoods.co/product/330116
 https://verygoods.co/product/330204
+https://verygoods.co/product/330232
+https://verygoods.co/product/330268
 https://verygoods.co/product/330283
 https://verygoods.co/product/330284
+https://verygoods.co/product/330335
+https://verygoods.co/product/330343
+https://verygoods.co/product/330395
+https://verygoods.co/product/330399
+https://verygoods.co/product/330410
+https://verygoods.co/product/330413
+https://verygoods.co/product/330416
+https://verygoods.co/product/330422
+https://verygoods.co/product/330429
+https://verygoods.co/product/330449
+https://verygoods.co/product/330450
+https://verygoods.co/product/330465
+https://verygoods.co/product/330468
+https://verygoods.co/product/330469
 https://verygoods.co/product/54839
 https://verygoods.co/product/55154
 https://verygoods.co/product/9385
@@ -8882,7 +8900,6 @@ https://www.flickr.com/photos/60028364@N05/11579957456
 https://www.flickr.com/photos/60028364@N05/22975722673
 https://www.flickr.com/photos/60028364@N05/23234841699
 https://www.flickr.com/photos/60028364@N05/23520322771
-https://www.flickr.com/photos/60028364@N05/23520353331
 https://www.flickr.com/photos/60028364@N05/23576656606
 https://www.flickr.com/photos/60144070@N00/22669835
 https://www.flickr.com/photos/60475145@N00/3891399062
