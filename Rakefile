@@ -69,7 +69,11 @@ task :download do
     filename = url.path.split('/').last
     
     open("tmp/images/#{filename}", 'wb') do |file|
-      file << open(url).read
+      begin
+        file << open(url).read
+      rescue OpenURI::HTTPError => e
+        puts "Open URI error - #{e}"
+      end
     end
   end
 end
