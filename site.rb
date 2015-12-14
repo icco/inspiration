@@ -88,7 +88,7 @@ class Inspiration < Sinatra::Base
     @cdb = CacheDB.new
 
     content_type :json
-    @cdb.all.map {|k, v| p k,v; v["image"] }.to_json
+    @cdb.all.map {|k, v| v["image"] }.to_json
   end
 
   get "/all.json" do

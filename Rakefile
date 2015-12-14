@@ -56,3 +56,20 @@ task :import_sqlite do
   cdb = CacheDB.new
   cdb.load_sql_to_json "cache.db"
 end
+
+desc "Download all images into a folder."
+task :download do
+  require 'open-uri'
+  require 'uri'
+
+  cdb = CacheDB.new
+  cdb.all.map {|k, v| v["image"] }.each do |i|
+    url = URI(i)
+    filename = url.path.split('/').last
+    
+    open("tmp/images/#{filename}", 'wb') do |file|
+      puts "Downloading #{filename}"
+      file << open(url).read
+    end
+  end
+end
