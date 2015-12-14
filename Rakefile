@@ -64,11 +64,11 @@ task :download do
 
   cdb = CacheDB.new
   cdb.all.map {|k, v| v["image"] }.each do |i|
+    puts "Downloading #{i}"
     url = URI(i)
     filename = url.path.split('/').last
     
     open("tmp/images/#{filename}", 'wb') do |file|
-      puts "Downloading #{filename}"
       file << open(url).read
     end
   end
