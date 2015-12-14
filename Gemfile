@@ -20,6 +20,7 @@ group :development do
   gem "bundler"
   gem "heroku"
   gem "shotgun"
+  gem "rubocop"
 end
 
 group :test do
