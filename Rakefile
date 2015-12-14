@@ -63,7 +63,7 @@ task :download do
   require 'uri'
 
   cdb = CacheDB.new
-  cdb.all.map {|k, v| v["image"] }.each do |i|
+  cdb.all.map {|k, v| v["image"] }.delete_if {|i| i.nil? or i.empty? }.sort.each do |i|
     puts "Downloading #{i}"
     url = URI(i)
     filename = url.path.split('/').last
