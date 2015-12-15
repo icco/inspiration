@@ -66,7 +66,7 @@ task :download do
   cdb.all.map {|k, v| v["image"] }.delete_if {|i| i.nil? or i.empty? }.sort.each do |i|
     puts "Downloading #{i}"
     url = URI(i)
-    filename = url.path.split('/').last
+    filename = url.path.split('/').join("_")
     
     open("tmp/images/#{filename}", 'wb') do |file|
       begin
