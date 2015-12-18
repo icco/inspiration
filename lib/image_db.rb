@@ -79,10 +79,15 @@ class ImageDB
     File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
 
     # Twitter
-    ImageDB.twitter_client.favorites("icco", count: 200).each do |t|
-      if t.user.screen_name.eql? "archillect"
-        @images.add t.uri.to_s
+    begin
+      ImageDB.twitter_client.favorites("icco", count: 200).each do |t|
+        if t.user.screen_name.eql? "archillect"
+          @images.add t.uri.to_s
+        end
       end
+    rescue Twitter::Error::TooManyRequests => e
+      sleep error.rate_limit.reset_in + 1
+      retry
     end
 
     # Write all image links to disk
@@ -219,10 +224,15 @@ class ImageDB
       options[:max_id] = max_id unless max_id.nil?
       print_data = { twitter: "icco", max_id: max_id }
       logging.info print_data.inspect
-      ImageDB.twitter_client.favorites("icco", options).each do |t|
-        if t.user.screen_name.eql? "archillect"
-          @images.add t.uri.to_s
+      begin
+        ImageDB.twitter_client.favorites("icco", options).each do |t|
+          if t.user.screen_name.eql? "archillect"
+            @images.add t.uri.to_s
+          end
         end
+      rescue Twitter::Error::TooManyRequests => e
+        sleep error.rate_limit.reset_in + 1
+        retry
       end
     end
 
