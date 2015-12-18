@@ -105,13 +105,12 @@ class ImageDB
     # Flickr Personal Favorites Set
     # NOTE: Page count verified 2015-07-22
     (1..3).each do |page|
-      print_data = { flickr: "42027916@N00", set: "72157601200827657", page: page }
+      print_data = { flickr: "42027916@N00", set: "72157601200827657", page: page, images: @images.count }
       logging.info print_data.inspect
       begin
         resp = flickr.photosets.getPhotos(photoset_id: "72157601200827657", extras: "url_n", page: page)
         favorites = resp["photo"].map { |p| "https://www.flickr.com/photos/#{resp['owner']}/#{p['id']}" }
         favorites.each { |l| @images.add l }
-        logging.info "Images: #{@images.count}"
       rescue
         logging.error "Failed to get."
       end
@@ -124,7 +123,7 @@ class ImageDB
     # NOTE: Offset count verified 2015-07-22
     (0..6000).step(60) do |offset|
       rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
-      print_data = { deviant: "calvin166", offset: offset }
+      print_data = { deviant: "calvin166", offset: offset, images: @images.count }
       logging.info print_data.inspect
       open(rss_url) do |rss|
         feed = RSS::Parser.parse(rss)
@@ -132,8 +131,6 @@ class ImageDB
           @images.add item.link
         end
       end
-
-      logging.info "Images: #{@images.count}"
     end
 
     # Write to file.
@@ -147,11 +144,9 @@ class ImageDB
     (1..page_count).each do |page|
       user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
       data = user.likes page: page
-      print_data = { player: dribbble_user, page: page }
+      print_data = { player: dribbble_user, page: page, images: @images.count }
       logging.info print_data.inspect
       data.each { |l| @images.add l.html_url }
-
-      logging.info "Images: #{@images.count}"
     end
 
     # Write to file.
@@ -161,13 +156,12 @@ class ImageDB
     # http://www.flickr.com/services/api/misc.urls.html
     # NOTE: Page count verified 2015-07-22
     (1..30).each do |page|
-      print_data = { flickr: "42027916@N00", page: page }
+      print_data = { flickr: "42027916@N00", page: page, images: @images.count }
       logging.info print_data.inspect
 
       favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
       favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
       favorites.each { |l| @images.add l }
-      logging.info "Images: #{@images.count}"
     end
 
     # Write to file.
@@ -177,7 +171,7 @@ class ImageDB
     domain = "https://verygoods.co/site-api-0.1"
     url = domain + "/users/icco/goods?limit=20"
     while url
-      print_data = { verygoods: url }
+      print_data = { verygoods: url, images: @images.count }
       logging.info print_data.inspect
 
       j = open url
@@ -192,7 +186,6 @@ class ImageDB
         "https://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
       end
       products.each { |prod| @images.add prod }
-      logging.info "Images: #{@images.count}"
     end
 
     # Write to file.
@@ -205,7 +198,7 @@ class ImageDB
     max_id = nil
     user = ImageDB.instagram_client.user.username
     loop do
-      print_data = { instagram: user, max_id: max_id }
+      print_data = { instagram: user, max_id: max_id, images: @images.count }
       logging.info print_data.inspect
 
       args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
@@ -215,7 +208,6 @@ class ImageDB
         max_id = i.id
       end
 
-      logging.info "Images: #{@images.count}"
       break if data.count == 0
     end
 
