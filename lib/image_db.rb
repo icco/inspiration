@@ -218,7 +218,7 @@ class ImageDB
       print_data = { twitter: "icco", max_id: t_max_id, images: @images.count }
       logging.info print_data.inspect
       begin
-       ImageDB.twitter_client.favorites(options).each do |t|
+        ImageDB.twitter_client.favorites(options).each do |t|
           if t.user.screen_name.eql? "archillect"
             @images.add t.uri.to_s
           end
