@@ -11,7 +11,7 @@ task :local do
 end
 
 desc "Update links."
-task :cron do
+task :update_links do
   idb = ImageDB.new
   idb.update
 end

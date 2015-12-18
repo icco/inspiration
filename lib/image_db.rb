@@ -17,6 +17,10 @@ class ImageDB
     Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
   end
 
+  def self.twitter_client
+    Twitter::REST::Client.new(Inspiration::TWITTER_CONFIG)
+  end
+
   # This goes through all services and stores the newest links.
   #
   # NOTE: When updating this, make sure to update the method full_update as well.
@@ -68,6 +72,21 @@ class ImageDB
     # Instagram
     ImageDB.instagram_client.user_liked_media.each do |i|
       @images.add i.link
+    end
+
+    # Write all image links to disk
+    all_images = @images.delete_if(&:empty?).to_a.sort
+    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
+
+    # Twitter
+    ImageDB.twitter_client.favorites("icco", count: 200).each do |t|
+      if t.user.screen_name.eql? "archillect"
+        @images.add t.uri.to_s
+      end
+      # How to get image.
+      # if t.user.screen_name.eql? "archillect"
+      #   t.media.each {|m| @images.add m.media_url_https.to_s }
+      # end
     end
 
     # Write all image links to disk
@@ -205,5 +224,11 @@ class ImageDB
     File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
 
     true
+  end
+
+  def twitter_collect_with_max_id(collection=[], max_id=nil, &block)
+    response = yield(max_id)
+    collection += response
+    response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
   end
 end
