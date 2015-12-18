@@ -231,6 +231,8 @@ class ImageDB
             @images.add t.uri.to_s
           end
         end
+
+        logging.info "Images: #{@images.count}"
       rescue Twitter::Error::TooManyRequests => e
         logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
         sleep e.rate_limit.reset_in + 1
