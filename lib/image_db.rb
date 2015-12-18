@@ -220,19 +220,17 @@ class ImageDB
     end
 
     # Twitter
+    options = { count: 20 }
     twitter_collect_with_max_id do |t_max_id|
-      options = { count: 200, include_rts: true }
       options[:max_id] = t_max_id unless t_max_id.nil?
-      print_data = { twitter: "icco", max_id: t_max_id }
+      print_data = { twitter: "icco", max_id: t_max_id, images: @images.count }
       logging.info print_data.inspect
       begin
-        ImageDB.twitter_client.favorites("icco", options).each do |t|
+       ImageDB.twitter_client.favorites(options).each do |t|
           if t.user.screen_name.eql? "archillect"
             @images.add t.uri.to_s
           end
         end
-
-        logging.info "Images: #{@images.count}"
       rescue Twitter::Error::TooManyRequests => e
         logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
         sleep e.rate_limit.reset_in + 1
@@ -251,8 +249,9 @@ class ImageDB
 
   def twitter_collect_with_max_id(collection = [], max_id = nil, &block)
     response = yield(max_id)
-    response = [] if response.is_a? TrueClass
     collection += response
     response.empty? ? collection.flatten : twitter_collect_with_max_id(collection, response.last.id - 1, &block)
+  rescue TypeError => e
+    logging.error "Type Error: #{e.inspect}"
   end
 end
