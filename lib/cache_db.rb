@@ -170,21 +170,14 @@ class CacheDB
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
       when twitter_re
-        oembed_url = "https://api.twitter.com/1.1/statuses/oembed.json?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
-        resp = Faraday.get oembed_url
-        if resp.status == 200
-          data = JSON.parse(resp.body)
-        else
-          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
-          return
-        end
+        id = url.split("/").last
+        client = ImageDB.twitter_client
+        data = client.status(id)
 
-        p data
-
-        title = "\"#{data['title']}\" by #{data['author_name']}"
-        attrs = { title: title, image: data["thumbnail_url"], size: { width: data["thumbnail_width"], height: data["thumbnail_height"] } }
+        image = data.media.first
+        title = "\"#{data.id}\" by @#{data.user.screen_name}"
+        attrs = { title: title, image: image.media_url_https.to_s, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
         hash.merge! attrs
-        p hash
       else
         logging.error "No idea what url this is: #{url}"
       end
