@@ -11,13 +11,13 @@ task :local do
 end
 
 desc "Update links."
-task :update_links do
+task :update_some_links do
   idb = ImageDB.new
   idb.update
 end
 
-desc "Get all old favorites."
-task :get_old do
+desc "Get update all links."
+task :update_links do
   idb = ImageDB.new
   idb.full_update
 end
@@ -30,8 +30,6 @@ task :build_cache do
   idb.images.to_a.shuffle.each do |i|
     cdb.cache i
   end
-
-  cdb.clean idb.images
 end
 
 desc "Try to update 10 images in the cache."
