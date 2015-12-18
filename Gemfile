@@ -14,6 +14,7 @@ gem "rake"
 gem "sass"
 gem "sinatra", require: "sinatra/base"
 gem "thin"
+gem "twitter"
 
 # For dev
 group :development do
