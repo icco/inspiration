@@ -86,6 +86,7 @@ class ImageDB
         end
       end
     rescue Twitter::Error::TooManyRequests => e
+      logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
       sleep e.rate_limit.reset_in + 1
       retry
     end
@@ -231,6 +232,7 @@ class ImageDB
           end
         end
       rescue Twitter::Error::TooManyRequests => e
+        logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
         sleep e.rate_limit.reset_in + 1
         retry
       end
