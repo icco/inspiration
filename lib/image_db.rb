@@ -83,10 +83,6 @@ class ImageDB
       if t.user.screen_name.eql? "archillect"
         @images.add t.uri.to_s
       end
-      # How to get image.
-      # if t.user.screen_name.eql? "archillect"
-      #   t.media.each {|m| @images.add m.media_url_https.to_s }
-      # end
     end
 
     # Write all image links to disk
@@ -203,7 +199,7 @@ class ImageDB
     max_id = nil
     user = ImageDB.instagram_client.user.username
     loop do
-      print_data = { instagram: max_id, user: user }
+      print_data = { instagram: user, max_id: max_id }
       logging.info print_data.inspect
 
       args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
@@ -215,6 +211,19 @@ class ImageDB
 
       logging.info "Images: #{@images.count}"
       break if data.count == 0
+    end
+
+    # Twitter
+    twitter_collect_with_max_id do |max_id|
+      options = {count: 200, include_rts: true}
+      options[:max_id] = max_id unless max_id.nil?
+      print_data = { twitter: "icco", max_id: max_id }
+      logging.info print_data.inspect
+      ImageDB.twitter_client.favorites("icco", options).each do |t|
+        if t.user.screen_name.eql? "archillect"
+          @images.add t.uri.to_s
+        end
+      end
     end
 
     # Clean UP.
@@ -229,6 +238,6 @@ class ImageDB
   def twitter_collect_with_max_id(collection=[], max_id=nil, &block)
     response = yield(max_id)
     collection += response
-    response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
+    response.empty? ? collection.flatten : twitter_collect_with_max_id(collection, response.last.id - 1, &block)
   end
 end
