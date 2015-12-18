@@ -220,7 +220,7 @@ class ImageDB
     end
 
     # Twitter
-    options = { count: 20 }
+    options = { count: 200 }
     twitter_collect_with_max_id do |t_max_id|
       options[:max_id] = t_max_id unless t_max_id.nil?
       print_data = { twitter: "icco", max_id: t_max_id, images: @images.count }
