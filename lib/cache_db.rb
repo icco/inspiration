@@ -176,7 +176,8 @@ class CacheDB
 
         image = data.media.first
         title = "\"#{data.id}\" by @#{data.user.screen_name}"
-        attrs = { title: title, image: image.media_url_https.to_s, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
+        image_url = "#{image.media_url_https}:large"
+        attrs = { title: title, image: image_url, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
         hash.merge! attrs
       else
         logging.error "No idea what url this is: #{url}"
