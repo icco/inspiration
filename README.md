@@ -6,4 +6,4 @@ A mood board I guess.
 
 This autodeploys to Heroku and is hosted on http://mood.natwelch.com.
 
-![screenshot](http://cl.natw.me/dks1/d)
+![screenshot](http://cl.natw.me/e7OF/d)
