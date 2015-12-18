@@ -17,6 +17,9 @@ class ImageDB
     Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
   end
 
+  # This goes through all services and stores the newest links.
+  #
+  # NOTE: When updating this, make sure to update the method full_update as well.
   def update
     # DeviantArt
     rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation"
@@ -74,6 +77,9 @@ class ImageDB
     true
   end
 
+  # This goes through all services and stores the links.
+  #
+  # NOTE: When updating this, make sure to update the method update as well.
   def full_update
     # Flickr Personal Favorites Set
     # NOTE: Page count verified 2015-07-22
