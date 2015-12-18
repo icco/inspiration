@@ -251,6 +251,7 @@ class ImageDB
 
   def twitter_collect_with_max_id(collection = [], max_id = nil, &block)
     response = yield(max_id)
+    response = [] if response.is_a? TrueClass
     collection += response
     response.empty? ? collection.flatten : twitter_collect_with_max_id(collection, response.last.id - 1, &block)
   end
