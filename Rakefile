@@ -59,16 +59,16 @@ end
 
 desc "Download all images into a folder."
 task :download do
-  require 'open-uri'
-  require 'uri'
+  require "open-uri"
+  require "uri"
 
   cdb = CacheDB.new
-  cdb.all.map {|k, v| v["image"] }.delete_if {|i| i.nil? or i.empty? }.sort.each do |i|
+  cdb.all.map { |_k, v| v["image"] }.delete_if { |i| i.nil? || i.empty? }.sort.each do |i|
     puts "Downloading #{i}"
     url = URI(i)
-    filename = url.path.split('/').join("_")
-    
-    open("tmp/images/#{filename}", 'wb') do |file|
+    filename = url.path.split("/").join("_")
+
+    open("tmp/images/#{filename}", "wb") do |file|
       begin
         file << open(url).read
       rescue OpenURI::HTTPError => e
