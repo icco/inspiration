@@ -46,14 +46,19 @@ class Inspiration < Sinatra::Base
   end
   INSTAGRAM_TOKEN = "2025166174.696296e.b8d7376606d04d38a745aea46d4284f5"
 
-  COUNT = 400
+  TWITTER_CONFIG = {
+    consumer_key:    "GQx89ku8NLacf02n2GzjgGvLa",
+    consumer_secret: "6miWrWUFRNrTWsZ4Honnp1oAXDa1T2NtA6l1c4cCGD9Hy7GlWD",
+    access_token: "3576561-R2m1fM1r0ogs5UPUeCzWJBc0cKfQatWfLIlouemrzv",
+    access_token_secret: "lvWZMoeN9YN0OeTvwhx6M4w4wCaYEYZbYwkSuvG3sf5ij",
+  }
 
   get "/about" do
     erb :about
   end
 
   get "/" do
-    @images = COUNT
+    @images = PER_PAGE
     @idb = ImageDB.new
     @library = @idb.images.count
 
@@ -61,7 +66,7 @@ class Inspiration < Sinatra::Base
   end
 
   get "/cache.json" do
-    @count = COUNT
+    @count = PER_PAGE
     @count = params["count"].to_i if params["count"]
 
     @idb = ImageDB.new
@@ -73,7 +78,7 @@ class Inspiration < Sinatra::Base
   end
 
   get "/sample.json" do
-    @count = COUNT
+    @count = PER_PAGE
     @count = params["count"].to_i if params["count"]
 
     @cdb = CacheDB.new
@@ -88,7 +93,7 @@ class Inspiration < Sinatra::Base
     @cdb = CacheDB.new
 
     content_type :json
-    @cdb.all.map {|k, v| v["image"] }.to_json
+    @cdb.all.map { |_k, v| v["image"] }.to_json
   end
 
   get "/all.json" do

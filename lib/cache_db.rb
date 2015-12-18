@@ -75,6 +75,7 @@ class CacheDB
     flickr_re = /www\.flickr\.com/
     insta_re = %r{https://www.instagram\.com/p/}
     verygoods_re = /verygoods\.co/
+    twitter_re = %r{https://twitter.com/}
 
     begin
       case url
@@ -139,7 +140,7 @@ class CacheDB
         hash.merge! attrs
       when insta_re
         # OEMBED for INSTAGRAM
-        oembed_url = "https://www.instagram.com/publicapi/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
+        oembed_url = "https://api.instagram.com/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
         resp = Faraday.get oembed_url
         if resp.status == 200
           data = JSON.parse(resp.body)
@@ -168,11 +169,25 @@ class CacheDB
         size = { width: 400, height: nil } # TODO
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
+      when twitter_re
+        id = url.split("/").last
+        client = ImageDB.twitter_client
+        data = client.status(id)
+
+        image = data.media.first
+        title = "\"#{data.id}\" by @#{data.user.screen_name}"
+        image_url = "#{image.media_url_https}:large"
+        attrs = { title: title, image: image_url, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
+        hash.merge! attrs
       else
         logging.error "No idea what url this is: #{url}"
       end
     rescue StandardError => e
       logging.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
+    rescue Twitter::Error::TooManyRequests => e
+      logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
+      sleep e.rate_limit.reset_in + 1
+      retry
     end
 
     set url, hash
