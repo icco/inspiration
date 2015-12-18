@@ -220,10 +220,10 @@ class ImageDB
     end
 
     # Twitter
-    twitter_collect_with_max_id do |max_id|
+    twitter_collect_with_max_id do |t_max_id|
       options = { count: 200, include_rts: true }
-      options[:max_id] = max_id unless max_id.nil?
-      print_data = { twitter: "icco", max_id: max_id }
+      options[:max_id] = t_max_id unless t_max_id.nil?
+      print_data = { twitter: "icco", max_id: t_max_id }
       logging.info print_data.inspect
       begin
         ImageDB.twitter_client.favorites("icco", options).each do |t|
