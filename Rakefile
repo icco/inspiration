@@ -59,18 +59,21 @@ desc "Download all images into a folder."
 task :download do
   require "open-uri"
   require "uri"
+  require "digest/sha1"
+  require "mime/types"
 
   cdb = CacheDB.new
   cdb.all.map { |_k, v| v["image"] }.delete_if { |i| i.nil? || i.empty? }.sort.each do |i|
     url = URI(i)
-    filename = url.path.split("/").join("")
-    path = "/Users/nat/Dropbox/Photos/Inspiration/#{filename}"
+    filename = Digest::SHA1.hexdigest(i)
 
-    if !File.exist? path
+    open(url) do |u|
+      ext = MIME::Types[u.content_type].first.extensions.first
+      path = "/Users/nat/Dropbox/Photos/Inspiration/#{filename}.#{ext}"
       open(path, "wb") do |file|
         begin
           puts "Downloading #{i}"
-          file << open(url).read
+          file << u.read
         rescue OpenURI::HTTPError => e
           puts "Open URI error - #{e}"
         end
