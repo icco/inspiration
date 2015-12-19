@@ -66,10 +66,17 @@ task :download do
   cdb.all.map { |_k, v| v["image"] }.delete_if { |i| i.nil? || i.empty? }.sort.each do |i|
     url = URI(i)
     filename = Digest::SHA1.hexdigest(i)
-
+    ext = File.extname(i)
     open(url) do |u|
-      ext = MIME::Types[u.content_type].first.extensions.first
+      if ext.empty?
+        ext = MIME::Types[u.content_type].first.extensions.first
+      else
+        ext = ext[1..-1]
+      end
       path = "/Users/nat/Dropbox/Photos/Inspiration/#{filename}.#{ext}"
+
+      next if ext == "bin"
+
       open(path, "wb") do |file|
         begin
           puts "Downloading #{i}"
