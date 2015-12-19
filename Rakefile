@@ -62,15 +62,18 @@ task :download do
 
   cdb = CacheDB.new
   cdb.all.map { |_k, v| v["image"] }.delete_if { |i| i.nil? || i.empty? }.sort.each do |i|
-    puts "Downloading #{i}"
     url = URI(i)
-    filename = url.path.split("/").join("_")
+    filename = url.path.split("/").join("")
+    path = "/Users/nat/Dropbox/Photos/Inspiration/#{filename}"
 
-    open("tmp/images/#{filename}", "wb") do |file|
-      begin
-        file << open(url).read
-      rescue OpenURI::HTTPError => e
-        puts "Open URI error - #{e}"
+    if !File.exist? path
+      open(path, "wb") do |file|
+        begin
+          puts "Downloading #{i}"
+          file << open(url).read
+        rescue OpenURI::HTTPError => e
+          puts "Open URI error - #{e}"
+        end
       end
     end
   end
