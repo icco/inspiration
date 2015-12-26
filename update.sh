@@ -1,5 +1,5 @@
 #! /bin/bash
-source ~/.rvm/environments/ruby-2.2.3
+source ~/.rvm/environments/ruby-2.3.0
 
 git pull
 bundle update
