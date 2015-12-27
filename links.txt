@@ -6575,12 +6575,10 @@ https://dribbble.com/shots/791617-Leo
 https://dribbble.com/shots/799348-Flip-Clock
 https://dribbble.com/shots/804530-Eyedrop-me-app-is-alive
 https://dribbble.com/shots/807288-Cart
-https://dribbble.com/shots/808780-New-portfolio
 https://dribbble.com/shots/811847-Photo-Frame
 https://dribbble.com/shots/812038-Blackboard
 https://dribbble.com/shots/812159-My-website-final-screen-design
 https://dribbble.com/shots/818018-So-long-Loosecubes
-https://dribbble.com/shots/819192-New-Portfolio-2
 https://dribbble.com/shots/822997-Android-Design-in-Action-Endomondo-on-Tablets
 https://dribbble.com/shots/824210-waffle-iphone-icon
 https://dribbble.com/shots/825319-PR-SENT-logo-proposal
@@ -6840,6 +6838,7 @@ https://twitter.com/archillect/status/680269260174835712
 https://twitter.com/archillect/status/680510852345282560
 https://twitter.com/archillect/status/680538537209495553
 https://twitter.com/archillect/status/680591380297695232
+https://twitter.com/archillect/status/680976419917266946
 https://verygoods.co/product/129197
 https://verygoods.co/product/131139
 https://verygoods.co/product/16210
@@ -7447,6 +7446,7 @@ https://www.flickr.com/photos/127446714@N05/22300371264
 https://www.flickr.com/photos/127552659@N06/22731994062
 https://www.flickr.com/photos/127665714@N08/15865606363
 https://www.flickr.com/photos/127871198@N05/23572116895
+https://www.flickr.com/photos/127947080@N06/23287677222
 https://www.flickr.com/photos/128035468@N04/16296160453
 https://www.flickr.com/photos/128035468@N04/16430453580
 https://www.flickr.com/photos/128035468@N04/16728264050
@@ -7480,6 +7480,7 @@ https://www.flickr.com/photos/129391618@N08/21069935389
 https://www.flickr.com/photos/129391618@N08/21230555676
 https://www.flickr.com/photos/129391618@N08/21256805075
 https://www.flickr.com/photos/129701211@N08/19397857842
+https://www.flickr.com/photos/129744930@N03/23446314549
 https://www.flickr.com/photos/129817855@N03/22403234001
 https://www.flickr.com/photos/130023849@N08/23090144696
 https://www.flickr.com/photos/130263255@N04/16909002614
@@ -8208,6 +8209,7 @@ https://www.flickr.com/photos/33882696@N04/4916824302
 https://www.flickr.com/photos/33895829@N05/3345217051
 https://www.flickr.com/photos/33909421@N03/4289383158
 https://www.flickr.com/photos/33953253@N00/5710939909
+https://www.flickr.com/photos/34015863@N03/22144482845
 https://www.flickr.com/photos/34085095@N07/9119217854
 https://www.flickr.com/photos/34086724@N02/5697500846
 https://www.flickr.com/photos/34086724@N02/6071952419
@@ -8380,6 +8382,7 @@ https://www.flickr.com/photos/38181284@N06/11819446084
 https://www.flickr.com/photos/38234898@N00/4828825288
 https://www.flickr.com/photos/38327218@N05/5072059208
 https://www.flickr.com/photos/38349570@N04/14817600674
+https://www.flickr.com/photos/38454938@N03/17313893611
 https://www.flickr.com/photos/38462165@N05/5895809050
 https://www.flickr.com/photos/38593652@N03/10337417923
 https://www.flickr.com/photos/38614216@N08/17102330275
@@ -8450,11 +8453,14 @@ https://www.flickr.com/photos/40195501@N06/4028861840
 https://www.flickr.com/photos/40195501@N06/5125705876
 https://www.flickr.com/photos/40195501@N06/5408902186
 https://www.flickr.com/photos/40195501@N06/5502258262
+https://www.flickr.com/photos/40220387@N08/23443771476
+https://www.flickr.com/photos/40226589@N06/23678348066
 https://www.flickr.com/photos/40235028@N08/7787046510
 https://www.flickr.com/photos/40386447@N00/4409763030
 https://www.flickr.com/photos/40417073@N00/5079708278
 https://www.flickr.com/photos/40487346@N00/15619514593
 https://www.flickr.com/photos/40575690@N00/15113096814
+https://www.flickr.com/photos/40775084@N05/21639067114
 https://www.flickr.com/photos/40826712@N00/1815956234
 https://www.flickr.com/photos/40856688@N04/4657053554
 https://www.flickr.com/photos/40871351@N00/3971344656
@@ -8778,7 +8784,9 @@ https://www.flickr.com/photos/42537025@N00/21798938809
 https://www.flickr.com/photos/42537025@N00/23584028089
 https://www.flickr.com/photos/42537025@N00/23843338662
 https://www.flickr.com/photos/42537025@N00/23843446382
+https://www.flickr.com/photos/42537025@N00/23844199752
 https://www.flickr.com/photos/42537025@N00/23869175521
+https://www.flickr.com/photos/42537025@N00/23926623036
 https://www.flickr.com/photos/42537025@N00/23951684725
 https://www.flickr.com/photos/42537025@N00/2783981073
 https://www.flickr.com/photos/42537025@N00/3212647869
@@ -9250,6 +9258,7 @@ https://www.flickr.com/photos/60028364@N05/23520322771
 https://www.flickr.com/photos/60028364@N05/23576656606
 https://www.flickr.com/photos/60028364@N05/23949841325
 https://www.flickr.com/photos/60144070@N00/22669835
+https://www.flickr.com/photos/60383415@N07/23234765382
 https://www.flickr.com/photos/60475145@N00/3891399062
 https://www.flickr.com/photos/60475224@N05/9655433834
 https://www.flickr.com/photos/60529780@N02/21897852079
@@ -9684,6 +9693,7 @@ https://www.flickr.com/photos/71482738@N00/12336591195
 https://www.flickr.com/photos/7157508@N04/4247653395
 https://www.flickr.com/photos/7173680@N03/3238729871
 https://www.flickr.com/photos/7181739@N05/20840881398
+https://www.flickr.com/photos/71841709@N05/20722704382
 https://www.flickr.com/photos/71957046@N00/1782182319
 https://www.flickr.com/photos/7211513@N04/2083657968
 https://www.flickr.com/photos/72187820@N08/7996355918
@@ -9885,6 +9895,7 @@ https://www.flickr.com/photos/79238478@N00/414359862
 https://www.flickr.com/photos/79413062@N07/19183671990
 https://www.flickr.com/photos/79450590@N02/9072913409
 https://www.flickr.com/photos/79513319@N00/1277380189
+https://www.flickr.com/photos/79649916@N00/22857292880
 https://www.flickr.com/photos/79688583@N03/13009160494
 https://www.flickr.com/photos/79688583@N03/15725868180
 https://www.flickr.com/photos/7969238@N02/3937288726
@@ -10115,6 +10126,7 @@ https://www.flickr.com/photos/93846482@N08/14197491985
 https://www.flickr.com/photos/93956975@N03/8589992454
 https://www.flickr.com/photos/94076933@N07/10130634906
 https://www.flickr.com/photos/94248387@N07/11190745776
+https://www.flickr.com/photos/94405244@N03/22407305427
 https://www.flickr.com/photos/94523064@N04/23809975806
 https://www.flickr.com/photos/94665864@N00/8545934886
 https://www.flickr.com/photos/94816772@N00/14819442903
@@ -10412,6 +10424,9 @@ https://www.instagram.com/p/_pF1O7qkmp/
 https://www.instagram.com/p/_pF_sRuvHw/
 https://www.instagram.com/p/_pIEM5IckU/
 https://www.instagram.com/p/_pNgfOA6Td/
+https://www.instagram.com/p/_xhLkDyfrv/
+https://www.instagram.com/p/_xjVrEAwZS/
+https://www.instagram.com/p/_xkm6NnxZf/
 https://www.instagram.com/p/wkOoQFJZKS/
 https://www.instagram.com/p/xF9eX5gFET/
 https://www.instagram.com/p/y0nSo9CCPw/
