@@ -183,7 +183,7 @@ class CacheDB
         logging.error "No idea what url this is: #{url}"
       end
     rescue StandardError => e
-      logging.error "Failed #{oembed_url} for #{url}: #{e.inspect}"
+      logging.error "Failed OEmbed Get for #{url}: #{e.inspect}"
     rescue Twitter::Error::TooManyRequests => e
       logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
       sleep e.rate_limit.reset_in + 1
