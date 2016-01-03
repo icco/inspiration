@@ -6880,6 +6880,12 @@ https://twitter.com/archillect/status/682217096684679168
 https://twitter.com/archillect/status/682350472158703616
 https://twitter.com/archillect/status/682451149279084544
 https://twitter.com/archillect/status/682813524851212288
+https://twitter.com/archillect/status/683009815858298880
+https://twitter.com/archillect/status/683027436523622401
+https://twitter.com/archillect/status/683065183443546112
+https://twitter.com/archillect/status/683158295855673344
+https://twitter.com/archillect/status/683329421189738496
+https://twitter.com/archillect/status/683462803064250368
 https://verygoods.co/product/129197
 https://verygoods.co/product/131139
 https://verygoods.co/product/16210
@@ -7364,6 +7370,8 @@ https://verygoods.co/product/331937
 https://verygoods.co/product/331939
 https://verygoods.co/product/331940
 https://verygoods.co/product/331942
+https://verygoods.co/product/332088
+https://verygoods.co/product/332185
 https://verygoods.co/product/54839
 https://verygoods.co/product/55154
 https://verygoods.co/product/9385
@@ -7485,6 +7493,7 @@ https://www.flickr.com/photos/12289718@N00/21008772763
 https://www.flickr.com/photos/12289718@N00/21991870284
 https://www.flickr.com/photos/12289718@N00/23242668722
 https://www.flickr.com/photos/12289718@N00/23876455805
+https://www.flickr.com/photos/12289718@N00/24026066701
 https://www.flickr.com/photos/12355556@N00/15299425226
 https://www.flickr.com/photos/123566961@N03/22140401559
 https://www.flickr.com/photos/123680152@N04/13923562281
@@ -10384,7 +10393,7 @@ https://www.instagram.com/p/-HKgUsuU23/
 https://www.instagram.com/p/-HLDa7qZaI/
 https://www.instagram.com/p/-HLIWULocL/
 https://www.instagram.com/p/-H_uuGPc3z/
-https://www.instagram.com/p/-HdPcKuIZe/
+https://www.instagram.com/p/-HdPcKuIZevlXZz10_bGkSSC-tC3O8ssr_Ats0/
 https://www.instagram.com/p/-Kj4csvczR/
 https://www.instagram.com/p/-LVYmHm6GR/
 https://www.instagram.com/p/-PWRJ_o0So/
@@ -10487,8 +10496,11 @@ https://www.instagram.com/p/9vtjYgxXRe/
 https://www.instagram.com/p/9vye5dyIfx/
 https://www.instagram.com/p/9vzVUbIVag/
 https://www.instagram.com/p/9wDfsdojp1/
+https://www.instagram.com/p/BACcQynn-uK/
+https://www.instagram.com/p/BACrzHBtbjL/
 https://www.instagram.com/p/Qd8wbum6GN/
 https://www.instagram.com/p/_-d28bQEc9/
+https://www.instagram.com/p/_-n0UPG6Ji/
 https://www.instagram.com/p/_0ADr5swO9/
 https://www.instagram.com/p/_0g9qtAwcn/
 https://www.instagram.com/p/_0hGgHgwc7/
@@ -10521,11 +10533,12 @@ https://www.instagram.com/p/_ZmMr9oVRZ/
 https://www.instagram.com/p/_Zo4p9CQ8b/
 https://www.instagram.com/p/_ZvJrgy5iW/
 https://www.instagram.com/p/_Zyjn2oVcN/
+https://www.instagram.com/p/__AaBbG49A/
 https://www.instagram.com/p/_aM4A5hQTu/
 https://www.instagram.com/p/_b22FLS8Hi/
 https://www.instagram.com/p/_ey0XmoVdZ/
 https://www.instagram.com/p/_eycQ-uvM5/
-https://www.instagram.com/p/_fCv8NFVcrVPNt3zx0xqKm_31j2JdRu4_Ro440/
+https://www.instagram.com/p/_fCv8NFVcr/
 https://www.instagram.com/p/_fDU6aoTIL/
 https://www.instagram.com/p/_fFnsnIVZl/
 https://www.instagram.com/p/_fNM0DIjvC/
