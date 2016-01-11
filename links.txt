@@ -5599,7 +5599,6 @@ https://dribbble.com/shots/1447150-Wild-Free
 https://dribbble.com/shots/1447708-XOXO-2014
 https://dribbble.com/shots/1449027-Artist-Wanted
 https://dribbble.com/shots/1449155-Drone-Concept
-https://dribbble.com/shots/1450315-Giveaway-Pencil-by-FiftyThree
 https://dribbble.com/shots/1450530-Engine-Yard-Icons
 https://dribbble.com/shots/1450899-The-Shining
 https://dribbble.com/shots/1452642-Pantone-Book
@@ -5766,6 +5765,7 @@ https://dribbble.com/shots/1635231-Personal-Website-Redesign
 https://dribbble.com/shots/1639865-Simple-Personal-Page-portfolio
 https://dribbble.com/shots/1640194-Personal-Resume
 https://dribbble.com/shots/1647239-Array
+https://dribbble.com/shots/1650973-Gsound-iPhone-app
 https://dribbble.com/shots/1652130-Bird
 https://dribbble.com/shots/1653873-Inventory-Wireframes-GIF
 https://dribbble.com/shots/1654273-I-MPOSSIBLE
@@ -5926,6 +5926,7 @@ https://dribbble.com/shots/1846314-MATCHDAY
 https://dribbble.com/shots/1846372-Sidebar
 https://dribbble.com/shots/1846524-Trip-Organiser-v2
 https://dribbble.com/shots/1847155-Responsive-landing-page-early-stage
+https://dribbble.com/shots/1847266-Craigslist-Redesign
 https://dribbble.com/shots/1847402-MyBlossom-com-Interior-Pages
 https://dribbble.com/shots/1847733-Rooster-Mark
 https://dribbble.com/shots/1847829-10-x-2014-06
@@ -6333,6 +6334,7 @@ https://dribbble.com/shots/2175668-Children-of-Morta-John-fan-art
 https://dribbble.com/shots/2178278-Terrible-App-Idea-Design-Google-Racing
 https://dribbble.com/shots/2178359-Envoy-Welcome-Desk
 https://dribbble.com/shots/2181943-Social-Banking-App
+https://dribbble.com/shots/2183740-Shift-Business-Cards
 https://dribbble.com/shots/2184459-Astronaut
 https://dribbble.com/shots/2186049-Press
 https://dribbble.com/shots/2186490-April-Download-Cards
@@ -6517,6 +6519,7 @@ https://dribbble.com/shots/2396911-M-O
 https://dribbble.com/shots/2397167-10x2015-08-Joanna-Newsom-Divers
 https://dribbble.com/shots/2401709-10x2015-06-Jacco-Gardner-Hypnophobia
 https://dribbble.com/shots/2405492-10x2015-05-Deerhunter-Fading-Frontier
+https://dribbble.com/shots/2407457-Royal-Crown
 https://dribbble.com/shots/2409656-HAN-S
 https://dribbble.com/shots/2413695-Saison-Growler
 https://dribbble.com/shots/2413980-Stormtrooper
@@ -6553,6 +6556,9 @@ https://dribbble.com/shots/2438934-Giuletta-Sprint-Xmas-Gift
 https://dribbble.com/shots/2439130-Cabin-On-A-Mountain
 https://dribbble.com/shots/2439150-Moon-WIP
 https://dribbble.com/shots/2439233-Roseline-T-Shirt-Design
+https://dribbble.com/shots/2440401-Streaming-Platform
+https://dribbble.com/shots/2444270-Aye
+https://dribbble.com/shots/2446282-Beer-Supplier-Icons
 https://dribbble.com/shots/251025-Velocity-Stage-2
 https://dribbble.com/shots/251747--A-Logo
 https://dribbble.com/shots/292208-Kavak
@@ -6925,6 +6931,8 @@ https://twitter.com/archillect/status/685682422218887168
 https://twitter.com/archillect/status/685702557084299264
 https://twitter.com/archillect/status/685944145802883072
 https://twitter.com/archillect/status/686049852149596161
+https://twitter.com/archillect/status/686153027254906880
+https://twitter.com/archillect/status/686200845847937024
 https://verygoods.co/product/129197
 https://verygoods.co/product/131139
 https://verygoods.co/product/154067
