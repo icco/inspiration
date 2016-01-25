@@ -64,7 +64,7 @@ class ImageDB
     products = open "https://verygoods.co/site-api-0.1/users/icco/goods?limit=20" do |j|
       data = Oj.compat_load(j)
       data["_embedded"]["goods"].map do |g|
-        "https://verygoods.co/site-api-0.1#{g['_links']['product']['href']}"
+        "https://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
       end
     end
     products.each { |prod| @images.add prod }
