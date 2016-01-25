@@ -13,6 +13,10 @@ class ImageDB
     images.sample count
   end
 
+  def valid_twitter_users
+    ["EveningWaters", "archillect"]
+  end
+
   def self.instagram_client
     Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
   end
@@ -81,7 +85,7 @@ class ImageDB
     # Twitter
     begin
       ImageDB.twitter_client.favorites("icco", count: 200).each do |t|
-        if t.user.screen_name.eql? "archillect"
+        if valid_twitter_users.include? t.user.screen_name
           @images.add t.uri.to_s
         end
       end
@@ -219,7 +223,7 @@ class ImageDB
       logging.info print_data.inspect
       begin
         ImageDB.twitter_client.favorites(options).each do |t|
-          if t.user.screen_name.eql? "archillect"
+          if valid_twitter_users.include? t.user.screen_name
             @images.add t.uri.to_s
           end
         end
