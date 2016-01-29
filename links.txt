@@ -2167,6 +2167,7 @@ http://kanoe-v2.deviantart.com/art/homeward-153038045
 http://kanta-kun.deviantart.com/art/Random22-187836617
 http://kantbstopped519.deviantart.com/art/Minimal-MIUI-Go-Apex-Nova-Theme-Update-349147021
 http://kantbstopped519.deviantart.com/art/The-Real-Teal-346292214
+http://karadavre.deviantart.com/art/AT-KoHeath-431267498
 http://kariliimatainen.deviantart.com/art/7878-269951321
 http://karincoma.deviantart.com/art/sonatina-56525294
 http://karincoma.deviantart.com/art/urban-whisper-49241231
@@ -3431,6 +3432,7 @@ http://paulosiqueira.deviantart.com/art/Justice-League-23-1-Darkseid-page-02-pen
 http://paulrenaud.deviantart.com/art/Game-of-Thrones-color-378890847
 http://paulskywalker.deviantart.com/art/TARDIS-Union-Jack-Wallpaper-329780044
 http://pav327.deviantart.com/art/Scrap-Metal-Master-1-511639226
+http://pawbit.deviantart.com/art/Lionhearted-554421737
 http://pel07.deviantart.com/art/pixel-art-555366901
 http://pen-tacular-artist.deviantart.com/art/The-Final-Frontier-graphite-drawing-410173308
 http://perefalc.deviantart.com/art/Alpine-Meadow-32869320
@@ -4781,7 +4783,6 @@ http://wildrainoficeandfire.deviantart.com/art/Paris-est-pour-les-amoureux-15869
 http://wildrainoficeandfire.deviantart.com/art/Paris-est-pour-les-amoureux-II-164232092
 http://wildweasel339.deviantart.com/art/Return-419069015
 http://williweissfuss.deviantart.com/art/Tom-Bombadil-402724162
-http://windwakers.deviantart.com/art/Lionhearted-554421737
 http://winnichip.deviantart.com/art/Beleuchtung-273112975
 http://winterland.deviantart.com/art/Catching-snowflakes-II-24552503
 http://wiredgear.deviantart.com/art/Elite-Soldier-92053319
@@ -4916,7 +4917,6 @@ http://yukosan2.deviantart.com/art/aquarius-193414770
 http://yuliaspesivtseva.deviantart.com/art/Mary-444678060
 http://yuliaspesivtseva.deviantart.com/art/Mary-II-445772482
 http://yumemitsuki.deviantart.com/art/Dreamer-443291285
-http://yuruikarameru.deviantart.com/art/AT-KoHeath-431267498
 http://yuschav.deviantart.com/art/Untitled-4-513470338
 http://yuumei.deviantart.com/art/Alone-Among-the-Lights-Tutorial-Video-linked-564620362
 http://yuumei.deviantart.com/art/Axent-Wear-Ria-487811680
@@ -6362,7 +6362,6 @@ https://dribbble.com/shots/2155253-The-Royal-Oak
 https://dribbble.com/shots/2155596-Bryne-Coffee
 https://dribbble.com/shots/2155728-Color-UI-Exploration
 https://dribbble.com/shots/2156118-Red-Death
-https://dribbble.com/shots/2156338-Hocus-Pocus
 https://dribbble.com/shots/2158459-Operator-Illos-04
 https://dribbble.com/shots/2159366-Keep-Ruby-Weird-Home
 https://dribbble.com/shots/2163273-Stream
@@ -6639,6 +6638,7 @@ https://dribbble.com/shots/2458981-1903-Tap-Table
 https://dribbble.com/shots/2469948-Sheepdogs-Jackalope
 https://dribbble.com/shots/2472119-Workflow-2-0-Even-better-design-driven-project-management
 https://dribbble.com/shots/2473681-Old-Skool-2016-Team-T-Shirt
+https://dribbble.com/shots/2484896-Dark-UI-Calendar-app
 https://dribbble.com/shots/251025-Velocity-Stage-2
 https://dribbble.com/shots/251747--A-Logo
 https://dribbble.com/shots/292208-Kavak
@@ -7064,6 +7064,7 @@ https://twitter.com/archillect/status/691742361823633408
 https://twitter.com/archillect/status/691832953274548225
 https://twitter.com/archillect/status/691994016347525120
 https://twitter.com/archillect/status/692094681530896385
+https://twitter.com/archillect/status/692691102026043392
 https://verygoods.co/product/129197
 https://verygoods.co/product/131139
 https://verygoods.co/product/154067
@@ -7778,6 +7779,8 @@ https://www.flickr.com/photos/129002837@N05/21575626300
 https://www.flickr.com/photos/129002837@N05/21575627210
 https://www.flickr.com/photos/129002837@N05/21737513016
 https://www.flickr.com/photos/129002837@N05/21751955962
+https://www.flickr.com/photos/129071009@N07/22188543676
+https://www.flickr.com/photos/129071009@N07/24041228521
 https://www.flickr.com/photos/129134186@N06/19977419675
 https://www.flickr.com/photos/129147950@N03/19342041203
 https://www.flickr.com/photos/129348032@N02/23739364356
@@ -10714,6 +10717,7 @@ https://www.instagram.com/p/4IP9xzgwbF/
 https://www.instagram.com/p/4KptoQBUmN/
 https://www.instagram.com/p/4QCmxCAwTr/
 https://www.instagram.com/p/4k0ucOAFDO/
+https://www.instagram.com/p/51kh3YB0Kd/
 https://www.instagram.com/p/5VTFBrgwfG/
 https://www.instagram.com/p/5mqCnKpZCi/
 https://www.instagram.com/p/5r7xDZD0mg/
@@ -10851,6 +10855,7 @@ https://www.instagram.com/p/_fNm7WuvPx/
 https://www.instagram.com/p/_fdD93tOcJ/
 https://www.instagram.com/p/_h7fl-kdt2/
 https://www.instagram.com/p/_h7h1Juqdv/
+https://www.instagram.com/p/_hkiIITVqi/
 https://www.instagram.com/p/_hznydojie/
 https://www.instagram.com/p/_iMzVmG6GY/
 https://www.instagram.com/p/_jtS9pnxZ_/
