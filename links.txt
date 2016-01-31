@@ -2635,9 +2635,11 @@ http://m0thart.deviantart.com/art/the-great-story-IX-563936505
 http://m0thart.deviantart.com/art/the-great-story-VI-538487325
 http://m0thart.deviantart.com/art/the-great-story-X-565115238
 http://m0thart.deviantart.com/art/the-great-story-XIII-567644976
+http://m0thart.deviantart.com/art/the-other-side-587632804
 http://m0thart.deviantart.com/art/the-secrets-of-room-8-577780666
 http://m0thart.deviantart.com/art/the-secrets-of-room-8-7-579059906
 http://m0thart.deviantart.com/art/the-unexpected-557583925
+http://m0thart.deviantart.com/art/wood-and-flowers-587400871
 http://m7781.deviantart.com/art/avenger-time-376462305
 http://m7781.deviantart.com/art/deadpool-kills-deadpool-2-372042475
 http://m7781.deviantart.com/art/optimus-prime-x-rockwell-297233090
@@ -3380,6 +3382,7 @@ http://pascalcampion.deviantart.com/art/Apartment-3B-516230260
 http://pascalcampion.deviantart.com/art/Bring-it-on-Monday-552635192
 http://pascalcampion.deviantart.com/art/Chocolate-and-Vanilla-meet-in-a-park-473111567
 http://pascalcampion.deviantart.com/art/Closing-time-475574261
+http://pascalcampion.deviantart.com/art/Getting-away-for-a-moment-587051972
 http://pascalcampion.deviantart.com/art/It-s-in-winter-sometime-between-the-afternoon-497607051
 http://pascalcampion.deviantart.com/art/It-was-on-the-corner-of-Market-and-Van-Ness-475797183
 http://pascalcampion.deviantart.com/art/Keeping-it-simple-508961266
@@ -3501,6 +3504,7 @@ http://picolo-kun.deviantart.com/art/Gryffindor-511825420
 http://picolo-kun.deviantart.com/art/Lumos-576811848
 http://picolo-kun.deviantart.com/art/Luna-Lovegood-523462272
 http://picolo-kun.deviantart.com/art/Now-playing-508736364
+http://picolo-kun.deviantart.com/art/Occlumency-587036473
 http://picolo-kun.deviantart.com/art/Phoenix-584255350
 http://picolo-kun.deviantart.com/art/RIP-David-Bowie-583845908
 http://picolo-kun.deviantart.com/art/SKETCH-YOUR-HAND-Challenge-563664460
@@ -4126,6 +4130,7 @@ http://slurpaza.deviantart.com/art/geo-439661101
 http://slurpaza.deviantart.com/art/iOS-7-432880979
 http://slurpaza.deviantart.com/art/m-491374850
 http://slurpaza.deviantart.com/art/squares-mockup-446553644
+http://slurpaza.deviantart.com/art/t-587200909
 http://slurpaza.deviantart.com/art/toolazyfortitles-483455854
 http://smashmethod.deviantart.com/art/A-T-O-M-I-C-23861637
 http://smashmethod.deviantart.com/art/A-n-g-e-l-22455778
@@ -4312,6 +4317,7 @@ http://sugargrl14.deviantart.com/art/Should-I-Follow-561475272
 http://suhona.deviantart.com/art/Danse-Macabre-275067609
 http://suihara.deviantart.com/art/Adventure-Time-320277664
 http://suihowl.deviantart.com/art/The-magician-504197703
+http://sujansky.deviantart.com/art/Barbora-583016837
 http://sumirehaikuxna.deviantart.com/art/Arbiter-381637101
 http://sunflorii.deviantart.com/art/C-chibizoo-423178914
 http://sunnygho.deviantart.com/art/Artgerm-s-Pepper-Christmas-13413801
@@ -6214,7 +6220,7 @@ https://dribbble.com/shots/2032257-Landing-page-upload
 https://dribbble.com/shots/2033194-UI-Haus-mobile-graph-kit
 https://dribbble.com/shots/2033406-Activity-App
 https://dribbble.com/shots/2033473-The-Morning-Routine
-https://dribbble.com/shots/2034557-UI-Designer-Portfolio-Concept
+https://dribbble.com/shots/2034557-UI-Designer-Portfolio-Website
 https://dribbble.com/shots/2034598-NEW-Nighttime-Mixtape
 https://dribbble.com/shots/2035680-Thor-no-texture
 https://dribbble.com/shots/2036097-The-Outdoors
@@ -6909,6 +6915,7 @@ https://twitter.com/EveningWaters/status/691955396299374592
 https://twitter.com/EveningWaters/status/691998096348311552
 https://twitter.com/EveningWaters/status/692003251957469184
 https://twitter.com/EveningWaters/status/692184314017091584
+https://twitter.com/EveningWaters/status/693452721576349698
 https://twitter.com/archillect/status/586217045710209024
 https://twitter.com/archillect/status/650719553639608321
 https://twitter.com/archillect/status/650993864447270912
@@ -7063,6 +7070,7 @@ https://twitter.com/archillect/status/691994016347525120
 https://twitter.com/archillect/status/692094681530896385
 https://twitter.com/archillect/status/692691102026043392
 https://twitter.com/archillect/status/692927664483667968
+https://twitter.com/archillect/status/693644893785329664
 https://verygoods.co/product/129197
 https://verygoods.co/product/131139
 https://verygoods.co/product/154067
@@ -10777,6 +10785,7 @@ https://www.instagram.com/p/9vye5dyIfx/
 https://www.instagram.com/p/9vzVUbIVag/
 https://www.instagram.com/p/9wDfsdojp1/
 https://www.instagram.com/p/BA1dHaVkdpz/
+https://www.instagram.com/p/BA1urD4w43-/
 https://www.instagram.com/p/BA40bzgBQTQ/
 https://www.instagram.com/p/BA45OjrvptD/
 https://www.instagram.com/p/BA46CDYNbvr/
@@ -10786,6 +10795,7 @@ https://www.instagram.com/p/BA4owS-NOVr/
 https://www.instagram.com/p/BA4wPkHjgQm/
 https://www.instagram.com/p/BA4xYH-uvML/
 https://www.instagram.com/p/BA6isIOHbwf/
+https://www.instagram.com/p/BA8VzdxQ4yh/
 https://www.instagram.com/p/BA9YKPhoVQV/
 https://www.instagram.com/p/BA9odKfKksy/
 https://www.instagram.com/p/BACcQynn-uK/
@@ -10806,6 +10816,10 @@ https://www.instagram.com/p/BAdPqE2o0Wv/
 https://www.instagram.com/p/BAqirNbwEc0/
 https://www.instagram.com/p/BAwh_Fam6Dj/
 https://www.instagram.com/p/BBH7mV2n-u1/
+https://www.instagram.com/p/BBK5kJ5jgex/
+https://www.instagram.com/p/BBK6zMWrEL7/
+https://www.instagram.com/p/BBKouQ-IVRr/
+https://www.instagram.com/p/BBKpceKHxW6/
 https://www.instagram.com/p/Qd8wbum6GN/
 https://www.instagram.com/p/_-d28bQEc9/
 https://www.instagram.com/p/_-n0UPG6Ji/
