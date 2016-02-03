@@ -14,7 +14,7 @@ class ImageDB
   end
 
   def valid_twitter_users
-    ["EveningWaters", "archillect"]
+    ["EveningWaters", "archillect", "FFD8FFDB"]
   end
 
   def self.instagram_client
