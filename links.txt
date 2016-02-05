@@ -7090,6 +7090,10 @@ https://twitter.com/archillect/status/693644893785329664
 https://twitter.com/archillect/status/693989662231302148
 https://twitter.com/archillect/status/694382251501580291
 https://twitter.com/archillect/status/694384768193028096
+https://twitter.com/cooperhewittbot/status/678079835898515456
+https://twitter.com/cooperhewittbot/status/694930900870635525
+https://twitter.com/cooperhewittbot/status/695293290132938752
+https://twitter.com/cooperhewittbot/status/695474467645034496
 https://verygoods.co/product/129197
 https://verygoods.co/product/131139
 https://verygoods.co/product/154067
@@ -7899,6 +7903,7 @@ https://www.flickr.com/photos/13119988@N00/2747009018
 https://www.flickr.com/photos/13141802@N00/255809826
 https://www.flickr.com/photos/131442016@N05/20455530054
 https://www.flickr.com/photos/131543149@N07/23638949810
+https://www.flickr.com/photos/131767938@N05/24194893353
 https://www.flickr.com/photos/131850249@N04/18366553740
 https://www.flickr.com/photos/131942646@N08/20934279236
 https://www.flickr.com/photos/132460578@N07/22893104305
@@ -10219,6 +10224,7 @@ https://www.flickr.com/photos/73557980@N00/23265780384
 https://www.flickr.com/photos/73557980@N00/23930084445
 https://www.flickr.com/photos/73557980@N00/24146070490
 https://www.flickr.com/photos/73557980@N00/24584010181
+https://www.flickr.com/photos/73557980@N00/24703161462
 https://www.flickr.com/photos/73557980@N00/9427463438
 https://www.flickr.com/photos/73557980@N00/9608366291
 https://www.flickr.com/photos/73557980@N00/9608367513
@@ -10569,6 +10575,7 @@ https://www.flickr.com/photos/92385702@N03/12484824374
 https://www.flickr.com/photos/92385702@N03/16977114956
 https://www.flickr.com/photos/92385702@N03/20706680131
 https://www.flickr.com/photos/92385702@N03/21041458824
+https://www.flickr.com/photos/92385702@N03/24380390729
 https://www.flickr.com/photos/9242407@N04/4632302172
 https://www.flickr.com/photos/92434422@N02/19350557103
 https://www.flickr.com/photos/92476579@N00/3909926171
@@ -10896,6 +10903,7 @@ https://www.instagram.com/p/BBK6zMWrEL7/
 https://www.instagram.com/p/BBKouQ-IVRr/
 https://www.instagram.com/p/BBKpceKHxW6/
 https://www.instagram.com/p/BBOZRb2ykdq/
+https://www.instagram.com/p/BBVbA1GuvI3/
 https://www.instagram.com/p/Qd8wbum6GN/
 https://www.instagram.com/p/_-d28bQEc9/
 https://www.instagram.com/p/_-n0UPG6Ji/
