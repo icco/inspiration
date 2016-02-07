@@ -19,6 +19,7 @@ class ImageDB
       "FFD8FFDB",
       "archillect",
       "cooperhewittbot",
+      "everycolorbot",
     ]
   end
 
