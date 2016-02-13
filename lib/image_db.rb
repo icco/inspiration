@@ -20,6 +20,7 @@ class ImageDB
       "archillect",
       "cooperhewittbot",
       "everycolorbot",
+      "madeofsparrows",
     ]
   end
 
