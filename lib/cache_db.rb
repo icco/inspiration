@@ -190,7 +190,9 @@ class CacheDB
       retry
     end
 
-    set url, hash
+    unless hash[:title].empty? or hash[:image].empty?
+      set url, hash
+    end
   end
 
   def get(url)
