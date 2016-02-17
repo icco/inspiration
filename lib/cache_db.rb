@@ -190,7 +190,9 @@ class CacheDB
       retry
     end
 
-    unless hash[:title].empty? or hash[:image].empty?
+    if hash[:title].nil? or hash[:title].empty? or hash[:image].nil? or hash[:image].empty?
+      # Should we warn that we couldn't connect?
+    else
       set url, hash
     end
   end
