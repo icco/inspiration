@@ -22,7 +22,7 @@ GEM
     buftok (0.2.0)
     builder (3.2.2)
     daemons (1.2.3)
-    domain_name (0.5.20160128)
+    domain_name (0.5.20160216)
       unf (>= 0.0.5, < 1.0.0)
     dribbble (1.0.4)
       rest-client (~> 1.7)
