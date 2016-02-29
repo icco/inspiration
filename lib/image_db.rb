@@ -22,6 +22,7 @@ class ImageDB
       "dscovr_epic",
       "everycolorbot",
       "madeofsparrows",
+      "youtubeartifact",
     ]
   end
 
