@@ -17,6 +17,7 @@ class ImageDB
     [
       "EveningWaters",
       "FFD8FFDB",
+      "MoMARobot",
       "archillect",
       "cooperhewittbot",
       "dscovr_epic",
