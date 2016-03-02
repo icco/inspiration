@@ -298,11 +298,11 @@ class CacheDB
 
     valid_keys.each do |k|
       data = get k
-      if data[:image].nil? || data[:image].empty?
+      if data["image"].nil? || data["image"].empty?
         delete k
       end
 
-      if data[:title].nil? || data[:title].empty?
+      if data["title"].nil? || data["title"].empty?
         delete k
       end
     end
