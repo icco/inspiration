@@ -296,6 +296,17 @@ class CacheDB
       delete k
     end
 
+    valid_keys.each do |k|
+      data = get k
+      if data[:image].nil? || data[:image].empty?
+        delete k
+      end
+
+      if data[:title].nil? || data[:title].empty?
+        delete k
+      end
+    end
+
     if sqlite?
       sql = "VACUUM FULL"
       ActiveRecord::Base.connection.execute(sql)
