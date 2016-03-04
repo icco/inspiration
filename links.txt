@@ -6811,6 +6811,10 @@ https://dribbble.com/shots/2557609-Blog-Design
 https://dribbble.com/shots/2557975-Quote-Card
 https://dribbble.com/shots/2558289-Markoff-Icon
 https://dribbble.com/shots/2560606-Positive-Inputs
+https://dribbble.com/shots/2564710-Dropbox-Audio-Previews
+https://dribbble.com/shots/2564960-Dashboard
+https://dribbble.com/shots/2566266-Koolzone-Module
+https://dribbble.com/shots/2566696-Organised-Kittie
 https://dribbble.com/shots/292208-Kavak
 https://dribbble.com/shots/301631-My-Site-Rd2
 https://dribbble.com/shots/311242-Cloud-for-Growl
@@ -7334,6 +7338,7 @@ https://twitter.com/archillect/status/704670048523313153
 https://twitter.com/archillect/status/705107925669384192
 https://twitter.com/archillect/status/705178395743748096
 https://twitter.com/archillect/status/705518131511476224
+https://twitter.com/archillect/status/705611247392321536
 https://twitter.com/cooperhewittbot/status/678079835898515456
 https://twitter.com/cooperhewittbot/status/694930900870635525
 https://twitter.com/cooperhewittbot/status/695293290132938752
@@ -7357,6 +7362,7 @@ https://twitter.com/everycolorbot/status/680591638243217408
 https://twitter.com/everycolorbot/status/696415801860034560
 https://twitter.com/everycolorbot/status/702848293001367552
 https://twitter.com/everycolorbot/status/705520903191437312
+https://twitter.com/everycolorbot/status/705611498593361920
 https://twitter.com/madeofsparrows/status/576813110519992320
 https://twitter.com/madeofsparrows/status/592510761072754688
 https://twitter.com/madeofsparrows/status/596431286278819840
@@ -8866,6 +8872,7 @@ https://www.flickr.com/photos/30341419@N00/22466026042
 https://www.flickr.com/photos/30365826@N02/5482745395
 https://www.flickr.com/photos/30375950@N07/2845991015
 https://www.flickr.com/photos/30427198@N00/14760428328
+https://www.flickr.com/photos/30427198@N00/25352105862
 https://www.flickr.com/photos/30433776@N03/2868312947
 https://www.flickr.com/photos/30466368@N07/5758850969
 https://www.flickr.com/photos/30493186@N03/4544759605
