@@ -25,7 +25,7 @@ class ImageDB
       "everycolorbot",
       "madeofsparrows",
       "youtubeartifact",
-    ]
+    ].map {|i| i.downcase }
   end
 
   def self.instagram_client
@@ -96,7 +96,7 @@ class ImageDB
     # Twitter
     begin
       ImageDB.twitter_client.favorites("icco", count: 200).each do |t|
-        if valid_twitter_users.include? t.user.screen_name
+        if valid_twitter_users.include? t.user.screen_name.downcase
           @images.add t.uri.to_s
         end
       end
