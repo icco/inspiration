@@ -234,7 +234,7 @@ class ImageDB
       logging.info print_data.inspect
       begin
         ImageDB.twitter_client.favorites(options).each do |t|
-          if valid_twitter_users.include? t.user.screen_name
+          if valid_twitter_users.include? t.user.screen_name.downcase
             @images.add t.uri.to_s
           end
         end
