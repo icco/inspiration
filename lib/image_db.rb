@@ -19,6 +19,7 @@ class ImageDB
       "FFD8FFDB",
       "MoMARobot",
       "archillect",
+      "artfinderlatest",
       "cooperhewittbot",
       "dscovr_epic",
       "everycolorbot",
