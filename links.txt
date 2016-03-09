@@ -180,7 +180,6 @@ http://aldgerrelpa.deviantart.com/art/Wolverines-3-variant-cover-503591316
 http://alectorfencer.deviantart.com/art/In-Quietness-409052408
 http://alectorfencer.deviantart.com/art/perishable-192407367
 http://alegion.deviantart.com/art/A-World-Forgotten-67255052
-http://alejandra-perez.deviantart.com/art/Leliana-501478335
 http://aleksandra.deviantart.com/art/Spring-23465481
 http://aleksandra88.deviantart.com/art/Untitled-520880807
 http://alex-vas.deviantart.com/art/LeBlanc-FF-X-2-182667409
@@ -300,6 +299,7 @@ http://angelicbyjones.deviantart.com/art/Opening-Night-383414214
 http://angelitoon.deviantart.com/art/CULEX-v-2-398896668
 http://angelitoon.deviantart.com/art/INV-PG01V01-401761391
 http://anggabayup25.deviantart.com/art/PRONTERA-RAGNAROK-ONLINE-2-440002030
+http://anhyra.deviantart.com/art/Leliana-501478335
 http://anikakinka.deviantart.com/art/Glaced-Orange-Chocolate-Dipped-208177831
 http://anikakinka.deviantart.com/art/RedPurple-278190524
 http://animantx.deviantart.com/art/I-See-You-162004539
@@ -4510,6 +4510,7 @@ http://terrydodson.deviantart.com/art/NEIGE-SDCC-2014-472370216
 http://terrydodson.deviantart.com/art/Rose-City-399958633
 http://terrydodson.deviantart.com/art/STORM-X-Men-100-Project-438032931
 http://terrydodson.deviantart.com/art/Star-Lord-1-Variant-Cover-465242834
+http://terrydodson.deviantart.com/art/Star-Wars-16-Cover-Pencils-595407350
 http://terrydodson.deviantart.com/art/Star-Wars-Princess-Leia-3-Cover-510585791
 http://terrydodson.deviantart.com/art/Star-Wars-Princess-Leia-5-Cover-543357461
 http://terrydodson.deviantart.com/art/X-MEN-16-Cover-color-468491309
@@ -6811,6 +6812,7 @@ https://dribbble.com/shots/2557609-Blog-Design
 https://dribbble.com/shots/2557975-Quote-Card
 https://dribbble.com/shots/2558289-Markoff-Icon
 https://dribbble.com/shots/2560606-Positive-Inputs
+https://dribbble.com/shots/2564163-Home-Page-Illos
 https://dribbble.com/shots/2564710-Dropbox-Audio-Previews
 https://dribbble.com/shots/2564960-Dashboard
 https://dribbble.com/shots/2566266-Koolzone-Module
@@ -7347,6 +7349,13 @@ https://twitter.com/archillect/status/706527268584202240
 https://twitter.com/archillect/status/706529783929298948
 https://twitter.com/archillect/status/706534824161517568
 https://twitter.com/archillect/status/706851907822854144
+https://twitter.com/archillect/status/707297340797931521
+https://twitter.com/archillect/status/707337609996013568
+https://twitter.com/archillect/status/707340127064989697
+https://twitter.com/archillect/status/707390454388682756
+https://twitter.com/archillect/status/707410594186526720
+https://twitter.com/archillect/status/707415620460134401
+https://twitter.com/archillect/status/707418140892913664
 https://twitter.com/artfinderlatest/status/706568807314280448
 https://twitter.com/artfinderlatest/status/706839337401454592
 https://twitter.com/cooperhewittbot/status/678079835898515456
@@ -9477,6 +9486,7 @@ https://www.flickr.com/photos/42027916@N00/8315852472
 https://www.flickr.com/photos/42027916@N00/8320249326
 https://www.flickr.com/photos/42027916@N00/8489825569
 https://www.flickr.com/photos/42027916@N00/8520319512
+https://www.flickr.com/photos/42027916@N00/8520657168
 https://www.flickr.com/photos/42027916@N00/8521858965
 https://www.flickr.com/photos/42027916@N00/8612954141
 https://www.flickr.com/photos/42027916@N00/8637150106
@@ -10730,6 +10740,8 @@ https://www.flickr.com/photos/77865907@N00/48591017
 https://www.flickr.com/photos/77936733@N00/4141216449
 https://www.flickr.com/photos/77988327@N00/2461419181
 https://www.flickr.com/photos/78122404@N00/219299261
+https://www.flickr.com/photos/7821771@N05/11327600454
+https://www.flickr.com/photos/7821771@N05/8696042051
 https://www.flickr.com/photos/78331455@N05/21679504290
 https://www.flickr.com/photos/78331455@N05/23033920646
 https://www.flickr.com/photos/78401507@N03/10126063564
