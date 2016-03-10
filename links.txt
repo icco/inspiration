@@ -3099,7 +3099,6 @@ http://nanomortis.deviantart.com/art/Savior-342840343
 http://nanomortis.deviantart.com/art/Stranger-of-Trust-537001829
 http://nanomortis.deviantart.com/art/Tear-Me-Apart-587051806
 http://nanomortis.deviantart.com/art/Teardrop-480623104
-http://nanomortis.deviantart.com/art/The-Deep-Descent-556743493
 http://nanomortis.deviantart.com/art/The-Hardest-Part-585999522
 http://nanomortis.deviantart.com/art/The-Wolf-Won-t-Sleep-Tonight-543168628
 http://nanomortis.deviantart.com/art/This-Is-Not-The-End-579561489
@@ -7356,8 +7355,11 @@ https://twitter.com/archillect/status/707390454388682756
 https://twitter.com/archillect/status/707410594186526720
 https://twitter.com/archillect/status/707415620460134401
 https://twitter.com/archillect/status/707418140892913664
+https://twitter.com/archillect/status/707589269418803200
+https://twitter.com/archillect/status/707591781895032836
 https://twitter.com/artfinderlatest/status/706568807314280448
 https://twitter.com/artfinderlatest/status/706839337401454592
+https://twitter.com/artfinderlatest/status/707590538061606912
 https://twitter.com/cooperhewittbot/status/678079835898515456
 https://twitter.com/cooperhewittbot/status/694930900870635525
 https://twitter.com/cooperhewittbot/status/695293290132938752
@@ -7383,6 +7385,7 @@ https://twitter.com/everycolorbot/status/702848293001367552
 https://twitter.com/everycolorbot/status/705520903191437312
 https://twitter.com/everycolorbot/status/705611498593361920
 https://twitter.com/everycolorbot/status/706532457739325442
+https://twitter.com/everycolorbot/status/707589335340687360
 https://twitter.com/madeofsparrows/status/576813110519992320
 https://twitter.com/madeofsparrows/status/592510761072754688
 https://twitter.com/madeofsparrows/status/596431286278819840
@@ -11372,6 +11375,7 @@ https://www.instagram.com/p/BCjdWGGRejZ/
 https://www.instagram.com/p/BCkceBOG6Tv/
 https://www.instagram.com/p/BCngKHejgVu/
 https://www.instagram.com/p/BCniT7FpZD9/
+https://www.instagram.com/p/BCvVZEzKaWVvauq0mxG3qOUnTfdIo5wOsaHFd40/
 https://www.instagram.com/p/Qd8wbum6GN/
 https://www.instagram.com/p/_-d28bQEc9/
 https://www.instagram.com/p/_-n0UPG6Ji/
