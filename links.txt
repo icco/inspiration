@@ -5145,7 +5145,6 @@ http://zygat3r.deviantart.com/art/Dark-Wood-58266349
 http://zzyzzyy.deviantart.com/art/Merry-in-Heaven-537178081
 https://dribbble.com/shots/1001044-App-Walkthrough
 https://dribbble.com/shots/1001719-Music-Web-Application
-https://dribbble.com/shots/1007628-North-Star
 https://dribbble.com/shots/1008044-Charity-WIP
 https://dribbble.com/shots/1010733-Micro-Worlds-II
 https://dribbble.com/shots/1013895-Fantasy-Soccer-Stats
@@ -5163,7 +5162,6 @@ https://dribbble.com/shots/1025086-Google-early-explorations
 https://dribbble.com/shots/1027306-Levels
 https://dribbble.com/shots/1034141-Weather-animated-MOV
 https://dribbble.com/shots/1034833-I-like-these-apps
-https://dribbble.com/shots/1037513-Mobile-Documents
 https://dribbble.com/shots/1037518-phoneclip
 https://dribbble.com/shots/1040278-Cha-Redesign-Thank-You
 https://dribbble.com/shots/104499-Site-Portfolio
@@ -5577,7 +5575,6 @@ https://dribbble.com/shots/1353860-Poor
 https://dribbble.com/shots/1353945-Harold-Washington-Library-invitation-detail
 https://dribbble.com/shots/1353963-baby-it-s-cold-outside
 https://dribbble.com/shots/1353964-NTLS-Poster-Front
-https://dribbble.com/shots/1353998-Phormy
 https://dribbble.com/shots/1354111-Just-having-fun
 https://dribbble.com/shots/1354282-Origami-Logo
 https://dribbble.com/shots/1354294--Net-Magazine-Challenge-249
@@ -5610,7 +5607,6 @@ https://dribbble.com/shots/1365056-Museum-District
 https://dribbble.com/shots/1365082-USA-ALL-THE-WAY
 https://dribbble.com/shots/1365109-Google-Chrome-Redesign
 https://dribbble.com/shots/1365158-Brick-WIP
-https://dribbble.com/shots/1365344-Kyto
 https://dribbble.com/shots/1365359-Zombie-Hand
 https://dribbble.com/shots/1365413-DataRecovery-for-mac-Layout-2
 https://dribbble.com/shots/1365469-Winter-vacation
@@ -6983,7 +6979,6 @@ https://dribbble.com/shots/875955-ui-and-datas
 https://dribbble.com/shots/876350-User-Sentiment-Activity
 https://dribbble.com/shots/876515-Search-for-friends-list
 https://dribbble.com/shots/876547-Plant-Pals
-https://dribbble.com/shots/876625-UI-Freebies
 https://dribbble.com/shots/877907-Saltwater-Tank-Dashboard
 https://dribbble.com/shots/878515-UI-Kit
 https://dribbble.com/shots/878523-menu
@@ -7395,6 +7390,8 @@ https://twitter.com/archillect/status/709089157008777220
 https://twitter.com/archillect/status/709147029327515649
 https://twitter.com/archillect/status/709949828327989248
 https://twitter.com/archillect/status/709957370735108096
+https://twitter.com/archillect/status/710455653949644802
+https://twitter.com/archillect/status/710463202644127744
 https://twitter.com/artfinderlatest/status/706568807314280448
 https://twitter.com/artfinderlatest/status/706839337401454592
 https://twitter.com/artfinderlatest/status/707590538061606912
@@ -11483,6 +11480,7 @@ https://www.instagram.com/p/BDBs4Lpr-D6/
 https://www.instagram.com/p/BDBurwjwKk-/
 https://www.instagram.com/p/BDBuunJQdSt/
 https://www.instagram.com/p/BDCIJJxuvMn/
+https://www.instagram.com/p/BDDgQ1vjgf6/
 https://www.instagram.com/p/Qd8wbum6GN/
 https://www.instagram.com/p/_-d28bQEc9/
 https://www.instagram.com/p/_-n0UPG6Ji/
