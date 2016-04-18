@@ -15,6 +15,7 @@ class ImageDB
 
   def valid_twitter_users
     [
+      "1041uuu",
       "EveningWaters",
       "FFD8FFDB",
       "MoMARobot",
