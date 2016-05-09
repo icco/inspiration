@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   // TODO: write simple formula so this scales forever
   if (width > 2000) {
-    columns = 8.0;
+    columns = 6.0;
   }
 
   // 5px padding, 1px margin on each image, 1px border
