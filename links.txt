@@ -6485,6 +6485,7 @@ https://dribbble.com/shots/2059657-Product-Listing-Template
 https://dribbble.com/shots/2062485-No-Sidebar-Landing
 https://dribbble.com/shots/2062953-Health-App-mobile
 https://dribbble.com/shots/2062971-like-tinder-style-Animation
+https://dribbble.com/shots/2067564-Replace
 https://dribbble.com/shots/2068435-Lo-Poly-Planet-V
 https://dribbble.com/shots/2072868-Pok-biome-001-Bulbasaur
 https://dribbble.com/shots/2073618-Property-Card
@@ -7010,6 +7011,12 @@ https://dribbble.com/shots/2686113-May1Reboot-It-s-launched
 https://dribbble.com/shots/2689148-Paper-Eight-UI
 https://dribbble.com/shots/2695754-Put-one-on
 https://dribbble.com/shots/2701610-Joshua-Tree-Bandana
+https://dribbble.com/shots/2705151-The-New-Material-Design-Motion-Guidelines
+https://dribbble.com/shots/2715443-Google-Play-Music
+https://dribbble.com/shots/2715606-Google-Play-Books
+https://dribbble.com/shots/2715673-Product-Guidelines
+https://dribbble.com/shots/2715796-Winter-Fall-Colection
+https://dribbble.com/shots/2716159-Google-Play-Games
 https://dribbble.com/shots/292208-Kavak
 https://dribbble.com/shots/301631-My-Site-Rd2
 https://dribbble.com/shots/311242-Cloud-for-Growl
@@ -9405,6 +9412,7 @@ https://www.flickr.com/photos/34086724@N02/5697500846
 https://www.flickr.com/photos/34086724@N02/6071952419
 https://www.flickr.com/photos/34114814@N00/19728958748
 https://www.flickr.com/photos/34114814@N00/24887296741
+https://www.flickr.com/photos/34114814@N00/27025108205
 https://www.flickr.com/photos/34178660@N03/15437701386
 https://www.flickr.com/photos/34178660@N03/15580215686
 https://www.flickr.com/photos/34178660@N03/3739223487
@@ -9443,6 +9451,7 @@ https://www.flickr.com/photos/35067687@N04/20185156095
 https://www.flickr.com/photos/35067687@N04/20228789791
 https://www.flickr.com/photos/35067687@N04/22846399364
 https://www.flickr.com/photos/35067687@N04/25183481383
+https://www.flickr.com/photos/35067687@N04/26311383763
 https://www.flickr.com/photos/35067687@N04/5724816688
 https://www.flickr.com/photos/35067687@N04/8517089531
 https://www.flickr.com/photos/35067687@N04/8518205048
