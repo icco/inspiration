@@ -15,7 +15,7 @@ $(document).ready(function() {
   }
 
   // TODO: write simple formula so this scales forever
-  if (width > 2000) {
+  if (width > 1900) {
     columns = 6.0;
   }
 
