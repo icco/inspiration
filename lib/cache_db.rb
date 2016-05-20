@@ -329,7 +329,6 @@ end
 
 class CacheSerializer < ActiveModel::Serializer
   attributes :url, :title, :size, :image, :modified
-  root false
 end
 
 class Cache < ActiveRecord::Base
