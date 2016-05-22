@@ -50,11 +50,6 @@ task :clean do
   cdb.clean idb.images
 end
 
-task :import_sqlite do
-  cdb = CacheDB.new
-  cdb.load_sql_to_json "cache.db"
-end
-
 desc "Download all images into a folder."
 task :download do
   require "open-uri"

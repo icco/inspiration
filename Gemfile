@@ -2,8 +2,6 @@ source "https://rubygems.org"
 
 ruby "2.3.0"
 
-gem "active_model_serializers", "~> 0.10.0"
-gem "activerecord", require: "active_record"
 gem "dribbble", ">= 1.0.0"
 gem "erubis", "~> 2.7"
 gem "faraday"
