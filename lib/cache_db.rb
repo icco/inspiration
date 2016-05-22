@@ -19,34 +19,9 @@ class CacheDB
       unless File.exist? @cache_file_name
         File.open(@cache_file_name, "w+") { |file| file.write("{}") }
       end
-    elsif File.extname(@cache_file_name).eql? ".db"
-      @mode = "sqlite"
-
-      ActiveRecord::Base.establish_connection(
-        adapter: "sqlite3",
-        database: @cache_file_name
-      )
-
-      unless ActiveRecord::Base.connection.table_exists?(:caches)
-        ActiveRecord::Migration.class_eval do
-          create_table :caches do |t|
-            t.string :key
-            t.string :url
-            t.string :image
-            t.datetime :modified
-            t.string :title
-            t.integer :width
-            t.integer :height
-          end
-        end
-      end
     else
       fail "Invalid Cache Type!"
     end
-  end
-
-  def sqlite?
-    @mode == "sqlite"
   end
 
   def json?
@@ -57,11 +32,6 @@ class CacheDB
     if json?
       file = Oj.load_file(@cache_file_name)
       return file.values.sample(count).delete_if { |d| d.nil? || d["image"].nil? }
-    elsif sqlite?
-      query = Cache.where.not(image: nil).order("RANDOM()").limit(count)
-      return query.map do |c|
-        CacheSerializer.new(c)
-      end
     end
   end
 
@@ -208,14 +178,6 @@ class CacheDB
       else
         return data
       end
-    elsif sqlite?
-      data = Cache.where(key: key).first
-      if data
-        # So our data looks the same no matter what
-        return Oj.compat_load(data.to_json)
-      else
-        return nil
-      end
     else
       return nil
     end
@@ -228,15 +190,6 @@ class CacheDB
       file = all
       file[key] = data
       Oj.to_file(@cache_file_name, file)
-    elsif sqlite?
-      entry = Cache.find_or_create_by(key: key)
-      entry.title = data[:title]
-      entry.url = data[:url]
-      entry.image = data[:image]
-      entry.modified = data[:modified]
-      entry.width = data[:size][:width] if data[:size]
-      entry.height = data[:size][:height] if data[:size]
-      entry.save
     else
       return false
     end
@@ -249,8 +202,6 @@ class CacheDB
       file = all
       file.delete key
       Oj.to_file(@cache_file_name, file)
-    elsif sqlite?
-      Cache.delete(Cache.where(key: key))
     else
       return false
     end
@@ -261,8 +212,6 @@ class CacheDB
   def all
     if json?
       return Oj.load_file(@cache_file_name)
-    elsif sqlite?
-      return Cache.all
     else
       return nil
     end
@@ -287,8 +236,6 @@ class CacheDB
     valid_keys = images.map { |i| i.gsub(@keyfilter, "") }.to_set
     if json?
       current_keys = all.keys.to_set
-    elsif sqlite?
-      current_keys = Set.new(Cache.uniq.pluck(:key))
     end
     to_delete = current_keys - valid_keys
 
@@ -309,42 +256,6 @@ class CacheDB
       end
     end
 
-    if sqlite?
-      sql = "VACUUM FULL"
-      ActiveRecord::Base.connection.execute(sql)
-    end
-
     to_delete.count
-  end
-
-  def load_sql_to_json(sqlite_filename)
-    ActiveRecord::Base.establish_connection(
-      adapter: "sqlite3",
-      database: sqlite_filename
-    )
-
-    Oj.to_file(@cache_file_name, Cache.all_as_hash)
-  end
-end
-
-class CacheSerializer < ActiveModel::Serializer
-  attributes :url, :title, :size, :image, :modified
-end
-
-class Cache < ActiveRecord::Base
-  def size
-    {
-      height: height,
-      width: width
-    }
-  end
-
-  def self.all_as_hash
-    hash = {}
-    Cache.all.order(key: :asc).each do |c|
-      hash[c.key] = CacheSerializer.new(c)
-    end
-
-    hash
   end
 end
