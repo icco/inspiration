@@ -39,11 +39,11 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
-    instagram-continued (1.2.0)
+    instagram-continued (1.2.1)
       faraday (~> 0.9.2)
       faraday_middleware (~> 0.10.0)
       hashie (~> 3.4.3)
-      multi_json (~> 1.11.2)
+      multi_json (~> 1.12.1)
     json (1.8.3)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -51,7 +51,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     mime-types (2.99.2)
     minitest (5.9.0)
-    multi_json (1.11.3)
+    multi_json (1.12.1)
     multipart-post (2.0.0)
     naught (1.1.0)
     net-ssh (3.1.1)
@@ -130,5 +130,8 @@ DEPENDENCIES
   thin
   twitter
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.5
