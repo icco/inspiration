@@ -24,6 +24,7 @@ class ImageDB
       "cooperhewittbot",
       "dscovr_epic",
       "everycolorbot",
+      "interior",
       "madeofsparrows",
       "youtubeartifact",
     ].map {|i| i.downcase }
