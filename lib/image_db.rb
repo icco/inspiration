@@ -159,11 +159,17 @@ class ImageDB
     page_count = 30
 
     (1..page_count).each do |page|
-      user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
-      data = user.likes page: page
-      print_data = { player: dribbble_user, page: page, images: @images.count }
-      logging.info print_data.inspect
-      data.each { |l| @images.add l.html_url }
+      begin
+        user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
+        data = user.likes page: page
+        print_data = { player: dribbble_user, page: page, images: @images.count }
+        logging.info print_data.inspect
+        data.each { |l| @images.add l.html_url }
+      rescue RestClient::TooManyRequests
+        logging.error "Too Many requests to Dribbble. Sleeping."
+        sleep 60
+        retry
+      end
     end
 
     # Write to file.
