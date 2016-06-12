@@ -31,7 +31,7 @@ class ImageDB
   end
 
   def self.instagram_client
-    Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN)
+    Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN, scope: "public_content")
   end
 
   def self.twitter_client
