@@ -21,3 +21,4 @@ rake clean
 git ci cache.* -m 'clean cache'
 git st
 git push
+./archive.sh
