@@ -5,7 +5,7 @@ GEM
     ast (2.3.0)
     backports (3.6.8)
     buftok (0.2.0)
-    daemons (1.2.3)
+    daemons (1.2.4)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     dribbble (1.0.4)
