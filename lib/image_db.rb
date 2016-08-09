@@ -235,6 +235,7 @@ class ImageDB
         break if data.count == 0
       rescue Instagram::BadRequest => e
         logging.warn "Instagram Bad Request: #{e}"
+        break
       end
     end
 
