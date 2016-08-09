@@ -41,10 +41,10 @@ class Inspiration < Sinatra::Base
   FlickRaw.secure = true
 
   Instagram.configure do |config|
-    config.client_id = "696296edc81f417ea3418708c35485dd"
-    config.client_secret = "76e99607d14f48dda453fb9c6109d55b"
+    config.client_id = "1503e0bccdd9424bb9d9590ba181bbbb"
+    config.client_secret = "2c86ea5babf74038b592331d75e5ad7b"
   end
-  INSTAGRAM_TOKEN = "2025166174.696296e.b8d7376606d04d38a745aea46d4284f5"
+  INSTAGRAM_TOKEN = "2025166174.1503e0b.f6a0ee96f41f4f629a66d2e76f1127ac"
 
   TWITTER_CONFIG = {
     consumer_key:    "GQx89ku8NLacf02n2GzjgGvLa",
