@@ -26,6 +26,7 @@ class ImageDB
       "everycolorbot",
       "interior",
       "madeofsparrows",
+      "mattahan",
       "unsplash",
       "youtubeartifact",
     ].map {|i| i.downcase }
