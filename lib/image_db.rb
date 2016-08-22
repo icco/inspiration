@@ -19,6 +19,7 @@ class ImageDB
       "EveningWaters",
       "FFD8FFDB",
       "MoMARobot",
+      "PastPostcard",
       "archillect",
       "artfinderlatest",
       "cooperhewittbot",
