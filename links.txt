@@ -47,6 +47,7 @@ http://8o-clock.deviantart.com/art/white-190474896
 http://a-human-works.deviantart.com/art/how-far-to-the-horizon-104858439
 http://a36yka.deviantart.com/art/go-skateboarding-day-35140773
 http://a70172219.deviantart.com/art/GIRL-595913848
+http://aajohan.deviantart.com/art/Comfortaa-font-105395949
 http://aaragonnega.deviantart.com/art/Motoko-Kusanagi-Ghost-in-the-Shell-469377505
 http://aaronmiller.deviantart.com/art/The-Elementalist-339850360
 http://aaronolive.deviantart.com/art/Firewatch-Mods-619259473
@@ -1329,6 +1330,7 @@ http://eatcakedrinkblood.deviantart.com/art/In-the-Company-of-Rabbits-70822896
 http://ebineyland.deviantart.com/art/storyteller-347715547
 http://echoing-artemis.deviantart.com/art/Cowboy-Bebop-Edward-Wong-Hau-Pepelu-Tivrusky-IV-371309270
 http://eclesi4stik.deviantart.com/art/SpencerAlley2-399804675
+http://eclipsix.deviantart.com/art/Last-one-628833145
 http://eddy-shinjuku.deviantart.com/art/Ballad-of-the-Emerald-Bard-399366407
 http://eddy-shinjuku.deviantart.com/art/Dungeons-and-Dragons-Credence-433201925
 http://eddy-shinjuku.deviantart.com/art/Dungeons-and-Dragons-Farah-OC-Commission-406939553
@@ -1924,7 +1926,7 @@ http://igorwolski.deviantart.com/art/International-relations-612391739
 http://igorwolski.deviantart.com/art/Last-days-of-a-dying-world-628607959
 http://igorwolski.deviantart.com/art/Perfect-extraction-625361777
 http://igorwolski.deviantart.com/art/Power-of-cubes-602437968
-http://igorwolski.deviantart.com/art/Prepared-and-ready-for-fun-622227425
+http://igorwolski.deviantart.com/art/Prepared-and-ready-for-fun-LINEART-622227425
 http://igorwolski.deviantart.com/art/Regular-Show-comics-32-cover-579544871
 http://igorwolski.deviantart.com/art/Space-Food-Service-576705767
 http://igorwolski.deviantart.com/art/Speed-613628848
@@ -7519,6 +7521,11 @@ https://twitter.com/FFD8FFDB/status/696856590901764096
 https://twitter.com/Interior/status/742016815350611968
 https://twitter.com/Interior/status/755059432413925376
 https://twitter.com/MoMARobot/status/704540445154611200
+https://twitter.com/PastPostcard/status/729994684056096768
+https://twitter.com/PastPostcard/status/764559470655578112
+https://twitter.com/PastPostcard/status/767633037702103041
+https://twitter.com/PastPostcard/status/767710128304951296
+https://twitter.com/archillect/status/667160384508436480
 https://twitter.com/archillect/status/668174590707896320
 https://twitter.com/archillect/status/669173649270771712
 https://twitter.com/archillect/status/669734852644728834
@@ -8816,6 +8823,13 @@ https://verygoods.co/product/344732
 https://verygoods.co/product/344807
 https://verygoods.co/product/344826
 https://verygoods.co/product/345582
+https://verygoods.co/product/346439
+https://verygoods.co/product/346546
+https://verygoods.co/product/346547
+https://verygoods.co/product/346627
+https://verygoods.co/product/346723
+https://verygoods.co/product/346835
+https://verygoods.co/product/346848
 https://verygoods.co/product/44256
 https://verygoods.co/product/46659
 https://verygoods.co/product/50413
@@ -9844,8 +9858,6 @@ https://www.flickr.com/photos/34086724@N02/5697500846
 https://www.flickr.com/photos/34086724@N02/6071952419
 https://www.flickr.com/photos/34114814@N00/19728958748
 https://www.flickr.com/photos/34114814@N00/24887296741
-https://www.flickr.com/photos/34114814@N00/27025108205
-https://www.flickr.com/photos/34114814@N00/28146378690
 https://www.flickr.com/photos/34178660@N03/15437701386
 https://www.flickr.com/photos/34178660@N03/15580215686
 https://www.flickr.com/photos/34178660@N03/3739223487
@@ -10527,6 +10539,7 @@ https://www.flickr.com/photos/43949494@N07/10114764694
 https://www.flickr.com/photos/43949494@N07/9351623482
 https://www.flickr.com/photos/44124337679@N01/3629581900
 https://www.flickr.com/photos/44124348109@N01/3264312469
+https://www.flickr.com/photos/44124361155@N01/55889
 https://www.flickr.com/photos/44124416424@N01/188848071
 https://www.flickr.com/photos/44124421278@N01/2603807863
 https://www.flickr.com/photos/44124421278@N01/2604515412
@@ -11421,6 +11434,7 @@ https://www.flickr.com/photos/70757583@N00/15752534308
 https://www.flickr.com/photos/70757583@N00/251304226
 https://www.flickr.com/photos/70757583@N00/25872464561
 https://www.flickr.com/photos/70757583@N00/27841800
+https://www.flickr.com/photos/70757583@N00/27842899
 https://www.flickr.com/photos/70757583@N00/46733382
 https://www.flickr.com/photos/70757583@N00/46733948
 https://www.flickr.com/photos/70838083@N07/10250834664
