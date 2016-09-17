@@ -29,7 +29,7 @@ GEM
       multi_json (~> 1.0)
       net-http-persistent (>= 2.7)
       net-http-pipeline
-    hashie (3.4.4)
+    hashie (3.4.6)
     heroku (3.43.11)
       heroku-api (= 0.4.2)
       launchy (= 2.4.3)
