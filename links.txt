@@ -3226,6 +3226,7 @@ http://nanomortis.deviantart.com/art/Bat-on-your-back-491590350
 http://nanomortis.deviantart.com/art/Black-Bite-501372294
 http://nanomortis.deviantart.com/art/Black-Hole-Of-My-Own-548141992
 http://nanomortis.deviantart.com/art/Blooming-Flames-486138273
+http://nanomortis.deviantart.com/art/Body-593238518
 http://nanomortis.deviantart.com/art/BreakDown-304074863
 http://nanomortis.deviantart.com/art/Breaking-Boundaries-561258067
 http://nanomortis.deviantart.com/art/Breaking-Point-619939560
@@ -3252,7 +3253,6 @@ http://nanomortis.deviantart.com/art/I-Need-Air-495580438
 http://nanomortis.deviantart.com/art/In-The-End-597615924
 http://nanomortis.deviantart.com/art/Indred-Study-556118973
 http://nanomortis.deviantart.com/art/Innervision-498469910
-http://nanomortis.deviantart.com/art/It-Feels-Like-593238518
 http://nanomortis.deviantart.com/art/Lonely-Lullaby-350655638
 http://nanomortis.deviantart.com/art/Lost-Under-The-Lights-567312596
 http://nanomortis.deviantart.com/art/Love-Gone-Dry-412562694
@@ -9865,7 +9865,7 @@ https://www.flickr.com/photos/34086724@N02/5697500846
 https://www.flickr.com/photos/34086724@N02/6071952419
 https://www.flickr.com/photos/34114814@N00/19728958748
 https://www.flickr.com/photos/34114814@N00/24887296741
-https://www.flickr.com/photos/34114814@N00/29311303260
+https://www.flickr.com/photos/34114814@N00/29672981352
 https://www.flickr.com/photos/34178660@N03/15437701386
 https://www.flickr.com/photos/34178660@N03/15580215686
 https://www.flickr.com/photos/34178660@N03/3739223487
