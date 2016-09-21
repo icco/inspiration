@@ -26,6 +26,7 @@ class ImageDB
       "dscovr_epic",
       "everycolorbot",
       "interior",
+      "jgilleard",
       "madeofsparrows",
       "mattahan",
       "unsplash",
