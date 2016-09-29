@@ -587,6 +587,7 @@ http://balaskas.deviantart.com/art/Northgate-529972473
 http://balaskas.deviantart.com/art/Path-to-Q-dar-494176524
 http://balaskas.deviantart.com/art/Prairie-Sky-501980508
 http://balaskas.deviantart.com/art/Processors-512806237
+http://balaskas.deviantart.com/art/Quantus-Through-the-Nursery-636702018
 http://balaskas.deviantart.com/art/Scenic-Byway-632931253
 http://balaskas.deviantart.com/art/Scrapland-469338729
 http://balaskas.deviantart.com/art/Shai-Hulud-The-Maker-508582963
@@ -4524,6 +4525,7 @@ http://solarsouth.deviantart.com/art/Shadow-Fight-Battle-at-the-source-613265994
 http://solarsouth.deviantart.com/art/Shoreline-622378896
 http://solarsouth.deviantart.com/art/Solarss-series-September-work-480281372
 http://solarsouth.deviantart.com/art/Stylization-Of-Progress-January-work-509580693
+http://solarsouth.deviantart.com/art/Switchtek-636294369
 http://solarsouth.deviantart.com/art/Tourism-part-two-March-work-520641034
 http://solarsouth.deviantart.com/art/Training-576830761
 http://solarsouth.deviantart.com/art/Vertical-Emotions-597012711
@@ -4958,6 +4960,7 @@ http://tsabo6.deviantart.com/art/Inca-s-Apartment-460532235
 http://tsad.deviantart.com/art/rust-hour-356856808
 http://tsfcrew.deviantart.com/art/The-Tree2-341327806
 http://tsonline.deviantart.com/art/Ruins-401832801
+http://tsonline.deviantart.com/art/Surya-590547277
 http://tsuaii.deviantart.com/art/Carolynne-473909473
 http://tsuaii.deviantart.com/art/Jay-502492883
 http://tsuaii.deviantart.com/art/Lux-Pin-Up-510979302
@@ -8807,6 +8810,9 @@ https://verygoods.co/product/348162
 https://verygoods.co/product/348196
 https://verygoods.co/product/348235
 https://verygoods.co/product/348240
+https://verygoods.co/product/349141
+https://verygoods.co/product/349175
+https://verygoods.co/product/349310
 https://verygoods.co/product/44256
 https://verygoods.co/product/46659
 https://verygoods.co/product/50413
@@ -8898,7 +8904,6 @@ https://www.flickr.com/photos/116364774@N07/20910840171
 https://www.flickr.com/photos/11638771@N05/4971321261
 https://www.flickr.com/photos/116816083@N04/14206444930
 https://www.flickr.com/photos/11683700@N04/10123043855
-https://www.flickr.com/photos/11694099@N00/48839559
 https://www.flickr.com/photos/117856007@N08/16868645517
 https://www.flickr.com/photos/11795892@N00/2165049616
 https://www.flickr.com/photos/11801916@N00/328016201
@@ -8910,6 +8915,7 @@ https://www.flickr.com/photos/12007971@N00/2319203116
 https://www.flickr.com/photos/12037949754@N01/3276095876
 https://www.flickr.com/photos/12046865@N04/3530938424
 https://www.flickr.com/photos/12047782@N00/317642631
+https://www.flickr.com/photos/121436428@N08/29346651884
 https://www.flickr.com/photos/121494767@N03/14832074886
 https://www.flickr.com/photos/121616834@N05/14649699959
 https://www.flickr.com/photos/12255792@N07/1345546321
@@ -9310,7 +9316,6 @@ https://www.flickr.com/photos/22461382@N00/22629063215
 https://www.flickr.com/photos/22499269@N07/2905681830
 https://www.flickr.com/photos/22538679@N08/10682465646
 https://www.flickr.com/photos/22573958@N06/3128546942
-https://www.flickr.com/photos/22595649@N00/48694160
 https://www.flickr.com/photos/22595649@N00/496143156
 https://www.flickr.com/photos/22629236@N04/10115257013
 https://www.flickr.com/photos/22637643@N04/9308098049
@@ -9735,6 +9740,7 @@ https://www.flickr.com/photos/30427198@N00/25352105862
 https://www.flickr.com/photos/30427198@N00/26334126202
 https://www.flickr.com/photos/30427198@N00/26400546846
 https://www.flickr.com/photos/30427198@N00/27005037331
+https://www.flickr.com/photos/30427198@N00/29331915244
 https://www.flickr.com/photos/30433776@N03/2868312947
 https://www.flickr.com/photos/30466368@N07/5758850969
 https://www.flickr.com/photos/30493186@N03/4544759605
