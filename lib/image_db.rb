@@ -14,24 +14,24 @@ class ImageDB
   end
 
   def valid_twitter_users
-    [
-      "1041uuu",
-      "EveningWaters",
-      "FFD8FFDB",
-      "MoMARobot",
-      "PastPostcard",
-      "archillect",
-      "artfinderlatest",
-      "cooperhewittbot",
-      "dscovr_epic",
-      "everycolorbot",
-      "interior",
-      "jgilleard",
-      "madeofsparrows",
-      "mattahan",
-      "unsplash",
-      "youtubeartifact",
-    ].map {|i| i.downcase }
+    %w(
+      1041uuu
+      EveningWaters
+      FFD8FFDB
+      MoMARobot
+      PastPostcard
+      archillect
+      artfinderlatest
+      cooperhewittbot
+      dscovr_epic
+      everycolorbot
+      interior
+      jgilleard
+      madeofsparrows
+      mattahan
+      unsplash
+      youtubeartifact
+    ).map(&:downcase)
   end
 
   def self.instagram_client
@@ -70,7 +70,7 @@ class ImageDB
 
     # Flickr
     favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n")
-    favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
+    favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}" }
     favorites.each { |l| @images.add l }
 
     # Write all image links to disk
@@ -81,7 +81,7 @@ class ImageDB
     products = open "https://verygoods.co/site-api-0.1/users/icco/goods?limit=20" do |j|
       data = Oj.compat_load(j)
       data["_embedded"]["goods"].map do |g|
-        "https://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
+        "https://verygoods.co#{g["_links"]["product"]["href"].gsub(/products/, "product")}"
       end
     end
     products.each { |prod| @images.add prod }
@@ -130,7 +130,7 @@ class ImageDB
       logging.info print_data.inspect
       begin
         resp = flickr.photosets.getPhotos(photoset_id: "72157601200827657", extras: "url_n", page: page)
-        favorites = resp["photo"].map { |p| "https://www.flickr.com/photos/#{resp['owner']}/#{p['id']}" }
+        favorites = resp["photo"].map { |p| "https://www.flickr.com/photos/#{resp["owner"]}/#{p["id"]}" }
         favorites.each { |l| @images.add l }
       rescue
         logging.error "Failed to get."
@@ -187,7 +187,7 @@ class ImageDB
       logging.info print_data.inspect
 
       favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
-      favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p['owner']}/#{p['id']}" }
+      favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}" }
       favorites.each { |l| @images.add l }
     end
 
@@ -203,14 +203,10 @@ class ImageDB
 
       j = open url
       data = Oj.compat_load(j)
-      if data["_links"]["next"]
-        url = domain + data["_links"]["next"]["href"]
-      else
-        url = nil
-      end
+      url = (domain + data["_links"]["next"]["href"] if data["_links"]["next"])
 
       products = data["_embedded"]["goods"].map do |g|
-        "https://verygoods.co#{g['_links']['product']['href'].gsub(/products/, 'product')}"
+        "https://verygoods.co#{g["_links"]["product"]["href"].gsub(/products/, "product")}"
       end
       products.each { |prod| @images.add prod }
     end

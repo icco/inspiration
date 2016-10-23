@@ -10,7 +10,7 @@ class CacheDB
     # Default Oj options
     Oj.default_options = {
       mode: :compat,
-      indent: 2
+      indent: 2,
     }
     @keyfilter = %r{[\/:\.\\\-@]}
 
@@ -20,7 +20,7 @@ class CacheDB
         File.open(@cache_file_name, "w+") { |file| file.write("{}") }
       end
     else
-      fail "Invalid Cache Type!"
+      raise "Invalid Cache Type!"
     end
   end
 
@@ -31,7 +31,7 @@ class CacheDB
   def sample(count)
     if json?
       file = Oj.load_file(@cache_file_name)
-      return file.values.sample(count).delete_if { |d| d.nil? || d["image"].nil? }
+      file.values.sample(count).delete_if { |d| d.nil? || d["image"].nil? }
     end
   end
 
@@ -53,20 +53,20 @@ class CacheDB
         id = url.gsub(dribbble_re, "").split("-").first
         data = Dribbble::Shot.find(Inspiration::DRIBBBLE_TOKEN, id)
 
-        title = "\"#{data.title}\" by #{data.user['username']}"
-        if !data.images["hidpi"].nil?
-          image_link = data.images["hidpi"]
-        else
-          image_link = data.images["normal"]
-        end
+        title = "\"#{data.title}\" by #{data.user["username"]}"
+        image_link = if !data.images["hidpi"].nil?
+                       data.images["hidpi"]
+                     else
+                       data.images["normal"]
+                     end
 
         attrs = {
           title: title,
           image: image_link,
           size: {
             width: data.width,
-            height: data.height
-          }
+            height: data.height,
+          },
         }
         hash.merge! attrs
       when deviant_re
@@ -79,7 +79,7 @@ class CacheDB
           return
         end
 
-        title = "\"#{data['title']}\" by #{data['author_name']}"
+        title = "\"#{data["title"]}\" by #{data["author_name"]}"
         attrs = { title: title, image: data["thumbnail_url"], size: { width: data["width"], height: data["height"] } }
         hash.merge! attrs
       when flickr_re
@@ -105,7 +105,7 @@ class CacheDB
         end
 
         image_url = data["url"]
-        title = "\"#{data['title']}\" by #{data['author_name']}"
+        title = "\"#{data["title"]}\" by #{data["author_name"]}"
         attrs = { title: title, image: image_url, size: { width: data["width"], height: data["height"] } }
         hash.merge! attrs
       when insta_re
@@ -119,7 +119,7 @@ class CacheDB
           return
         end
 
-        title = "\"#{data['title']}\" by #{data['author_name']}"
+        title = "\"#{data["title"]}\" by #{data["author_name"]}"
         attrs = { title: title, image: data["thumbnail_url"], size: { width: data["thumbnail_width"], height: data["thumbnail_height"] } }
         hash.merge! attrs
       when verygoods_re
@@ -160,7 +160,7 @@ class CacheDB
       retry
     end
 
-    if hash[:title].nil? or hash[:title].empty? or hash[:image].nil? or hash[:image].empty?
+    if hash[:title].nil? || hash[:title].empty? || hash[:image].nil? || hash[:image].empty?
       # Should we warn that we couldn't connect?
     else
       set url, hash
@@ -210,11 +210,7 @@ class CacheDB
   end
 
   def all
-    if json?
-      return Oj.load_file(@cache_file_name)
-    else
-      return nil
-    end
+    Oj.load_file(@cache_file_name) if json?
   end
 
   def needs_update?(url)
@@ -234,9 +230,7 @@ class CacheDB
 
   def clean(images)
     valid_keys = images.map { |i| i.gsub(@keyfilter, "") }.to_set
-    if json?
-      current_keys = all.keys.to_set
-    end
+    current_keys = all.keys.to_set if json?
     to_delete = current_keys - valid_keys
 
     to_delete.each do |k|
@@ -245,15 +239,10 @@ class CacheDB
 
     valid_keys.each do |k|
       data = get k
-      if data
-        if data["image"].nil? || data["image"].empty?
-          delete k
-        end
+      next unless data
+      delete k if data["image"].nil? || data["image"].empty?
 
-        if data["title"].nil? || data["title"].empty?
-          delete k
-        end
-      end
+      delete k if data["title"].nil? || data["title"].empty?
     end
 
     to_delete.count
