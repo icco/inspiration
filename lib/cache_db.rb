@@ -54,11 +54,11 @@ class CacheDB
         data = Dribbble::Shot.find(Inspiration::DRIBBBLE_TOKEN, id)
 
         title = "\"#{data.title}\" by #{data.user["username"]}"
-        image_link = if !data.images["hidpi"].nil?
-                       data.images["hidpi"]
-                     else
-                       data.images["normal"]
-                     end
+        if !data.images["hidpi"].nil?
+          image_link = data.images["hidpi"]
+        else
+          image_link = data.images["normal"]
+        end
 
         attrs = {
           title: title,
