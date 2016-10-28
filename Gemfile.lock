@@ -7,7 +7,7 @@ GEM
     buftok (0.2.0)
     connection_pool (2.2.0)
     daemons (1.2.4)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161021)
       unf (>= 0.0.5, < 1.0.0)
     dribbble (1.0.4)
       rest-client (~> 1.7)
