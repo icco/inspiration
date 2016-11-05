@@ -1,7 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.4.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     ast (2.3.0)
     backports (3.6.8)
     buftok (0.2.0)
@@ -79,6 +80,7 @@ GEM
     parser (2.3.1.4)
       ast (~> 2.2)
     powerpack (0.1.1)
+    public_suffix (2.0.3)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
