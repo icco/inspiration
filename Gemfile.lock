@@ -1,8 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.0)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.4.0)
     ast (2.3.0)
     backports (3.6.8)
     buftok (0.2.0)
@@ -23,12 +22,12 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.14)
     flickraw (0.9.9)
-    gh (0.14.0)
-      addressable
+    gh (0.15.0)
+      addressable (~> 2.4.0)
       backports
       faraday (~> 0.8)
       multi_json (~> 1.0)
-      net-http-persistent (>= 2.7)
+      net-http-persistent (~> 2.9)
       net-http-pipeline
     hashie (3.4.6)
     heroku (3.43.11)
@@ -78,7 +77,6 @@ GEM
     parser (2.3.1.4)
       ast (~> 2.2)
     powerpack (0.1.1)
-    public_suffix (2.0.4)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
