@@ -3471,7 +3471,7 @@ http://ochrejelly.deviantart.com/art/The-Return-of-Weddinguins-432798713
 http://ochrejelly.deviantart.com/art/Why-Not-Zoidberg-268732371
 http://ociacia.deviantart.com/art/SHI-506319028
 http://octavinavarro.deviantart.com/art/Scene-19-Nomads-532638290
-http://odditorium.deviantart.com/art/Adonenniel-421181271
+http://oddeum.deviantart.com/art/Adonenniel-421181271
 http://oer-wout.deviantart.com/art/In-Light-353576721
 http://oer-wout.deviantart.com/art/Reflect-your-Beauty-257833084
 http://offrecord.deviantart.com/art/AC-Yusuf-299280727
@@ -7300,9 +7300,11 @@ https://dribbble.com/shots/301631-My-Site-Rd2
 https://dribbble.com/shots/3043251-PrescribeWellness
 https://dribbble.com/shots/3046330-Afro-Samurai
 https://dribbble.com/shots/3048214-Early-Sketch-Stance
+https://dribbble.com/shots/3052936-Crescent-Ridge-Farm
 https://dribbble.com/shots/3053554-Lighthouse-Youth-Staff-Sweater
 https://dribbble.com/shots/3059975-Grand-Budapest-Hotel-Matchbooks
 https://dribbble.com/shots/3060488-Introducing-Design-at-MIT
+https://dribbble.com/shots/3072728-The-Bay
 https://dribbble.com/shots/3081899-BB-Bird
 https://dribbble.com/shots/3091609-Shapes-Sign-Up
 https://dribbble.com/shots/3102780-Southeastern-Construction-pt-III
@@ -7326,6 +7328,7 @@ https://dribbble.com/shots/3139246-Shape-Builder-Tool
 https://dribbble.com/shots/3147104-VSCO-Profile
 https://dribbble.com/shots/3148008-10x16-6-Tycho-Epoch
 https://dribbble.com/shots/3157988-Lesson
+https://dribbble.com/shots/3161265-Myriad-Coffee-Roasters
 https://dribbble.com/shots/342693-tooling-with-canvas
 https://dribbble.com/shots/364656-Profil
 https://dribbble.com/shots/3737-Thinking-About-Color
@@ -7830,6 +7833,11 @@ https://twitter.com/archillect/status/811612213630930944
 https://twitter.com/archillect/status/811803472832110592
 https://twitter.com/archillect/status/812153280101056512
 https://twitter.com/archillect/status/812158311223197697
+https://twitter.com/archillect/status/812430096963399680
+https://twitter.com/archillect/status/812435130652442624
+https://twitter.com/archillect/status/812480434403741696
+https://twitter.com/archillect/status/812523219148271617
+https://twitter.com/archillect/status/812560962704261121
 https://twitter.com/artfinderlatest/status/744513855917801473
 https://twitter.com/artfinderlatest/status/751580415299846144
 https://twitter.com/artfinderlatest/status/752481354047221760
@@ -8995,6 +9003,7 @@ https://www.flickr.com/photos/130984525@N03/28696805955
 https://www.flickr.com/photos/130984525@N03/29650915830
 https://www.flickr.com/photos/130984525@N03/30131007711
 https://www.flickr.com/photos/130984525@N03/30938335035
+https://www.flickr.com/photos/130984525@N03/30985164754
 https://www.flickr.com/photos/130995678@N04/22401732367
 https://www.flickr.com/photos/13119988@N00/2747009018
 https://www.flickr.com/photos/13141802@N00/255809826
@@ -10815,7 +10824,6 @@ https://www.flickr.com/photos/56475123@N00/3130994986
 https://www.flickr.com/photos/56475123@N00/3230931119
 https://www.flickr.com/photos/56475123@N00/3274638781
 https://www.flickr.com/photos/56475123@N00/341109112
-https://www.flickr.com/photos/56475123@N00/355136908
 https://www.flickr.com/photos/56475123@N00/3568128200
 https://www.flickr.com/photos/56475123@N00/3716835133
 https://www.flickr.com/photos/56475123@N00/3725293032
