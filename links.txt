@@ -7569,6 +7569,7 @@ https://dribbble.com/shots/993277-Reminder
 https://dribbble.com/shots/993524-Countdown-WIP
 https://twitter.com/Interior/status/742016815350611968
 https://twitter.com/Interior/status/755059432413925376
+https://twitter.com/Interior/status/813402895982936064
 https://twitter.com/PastPostcard/status/764559470655578112
 https://twitter.com/PastPostcard/status/767633037702103041
 https://twitter.com/PastPostcard/status/767710128304951296
@@ -7840,6 +7841,7 @@ https://twitter.com/archillect/status/812709445780246529
 https://twitter.com/archillect/status/813119642482909184
 https://twitter.com/archillect/status/813180038942228481
 https://twitter.com/archillect/status/813278190433091584
+https://twitter.com/archillect/status/813396465884295168
 https://twitter.com/artfinderlatest/status/744513855917801473
 https://twitter.com/artfinderlatest/status/751580415299846144
 https://twitter.com/artfinderlatest/status/752481354047221760
@@ -9237,6 +9239,7 @@ https://www.flickr.com/photos/21241480@N05/3677835375
 https://www.flickr.com/photos/21256871@N06/22402065342
 https://www.flickr.com/photos/21467909@N02/2904249585
 https://www.flickr.com/photos/21524785@N00/2257842221
+https://www.flickr.com/photos/21679597@N02/31746106221
 https://www.flickr.com/photos/21769199@N00/5657316959
 https://www.flickr.com/photos/21804293@N08/5532176528
 https://www.flickr.com/photos/21827032@N08/3899632040
@@ -10652,7 +10655,6 @@ https://www.flickr.com/photos/49503155065@N01/382544903
 https://www.flickr.com/photos/49580270@N07/16895176167
 https://www.flickr.com/photos/49580270@N07/16915002840
 https://www.flickr.com/photos/49746210@N07/11820914976
-https://www.flickr.com/photos/49746597@N00/97403945
 https://www.flickr.com/photos/49788302@N00/15405805890
 https://www.flickr.com/photos/49788302@N00/16211538249
 https://www.flickr.com/photos/49821089@N03/8135961735
