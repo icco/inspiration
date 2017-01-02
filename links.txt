@@ -2147,10 +2147,6 @@ http://jayvant.deviantart.com/art/WorkFlowy-Icon-266030500
 http://jbcasacop.deviantart.com/art/Darth-Khal-Drogo-395624212
 http://jbrown67.deviantart.com/art/One-Way-Through-476811718
 http://jcapela.deviantart.com/art/Postcards-from-London-16-426076560
-http://jdarnell.deviantart.com/art/Celeste-545039608
-http://jdarnell.deviantart.com/art/Magana-531743857
-http://jdarnell.deviantart.com/art/Samus-Commission-423641809
-http://jdarnell.deviantart.com/art/snow-white-213086749
 http://jeanfan.deviantart.com/art/Bokeh-Blossoms-412840252
 http://jeanfrancois.deviantart.com/art/Come-Kitty-Coooome-44761839
 http://jeanfrancois.deviantart.com/art/See-You-In-200-Meters-44378341
@@ -5298,6 +5294,10 @@ http://yaphleen.deviantart.com/art/Kohaku-358576413
 http://yaphleen.deviantart.com/art/Nausicaa-s-laboratory-344015500
 http://yaphleen.deviantart.com/art/Summer-2012-319211885
 http://yar0.deviantart.com/art/2209-619920415
+http://yasa-hime.deviantart.com/art/Celeste-545039608
+http://yasa-hime.deviantart.com/art/Magana-531743857
+http://yasa-hime.deviantart.com/art/Samus-Commission-423641809
+http://yasa-hime.deviantart.com/art/snow-white-213086749
 http://yavuzselimturan.deviantart.com/art/Leaf-513427055
 http://yayacosplay.deviantart.com/art/Fujiko-Mine-Lupin-III-380898002
 http://yayster.deviantart.com/art/Realism-Poker-Night-68388394
@@ -7843,6 +7843,7 @@ https://twitter.com/archillect/status/814861123417739264
 https://twitter.com/archillect/status/814871186362474496
 https://twitter.com/archillect/status/815082575937015808
 https://twitter.com/archillect/status/815480192114315264
+https://twitter.com/archillect/status/815636218851586048
 https://twitter.com/artfinderlatest/status/751580415299846144
 https://twitter.com/artfinderlatest/status/752481354047221760
 https://twitter.com/artfinderlatest/status/757389948253274112
@@ -7893,6 +7894,7 @@ https://twitter.com/unsplash/status/791165044490919936
 https://twitter.com/unsplash/status/793565848317419520
 https://twitter.com/unsplash/status/794133749692829696
 https://twitter.com/unsplash/status/809556179307393024
+https://twitter.com/unsplash/status/815716810758782980
 https://verygoods.co/product/119682
 https://verygoods.co/product/126302
 https://verygoods.co/product/126830
@@ -10225,8 +10227,12 @@ https://www.flickr.com/photos/42027916@N00/29235726381
 https://www.flickr.com/photos/42027916@N00/29235816291
 https://www.flickr.com/photos/42027916@N00/2937443776
 https://www.flickr.com/photos/42027916@N00/2957905146
+https://www.flickr.com/photos/42027916@N00/29883365763
+https://www.flickr.com/photos/42027916@N00/30046800743
 https://www.flickr.com/photos/42027916@N00/3076001643
+https://www.flickr.com/photos/42027916@N00/30996103774
 https://www.flickr.com/photos/42027916@N00/31054001691
+https://www.flickr.com/photos/42027916@N00/31768211712
 https://www.flickr.com/photos/42027916@N00/3277549591
 https://www.flickr.com/photos/42027916@N00/3322299448
 https://www.flickr.com/photos/42027916@N00/341806368
