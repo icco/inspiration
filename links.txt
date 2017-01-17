@@ -7835,6 +7835,7 @@ https://twitter.com/archillect/status/819436256149045248
 https://twitter.com/archillect/status/819627520605769729
 https://twitter.com/archillect/status/820324625909432320
 https://twitter.com/archillect/status/820329660257026048
+https://twitter.com/archillect/status/821137470159015941
 https://twitter.com/artfinderlatest/status/757389948253274112
 https://twitter.com/artfinderlatest/status/757904589693784064
 https://twitter.com/artfinderlatest/status/757927249328873472
@@ -8771,6 +8772,7 @@ https://www.flickr.com/photos/10678986@N02/1064311234
 https://www.flickr.com/photos/10745833@N04/2251517979
 https://www.flickr.com/photos/10745833@N04/2478216016
 https://www.flickr.com/photos/10817753@N03/16134876594
+https://www.flickr.com/photos/108230093@N02/32289542766
 https://www.flickr.com/photos/10853447@N06/6545582597
 https://www.flickr.com/photos/10853447@N06/8001177830
 https://www.flickr.com/photos/10853447@N06/8001196674
@@ -9604,6 +9606,7 @@ https://www.flickr.com/photos/26942683@N00/570948059
 https://www.flickr.com/photos/26979030@N07/5399220324
 https://www.flickr.com/photos/26992894@N08/5001848908
 https://www.flickr.com/photos/27055774@N08/3117803826
+https://www.flickr.com/photos/27064297@N04/32173671892
 https://www.flickr.com/photos/27082850@N04/4114165504
 https://www.flickr.com/photos/27138576@N00/3209715409
 https://www.flickr.com/photos/27237778@N00/14446217119
@@ -10864,7 +10867,6 @@ https://www.flickr.com/photos/58148052@N00/4950703293
 https://www.flickr.com/photos/58148052@N00/4953565853
 https://www.flickr.com/photos/58148052@N00/4973048918
 https://www.flickr.com/photos/58148052@N00/4985895397
-https://www.flickr.com/photos/58148052@N00/690277906
 https://www.flickr.com/photos/58249839@N00/4330391238
 https://www.flickr.com/photos/58249839@N00/4396417226
 https://www.flickr.com/photos/58268663@N08/9596822365
@@ -11605,7 +11607,6 @@ https://www.flickr.com/photos/7997148@N05/7751761084
 https://www.flickr.com/photos/80004015@N08/20361697906
 https://www.flickr.com/photos/80062105@N05/8181512258
 https://www.flickr.com/photos/80277632@N03/14267862852
-https://www.flickr.com/photos/80345933@N00/689362000
 https://www.flickr.com/photos/8045737@N07/959586087
 https://www.flickr.com/photos/8065310@N04/2526626732
 https://www.flickr.com/photos/80736039@N04/17203956019
