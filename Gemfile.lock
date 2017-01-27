@@ -110,8 +110,8 @@ GEM
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
     thread_safe (0.3.5)
-    tilt (2.0.5)
-    travis (1.8.5)
+    tilt (2.0.6)
+    travis (1.8.6)
       backports
       faraday (~> 0.9)
       faraday_middleware (~> 0.9, >= 0.9.1)
