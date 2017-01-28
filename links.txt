@@ -6578,7 +6578,6 @@ https://dribbble.com/shots/1906663-Medical-Dashboard
 https://dribbble.com/shots/1906883-Invoice-Sherpa-Customer-Portal-Mailing
 https://dribbble.com/shots/1907030-Home-Logo-Design
 https://dribbble.com/shots/1907055-Take-The-Moment-Bestake
-https://dribbble.com/shots/1907086-Cosmo-UI-Kit-PSD
 https://dribbble.com/shots/1907146-Peep-Feed
 https://dribbble.com/shots/1907166-KMCC
 https://dribbble.com/shots/1907171-Pencil-Catch
@@ -9073,7 +9072,6 @@ https://www.flickr.com/photos/132867739@N04/22827659913
 https://www.flickr.com/photos/133247444@N08/18617452473
 https://www.flickr.com/photos/133293125@N03/22666144683
 https://www.flickr.com/photos/133608745@N06/20910224986
-https://www.flickr.com/photos/13377462@N00/154400040
 https://www.flickr.com/photos/133888804@N08/23632054412
 https://www.flickr.com/photos/13420717@N05/11940967944
 https://www.flickr.com/photos/13420717@N05/15528499650
@@ -11386,6 +11384,7 @@ https://www.flickr.com/photos/70757583@N00/25872464561
 https://www.flickr.com/photos/70838083@N07/10250834664
 https://www.flickr.com/photos/70992083@N07/18500866821
 https://www.flickr.com/photos/71019104@N04/13242073383
+https://www.flickr.com/photos/71052963@N05/31561406660
 https://www.flickr.com/photos/71175433@N00/14819108116
 https://www.flickr.com/photos/71380034@N04/20871226563
 https://www.flickr.com/photos/71419960@N00/10304756843
