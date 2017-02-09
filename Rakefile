@@ -1,8 +1,26 @@
 require "bundler/setup"
 require "./site"
 
-task :default do
-  puts "No tests written."
+task :default => :static
+
+BUILD_DIR = File.join(Dir.pwd,"build")
+
+desc "Build a static version of the site."
+task :static do
+  require "fileutils"
+  data_dir = File.join(BUILD_DIR, "data")
+  FileUtils.mkdir_p(data_dir)
+  cdb = CacheDB.new
+  page = 0
+  per_page = 100
+  all = cdb.all.values
+  i = 0
+  while i < all.length
+    page += 1
+    b = page * per_page
+    Oj.to_file(File.join(data_dir, "#{page}.json"), all[i...b])
+    i = b
+  end
 end
 
 desc "Run a local server."
@@ -44,9 +62,10 @@ end
 
 desc "Remove unused images in cache."
 task :clean do
+  FileUtils.rm_rf(BUILD_DIR)
+
   cdb = CacheDB.new
   idb = ImageDB.new
-
   cdb.clean idb.images
 end
 

@@ -74,6 +74,7 @@ GEM
       net-ssh (>= 2.6.5)
     netrc (0.10.3)
     oj (2.18.1)
+    oj_mimic_json (1.0.1)
     parser (2.4.0.0)
       ast (~> 2.2)
     powerpack (0.1.1)
@@ -152,6 +153,7 @@ DEPENDENCIES
   instagram-continued
   minitest
   oj
+  oj_mimic_json
   rake
   rubocop
   sass

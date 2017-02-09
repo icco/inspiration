@@ -7,11 +7,6 @@ class CacheDB
   def initialize
     @cache_file_name = Inspiration::CACHE_FILE
 
-    # Default Oj options
-    Oj.default_options = {
-      mode: :compat,
-      indent: 2,
-    }
     @keyfilter = %r{[\/:\.\\\-@]}
 
     if File.extname(@cache_file_name).eql? ".json"

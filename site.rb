@@ -16,6 +16,15 @@ require "./lib/scss_init.rb"
 require "./lib/cache_db.rb"
 require "./lib/image_db.rb"
 
+# Default Oj options
+Oj.default_options = {
+  mode: :compat,
+  indent: 2,
+  escape_mode: :json,
+  class_cache: true,
+  nan: :word,
+}
+
 class Inspiration < Sinatra::Base
   register ScssInitializer
   use Rack::Deflater
