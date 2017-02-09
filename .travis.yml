@@ -4,3 +4,5 @@ rvm:
 bundler_args: --without development
 cache: bundler
 sudo: false
+script:
+- rake static
