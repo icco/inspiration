@@ -13,7 +13,7 @@ task :static do
   cdb = CacheDB.new
   page = 0
   per_page = 100
-  all = cdb.all.values
+  all = cdb.all.values.shuffle
   i = 0
   while i < all.length
     page += 1
