@@ -6,3 +6,4 @@ cache: bundler
 sudo: false
 script:
 - rake static
+- cat $TRAVIS_HOME/build/stats.json
