@@ -39,7 +39,7 @@ class Inspiration < Sinatra::Base
     escape_mode: :json,
     class_cache: true,
     nan: :word,
-  }
+  }.freeze
   Oj.default_options = OJ_OPTIONS
 
   DRIBBBLE_TOKEN = "13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479".freeze
@@ -55,7 +55,7 @@ class Inspiration < Sinatra::Base
   INSTAGRAM_TOKEN = "2025166174.1503e0b.f6a0ee96f41f4f629a66d2e76f1127ac".freeze
 
   TWITTER_CONFIG = {
-    consumer_key:    "GQx89ku8NLacf02n2GzjgGvLa",
+    consumer_key: "GQx89ku8NLacf02n2GzjgGvLa",
     consumer_secret: "6miWrWUFRNrTWsZ4Honnp1oAXDa1T2NtA6l1c4cCGD9Hy7GlWD",
     access_token: "3576561-R2m1fM1r0ogs5UPUeCzWJBc0cKfQatWfLIlouemrzv",
     access_token_secret: "lvWZMoeN9YN0OeTvwhx6M4w4wCaYEYZbYwkSuvG3sf5ij",
