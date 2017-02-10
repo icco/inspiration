@@ -19,8 +19,8 @@ gem "twitter"
 group :development do
   gem "bundler"
   gem "heroku"
-  gem "shotgun"
   gem "rubocop"
+  gem "shotgun"
   gem "travis"
 end
 

@@ -1,9 +1,9 @@
 require "bundler/setup"
 require "./site"
 
-task :default => :static
+task default: :static
 
-BUILD_DIR = File.join(Dir.pwd,"build")
+BUILD_DIR = File.join(Dir.pwd, "build")
 
 desc "Build a static version of the site."
 task :static do
@@ -21,11 +21,12 @@ task :static do
     i = b
   end
 
-  Oj.to_file(File.join(BUILD_DIR, "stats.json"), {
+  data = {
     per_page: Inspiration::PER_PAGE,
     pages: page,
     images: all.length,
-  })
+  }
+  Oj.to_file(File.join(BUILD_DIR, "stats.json"), data)
 end
 
 desc "Run a local server."
@@ -87,11 +88,11 @@ task :download do
     filename = Digest::SHA1.hexdigest(i)
     ext = File.extname(i)
     open(url) do |u|
-      if ext.empty?
-        ext = MIME::Types[u.content_type].first.extensions.first
-      else
-        ext = ext[1..-1]
-      end
+      ext = if ext.empty?
+              MIME::Types[u.content_type].first.extensions.first
+            else
+              ext[1..-1]
+            end
       path = "/Users/nat/Dropbox/Photos/Inspiration/#{filename}.#{ext}"
 
       next if ext == "bin"
