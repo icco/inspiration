@@ -126,7 +126,7 @@ class ImageDB
   def full_update
     # Flickr Personal Favorites Set
     # NOTE: Page count verified 2015-07-22
-    (1..3).each do |page|
+    (1...3).each do |page|
       print_data = { flickr: "42027916@N00", set: "72157601200827657", page: page, images: @images.count }
       logging.info print_data.inspect
       begin
