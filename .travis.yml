@@ -6,5 +6,5 @@ cache: bundler
 sudo: false
 script:
 - rake static
-- ls -al *
+- ls -al build/*
 - cat build/stats.json
