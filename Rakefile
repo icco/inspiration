@@ -12,15 +12,20 @@ task :static do
   FileUtils.mkdir_p(data_dir)
   cdb = CacheDB.new
   page = 0
-  per_page = 100
   all = cdb.all.values.shuffle
   i = 0
   while i < all.length
     page += 1
-    b = page * per_page
+    b = page * Inspiration::PER_PAGE
     Oj.to_file(File.join(data_dir, "#{page}.json"), all[i...b])
     i = b
   end
+
+  Oj.to_file(File.join(BUILD_DIR, "stats.json"), {
+    per_page: Inspiration::PER_PAGE,
+    pages: page,
+    images: all.length,
+  })
 end
 
 desc "Run a local server."

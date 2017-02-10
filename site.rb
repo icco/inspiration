@@ -73,43 +73,4 @@ class Inspiration < Sinatra::Base
 
     erb :index
   end
-
-  get "/cache.json" do
-    @count = PER_PAGE
-    @count = params["count"].to_i if params["count"]
-
-    @idb = ImageDB.new
-    @cdb = CacheDB.new
-    @images = @idb.sample(@count).map { |u| @cdb.get u }
-
-    content_type :json
-    @images.to_json
-  end
-
-  get "/sample.json" do
-    @count = PER_PAGE
-    @count = params["count"].to_i if params["count"]
-
-    @cdb = CacheDB.new
-    @images = @cdb.sample(@count)
-
-    content_type :json
-    @images.to_json
-  end
-
-  get "/all_images.json" do
-    @idb = ImageDB.new
-    @cdb = CacheDB.new
-
-    content_type :json
-    @cdb.all.map { |_k, v| v["image"] }.to_json
-  end
-
-  get "/all.json" do
-    @idb = ImageDB.new
-    @cdb = CacheDB.new
-
-    content_type :json
-    @idb.images.to_json
-  end
 end
