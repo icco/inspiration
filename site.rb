@@ -16,15 +16,6 @@ require "./lib/scss_init.rb"
 require "./lib/cache_db.rb"
 require "./lib/image_db.rb"
 
-# Default Oj options
-Oj.default_options = {
-  mode: :compat,
-  indent: 2,
-  escape_mode: :json,
-  class_cache: true,
-  nan: :word,
-}
-
 class Inspiration < Sinatra::Base
   register ScssInitializer
   use Rack::Deflater
@@ -42,6 +33,14 @@ class Inspiration < Sinatra::Base
   LINK_FILE = "links.txt".freeze
   CACHE_FILE = "cache.json".freeze
   PER_PAGE = 400
+  OJ_OPTIONS = {
+    mode: :compat,
+    indent: 2,
+    escape_mode: :json,
+    class_cache: true,
+    nan: :word,
+  }
+  Oj.default_options = OJ_OPTIONS
 
   DRIBBBLE_TOKEN = "13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479".freeze
 

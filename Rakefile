@@ -11,13 +11,15 @@ task :static do
   data_dir = File.join(BUILD_DIR, "data")
   FileUtils.mkdir_p(data_dir)
   cdb = CacheDB.new
+  idb = ImageDB.new
+  all = idb.images.shuffle
   page = 0
-  all = cdb.all.values.shuffle
   i = 0
   while i < all.length
     page += 1
     b = page * Inspiration::PER_PAGE
-    Oj.to_file(File.join(data_dir, "#{page}.json"), all[i...b])
+    data = all[i...b].map { |img| cdb.get(img) }
+    Oj.to_file(File.join(data_dir, "#{page}.json"), data)
     i = b
   end
 

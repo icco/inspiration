@@ -3,6 +3,7 @@ class ImageDB
 
   def initialize
     @images = Set.new(File.readlines(Inspiration::LINK_FILE).map(&:strip))
+    Oj.default_options = Inspiration::OJ_OPTIONS
   end
 
   def images

@@ -5,6 +5,7 @@ class CacheDB
   include Logging
 
   def initialize
+    Oj.default_options = Inspiration::OJ_OPTIONS
     @cache_file_name = Inspiration::CACHE_FILE
 
     @keyfilter = %r{[\/:\.\\\-@]}
