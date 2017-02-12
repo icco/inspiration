@@ -8,6 +8,18 @@ BUILD_DIR = File.join(Dir.pwd, "build")
 desc "Build a static version of the site."
 task :static do
   require "fileutils"
+
+  # About
+  about_dir = File.join(BUILD_DIR, "about")
+  FileUtils.mkdir_p(about_dir)
+  about = Tilt.new('views/about.erb')
+  File.open(File.join(about_dir, "index.html"), 'w') { |file| file.write(about.render) }
+
+  # Root
+  index = Tilt.new('views/index.erb')
+  File.open(File.join(BUILD_DIR, "index.html"), 'w') { |file| file.write(index.render) }
+
+  # JSON Data
   data_dir = File.join(BUILD_DIR, "data")
   FileUtils.mkdir_p(data_dir)
   cdb = CacheDB.new

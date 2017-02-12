@@ -12,6 +12,7 @@ gem "rake"
 gem "sass"
 gem "sinatra", require: "sinatra/base"
 gem "thin"
+gem "tilt"
 gem "twitter"
 gem "typhoeus"
 
