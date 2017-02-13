@@ -10,20 +10,20 @@ task :static do
   require "fileutils"
 
   # Layout
-  layout = Tilt.new('views/layout.erb')
+  layout = Tilt.new("views/layout.erb")
 
   # About
   about_dir = File.join(BUILD_DIR, "about")
   FileUtils.mkdir_p(about_dir)
-  about = Tilt.new('views/about.erb')
-  File.open(File.join(about_dir, "index.html"), 'w') { |file| file.write(layout.render { about.render }) }
+  about = Tilt.new("views/about.erb")
+  File.open(File.join(about_dir, "index.html"), "w") { |file| file.write(layout.render { about.render }) }
 
   # Root
-  index = Tilt.new('views/index.erb')
-  File.open(File.join(BUILD_DIR, "index.html"), 'w') { |file| file.write(layout.render { index.render }) }
+  index = Tilt.new("views/index.erb")
+  File.open(File.join(BUILD_DIR, "index.html"), "w") { |file| file.write(layout.render { index.render }) }
 
   # Other Files
-  FileUtils.cp_r 'public/.', BUILD_DIR
+  FileUtils.cp_r "public/.", BUILD_DIR
 
   # JSON Data
   data_dir = File.join(BUILD_DIR, "data")
