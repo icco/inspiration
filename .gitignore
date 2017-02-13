@@ -10,3 +10,4 @@ log/*.log
 tmp/**/*
 vendor/gems/*
 .rake_t_cache
+build

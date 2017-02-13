@@ -1,6 +1,21 @@
 language: ruby
 rvm:
-- 2.3.0
-bundler_args: --without development
+- 2.4.0
+bundler_args: "--without development"
 cache: bundler
 sudo: false
+script:
+- rake static
+- ls -al build/*
+- cat build/stats.json
+deploy:
+  provider: onesie
+  edge:
+    source: icco/dpl
+    branch: onesie
+  key: 1193dc06-d1be-461d-9025-97c4cc50319b
+  domain: mood.natwelch.com
+  skip_cleanup: true
+  local-dir: build
+  secret:
+    secure: Wb3wIjuWkkzCoX+JUCVT769IT6f2lbRcU1GdfKJys/nYHMBBr50ZrU5RtIHhWq3pKvcTcocU9de/FQHxWlOYYZzcUptq4sh87ahfByjc7Um037LUJUwaRfYgHHrRZrkIBonatj3aJj8/4ckdg/hQasKBZlEe6/l/98i3XXba7l8=

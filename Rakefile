@@ -1,8 +1,52 @@
 require "bundler/setup"
 require "./site"
 
-task :default do
-  puts "No tests written."
+task default: :static
+
+BUILD_DIR = File.join(Dir.pwd, "build")
+
+desc "Build a static version of the site."
+task :static do
+  require "fileutils"
+
+  # Layout
+  layout = Tilt.new('views/layout.erb')
+
+  # About
+  about_dir = File.join(BUILD_DIR, "about")
+  FileUtils.mkdir_p(about_dir)
+  about = Tilt.new('views/about.erb')
+  File.open(File.join(about_dir, "index.html"), 'w') { |file| file.write(layout.render { about.render }) }
+
+  # Root
+  index = Tilt.new('views/index.erb')
+  File.open(File.join(BUILD_DIR, "index.html"), 'w') { |file| file.write(layout.render { index.render }) }
+
+  # Other Files
+  FileUtils.cp_r 'public/.', BUILD_DIR
+
+  # JSON Data
+  data_dir = File.join(BUILD_DIR, "data")
+  FileUtils.mkdir_p(data_dir)
+  cdb = CacheDB.new
+  idb = ImageDB.new
+  all = idb.images.shuffle
+  page = 0
+  i = 0
+  while i < all.length
+    page += 1
+    b = page * Inspiration::PER_PAGE
+    data = all[i...b].map { |img| cdb.get(img) }.compact
+    Oj.to_file(File.join(data_dir, "#{page}.json"), data)
+    i = b
+  end
+
+  data = {
+    per_page: Inspiration::PER_PAGE,
+    pages: page,
+    images: all.length,
+  }
+  Oj.to_file(File.join(BUILD_DIR, "stats.json"), data)
 end
 
 desc "Run a local server."
@@ -44,9 +88,10 @@ end
 
 desc "Remove unused images in cache."
 task :clean do
+  FileUtils.rm_rf(BUILD_DIR)
+
   cdb = CacheDB.new
   idb = ImageDB.new
-
   cdb.clean idb.images
 end
 
@@ -63,11 +108,11 @@ task :download do
     filename = Digest::SHA1.hexdigest(i)
     ext = File.extname(i)
     open(url) do |u|
-      if ext.empty?
-        ext = MIME::Types[u.content_type].first.extensions.first
-      else
-        ext = ext[1..-1]
-      end
+      ext = if ext.empty?
+              MIME::Types[u.content_type].first.extensions.first
+            else
+              ext[1..-1]
+            end
       path = "/Users/nat/Dropbox/Photos/Inspiration/#{filename}.#{ext}"
 
       next if ext == "bin"

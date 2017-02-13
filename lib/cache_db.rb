@@ -5,13 +5,9 @@ class CacheDB
   include Logging
 
   def initialize
+    Oj.default_options = Inspiration::OJ_OPTIONS
     @cache_file_name = Inspiration::CACHE_FILE
 
-    # Default Oj options
-    Oj.default_options = {
-      mode: :compat,
-      indent: 2,
-    }
     @keyfilter = %r{[\/:\.\\\-@]}
 
     if File.extname(@cache_file_name).eql? ".json"
@@ -71,7 +67,7 @@ class CacheDB
         hash.merge! attrs
       when deviant_re
         oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
-        resp = Faraday.get oembed_url
+        resp = Typhoeus.get oembed_url, followlocation: true
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
@@ -84,7 +80,7 @@ class CacheDB
         hash.merge! attrs
       when flickr_re
         oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=400"
-        resp = Faraday.get oembed_url
+        resp = Typhoeus.get oembed_url, followlocation: true
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
@@ -111,7 +107,7 @@ class CacheDB
       when insta_re
         # OEMBED for INSTAGRAM
         oembed_url = "https://api.instagram.com/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
-        resp = Faraday.get oembed_url
+        resp = Typhoeus.get oembed_url, followlocation: true
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
@@ -126,7 +122,7 @@ class CacheDB
         # VeryGoods does not support OEmbed as of 2015-08-10
         oembed_url = "https://verygoods.co/site-api-0.1"
         oembed_url += URI(url).path.gsub(/product/, "products")
-        resp = Faraday.get oembed_url
+        resp = Typhoeus.get oembed_url, followlocation: true
         if resp.status == 200
           data = JSON.parse(resp.body)
         else
