@@ -108,11 +108,11 @@ task :download do
     filename = Digest::SHA1.hexdigest(i)
     ext = File.extname(i)
     open(url) do |u|
-      ext = if ext.empty?
-              MIME::Types[u.content_type].first.extensions.first
-            else
-              ext[1..-1]
-            end
+      if ext.empty?
+        ext = MIME::Types[u.content_type].first.extensions.first
+      else
+        ext = ext[1..-1]
+      end
       path = "/Users/nat/Dropbox/Photos/Inspiration/#{filename}.#{ext}"
 
       next if ext == "bin"
