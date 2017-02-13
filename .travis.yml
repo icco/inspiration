@@ -6,7 +6,7 @@ cache: bundler
 sudo: false
 script:
 - rake static
-- ls -al build/*
+- ls -lh build/*
 - cat build/stats.json
 deploy:
   provider: onesie
