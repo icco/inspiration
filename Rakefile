@@ -9,15 +9,21 @@ desc "Build a static version of the site."
 task :static do
   require "fileutils"
 
+  # Layout
+  layout = Tilt.new('views/layout.erb')
+
   # About
   about_dir = File.join(BUILD_DIR, "about")
   FileUtils.mkdir_p(about_dir)
   about = Tilt.new('views/about.erb')
-  File.open(File.join(about_dir, "index.html"), 'w') { |file| file.write(about.render) }
+  File.open(File.join(about_dir, "index.html"), 'w') { |file| file.write(layout.render { about.render }) }
 
   # Root
   index = Tilt.new('views/index.erb')
-  File.open(File.join(BUILD_DIR, "index.html"), 'w') { |file| file.write(index.render) }
+  File.open(File.join(BUILD_DIR, "index.html"), 'w') { |file| file.write(layout.render { index.render }) }
+
+  # Other Files
+  FileUtils.cp_r 'public/.', BUILD_DIR
 
   # JSON Data
   data_dir = File.join(BUILD_DIR, "data")
@@ -30,7 +36,7 @@ task :static do
   while i < all.length
     page += 1
     b = page * Inspiration::PER_PAGE
-    data = all[i...b].map { |img| cdb.get(img) }
+    data = all[i...b].map { |img| cdb.get(img) }.compact
     Oj.to_file(File.join(data_dir, "#{page}.json"), data)
     i = b
   end
