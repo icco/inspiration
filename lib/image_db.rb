@@ -21,6 +21,7 @@ class ImageDB
       FFD8FFDB
       MoMARobot
       PastPostcard
+      _OutToSea_
       archillect
       artfinderlatest
       cooperhewittbot
@@ -30,6 +31,8 @@ class ImageDB
       jgilleard
       madeofsparrows
       mattahan
+      moon_rise_bot
+      softlandscapes
       unsplash
       youtubeartifact
     ).map(&:downcase)
