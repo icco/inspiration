@@ -164,9 +164,7 @@ class CacheDB
   end
 
   def get(url)
-    if url.nil? || url.empty?
-      return nil
-    end
+    return nil if url.nil? || url.empty?
 
     key = url.gsub(@keyfilter, "")
 
