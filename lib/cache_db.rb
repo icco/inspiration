@@ -221,6 +221,8 @@ class CacheDB
     # For Flickr wrong size stuff
     return true if data["image"].nil? || data["image"].match(/_q/)
 
+    return true unless data["modified"].is_a? String
+
     # ~10 days * a random float
     time = Time.parse(data["modified"])
     (Time.now.utc - time) > (860_000 * rand)
