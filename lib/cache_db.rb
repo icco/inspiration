@@ -68,10 +68,10 @@ class CacheDB
       when deviant_re
         oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
         resp = Typhoeus.get oembed_url, followlocation: true
-        if resp.status == 200
+        if resp.success?
           data = JSON.parse(resp.body)
         else
-          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.response_code}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -81,10 +81,10 @@ class CacheDB
       when flickr_re
         oembed_url = "https://www.flickr.com/services/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json&&maxwidth=400"
         resp = Typhoeus.get oembed_url, followlocation: true
-        if resp.status == 200
+        if resp.success?
           data = JSON.parse(resp.body)
         else
-          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.response_code}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -108,10 +108,10 @@ class CacheDB
         # OEMBED for INSTAGRAM
         oembed_url = "https://api.instagram.com/oembed/?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}"
         resp = Typhoeus.get oembed_url, followlocation: true
-        if resp.status == 200
+        if resp.success?
           data = JSON.parse(resp.body)
         else
-          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.response_code}: Hitting #{oembed_url} for #{url}"
           return
         end
 
@@ -123,10 +123,10 @@ class CacheDB
         oembed_url = "https://verygoods.co/site-api-0.1"
         oembed_url += URI(url).path.gsub(/product/, "products")
         resp = Typhoeus.get oembed_url, followlocation: true
-        if resp.status == 200
+        if resp.success?
           data = JSON.parse(resp.body)
         else
-          logging.error "Code #{resp.status}: Hitting #{oembed_url} for #{url}"
+          logging.error "Code #{resp.response_code}: Hitting #{oembed_url} for #{url}"
           return
         end
 
