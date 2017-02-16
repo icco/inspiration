@@ -39,6 +39,7 @@ class Inspiration < Sinatra::Base
     escape_mode: :json,
     class_cache: true,
     nan: :word,
+    time_format: :ruby,
   }.freeze
   Oj.default_options = OJ_OPTIONS
 
