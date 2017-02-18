@@ -1910,7 +1910,6 @@ http://hirolu.deviantart.com/art/UDON-SHOP-IN-TOKYO-157921389
 http://hitogata.deviantart.com/art/Evolution-of-Pixel-Vignette2-400818629
 http://hitogata.deviantart.com/art/Pixel-Vignette-First-Meeting-400473002
 http://hitohai.deviantart.com/art/Mesmerizer-574176954
-http://hitsukuya.deviantart.com/art/Painter-282891352
 http://hjalmarwahlin.deviantart.com/art/The-Observatory-333923796
 http://hjstory.deviantart.com/art/Love-Chemistry-565724926
 http://hjstory.deviantart.com/art/Love-is-taking-risks-562156863
@@ -7841,6 +7840,7 @@ https://twitter.com/archillect/status/827859265234804736
 https://twitter.com/archillect/status/828025359920746497
 https://twitter.com/archillect/status/829034508515151873
 https://twitter.com/archillect/status/829557955259408385
+https://twitter.com/archillect/status/832575343026384896
 https://twitter.com/artfinderlatest/status/757389948253274112
 https://twitter.com/artfinderlatest/status/757904589693784064
 https://twitter.com/artfinderlatest/status/757927249328873472
@@ -8833,8 +8833,6 @@ https://www.flickr.com/photos/11142666@N03/2516618196
 https://www.flickr.com/photos/111434654@N07/16634214429
 https://www.flickr.com/photos/111661024@N07/29855588976
 https://www.flickr.com/photos/11174140@N00/2419944114
-https://www.flickr.com/photos/11212735@N02/1683378599
-https://www.flickr.com/photos/11212735@N02/1684233150
 https://www.flickr.com/photos/11236975@N08/3231603425
 https://www.flickr.com/photos/11236975@N08/3481984272
 https://www.flickr.com/photos/11248435@N04/11817715183
@@ -8870,6 +8868,7 @@ https://www.flickr.com/photos/118767414@N04/23166234515
 https://www.flickr.com/photos/12007971@N00/2319203116
 https://www.flickr.com/photos/12037949754@N01/3276095876
 https://www.flickr.com/photos/12046865@N04/3530938424
+https://www.flickr.com/photos/120978855@N06/22563670318
 https://www.flickr.com/photos/121494767@N03/14832074886
 https://www.flickr.com/photos/121616834@N05/14649699959
 https://www.flickr.com/photos/12255792@N07/1345546321
@@ -8902,6 +8901,7 @@ https://www.flickr.com/photos/12289718@N00/21991870284
 https://www.flickr.com/photos/12289718@N00/23242668722
 https://www.flickr.com/photos/12289718@N00/23876455805
 https://www.flickr.com/photos/12289718@N00/24026066701
+https://www.flickr.com/photos/123098893@N02/17055726798
 https://www.flickr.com/photos/123495891@N02/16470336113
 https://www.flickr.com/photos/123495891@N02/18955883562
 https://www.flickr.com/photos/123495891@N02/22583618875
