@@ -33,6 +33,7 @@ class ImageDB
       mattahan
       moon_rise_bot
       softlandscapes
+      tinyspires
       unsplash
       youtubeartifact
     ).map(&:downcase)
