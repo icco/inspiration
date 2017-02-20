@@ -32,7 +32,7 @@ class Inspiration < Sinatra::Base
 
   LINK_FILE = "links.txt".freeze
   CACHE_FILE = "cache.json".freeze
-  PER_PAGE = 400
+  PER_PAGE = 100
   OJ_OPTIONS = {
     mode: :compat,
     indent: 2,
@@ -40,6 +40,7 @@ class Inspiration < Sinatra::Base
     class_cache: true,
     nan: :word,
     time_format: :ruby,
+    use_to_json: true,
   }.freeze
   Oj.default_options = OJ_OPTIONS
 
