@@ -32,7 +32,7 @@ class Inspiration < Sinatra::Base
 
   LINK_FILE = "links.txt".freeze
   CACHE_FILE = "cache.json".freeze
-  PER_PAGE = 200
+  PER_PAGE = 100
   OJ_OPTIONS = {
     mode: :compat,
     indent: 2,
