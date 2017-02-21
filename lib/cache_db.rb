@@ -34,7 +34,7 @@ class CacheDB
   def cache(url)
     return true unless needs_update? url
 
-    hash = { url: url, modified: Time.now.utc }
+    hash = { url: url, modified: Time.now.utc.to_s }
 
     dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = /deviantart\.com/
@@ -187,7 +187,7 @@ class CacheDB
     if json?
       file = all
       file[key] = data
-      Oj.to_file(@cache_file_name, file)
+      Oj.to_file(@cache_file_name, file, Oj.default_options)
     else
       return false
     end

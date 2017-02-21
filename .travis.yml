@@ -4,6 +4,7 @@ rvm:
 bundler_args: "--without development"
 cache: bundler
 sudo: false
+dist: trusty
 script:
 - rake static
 - ls -lh build/*
