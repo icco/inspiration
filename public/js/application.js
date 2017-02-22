@@ -103,6 +103,9 @@ function build_element(image, link, title, column_width) {
     $(div).addClass('item');
     $('#container').isotope('insert', $(div));
   }).each(function() {
-    if(this.complete) $(this).load();
+    var el = $(this);
+    if (el != undefined && this.complete) {
+      el.load();
+    }
   });
 }
