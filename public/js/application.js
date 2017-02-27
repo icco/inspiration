@@ -15,6 +15,7 @@ $(document).ready(function() {
   }
 
   // TODO: write simple formula so this scales forever
+  // IDEA: round_up_to_int((width * 0.4) / 100)
   if (width > 1900) {
     columns = 6.0;
   }
