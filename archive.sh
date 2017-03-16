@@ -10,7 +10,6 @@ else
 fi
 
 for u in $LINKS; do
-  echo $u
   curl -sL --data-urlencode "url=$u" https://archive.is/submit/ > /dev/null
-  echo $?
+  echo $u - $?
 done
