@@ -9,6 +9,7 @@ script:
 - rake static
 - ls -lh build/*
 - cat build/stats.json
+- ./archive.sh
 deploy:
   provider: onesie
   edge:
