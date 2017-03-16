@@ -11,5 +11,9 @@ fi
 
 for u in $LINKS; do
   curl -sL --data-urlencode "url=$u" https://archive.is/submit/ > /dev/null
-  echo $u - $?
+  out=$?
+
+  if [[ $out -gt 0 ]]; then
+    echo $u - $out
+  fi
 done
