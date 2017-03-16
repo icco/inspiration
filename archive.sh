@@ -10,10 +10,5 @@ else
 fi
 
 for u in $LINKS; do
-  curl -sL --data-urlencode "url=$u" https://archive.is/submit/ > /dev/null
-  out=$?
-
-  if [[ $out -gt 0 ]]; then
-    echo $u - $out
-  fi
+  curl -sv --data-urlencode "url=$u" https://archive.is/submit/ 2>&1 >/dev/null | grep '< HTTP/1.1' | grep -v 302
 done
