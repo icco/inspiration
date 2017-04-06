@@ -6,7 +6,7 @@ GEM
     ast (2.3.0)
     buftok (0.2.0)
     daemons (1.2.4)
-    domain_name (0.5.20170223)
+    domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
     dribbble (1.2.0)
       rest-client (~> 2.0)
