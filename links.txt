@@ -6956,7 +6956,6 @@ https://dribbble.com/shots/2186049-Press
 https://dribbble.com/shots/2186490-April-Download-Cards
 https://dribbble.com/shots/2192195-Vandy-s-BBQ-pt-III
 https://dribbble.com/shots/2194053-Coffeehood-Paper-Cup
-https://dribbble.com/shots/2194275-Process
 https://dribbble.com/shots/2194289-Broadcast-Dashboard
 https://dribbble.com/shots/2194551-moodji
 https://dribbble.com/shots/2194762-Home-Page-Ideation-Product-Mock-up
@@ -7825,8 +7824,6 @@ https://twitter.com/_OutToSea_/status/837830923982880768
 https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/765611586530705408
-https://twitter.com/archillect/status/766472264065875968
 https://twitter.com/archillect/status/767413461173370880
 https://twitter.com/archillect/status/768047644786720768
 https://twitter.com/archillect/status/768435193841590272
@@ -7932,7 +7929,6 @@ https://twitter.com/archillect/status/803096089993891840
 https://twitter.com/archillect/status/803274763619569665
 https://twitter.com/archillect/status/804495310177402881
 https://twitter.com/archillect/status/804895442534301696
-https://twitter.com/archillect/status/804920605321596928
 https://twitter.com/archillect/status/805167238655393792
 https://twitter.com/archillect/status/805192401061052416
 https://twitter.com/archillect/status/806186446625378304
@@ -8023,6 +8019,8 @@ https://twitter.com/archillect/status/844886467025539072
 https://twitter.com/archillect/status/846174953305198592
 https://twitter.com/archillect/status/849247705176186880
 https://twitter.com/archillect/status/849318169634385920
+https://twitter.com/archillect/status/850093272215293952
+https://twitter.com/archillect/status/850103338687496192
 https://twitter.com/artfinderlatest/status/779320709357142022
 https://twitter.com/artfinderlatest/status/780041707949846528
 https://twitter.com/artfinderlatest/status/792941708610834432
@@ -8065,7 +8063,6 @@ https://twitter.com/softlandscapes/status/839912348987109377
 https://twitter.com/softlandscapes/status/843898609565417472
 https://twitter.com/tinyspires/status/819481466488946688
 https://twitter.com/tinyspires/status/833795728766033922
-https://twitter.com/unsplash/status/765797850848563200
 https://twitter.com/unsplash/status/768047718027624448
 https://twitter.com/unsplash/status/768696937277194241
 https://twitter.com/unsplash/status/768772533600587777
@@ -9084,6 +9081,18 @@ https://verygoods.co/product/362897
 https://verygoods.co/product/362911
 https://verygoods.co/product/362917
 https://verygoods.co/product/362974
+https://verygoods.co/product/363295
+https://verygoods.co/product/363426
+https://verygoods.co/product/363432
+https://verygoods.co/product/363641
+https://verygoods.co/product/363675
+https://verygoods.co/product/363698
+https://verygoods.co/product/363699
+https://verygoods.co/product/363749
+https://verygoods.co/product/363783
+https://verygoods.co/product/363785
+https://verygoods.co/product/363802
+https://verygoods.co/product/363803
 https://verygoods.co/product/44256
 https://verygoods.co/product/46659
 https://verygoods.co/product/50413
