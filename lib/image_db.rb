@@ -19,6 +19,7 @@ class ImageDB
       1041uuu
       EveningWaters
       FFD8FFDB
+      IGeometryArt
       MoMARobot
       PastPostcard
       _OutToSea_
