@@ -8222,7 +8222,6 @@ https://www.flickr.com/photos/130984525@N03/33830593630
 https://www.flickr.com/photos/45097551@N05/33862126570
 https://www.flickr.com/photos/130984525@N03/34202936966
 https://www.flickr.com/photos/35067687@N04/33434678203
-https://www.flickr.com/photos/60551705@N06/33401448054
 https://www.flickr.com/photos/130984525@N03/34027020275
 https://www.flickr.com/photos/23659159@N00/33726824432
 https://www.flickr.com/photos/23659159@N00/33726829682
@@ -11187,6 +11186,7 @@ https://www.flickr.com/photos/58148052@N00/2259515644
 https://www.flickr.com/photos/25419820@N00/2258668255
 https://www.flickr.com/photos/35034363287@N01/2251820987
 https://www.flickr.com/photos/51487460@N00/124768440
+https://www.flickr.com/photos/60551467@N00/251912067
 https://verygoods.co/product/368305
 https://verygoods.co/product/15724
 https://verygoods.co/product/239202
