@@ -49,7 +49,7 @@ GEM
     netrc (0.11.0)
     oj (3.3.2)
     oj_mimic_json (1.0.1)
-    parallel (1.11.2)
+    parallel (1.12.0)
     parser (2.4.0.0)
       ast (~> 2.2)
     powerpack (0.1.1)
