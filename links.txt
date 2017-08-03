@@ -7994,10 +7994,6 @@ https://twitter.com/_OutToSea_/status/837830923982880768
 https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/804895442534301696
-https://twitter.com/archillect/status/804920605321596928
-https://twitter.com/archillect/status/805167238655393792
-https://twitter.com/archillect/status/805192401061052416
 https://twitter.com/archillect/status/806186446625378304
 https://twitter.com/archillect/status/806372673328660494
 https://twitter.com/archillect/status/806730040905854976
@@ -8171,7 +8167,6 @@ https://twitter.com/archillect/status/886654182899535872
 https://twitter.com/archillect/status/887444387025870848
 https://twitter.com/archillect/status/889457652853559296
 https://twitter.com/archillect/status/891825757504376832
-https://twitter.com/artfinderlatest/status/804495337717174272
 https://twitter.com/artfinderlatest/status/807632261113856000
 https://twitter.com/artfinderlatest/status/809215193825890304
 https://twitter.com/artfinderlatest/status/819714371358224384
@@ -8183,9 +8178,6 @@ https://twitter.com/artfinderlatest/status/868460565789904896
 https://twitter.com/artfinderlatest/status/869521307666440192
 https://twitter.com/artfinderlatest/status/873140153921007616
 https://twitter.com/artfinderlatest/status/879300748605100032
-https://twitter.com/everycolorbot/status/804648983591260160
-https://twitter.com/everycolorbot/status/804694345806991360
-https://twitter.com/everycolorbot/status/804785037296226304
 https://twitter.com/everycolorbot/status/820443152792358912
 https://twitter.com/everycolorbot/status/842488427840978944
 https://twitter.com/everycolorbot/status/845432684839100416
@@ -11537,7 +11529,6 @@ https://www.flickr.com/photos/60475145@N00/3891399062
 https://www.flickr.com/photos/60475224@N05/9655433834
 https://www.flickr.com/photos/60529780@N02/21897852079
 https://www.flickr.com/photos/60547391@N06/20490380068
-https://www.flickr.com/photos/60551467@N00/251912067
 https://www.flickr.com/photos/60606086@N07/16479914654
 https://www.flickr.com/photos/60717073@N00/3808248315
 https://www.flickr.com/photos/60717073@N00/4756137327
@@ -12339,6 +12330,7 @@ https://www.flickr.com/photos/86326874@N00/3921734817
 https://www.flickr.com/photos/86326874@N00/3922530761
 https://www.flickr.com/photos/86326874@N00/3923295758
 https://www.flickr.com/photos/8642096@N02/10173508994
+https://www.flickr.com/photos/86526267@N00/36296702936
 https://www.flickr.com/photos/8667818@N02/19222736093
 https://www.flickr.com/photos/86752605@N00/10095715713
 https://www.flickr.com/photos/8690161@N08/16581806059
