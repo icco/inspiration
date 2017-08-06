@@ -8004,8 +8004,6 @@ https://twitter.com/_OutToSea_/status/837830923982880768
 https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/806730040905854976
-https://twitter.com/archillect/status/807414541361549312
 https://twitter.com/archillect/status/807837335492694016
 https://twitter.com/archillect/status/808104086050656256
 https://twitter.com/archillect/status/808167013646565377
@@ -8175,7 +8173,6 @@ https://twitter.com/archillect/status/886654182899535872
 https://twitter.com/archillect/status/887444387025870848
 https://twitter.com/archillect/status/889457652853559296
 https://twitter.com/archillect/status/891825757504376832
-https://twitter.com/artfinderlatest/status/807632261113856000
 https://twitter.com/artfinderlatest/status/809215193825890304
 https://twitter.com/artfinderlatest/status/819714371358224384
 https://twitter.com/artfinderlatest/status/835848179719548929
@@ -8233,6 +8230,7 @@ https://twitter.com/unsplash/status/888903999696621568
 https://twitter.com/unsplash/status/892089992402677762
 https://twitter.com/unsplash/status/892490266749403136
 https://twitter.com/unsplash/status/893064067665022976
+https://twitter.com/unsplash/status/893977546068549637
 https://verygoods.co/product/10155
 https://verygoods.co/product/117406
 https://verygoods.co/product/119682
@@ -9333,6 +9331,7 @@ https://verygoods.co/product/367654
 https://verygoods.co/product/367655
 https://verygoods.co/product/368305
 https://verygoods.co/product/36965
+https://verygoods.co/product/370800
 https://verygoods.co/product/44256
 https://verygoods.co/product/46659
 https://verygoods.co/product/50413
