@@ -8002,8 +8002,6 @@ https://twitter.com/_OutToSea_/status/837830923982880768
 https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/808886741369311232
-https://twitter.com/archillect/status/809478139760046080
 https://twitter.com/archillect/status/810155115709628417
 https://twitter.com/archillect/status/810157624675233792
 https://twitter.com/archillect/status/810160144839536642
@@ -8172,7 +8170,6 @@ https://twitter.com/archillect/status/894571352287567872
 https://twitter.com/archillect/status/894629231371710465
 https://twitter.com/archillect/status/894636791814291460
 https://twitter.com/archillect/status/894999175154339840
-https://twitter.com/artfinderlatest/status/809215193825890304
 https://twitter.com/artfinderlatest/status/819714371358224384
 https://twitter.com/artfinderlatest/status/835848179719548929
 https://twitter.com/artfinderlatest/status/841338103767941120
@@ -8215,7 +8212,6 @@ https://twitter.com/softlandscapes/status/886569851585736704
 https://twitter.com/softlandscapes/status/889197167516188672
 https://twitter.com/tinyspires/status/819481466488946688
 https://twitter.com/tinyspires/status/833795728766033922
-https://twitter.com/unsplash/status/809556179307393024
 https://twitter.com/unsplash/status/815716810758782980
 https://twitter.com/unsplash/status/836493738247598085
 https://twitter.com/unsplash/status/838184852193148929
@@ -8231,6 +8227,7 @@ https://twitter.com/unsplash/status/892490266749403136
 https://twitter.com/unsplash/status/893064067665022976
 https://twitter.com/unsplash/status/893977546068549637
 https://twitter.com/unsplash/status/894445593652842496
+https://twitter.com/unsplash/status/895434681121882112
 https://verygoods.co/product/10155
 https://verygoods.co/product/117406
 https://verygoods.co/product/119682
