@@ -2470,13 +2470,9 @@ http://kate-fox.deviantart.com/art/The-desert-prairie-412717001
 http://kate-n-bd.deviantart.com/art/Division48-359479100
 http://kate-n-bd.deviantart.com/art/It-s-my-turn-now-294120686
 http://kate-n-bd.deviantart.com/art/Jane-Shepard-460786705
-http://kate-n-bd.deviantart.com/art/Might-and-Magic-578000821
-http://kate-n-bd.deviantart.com/art/Milva-449506984
 http://kate-n-bd.deviantart.com/art/Wild-Hunt-Trio-575908836
 http://kate-n-bd.deviantart.com/art/jean-grey-227520897
-http://kate-n-bd.deviantart.com/art/snow-302103248
 http://kate-n-bd.deviantart.com/art/the-feels-495473955
-http://kate-n-bd.deviantart.com/art/witchblade-340012205
 http://kathrynlayno.deviantart.com/art/Firefly-Crew-110878339
 http://katie8787.deviantart.com/art/Interior-Space-35939011
 http://katiedesousa.deviantart.com/art/12-Gauge-DevID-85624416
@@ -8005,6 +8001,7 @@ https://twitter.com/FFD8FFDB/status/883528820996833282
 https://twitter.com/IGeometryArt/status/864646101604978689
 https://twitter.com/IGeometryArt/status/865090698974040064
 https://twitter.com/IGeometryArt/status/867717968062550019
+https://twitter.com/IGeometryArt/status/897409668275998720
 https://twitter.com/Interior/status/813402895982936064
 https://twitter.com/Interior/status/879425501277941760
 https://twitter.com/_OutToSea_/status/831587583561973760
@@ -8015,14 +8012,6 @@ https://twitter.com/_OutToSea_/status/837830923982880768
 https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/812153280101056512
-https://twitter.com/archillect/status/812158311223197697
-https://twitter.com/archillect/status/812430096963399680
-https://twitter.com/archillect/status/812435130652442624
-https://twitter.com/archillect/status/812480434403741696
-https://twitter.com/archillect/status/812523219148271617
-https://twitter.com/archillect/status/812560962704261121
-https://twitter.com/archillect/status/812709445780246529
 https://twitter.com/archillect/status/813119642482909184
 https://twitter.com/archillect/status/813180038942228481
 https://twitter.com/archillect/status/813278190433091584
@@ -8234,6 +8223,7 @@ https://twitter.com/unsplash/status/894445593652842496
 https://twitter.com/unsplash/status/895434681121882112
 https://twitter.com/unsplash/status/896838892506288128
 https://twitter.com/unsplash/status/897201334641930240
+https://twitter.com/unsplash/status/897439569024561152
 https://verygoods.co/product/10155
 https://verygoods.co/product/117406
 https://verygoods.co/product/119682
@@ -10437,7 +10427,6 @@ https://www.flickr.com/photos/33515415@N06/8088139623
 https://www.flickr.com/photos/33642498@N00/9533386
 https://www.flickr.com/photos/33726922@N05/5279322005
 https://www.flickr.com/photos/33728324@N08/21057738622
-https://www.flickr.com/photos/33734725@N05/16057073821
 https://www.flickr.com/photos/33776583@N00/3360377209
 https://www.flickr.com/photos/33789038@N07/7631461926
 https://www.flickr.com/photos/33795536@N05/9624781877
@@ -11487,6 +11476,7 @@ https://www.flickr.com/photos/57945291@N00/2529630020
 https://www.flickr.com/photos/58037062@N08/19729370833
 https://www.flickr.com/photos/58071821@N04/20691879664
 https://www.flickr.com/photos/58148052@N00/10638908516
+https://www.flickr.com/photos/58148052@N00/2233268663
 https://www.flickr.com/photos/58148052@N00/2259515644
 https://www.flickr.com/photos/58148052@N00/2380267564
 https://www.flickr.com/photos/58148052@N00/3098235567
