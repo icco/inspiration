@@ -8002,7 +8002,6 @@ https://twitter.com/IGeometryArt/status/864646101604978689
 https://twitter.com/IGeometryArt/status/865090698974040064
 https://twitter.com/IGeometryArt/status/867717968062550019
 https://twitter.com/IGeometryArt/status/897409668275998720
-https://twitter.com/Interior/status/813402895982936064
 https://twitter.com/Interior/status/879425501277941760
 https://twitter.com/_OutToSea_/status/831587583561973760
 https://twitter.com/_OutToSea_/status/832213909968928768
@@ -8012,10 +8011,6 @@ https://twitter.com/_OutToSea_/status/837830923982880768
 https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/813119642482909184
-https://twitter.com/archillect/status/813180038942228481
-https://twitter.com/archillect/status/813278190433091584
-https://twitter.com/archillect/status/813396465884295168
 https://twitter.com/archillect/status/814861123417739264
 https://twitter.com/archillect/status/814871186362474496
 https://twitter.com/archillect/status/815082575937015808
@@ -8172,6 +8167,7 @@ https://twitter.com/artfinderlatest/status/868460565789904896
 https://twitter.com/artfinderlatest/status/869521307666440192
 https://twitter.com/artfinderlatest/status/873140153921007616
 https://twitter.com/artfinderlatest/status/879300748605100032
+https://twitter.com/artfinderlatest/status/897934784894316546
 https://twitter.com/everycolorbot/status/820443152792358912
 https://twitter.com/everycolorbot/status/842488427840978944
 https://twitter.com/everycolorbot/status/845432684839100416
