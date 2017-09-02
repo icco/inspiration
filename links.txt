@@ -6035,7 +6035,6 @@ https://dribbble.com/shots/1301309-Hold-Fast
 https://dribbble.com/shots/1301461-Profile-card
 https://dribbble.com/shots/1301926-Modular-Css
 https://dribbble.com/shots/1302071-Dark-Slice-of-the-Moon-poster
-https://dribbble.com/shots/1302078-Guess-The-Brand-Sneak-Peak
 https://dribbble.com/shots/1302166-TBW-Crest-2
 https://dribbble.com/shots/1302210-Heart-Cross
 https://dribbble.com/shots/1302326-Ishtar-Kit
@@ -8010,7 +8009,6 @@ https://twitter.com/IGeometryArt/status/865090698974040064
 https://twitter.com/IGeometryArt/status/867717968062550019
 https://twitter.com/IGeometryArt/status/897409668275998720
 https://twitter.com/Interior/status/879425501277941760
-https://twitter.com/_OutToSea_/status/831587583561973760
 https://twitter.com/_OutToSea_/status/832213909968928768
 https://twitter.com/_OutToSea_/status/832304508168499204
 https://twitter.com/_OutToSea_/status/833301081966915584
@@ -8018,9 +8016,6 @@ https://twitter.com/_OutToSea_/status/837830923982880768
 https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/828025359920746497
-https://twitter.com/archillect/status/829034508515151873
-https://twitter.com/archillect/status/829557955259408385
 https://twitter.com/archillect/status/832575343026384896
 https://twitter.com/archillect/status/835325963546263552
 https://twitter.com/archillect/status/835348615375749121
@@ -8156,6 +8151,7 @@ https://twitter.com/artfinderlatest/status/873140153921007616
 https://twitter.com/artfinderlatest/status/879300748605100032
 https://twitter.com/artfinderlatest/status/897934784894316546
 https://twitter.com/artfinderlatest/status/901880784113590274
+https://twitter.com/artfinderlatest/status/903578215440150531
 https://twitter.com/everycolorbot/status/842488427840978944
 https://twitter.com/everycolorbot/status/845432684839100416
 https://twitter.com/everycolorbot/status/846489834248163332
@@ -8173,10 +8169,8 @@ https://twitter.com/jgilleard/status/857249945530769408
 https://twitter.com/jgilleard/status/874333441734660096
 https://twitter.com/jgilleard/status/889595779148599296
 https://twitter.com/jgilleard/status/892078030239260674
-https://twitter.com/moon_rise_bot/status/831383229651439616
 https://twitter.com/moon_rise_bot/status/831745615466024962
 https://twitter.com/moon_rise_bot/status/832017407388610561
-https://twitter.com/softlandscapes/status/831396246476697600
 https://twitter.com/softlandscapes/status/832211619874734080
 https://twitter.com/softlandscapes/status/832845793409110016
 https://twitter.com/softlandscapes/status/835473096819806208
