@@ -5837,7 +5837,6 @@ https://dribbble.com/shots/1176368-Lightning-Bug
 https://dribbble.com/shots/1177845-HUP
 https://dribbble.com/shots/1178026--gif-Snow-White-quote
 https://dribbble.com/shots/1190633-iPhone-6-Infinity
-https://dribbble.com/shots/1190922-iPhone-6-Infinity-Side-Status-Bar
 https://dribbble.com/shots/1191094-Iphone6-Cinemark-Movie-Ticket-App
 https://dribbble.com/shots/1191303-iPhone-6-Infinity-for-real-hipsta-s
 https://dribbble.com/shots/1191491-ios7-Infinity-shot
@@ -7002,7 +7001,6 @@ https://dribbble.com/shots/2124636-Early-Wake-Daily-Write
 https://dribbble.com/shots/2127233-Quantify-the-World
 https://dribbble.com/shots/2127328-Ghost-In-The-Shell-2-0
 https://dribbble.com/shots/2128057-Whale-Migration
-https://dribbble.com/shots/212815-City-Scout
 https://dribbble.com/shots/2129721-Howl-s-Moving-Castle-ANIMATED
 https://dribbble.com/shots/2130895-Inbox-Keep-Integration
 https://dribbble.com/shots/2130972-Menu-Animation
@@ -7204,7 +7202,6 @@ https://dribbble.com/shots/2290359-Ben-Lukas-Boysen
 https://dribbble.com/shots/2291261-Samson
 https://dribbble.com/shots/2292394-Audiovisual
 https://dribbble.com/shots/2292470-ICIX-Homepage
-https://dribbble.com/shots/2292883-Stuff-I-d-Never-Say-Part-1
 https://dribbble.com/shots/2293081-Cube-twist
 https://dribbble.com/shots/2294025-CodeTriage-Cards
 https://dribbble.com/shots/2294602-Space-Program-Timeline
@@ -7842,7 +7839,6 @@ https://dribbble.com/shots/807288-Cart
 https://dribbble.com/shots/811847-Photo-Frame
 https://dribbble.com/shots/812038-Blackboard
 https://dribbble.com/shots/812159-My-website-final-screen-design
-https://dribbble.com/shots/818018-So-long-Loosecubes
 https://dribbble.com/shots/822997-Android-Design-in-Action-Endomondo-on-Tablets
 https://dribbble.com/shots/824210-waffle-iphone-icon
 https://dribbble.com/shots/825319-PR-SENT-logo-proposal
@@ -8017,16 +8013,8 @@ https://twitter.com/IGeometryArt/status/897409668275998720
 https://twitter.com/IGeometryArt/status/905434285930373121
 https://twitter.com/Interior/status/879425501277941760
 https://twitter.com/PastPostcard/status/905172266119520258
-https://twitter.com/_OutToSea_/status/838827488461615107
 https://twitter.com/_OutToSea_/status/844716318989438976
 https://twitter.com/_OutToSea_/status/849336753416810496
-https://twitter.com/archillect/status/838743493971492864
-https://twitter.com/archillect/status/839065612081057792
-https://twitter.com/archillect/status/839093289580183553
-https://twitter.com/archillect/status/839126020775112704
-https://twitter.com/archillect/status/839131037938626560
-https://twitter.com/archillect/status/839138586561757184
-https://twitter.com/archillect/status/839161240354189314
 https://twitter.com/archillect/status/840915300556165120
 https://twitter.com/archillect/status/840917811161620482
 https://twitter.com/archillect/status/840935434964389888
@@ -8169,8 +8157,6 @@ https://twitter.com/jgilleard/status/857249945530769408
 https://twitter.com/jgilleard/status/874333441734660096
 https://twitter.com/jgilleard/status/889595779148599296
 https://twitter.com/jgilleard/status/892078030239260674
-https://twitter.com/softlandscapes/status/838825308774072321
-https://twitter.com/softlandscapes/status/839912348987109377
 https://twitter.com/softlandscapes/status/843898609565417472
 https://twitter.com/softlandscapes/status/857035184260227073
 https://twitter.com/softlandscapes/status/886569851585736704
