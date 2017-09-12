@@ -25,6 +25,7 @@ class ImageDB
       _OutToSea_
       archillect
       artfinderlatest
+      butdoesitfloat
       cooperhewittbot
       dscovr_epic
       everycolorbot
