@@ -3210,6 +3210,7 @@ https://dribbble.com/shots/3228503-Locations
 https://dribbble.com/shots/3228636-Onboarding
 https://dribbble.com/shots/3239445-Day-Night-Modes
 https://dribbble.com/shots/3239562-Product-Shots
+https://dribbble.com/shots/3247658-Hop-on-the-bus-Gus
 https://dribbble.com/shots/3247961-Beach-House
 https://dribbble.com/shots/3296428-Buddel-Ship
 https://dribbble.com/shots/3306382-Gyarados
@@ -3289,6 +3290,7 @@ https://dribbble.com/shots/342693-tooling-with-canvas
 https://dribbble.com/shots/3432484-Bucket
 https://dribbble.com/shots/3444111-Introducing-Microsoft-To-Do
 https://dribbble.com/shots/3446478-Microsoft-To-Do-Landing-Page
+https://dribbble.com/shots/3447696-WE-ARE-HIRING
 https://dribbble.com/shots/3453065-Another-Intelligent-Design-Film-Poster-Concept
 https://dribbble.com/shots/3453444-Blog
 https://dribbble.com/shots/3454964-Menu-Interface
@@ -3335,6 +3337,16 @@ https://dribbble.com/shots/3694200-Lego-Mono
 https://dribbble.com/shots/3737-Thinking-About-Color
 https://dribbble.com/shots/374883-Portfolio-Header
 https://dribbble.com/shots/376937-Portfolio-Site
+https://dribbble.com/shots/3826877-Project-Management
+https://dribbble.com/shots/3826976-Hatch
+https://dribbble.com/shots/3827001-
+https://dribbble.com/shots/3827109-Music-Landing-Page
+https://dribbble.com/shots/3827168-crisscross-023
+https://dribbble.com/shots/3827611-Calendar-iOS-app
+https://dribbble.com/shots/3827668-Get-out-of-the-way
+https://dribbble.com/shots/3828544-Enterprise-Illustration
+https://dribbble.com/shots/3828969-Green-City-Onboarding-Side-Menu
+https://dribbble.com/shots/3829852-Flurry-of-things
 https://dribbble.com/shots/391302-Type-your-message-here
 https://dribbble.com/shots/408190-Quick-Setting-Toggles
 https://dribbble.com/shots/410619-Quicknote-blog
@@ -7645,6 +7657,7 @@ https://twitter.com/archillect/status/904745890669350912
 https://twitter.com/archillect/status/905050400335818753
 https://twitter.com/archillect/status/906107368722886656
 https://twitter.com/archillect/status/907259981187121152
+https://twitter.com/archillect/status/912262929659105281
 https://twitter.com/artfinderlatest/status/868460565789904896
 https://twitter.com/artfinderlatest/status/869521307666440192
 https://twitter.com/artfinderlatest/status/873140153921007616
@@ -7665,6 +7678,7 @@ https://twitter.com/jgilleard/status/857249945530769408
 https://twitter.com/jgilleard/status/874333441734660096
 https://twitter.com/jgilleard/status/889595779148599296
 https://twitter.com/jgilleard/status/892078030239260674
+https://twitter.com/jgilleard/status/912405861909368833
 https://twitter.com/softlandscapes/status/857035184260227073
 https://twitter.com/softlandscapes/status/886569851585736704
 https://twitter.com/softlandscapes/status/889197167516188672
