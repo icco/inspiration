@@ -7667,6 +7667,7 @@ https://twitter.com/artfinderlatest/status/901880784113590274
 https://twitter.com/artfinderlatest/status/903578215440150531
 https://twitter.com/artfinderlatest/status/905173736860651521
 https://twitter.com/artfinderlatest/status/912122012755218432
+https://twitter.com/artfinderlatest/status/912658048052756485
 https://twitter.com/everycolorbot/status/859430886814646272
 https://twitter.com/everycolorbot/status/859867885996564480
 https://twitter.com/everycolorbot/status/868459412465364993
@@ -11843,7 +11844,6 @@ https://www.flickr.com/photos/74742635@N00/3579886
 https://www.flickr.com/photos/74742635@N00/5589156320
 https://www.flickr.com/photos/74742635@N00/864900082
 https://www.flickr.com/photos/7476336@N07/508475189
-https://www.flickr.com/photos/74951227@N00/408730137
 https://www.flickr.com/photos/75034991@N05/7092839051
 https://www.flickr.com/photos/75034991@N05/8118037295
 https://www.flickr.com/photos/7518165@N02/32455422265
@@ -11936,6 +11936,7 @@ https://www.flickr.com/photos/79649916@N00/22857292880
 https://www.flickr.com/photos/79688583@N03/13009160494
 https://www.flickr.com/photos/79688583@N03/15725868180
 https://www.flickr.com/photos/7969238@N02/3937288726
+https://www.flickr.com/photos/79731444@N00/1935728367
 https://www.flickr.com/photos/79752057@N00/31058801854
 https://www.flickr.com/photos/79752071@N00/3487885709
 https://www.flickr.com/photos/79803895@N00/13806432343
