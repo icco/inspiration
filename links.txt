@@ -2385,7 +2385,6 @@ https://dribbble.com/shots/1906663-Medical-Dashboard
 https://dribbble.com/shots/1906883-Invoice-Sherpa-Customer-Portal-Mailing
 https://dribbble.com/shots/1907030-Home-Logo-Design
 https://dribbble.com/shots/1907055-Take-The-Moment-Bestake
-https://dribbble.com/shots/1907146-Peep-Feed
 https://dribbble.com/shots/1907166-KMCC
 https://dribbble.com/shots/1907171-Pencil-Catch
 https://dribbble.com/shots/1907197-M-E-Wedding-Set
@@ -3336,6 +3335,7 @@ https://dribbble.com/shots/3694200-Lego-Mono
 https://dribbble.com/shots/3737-Thinking-About-Color
 https://dribbble.com/shots/374883-Portfolio-Header
 https://dribbble.com/shots/376937-Portfolio-Site
+https://dribbble.com/shots/3820914-Live-Chat-for-Sales
 https://dribbble.com/shots/3826877-Project-Management
 https://dribbble.com/shots/3826976-Hatch
 https://dribbble.com/shots/3827001-
@@ -3346,6 +3346,13 @@ https://dribbble.com/shots/3827668-Get-out-of-the-way
 https://dribbble.com/shots/3828544-Enterprise-Illustration
 https://dribbble.com/shots/3828969-Green-City-Onboarding-Side-Menu
 https://dribbble.com/shots/3829852-Flurry-of-things
+https://dribbble.com/shots/3832384-Preloader-and-pull-down-to-refresh-animation
+https://dribbble.com/shots/3845320-Roses
+https://dribbble.com/shots/3845509-Herbalogy-pt-4
+https://dribbble.com/shots/3845926-Moog-Console
+https://dribbble.com/shots/3845934-Moog-Command
+https://dribbble.com/shots/3846135-Cardinal-birb
+https://dribbble.com/shots/3846392-Lake-Fair-Lane
 https://dribbble.com/shots/391302-Type-your-message-here
 https://dribbble.com/shots/408190-Quick-Setting-Toggles
 https://dribbble.com/shots/410619-Quicknote-blog
@@ -5251,7 +5258,6 @@ https://m7781.deviantart.com/art/deadpool-kills-deadpool-2-372042475
 https://m7781.deviantart.com/art/optimus-prime-x-rockwell-297233090
 https://ma4u4a.deviantart.com/art/THE-TOTE-2-443167144
 https://macaron9.deviantart.com/art/Tartelettes-au-citron-590266817
-https://macbethoff.deviantart.com/art/Metal-Gear-Solid-Naked-Snake-404609826
 https://mackmac.deviantart.com/art/GARDENING-440081365
 https://mackmac.deviantart.com/art/TOUKEN-RANBU-FANART-SOUZA-SAMONJI-550215822
 https://madam-marla.deviantart.com/art/Princesses-Playing-DnD-430554921
@@ -7565,6 +7571,7 @@ https://twitter.com/IGeometryArt/status/897409668275998720
 https://twitter.com/IGeometryArt/status/905434285930373121
 https://twitter.com/IGeometryArt/status/913743626437509120
 https://twitter.com/IGeometryArt/status/914413014631067648
+https://twitter.com/IGeometryArt/status/915230632959205376
 https://twitter.com/Interior/status/879425501277941760
 https://twitter.com/PastPostcard/status/905172266119520258
 https://twitter.com/archillect/status/859782115600347136
