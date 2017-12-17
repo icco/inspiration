@@ -11,4 +11,11 @@ ENV LANG C.UTF-8
 
 RUN bundle install --system --without=test development
 
-CMD bundle exec thin -R config.ru start -p $PORT
+RUN rake static
+
+FROM nginx:latest
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /usr/share/nginx/html
+COPY --from=0 /opt/build/ .
+RUN ls -alh
+EXPOSE 8080
