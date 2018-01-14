@@ -17,6 +17,7 @@ class ImageDB
   def valid_twitter_users
     %w(
       1041uuu
+      CloudyConway
       EveningWaters
       FFD8FFDB
       IGeometryArt
@@ -25,10 +26,12 @@ class ImageDB
       _OutToSea_
       archillect
       artfinderlatest
+      artmxsphere
       butdoesitfloat
       cooperhewittbot
       dscovr_epic
       everycolorbot
+      ftrain
       interior
       jgilleard
       madeofsparrows
