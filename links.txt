@@ -8019,6 +8019,11 @@ https://twitter.com/archillect/status/964625464085090304
 https://twitter.com/archillect/status/964892222096400384
 https://twitter.com/archillect/status/964917377052958723
 https://twitter.com/archillect/status/964987849937440773
+https://twitter.com/archillect/status/965171559995461632
+https://twitter.com/archillect/status/965186657074008064
+https://twitter.com/archillect/status/965292350779084801
+https://twitter.com/archillect/status/965372879482380288
+https://twitter.com/archillect/status/965395533736108032
 https://twitter.com/artfinderlatest/status/922781010584055808
 https://twitter.com/artfinderlatest/status/929886573050716160
 https://twitter.com/artfinderlatest/status/932931640174825472
@@ -8032,12 +8037,12 @@ https://twitter.com/artfinderlatest/status/960249156647481346
 https://twitter.com/artfinderlatest/status/960592673118834688
 https://twitter.com/artfinderlatest/status/960870753674715136
 https://twitter.com/artfinderlatest/status/961302350592962562
+https://twitter.com/artfinderlatest/status/965349011921174528
 https://twitter.com/artmxsphere/status/940189606229741568
 https://twitter.com/artmxsphere/status/940370780394786817
 https://twitter.com/artmxsphere/status/940974950340612096
 https://twitter.com/artmxsphere/status/948041290729644033
 https://twitter.com/artmxsphere/status/951906856901009410
-https://twitter.com/everycolorbot/status/922425190428102657
 https://twitter.com/everycolorbot/status/937162423303327745
 https://twitter.com/everycolorbot/status/943730713010036736
 https://twitter.com/everycolorbot/status/944802682287656960
@@ -8073,9 +8078,9 @@ https://twitter.com/ftrain/status/961737335661613056
 https://twitter.com/ftrain/status/961970079448649728
 https://twitter.com/ftrain/status/961973211092185088
 https://twitter.com/ftrain/status/964336189393293313
+https://twitter.com/ftrain/status/965411141571809281
 https://twitter.com/jgilleard/status/925099060389871616
 https://twitter.com/softlandscapes/status/941651908518924288
-https://twitter.com/unsplash/status/922213515003355138
 https://twitter.com/unsplash/status/929008256642699264
 https://twitter.com/unsplash/status/932217003112325121
 https://twitter.com/unsplash/status/938166284105248768
@@ -10129,7 +10134,6 @@ https://www.flickr.com/photos/22827258@N00/2529962832
 https://www.flickr.com/photos/22851031@N04/2980432310
 https://www.flickr.com/photos/22882274@N04/11667441203
 https://www.flickr.com/photos/22885861@N05/3044539374
-https://www.flickr.com/photos/22911005@N06/2327070940
 https://www.flickr.com/photos/22918294@N04/4162760512
 https://www.flickr.com/photos/22943717@N00/1428012296
 https://www.flickr.com/photos/22943717@N00/2659735307
@@ -11839,6 +11843,7 @@ https://www.flickr.com/photos/60781728@N00/3899731010
 https://www.flickr.com/photos/60781728@N00/3901176816
 https://www.flickr.com/photos/60781728@N00/3901246568
 https://www.flickr.com/photos/60781728@N00/3902137172
+https://www.flickr.com/photos/60781728@N00/39431046665
 https://www.flickr.com/photos/60781728@N00/3952802652
 https://www.flickr.com/photos/60781728@N00/3961690870
 https://www.flickr.com/photos/60781728@N00/4022047162
