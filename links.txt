@@ -1956,7 +1956,6 @@ https://dribbble.com/shots/1462667-Best-Online-Portfolio-Net-Awards-nomination
 https://dribbble.com/shots/1463148-Mordor
 https://dribbble.com/shots/1463524-Harder-Better-Faster-Stronger-Lyrics-Poster
 https://dribbble.com/shots/1463557-Chauffeur-Priv-new-app
-https://dribbble.com/shots/1464059-Specialty-Technique
 https://dribbble.com/shots/1465014-Coupl-a-cans
 https://dribbble.com/shots/1466215-Menu-Navigation-UI
 https://dribbble.com/shots/1470683-Android-Wear-Nixon-Digital-Tide-Surf-App
@@ -5664,7 +5663,6 @@ https://my99reality.deviantart.com/art/Warhammer-40000-Inquisitor-cosplay-554550
 https://myhilary.deviantart.com/art/The-Memory-of-Trees-588824938
 https://myinqi.deviantart.com/art/Audi-TT-IR-Part-I-462708427
 https://mylifethroughthelens.deviantart.com/art/Life-in-the-City-544823417
-https://mynameistran.deviantart.com/art/Treading-Through-an-207628026
 https://myst-a.deviantart.com/art/Lucas-528916397
 https://mzrkart.deviantart.com/art/Ghost-383369310
 https://n-maulina.deviantart.com/art/Raruurien-Join-Hands-646500056
@@ -8060,6 +8058,9 @@ https://twitter.com/archillect/status/967746016807194624
 https://twitter.com/archillect/status/967808934626168843
 https://twitter.com/archillect/status/967907083977977856
 https://twitter.com/archillect/status/967949859369168896
+https://twitter.com/archillect/status/968098336912936960
+https://twitter.com/archillect/status/968231719131340801
+https://twitter.com/archillect/status/968274501594165249
 https://twitter.com/artfinderlatest/status/929886573050716160
 https://twitter.com/artfinderlatest/status/932931640174825472
 https://twitter.com/artfinderlatest/status/935854651676807173
@@ -10028,7 +10029,6 @@ https://www.flickr.com/photos/14901176@N02/3182755630
 https://www.flickr.com/photos/14919774@N04/8426795743
 https://www.flickr.com/photos/14919774@N04/9342827939
 https://www.flickr.com/photos/14942544@N08/4639636135
-https://www.flickr.com/photos/15037784@N08/1878806876
 https://www.flickr.com/photos/15120592@N07/3527218955
 https://www.flickr.com/photos/15145314@N06/35141386730
 https://www.flickr.com/photos/15159288@N03/29187185163
@@ -10603,6 +10603,7 @@ https://www.flickr.com/photos/30427198@N00/14760428328
 https://www.flickr.com/photos/30427198@N00/25352105862
 https://www.flickr.com/photos/30427198@N00/26334126202
 https://www.flickr.com/photos/30427198@N00/26400546846
+https://www.flickr.com/photos/30427198@N00/26621257408
 https://www.flickr.com/photos/30427198@N00/27005037331
 https://www.flickr.com/photos/30427198@N00/29331915244
 https://www.flickr.com/photos/30427198@N00/29877608194
@@ -10613,6 +10614,8 @@ https://www.flickr.com/photos/30427198@N00/34565441391
 https://www.flickr.com/photos/30427198@N00/35014733412
 https://www.flickr.com/photos/30427198@N00/35118634236
 https://www.flickr.com/photos/30427198@N00/39590260691
+https://www.flickr.com/photos/30427198@N00/40378404851
+https://www.flickr.com/photos/30427198@N00/40414294511
 https://www.flickr.com/photos/30466368@N07/5758850969
 https://www.flickr.com/photos/30493186@N03/4544759605
 https://www.flickr.com/photos/30547076@N08/2853747874
@@ -12288,7 +12291,6 @@ https://www.flickr.com/photos/73193468@N00/11802779053
 https://www.flickr.com/photos/73194085@N00/9609657988
 https://www.flickr.com/photos/73389415@N03/8542669175
 https://www.flickr.com/photos/7341163@N08/8338635376
-https://www.flickr.com/photos/73426581@N00/2337951772
 https://www.flickr.com/photos/73491156@N00/16538300737
 https://www.flickr.com/photos/7352143@N04/14247178036
 https://www.flickr.com/photos/7354779@N06/10731432254
@@ -12820,7 +12822,6 @@ https://www.flickr.com/photos/98666628@N08/21898751124
 https://www.flickr.com/photos/98696472@N04/29070853846
 https://www.flickr.com/photos/9873868@N04/3074618808
 https://www.flickr.com/photos/98825632@N02/26916026511
-https://www.flickr.com/photos/9885019@N02/2227590892
 https://www.flickr.com/photos/9899098@N04/4962056171
 https://www.flickr.com/photos/99136715@N00/27370395
 https://www.flickr.com/photos/99232835@N04/32466634344
