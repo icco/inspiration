@@ -8061,6 +8061,9 @@ https://twitter.com/archillect/status/967949859369168896
 https://twitter.com/archillect/status/968098336912936960
 https://twitter.com/archillect/status/968231719131340801
 https://twitter.com/archillect/status/968274501594165249
+https://twitter.com/archillect/status/968576488638418944
+https://twitter.com/archillect/status/968611722570366983
+https://twitter.com/archillect/status/968624304027045888
 https://twitter.com/artfinderlatest/status/929886573050716160
 https://twitter.com/artfinderlatest/status/932931640174825472
 https://twitter.com/artfinderlatest/status/935854651676807173
@@ -8084,7 +8087,6 @@ https://twitter.com/everycolorbot/status/943730713010036736
 https://twitter.com/everycolorbot/status/944802682287656960
 https://twitter.com/everycolorbot/status/945512514070175744
 https://twitter.com/everycolorbot/status/960249180945108992
-https://twitter.com/ftrain/status/926062751499390976
 https://twitter.com/ftrain/status/932777696307961856
 https://twitter.com/ftrain/status/932970925586288640
 https://twitter.com/ftrain/status/937788609914134536
@@ -8121,6 +8123,9 @@ https://twitter.com/ftrain/status/966674523964821504
 https://twitter.com/ftrain/status/966726213308907521
 https://twitter.com/ftrain/status/967178448094580737
 https://twitter.com/ftrain/status/967820119014600706
+https://twitter.com/ftrain/status/968474426336514049
+https://twitter.com/ftrain/status/968476271087902720
+https://twitter.com/ftrain/status/968499552465678336
 https://twitter.com/softlandscapes/status/941651908518924288
 https://twitter.com/unsplash/status/929008256642699264
 https://twitter.com/unsplash/status/932217003112325121
@@ -9428,6 +9433,7 @@ https://verygoods.co/product/383366
 https://verygoods.co/product/383372
 https://verygoods.co/product/383393
 https://verygoods.co/product/384616
+https://verygoods.co/product/384937
 https://verygoods.co/product/44256
 https://verygoods.co/product/46659
 https://verygoods.co/product/50413
