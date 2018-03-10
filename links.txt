@@ -7635,7 +7635,6 @@ https://twitter.com/CloudyConway/status/954774919514075137
 https://twitter.com/CloudyConway/status/961279102127955968
 https://twitter.com/Interior/status/943518269398507520
 https://twitter.com/_OutToSea_/status/941289534813343747
-https://twitter.com/archillect/status/933457587114336257
 https://twitter.com/archillect/status/934942364543737857
 https://twitter.com/archillect/status/935221712601395200
 https://twitter.com/archillect/status/935631916228890625
@@ -8105,7 +8104,10 @@ https://twitter.com/archillect/status/971344732143194112
 https://twitter.com/archillect/status/971485659780218880
 https://twitter.com/archillect/status/971558645187084289
 https://twitter.com/archillect/status/971561156988071937
-https://twitter.com/artfinderlatest/status/932931640174825472
+https://twitter.com/archillect/status/972044340930531328
+https://twitter.com/archillect/status/972107261295329290
+https://twitter.com/archillect/status/972240633346904064
+https://twitter.com/archillect/status/972245667929305088
 https://twitter.com/artfinderlatest/status/935854651676807173
 https://twitter.com/artfinderlatest/status/939107351981887488
 https://twitter.com/artfinderlatest/status/941865527865167872
@@ -8129,8 +8131,6 @@ https://twitter.com/everycolorbot/status/943730713010036736
 https://twitter.com/everycolorbot/status/944802682287656960
 https://twitter.com/everycolorbot/status/945512514070175744
 https://twitter.com/everycolorbot/status/960249180945108992
-https://twitter.com/ftrain/status/932777696307961856
-https://twitter.com/ftrain/status/932970925586288640
 https://twitter.com/ftrain/status/937788609914134536
 https://twitter.com/ftrain/status/937969844905013248
 https://twitter.com/ftrain/status/938081134180741121
@@ -8173,6 +8173,10 @@ https://twitter.com/ftrain/status/970282722311753728
 https://twitter.com/ftrain/status/970428395933917184
 https://twitter.com/ftrain/status/970765904274436099
 https://twitter.com/ftrain/status/971413368241258498
+https://twitter.com/ftrain/status/972077184339927042
+https://twitter.com/ftrain/status/972102891069689857
+https://twitter.com/ftrain/status/972122336781627398
+https://twitter.com/ftrain/status/972133283877281792
 https://twitter.com/softlandscapes/status/941651908518924288
 https://twitter.com/unsplash/status/938166284105248768
 https://twitter.com/unsplash/status/960845658126209025
