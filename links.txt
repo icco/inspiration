@@ -3214,7 +3214,6 @@ https://dribbble.com/shots/3223388-Chill
 https://dribbble.com/shots/3223542-Hadoken-lab-Logo-Design
 https://dribbble.com/shots/3223597-Identity-Map-Exploration
 https://dribbble.com/shots/3223979-Sound-Bar
-https://dribbble.com/shots/3223994-Account-Page
 https://dribbble.com/shots/3224062-Matriarch-Letters-WIP
 https://dribbble.com/shots/3225738-Notifications-give-me-anxiety
 https://dribbble.com/shots/3225789-Gustavo-s-Poly-Mailer-IRL
@@ -7675,15 +7674,6 @@ https://twitter.com/CloudyConway/status/954774919514075137
 https://twitter.com/CloudyConway/status/961279102127955968
 https://twitter.com/Interior/status/943518269398507520
 https://twitter.com/_OutToSea_/status/941289534813343747
-https://twitter.com/archillect/status/936349156779745280
-https://twitter.com/archillect/status/936593243034275840
-https://twitter.com/archillect/status/936605842408960000
-https://twitter.com/archillect/status/936615931685621761
-https://twitter.com/archillect/status/936631004336451584
-https://twitter.com/archillect/status/936643598623354880
-https://twitter.com/archillect/status/936646091226865664
-https://twitter.com/archillect/status/936648609763872768
-https://twitter.com/archillect/status/936653643411050496
 https://twitter.com/archillect/status/936827284677214209
 https://twitter.com/archillect/status/936829801364537344
 https://twitter.com/archillect/status/936837357038329856
@@ -8155,6 +8145,11 @@ https://twitter.com/archillect/status/973929256731455488
 https://twitter.com/archillect/status/973954421293047808
 https://twitter.com/archillect/status/974236281776623616
 https://twitter.com/archillect/status/974311783090544642
+https://twitter.com/archillect/status/974719473226846210
+https://twitter.com/archillect/status/974727010772766720
+https://twitter.com/archillect/status/974759726616629248
+https://twitter.com/archillect/status/974769803750772738
+https://twitter.com/archillect/status/974835228920504320
 https://twitter.com/artfinderlatest/status/939107351981887488
 https://twitter.com/artfinderlatest/status/941865527865167872
 https://twitter.com/artfinderlatest/status/953321009540714497
@@ -8228,6 +8223,7 @@ https://twitter.com/ftrain/status/972133283877281792
 https://twitter.com/ftrain/status/972468068990504966
 https://twitter.com/ftrain/status/973649908690509829
 https://twitter.com/ftrain/status/974247673212620803
+https://twitter.com/ftrain/status/974624815637303296
 https://twitter.com/softlandscapes/status/941651908518924288
 https://twitter.com/unsplash/status/938166284105248768
 https://twitter.com/unsplash/status/960845658126209025
