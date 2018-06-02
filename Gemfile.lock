@@ -29,7 +29,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (2.1.0)
+    http-form_data (2.1.1)
     http_parser.rb (0.6.0)
     instagram-continued (1.4.0)
       faraday (~> 0.11)
