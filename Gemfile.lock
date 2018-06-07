@@ -36,7 +36,7 @@ GEM
       faraday_middleware
       hashie (>= 3.5.1)
       multi_json
-    jaro_winkler (1.4.0)
+    jaro_winkler (1.5.1)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     mime-types (3.1)
@@ -67,8 +67,8 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rubocop (0.57.0)
-      jaro_winkler (~> 1.4.0)
+    rubocop (0.57.1)
+      jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5)
       powerpack (~> 0.1)
