@@ -51,7 +51,7 @@ GEM
     oj (3.6.13)
     oj_mimic_json (1.0.1)
     parallel (1.12.1)
-    parser (2.5.1.2)
+    parser (2.5.3.0)
       ast (~> 2.4.0)
     powerpack (0.1.2)
     public_suffix (3.0.3)
