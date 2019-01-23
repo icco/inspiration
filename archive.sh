@@ -5,7 +5,7 @@ sort --help | grep -i random > /dev/null
 if [[ $? -eq 1 ]]; then
   LINKS=$(cat links.txt)
 else
-  LINKS=$(cat links.txt | sort -R)
+  LINKS=$(cat links.txt | sort -R | head -n 30)
   echo " -- Randomized Links."
 fi
 
