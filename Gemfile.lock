@@ -20,7 +20,7 @@ GEM
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.10.0)
-    flickraw (0.9.9)
+    flickraw (0.9.10)
     hashie (3.6.0)
     http (3.3.0)
       addressable (~> 2.3)
