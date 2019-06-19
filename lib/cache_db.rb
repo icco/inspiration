@@ -36,7 +36,6 @@ class CacheDB
 
     hash = { url: url, modified: Time.now.utc.to_s }
 
-    dribbble_re = %r{https://dribbble\.com/shots/}
     deviant_re = /deviantart\.com/
     flickr_re = /www\.flickr\.com/
     insta_re = %r{https://www.instagram\.com/p/}
@@ -45,26 +44,6 @@ class CacheDB
 
     begin
       case url
-      when dribbble_re
-        id = url.gsub(dribbble_re, "").split("-").first
-        data = Dribbble::Shot.find(Inspiration::DRIBBBLE_TOKEN, id)
-
-        title = "\"#{data.title}\" by #{data.user["username"]}"
-        if !data.images["hidpi"].nil?
-          image_link = data.images["hidpi"]
-        else
-          image_link = data.images["normal"]
-        end
-
-        attrs = {
-          title: title,
-          image: image_link,
-          size: {
-            width: data.width,
-            height: data.height,
-          },
-        }
-        hash.merge! attrs
       when deviant_re
         oembed_url = "https://backend.deviantart.com/oembed?url=#{URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))}&format=json"
         resp = Typhoeus.get oembed_url, followlocation: true

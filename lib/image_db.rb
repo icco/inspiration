@@ -69,15 +69,6 @@ class ImageDB
     all_images = @images.delete_if(&:empty?).to_a.sort
     File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
 
-    # Dribbble
-    user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
-    data = user.likes
-    data.each { |l| @images.add l.html_url }
-
-    # Write all image links to disk
-    all_images = @images.delete_if(&:empty?).to_a.sort
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(all_images.join("\n")) }
-
     # Flickr
     favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n")
     favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}" }
@@ -161,28 +152,6 @@ class ImageDB
         feed.items.each do |item|
           @images.add item.link
         end
-      end
-    end
-
-    # Write to file.
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
-
-    # Dribbble
-    # NOTE: Page count verified 2015-09-02
-    dribbble_user = "icco"
-    page_count = 30
-
-    (1..page_count).each do |page|
-      begin
-        user = Dribbble::User.find(Inspiration::DRIBBBLE_TOKEN, "icco")
-        data = user.likes page: page
-        print_data = { player: dribbble_user, page: page, images: @images.count }
-        logging.info print_data.inspect
-        data.each { |l| @images.add l.html_url }
-      rescue RestClient::TooManyRequests
-        logging.error "Too Many requests to Dribbble. Sleeping."
-        sleep 60
-        retry
       end
     end
 

@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 ruby "2.6.3"
 
-gem "dribbble", ">= 1.0.0"
 gem "erubis", "~> 2.7"
 gem "flickraw"
 gem "instagram-continued", require: "instagram"
