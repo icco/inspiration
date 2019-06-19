@@ -1,6 +1,6 @@
 From ruby:2.6.3-alpine
 
-RUN apk add --update build-base libffi-dev
+RUN apk add --update build-base libffi-dev libcurl libcurl curl-dev
 
 WORKDIR /opt
 COPY . .
