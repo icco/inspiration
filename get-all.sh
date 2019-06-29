@@ -44,9 +44,12 @@ while read h; do \
      COUNT=$((COUNT + 1)); \
      COUNT_PRETTY=$(printf "%04d" $COUNT); \
      COMMIT_DATE=`git show $h | head -3 | grep 'Date:' | awk '{print $4"-"$3"-"$6}'`; \
+     FILE=${EXPORT_TO}/${COUNT_PRETTY}.${COMMIT_DATE}.${h}.${GIT_SHORT_FILENAME}
      if [ "${COMMIT_DATE}" != "" ]; then \
-         git cat-file -p ${h}:${GIT_PATH_TO_FILE} > ${EXPORT_TO}/${COUNT_PRETTY}.${COMMIT_DATE}.${h}.${GIT_SHORT_FILENAME};\
+         git cat-file -p ${h}:${GIT_PATH_TO_FILE} | jq --compact-output '.[]' > ${FILE};\
      fi;\
+
+     bq load --autodetect --source_format=NEWLINE_DELIMITED_JSON inspiration.data ${FILE}
 done    
 
 # return success code
