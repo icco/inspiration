@@ -1,20 +1,12 @@
 #!/bin/bash
 
 # we'll write all git versions of the file to this folder:
-EXPORT_TO=/tmp/all_versions_exported
-
-# take relative path to the file to inspect
-GIT_PATH_TO_FILE=$1
+EXPORT_TO=$(mktemp -d)
 
 # ---------------- don't edit below this line --------------
 
-USAGE="Please cd to the root of your git proj and specify path to file you with to inspect (example: $0 some/path/to/file)"
-
 # check if got argument
-if [ "${GIT_PATH_TO_FILE}" == "" ]; then
-    echo "error: no arguments given. ${USAGE}" >&2
-    exit 1
-fi
+GIT_PATH_TO_FILE="cache.json
 
 # check if file exist
 if [ ! -f ${GIT_PATH_TO_FILE} ]; then
