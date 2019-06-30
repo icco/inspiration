@@ -2,7 +2,7 @@
 
 sort --help | grep -i random > /dev/null
 
-LINKS=$(cat links.txt | sort -R | head -n 30)
+LINKS=$(cat links.txt | sort -R | head -n 10)
 echo " -- Randomized Links."
 
 for u in $LINKS; do
