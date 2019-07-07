@@ -6506,7 +6506,6 @@ https://www.flickr.com/photos/131442016@N05/20455530054
 https://www.flickr.com/photos/98666628@N08/21898751124
 https://www.flickr.com/photos/27838818@N04/16109918764
 https://www.flickr.com/photos/54683012@N04/18818447876
-https://www.flickr.com/photos/95053053@N04/21913390670
 https://www.flickr.com/photos/53262433@N04/22915303636
 https://www.flickr.com/photos/127446714@N05/22300371264
 https://www.flickr.com/photos/93570608@N05/17412789730
@@ -6675,7 +6674,6 @@ https://www.flickr.com/photos/28852917@N00/14939829678
 https://www.flickr.com/photos/94248387@N07/11190745776
 https://www.flickr.com/photos/105738673@N02/19132646234
 https://www.flickr.com/photos/54751723@N07/20745209696
-https://www.flickr.com/photos/90962754@N00/3484342784
 https://www.flickr.com/photos/51047889@N08/21835961593
 https://www.flickr.com/photos/12289718@N00/21991870284
 https://www.flickr.com/photos/123495891@N02/22583618875
@@ -8928,6 +8926,8 @@ https://www.flickr.com/photos/77623598@N00/71271960
 https://www.flickr.com/photos/76895297@N00/2126533900
 https://www.flickr.com/photos/10282387@N00/365802585
 https://www.flickr.com/photos/63359565@N00/2062482294
+https://www.flickr.com/photos/23659159@N00/2096992472
+https://www.flickr.com/photos/64649343@N00/2096369453
 https://verygoods.co/product/412891
 https://verygoods.co/product/125125
 https://verygoods.co/product/294836
