@@ -13,5 +13,5 @@ git pull
 bundle update
 git ci Gemfile* -m 'bundle update'
 
-rake update_links
+rake update
 git push
