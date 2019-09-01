@@ -4,6 +4,7 @@ class ImageDB
   def initialize
     @bigquery = Google::Cloud::Bigquery.new project: "icco-cloud"
     Oj.default_options = Inspiration::OJ_OPTIONS
+    @per_page = Inspiration::PER_PAGE
   end
 
   def count
@@ -13,8 +14,8 @@ class ImageDB
   end
 
   def page n
-    query = "SELECT * FROM `icco-cloud.inspiration.cache` ORDER BY rand() LIMIT 200"
-    @bigquery.query query
+    query = "SELECT * FROM `icco-cloud.inspiration.cache` ORDER BY rand() * EXTRACT(DAYOFYEAR FROM CURRENT_DATE()) LIMIT @per_page OFFSET @offset"
+    @bigquery.query query, params: { per_page: @per_page, offset: @per_page*n.to_i }
   end
 
   def valid_twitter_users
