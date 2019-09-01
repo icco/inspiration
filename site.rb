@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RACK_ENV ||= ENV["RACK_ENV"] ||= "development" unless defined?(RACK_ENV)
 
 require "rubygems" unless defined?(Gem)
@@ -12,8 +14,6 @@ require "logger"
 
 require "./lib/logging.rb"
 require "./lib/scss_init.rb"
-
-require "./lib/cache_db.rb"
 require "./lib/image_db.rb"
 
 class Inspiration < Sinatra::Base
@@ -30,9 +30,7 @@ class Inspiration < Sinatra::Base
     set :allow_disabled_csrf, true
   end
 
-  LINK_FILE = "links.txt".freeze
-  CACHE_FILE = "cache.json".freeze
-  PER_PAGE = 200
+  PER_PAGE = 100
   OJ_OPTIONS = {
     mode: :compat,
     indent: 2,
@@ -44,7 +42,7 @@ class Inspiration < Sinatra::Base
   }.freeze
   Oj.default_options = OJ_OPTIONS
 
-  DRIBBBLE_TOKEN = "13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479".freeze
+  DRIBBBLE_TOKEN = "13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479"
 
   FlickRaw.api_key = "5c282af934cd475695e1f727dd0404a9"
   FlickRaw.shared_secret = "49b3b77e99947328"
@@ -54,7 +52,7 @@ class Inspiration < Sinatra::Base
     config.client_id = "1503e0bccdd9424bb9d9590ba181bbbb"
     config.client_secret = "2c86ea5babf74038b592331d75e5ad7b"
   end
-  INSTAGRAM_TOKEN = "2025166174.1503e0b.f6a0ee96f41f4f629a66d2e76f1127ac".freeze
+  INSTAGRAM_TOKEN = "2025166174.1503e0b.f6a0ee96f41f4f629a66d2e76f1127ac"
 
   TWITTER_CONFIG = {
     consumer_key: "GQx89ku8NLacf02n2GzjgGvLa",
@@ -68,10 +66,22 @@ class Inspiration < Sinatra::Base
   end
 
   get "/" do
-    @images = PER_PAGE
-    @idb = ImageDB.new
-    @library = @idb.images.count
-
     erb :index
+  end
+
+  get "/data/:page/file.json" do
+    @idb = ImageDB.new
+    json @idb.page params[:page]
+  end
+
+  get "/stats.json" do
+    @idb = ImageDB.new
+    cnt = @idb.count
+    stats = {
+      per_page: PER_PAGE,
+      images: cnt,
+      pages: cnt / PER_PAGE,
+    }
+    json stats
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Logging
   # This is the magical bit that gets mixed into your classes
   def logger

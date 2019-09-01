@@ -69,7 +69,7 @@ function update_count() {
 
 function get_more(page, column_width) {
   var parse_cache_response = width_function_builder(column_width);
-  $.get("/data/" + page + ".json", parse_cache_response).fail(function() {
+  $.get("/data/" + page + "/file.json", parse_cache_response).fail(function() {
     console.error("Error getting data.");
   });
 }
