@@ -7,7 +7,7 @@ task :local do
 end
 
 desc "Update links."
-task :update_some_links do
+task :update do
   idb = ImageDB.new
   idb.update
 end

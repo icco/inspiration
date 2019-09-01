@@ -18,6 +18,29 @@ class ImageDB
     @bigquery.query query, params: { per_page: @per_page, offset: @per_page*n.to_i }
   end
 
+  def get url
+    query = "SELECT * FROM `icco-cloud.inspiration.cache` WHERE url = @url LIMIT 1"
+    data = @bigquery.query query, params: { url: url }
+    return data.first
+  end
+
+  def needs_update?(url)
+    data = get url
+
+    return true if data.nil?
+
+    return true if data["modified"].nil?
+
+    # For Flickr wrong size stuff
+    return true if data["image"].nil? || data["image"].match(/_q/)
+
+    return true unless data["modified"].is_a? String
+
+    # ~10 days * a random float
+    time = Time.parse(data["modified"])
+    (Time.now.utc - time) > (860_000 * rand)
+  end
+
   def valid_twitter_users
     %w(
       1041uuu
@@ -224,23 +247,6 @@ class ImageDB
       nil
     else
       hash
-    end
-
-    def needs_update?(url)
-      data = get url
-
-      return true if data.nil?
-
-      return true if data["modified"].nil?
-
-      # For Flickr wrong size stuff
-      return true if data["image"].nil? || data["image"].match(/_q/)
-
-      return true unless data["modified"].is_a? String
-
-      # ~10 days * a random float
-      time = Time.parse(data["modified"])
-      (Time.now.utc - time) > (860_000 * rand)
     end
   end
 end
