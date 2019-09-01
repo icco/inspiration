@@ -4,6 +4,7 @@ ruby "2.6.3"
 
 gem "erubis", "~> 2.7"
 gem "flickraw"
+gem "google-cloud-bigquery", require: "google/cloud/bigquery"
 gem "instagram-continued", require: "instagram"
 gem "oj"
 gem "oj_mimic_json"

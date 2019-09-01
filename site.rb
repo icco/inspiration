@@ -30,8 +30,6 @@ class Inspiration < Sinatra::Base
     set :allow_disabled_csrf, true
   end
 
-  LINK_FILE = "links.txt".freeze
-  CACHE_FILE = "cache.json".freeze
   PER_PAGE = 200
   OJ_OPTIONS = {
     mode: :compat,

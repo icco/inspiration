@@ -2,12 +2,15 @@ class ImageDB
   include Logging
 
   def initialize
-    @images = Set.new(File.readlines(Inspiration::LINK_FILE).map(&:strip))
+    bigquery = Google::Cloud::Bigquery.new project: "icco-cloud"
+    query = "SELECT * FROM `icco-cloud.inspiration.cache` ORDER BY rand() LIMIT 1000"
+    @data = bigquery.query sql
+
     Oj.default_options = Inspiration::OJ_OPTIONS
   end
 
   def images
-    @images.to_a
+    @data.to_a
   end
 
   def sample(count)
