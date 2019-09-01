@@ -28,7 +28,7 @@ class Inspiration < Sinatra::Base
     set :allow_disabled_csrf, true
   end
 
-  PER_PAGE = 200
+  PER_PAGE = 100
   OJ_OPTIONS = {
     mode: :compat,
     indent: 2,
@@ -74,10 +74,11 @@ class Inspiration < Sinatra::Base
 
   get "/stats.json" do
     @idb = ImageDB.new
+    cnt = @idb.count
     stats = {
       per_page: PER_PAGE,
-      images: @idb.count,
-      pages: @idb.count / PER_PAGE,
+      images: cnt,
+      pages:  cnt / PER_PAGE,
     }
     json stats
   end
