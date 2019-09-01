@@ -3,10 +3,18 @@ class ImageDB
 
   def initialize
     @bigquery = Google::Cloud::Bigquery.new project: "icco-cloud"
-    query = "SELECT * FROM `icco-cloud.inspiration.cache` ORDER BY rand() LIMIT 1000"
-    @data = bigquery.query sql
-
     Oj.default_options = Inspiration::OJ_OPTIONS
+  end
+
+  def count
+    query = "SELECT count(*) as cnt FROM `icco-cloud.inspiration.cache`"
+    data = @bigquery.query query
+    return data.first[:cnt].to_i
+  end
+
+  def page n
+    query = "SELECT * FROM `icco-cloud.inspiration.cache` ORDER BY rand() LIMIT 200"
+    @bigquery.query query
   end
 
   def valid_twitter_users

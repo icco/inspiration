@@ -10,7 +10,8 @@ gem "oj"
 gem "oj_mimic_json"
 gem "rake"
 gem "sass"
-gem "sinatra", require: "sinatra/base"
+gem "sinatra", require: ["sinatra/base"]
+gem "sinatra-contrib", require:  ["sinatra/json"]
 gem "thin"
 gem "tilt"
 gem "twitter"

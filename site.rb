@@ -12,8 +12,6 @@ require "logger"
 
 require "./lib/logging.rb"
 require "./lib/scss_init.rb"
-
-require "./lib/cache_db.rb"
 require "./lib/image_db.rb"
 
 class Inspiration < Sinatra::Base
@@ -66,10 +64,21 @@ class Inspiration < Sinatra::Base
   end
 
   get "/" do
-    @images = PER_PAGE
-    @idb = ImageDB.new
-    @library = @idb.images.count
-
     erb :index
+  end
+
+  get "/data/:page/file.json" do
+    @idb = ImageDB.new
+    json @idb.page params[:page]
+  end
+
+  get "/stats.json" do
+    @idb = ImageDB.new
+    stats = {
+      per_page: PER_PAGE,
+      images: @idb.count,
+      pages: @idb.count / PER_PAGE,
+    }
+    json stats
   end
 end
