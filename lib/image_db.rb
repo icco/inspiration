@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ImageDB
   include Logging
 
@@ -10,18 +12,18 @@ class ImageDB
   def count
     query = "SELECT count(*) as cnt FROM `icco-cloud.inspiration.cache`"
     data = @bigquery.query query
-    return data.first[:cnt].to_i
+    data.first[:cnt].to_i
   end
 
-  def page n
+  def page(n)
     query = "SELECT * FROM `icco-cloud.inspiration.cache` ORDER BY rand() * EXTRACT(DAYOFYEAR FROM CURRENT_DATE()) LIMIT @per_page OFFSET @offset"
-    @bigquery.query query, params: { per_page: @per_page, offset: @per_page*n.to_i }
+    @bigquery.query query, params: { per_page: @per_page, offset: @per_page * n.to_i }
   end
 
-  def get url
+  def get(url)
     query = "SELECT * FROM `icco-cloud.inspiration.cache` WHERE url = @url LIMIT 1"
     data = @bigquery.query query, params: { url: url }
-    return data.first
+    data.first
   end
 
   def needs_update?(url)
@@ -42,7 +44,7 @@ class ImageDB
   end
 
   def valid_twitter_users
-    %w(
+    %w[
       1041uuu
       CloudyConway
       EveningWaters
@@ -68,7 +70,7 @@ class ImageDB
       tinyspires
       unsplash
       youtubeartifact
-    ).map(&:downcase)
+    ].map(&:downcase)
   end
 
   def self.instagram_client
@@ -79,14 +81,12 @@ class ImageDB
     Twitter::REST::Client.new(Inspiration::TWITTER_CONFIG)
   end
 
-  def add image_url
+  def add(image_url)
     image_blob = cache image_url
     dataset = @bigquery.dataset "inspiration", skip_lookup: true
     table = dataset.table "cache", skip_lookup: true
 
-    if !image_blob.nil?
-      table.insert [ image_blob ]
-    end
+    table.insert [image_blob] unless image_blob.nil?
   end
 
   # This goes through all services and stores the newest links.
@@ -116,7 +116,6 @@ class ImageDB
     end
     products.each { |prod| add prod }
 
-
     # Instagram
     ImageDB.instagram_client.user_liked_media.each do |i|
       add i.link
@@ -125,9 +124,7 @@ class ImageDB
     # Twitter
     begin
       ImageDB.twitter_client.favorites("icco", count: 200).each do |t|
-        if valid_twitter_users.include? t.user.screen_name.downcase
-          add t.uri.to_s
-        end
+        add t.uri.to_s if valid_twitter_users.include? t.user.screen_name.downcase
       end
     rescue Twitter::Error::TooManyRequests => e
       logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"

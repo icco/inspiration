@@ -1,6 +1,6 @@
 #!/usr/bin/env rackup
-# encoding: utf-8
+# frozen_string_literal: true
 
-require File.expand_path("../site.rb", __FILE__)
+require File.expand_path("site.rb", __dir__)
 
 run Inspiration

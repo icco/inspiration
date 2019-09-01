@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RACK_ENV ||= ENV["RACK_ENV"] ||= "development" unless defined?(RACK_ENV)
 
 require "rubygems" unless defined?(Gem)
@@ -40,7 +42,7 @@ class Inspiration < Sinatra::Base
   }.freeze
   Oj.default_options = OJ_OPTIONS
 
-  DRIBBBLE_TOKEN = "13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479".freeze
+  DRIBBBLE_TOKEN = "13177c079f04b1dbd41c2c0399079b8d19cfd58156530c317d526dfc9e0a8479"
 
   FlickRaw.api_key = "5c282af934cd475695e1f727dd0404a9"
   FlickRaw.shared_secret = "49b3b77e99947328"
@@ -50,7 +52,7 @@ class Inspiration < Sinatra::Base
     config.client_id = "1503e0bccdd9424bb9d9590ba181bbbb"
     config.client_secret = "2c86ea5babf74038b592331d75e5ad7b"
   end
-  INSTAGRAM_TOKEN = "2025166174.1503e0b.f6a0ee96f41f4f629a66d2e76f1127ac".freeze
+  INSTAGRAM_TOKEN = "2025166174.1503e0b.f6a0ee96f41f4f629a66d2e76f1127ac"
 
   TWITTER_CONFIG = {
     consumer_key: "GQx89ku8NLacf02n2GzjgGvLa",
@@ -78,7 +80,7 @@ class Inspiration < Sinatra::Base
     stats = {
       per_page: PER_PAGE,
       images: cnt,
-      pages:  cnt / PER_PAGE,
+      pages: cnt / PER_PAGE,
     }
     json stats
   end
