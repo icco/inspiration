@@ -12,6 +12,7 @@ source $RUBY
 git pull
 bundle update
 git ci Gemfile* -m 'bundle update'
+git push
 
 rake update
-git push
+rake clean
