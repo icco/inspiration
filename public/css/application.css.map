@@ -1,7 +1,12 @@
 {
-"version": 3,
-"mappings": "AAAA,IAAK,CACH,WAAW,CAAE,UAAU,CAGzB,GAAI,CACF,OAAO,CAAE,KAAK,CAGhB,MAAO,CACL,WAAW,CAAE,GAAG,CAGlB,KAAM,CACJ,OAAO,CAAE,GAAG,CACZ,MAAM,CAAE,cAAc,CACtB,MAAM,CAAE,GAAG,CAGb,WAAY,CACV,YAAY,CAAE,OAAO,CAIrB,qBAAgB,CACd,UAAU,CAAE,GAAG,CAGjB,OAAE,CACA,aAAa,CAAE,GAAG,CAItB,MAAO,CACL,OAAO,CAAE,IAAI,CAGf,gBAAkB,CAChB,YAAY,CAAE,MAAM,CACpB,aAAa,CAAE,MAAM,CAGvB,MAAO,CACL,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,MAAM,CACd,OAAO,CAAE,IAAI,CACb,UAAU,CAAE,OAAO",
-"sources": ["../../css/application.scss"],
-"names": [],
-"file": "application.css"
+	"version": 3,
+	"file": "stdin.css",
+	"sources": [
+		"stdin"
+	],
+	"sourcesContent": [
+		"body {\n  font-family: sans-serif;\n}\n\nimg {\n  display: block;\n}\n\n#intro {\n  font-weight: 300;\n}\n\n.item {\n  padding: 5px;\n  border: 1px solid #CCC;\n  margin: 1px;\n}\n\n.item:hover {\n  border-color: #2BA6CB;\n}\n\n.item {\n  p:first-of-type {\n    margin-top: 2px;\n  }\n\n  p {\n    margin-bottom: 2px;\n  }\n}\n\n.embed {\n  display: none;\n}\n\n.column, .columns {\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n\n#about {\n  width: 500px;\n  margin: 0 auto;\n  padding: 10px;\n  text-align: justify;\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,UAAU,CACxB,AAED,AAAA,GAAG,AAAC,CACF,OAAO,CAAE,KAAK,CACf,AAED,AAAA,MAAM,AAAC,CACL,WAAW,CAAE,GAAG,CACjB,AAED,AAAA,KAAK,AAAC,CACJ,OAAO,CAAE,GAAG,CACZ,MAAM,CAAE,cAAc,CACtB,MAAM,CAAE,GAAG,CACZ,AAED,AAAA,KAAK,AAAA,MAAM,AAAC,CACV,YAAY,CAAE,OAAO,CACtB,AAED,AACE,KADG,CACH,CAAC,AAAA,cAAc,AAAC,CACd,UAAU,CAAE,GAAG,CAChB,AAHH,AAKE,KALG,CAKH,CAAC,AAAC,CACA,aAAa,CAAE,GAAG,CACnB,AAGH,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,IAAI,CACd,AAED,AAAA,OAAO,CAAE,QAAQ,AAAC,CAChB,YAAY,CAAE,MAAM,CACpB,aAAa,CAAE,MAAM,CACtB,AAED,AAAA,MAAM,AAAC,CACL,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,MAAM,CACd,OAAO,CAAE,IAAI,CACb,UAAU,CAAE,OAAO,CACpB"
 }

@@ -11,7 +11,8 @@ gem "instagram-continued", require: "instagram"
 gem "oj"
 gem "oj_mimic_json"
 gem "rake"
-gem "sass"
+gem "sassc"
+gem "rack-sassc", require: "rack/sassc"
 gem "sinatra", require: ["sinatra/base"]
 gem "sinatra-contrib", require: ["sinatra/json"]
 gem "thin"

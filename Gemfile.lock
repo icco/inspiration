@@ -85,11 +85,11 @@ GEM
     rack (2.0.7)
     rack-protection (2.0.7)
       rack
+    rack-sassc (0.1.0)
+      rack (>= 1.0)
+      sassc (~> 2.0)
     rainbow (3.0.0)
     rake (12.3.3)
-    rb-fsevent (0.10.3)
-    rb-inotify (0.10.0)
-      ffi (~> 1.0)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
@@ -103,11 +103,8 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
     ruby-progressbar (1.10.1)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.2.0)
+      ffi (~> 1.9)
     shotgun (0.9.2)
       rack (>= 1.0)
     signet (0.11.0)
@@ -165,9 +162,10 @@ DEPENDENCIES
   minitest
   oj
   oj_mimic_json
+  rack-sassc
   rake
   rubocop
-  sass
+  sassc
   shotgun
   sinatra
   sinatra-contrib
