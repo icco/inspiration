@@ -16,13 +16,7 @@ Style/CollectionMethods:
     reduce: inject
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
-  SupportedStyles:
-    - comma
-    - no_comma
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
-  SupportedStyles:
-    - comma
-    - no_comma
 Style/ConditionalAssignment:
   Enabled: false

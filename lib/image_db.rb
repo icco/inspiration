@@ -26,9 +26,7 @@ class ImageDB
     data.first
   end
 
-  def needs_update?(url)
-    data = get url
-
+  def needs_update?(data)
     return true if data.nil?
 
     return true if data["modified"].nil?
@@ -41,6 +39,18 @@ class ImageDB
     # ~10 days * a random float
     time = Time.parse(data["modified"])
     (Time.now.utc - time) > (860_000 * rand)
+  end
+
+  def bulk_get(urls)
+    query = "SELECT * FROM `icco-cloud.inspiration.cache` WHERE url IN UNNEST(@urls)"
+    @bigquery.query query, params: { urls: urls.to_a }
+  end
+
+  def bulk_needs_update?(urls)
+    bulk_get(urls).map do |d|
+      d[:update] = needs_update? d
+      d
+    end
   end
 
   def valid_twitter_users
@@ -82,62 +92,136 @@ class ImageDB
   end
 
   def add(image_url)
-    image_blob = cache image_url
-    dataset = @bigquery.dataset "inspiration", skip_lookup: true
-    table = dataset.table "cache", skip_lookup: true
+    bulk_add [image_url]
+  end
 
-    table.insert [image_blob] unless image_blob.nil?
+  def bulk_add(image_urls)
+    return if image_urls.nil?
+
+    return if image_urls.empty?
+
+    needs = bulk_needs_update? image_urls
+    image_urls = image_urls.delete_if do |u|
+      match = needs.select { |e| e[:url] == u }
+      !match.empty? && !match.first[:update]
+    end
+
+    unless image_urls.empty?
+      dataset = @bigquery.dataset "inspiration", skip_lookup: true
+      table = dataset.table "cache", skip_lookup: true
+      table.insert((image_urls.map { |u| cache u }))
+    end
   end
 
   # This goes through all services and stores the newest links.
-  #
-  # NOTE: When updating this, make sure to update the method full_update as well.
   def update
-    # DeviantArt
-    rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation"
-    open(rss_url) do |rss|
-      feed = RSS::Parser.parse(rss)
-      feed.items.each do |item|
-        add item.link
+    # Flickr Personal Favorites Set
+    # NOTE: Page count verified 2015-07-22
+    (1...3).each do |page|
+      print_data = { flickr: "42027916@N00", set: "72157601200827657", page: page, images: count }
+      logging.info print_data.inspect
+      begin
+        resp = flickr.photosets.getPhotos(photoset_id: "72157601200827657", extras: "url_n", page: page)
+        favorites = resp["photo"].map { |p| "https://www.flickr.com/photos/#{resp["owner"]}/#{p["id"]}" }
+        bulk_add favorites
+      rescue StandardError
+        logging.error "Failed to get."
       end
     end
 
-    # Flickr
-    favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n")
-    favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}" }
-    favorites.each { |l| @images.add l }
+    # DA Favorites
+    # NOTE: Offset count verified 2015-07-22
+    (0..6000).step(60) do |offset|
+      rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
+      print_data = { deviant: "calvin166", offset: offset, images: count }
+      logging.info print_data.inspect
+      URI.parse(rss_url).open do |rss|
+        feed = RSS::Parser.parse(rss)
+        items = feed.items.map(&:link)
+        bulk_add items
+      end
+    end
+
+    # Flickr Favorites
+    # http://www.flickr.com/services/api/misc.urls.html
+    # NOTE: Page count verified 2015-07-22
+    (1..30).each do |page|
+      print_data = { flickr: "42027916@N00", page: page, images: count }
+      logging.info print_data.inspect
+
+      favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
+      favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}" }
+      bulk_add favorites
+    end
 
     # VeryGoods.co
-    products = open "https://verygoods.co/site-api-0.1/users/icco/goods?limit=20" do |j|
+    domain = "https://verygoods.co/site-api-0.1"
+    url = domain + "/users/icco/goods?limit=20"
+    while url
+      print_data = { verygoods: url, images: count }
+      logging.info print_data.inspect
+
+      j = URI.parse(url).open
       data = Oj.compat_load(j)
-      data["_embedded"]["goods"].map do |g|
+      url = (domain + data["_links"]["next"]["href"] if data["_links"]["next"])
+
+      products = data["_embedded"]["goods"].map do |g|
         "https://verygoods.co#{g["_links"]["product"]["href"].gsub(/products/, "product")}"
       end
+      bulk_add products
     end
-    products.each { |prod| add prod }
 
     # Instagram
-    ImageDB.instagram_client.user_liked_media.each do |i|
-      add i.link
+    #
+    # No idea if the max_id stuff works here, all instagram likes currently fit
+    # in one page.
+    max_id = nil
+    user = ImageDB.instagram_client.user.username
+    loop do
+      print_data = { instagram: user, max_id: max_id, images: count }
+      logging.info print_data.inspect
+
+      args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
+      data = ImageDB.instagram_client.user_liked_media(args)
+      data.each do |i|
+        add i.link
+        max_id = i.id
+      end
+      break if data.count == 0
+    rescue Instagram::BadRequest => e
+      logging.warn "Instagram Bad Request: #{e}"
+      break
     end
 
     # Twitter
-    begin
-      ImageDB.twitter_client.favorites("icco", count: 200).each do |t|
-        add t.uri.to_s if valid_twitter_users.include? t.user.screen_name.downcase
+    options = { count: 200 }
+    twitter_collect_with_max_id do |t_max_id|
+      options[:max_id] = t_max_id unless t_max_id.nil?
+      print_data = { twitter: "icco", max_id: t_max_id, images: count }
+      logging.info print_data.inspect
+      begin
+        ImageDB.twitter_client.favorites(options).each do |t|
+          add t.uri.to_s if valid_twitter_users.include? t.user.screen_name.downcase
+        end
+      rescue Twitter::Error::TooManyRequests => e
+        logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
+        sleep e.rate_limit.reset_in + 1
+        retry
       end
-    rescue Twitter::Error::TooManyRequests => e
-      logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
-      sleep e.rate_limit.reset_in + 1
-      retry
     end
 
     true
   end
 
-  def cache(url)
-    return nil unless needs_update? url
+  def twitter_collect_with_max_id(collection = [], max_id = nil, &block)
+    response = yield(max_id)
+    collection += response
+    response.empty? ? collection.flatten : twitter_collect_with_max_id(collection, response.last.id - 1, &block)
+  rescue TypeError => e
+    logging.error "Type Error: #{e.inspect}"
+  end
 
+  def cache(url)
     hash = { url: url, modified: Time.now.utc.to_s }
 
     deviant_re = /deviantart\.com/
@@ -245,5 +329,24 @@ class ImageDB
     else
       hash
     end
+  end
+
+  def clean
+    query = <<~QUERY
+      DELETE
+      FROM `icco-cloud.inspiration.cache`
+      WHERE (url,modified) IN (
+        SELECT (t1.url, t1.modified)
+        FROM (
+          SELECT url, MAX(modified) AS modified
+          FROM `icco-cloud.inspiration.cache`
+          GROUP BY url HAVING count(*) > 1) AS newest
+      INNER JOIN
+        `icco-cloud.inspiration.cache` as t1
+      ON
+        t1.url = newest.url AND
+        t1.modified != newest.modified)
+    QUERY
+    @bigquery.query query
   end
 end

@@ -13,3 +13,9 @@ task :update do
   idb = ImageDB.new
   idb.update
 end
+
+desc "Clean outdated links."
+task :clean do
+  idb = ImageDB.new
+  idb.clean
+end
