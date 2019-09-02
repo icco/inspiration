@@ -26,9 +26,7 @@ class ImageDB
     data.first
   end
 
-  def needs_update?(url)
-    data = get url
-
+  def needs_update?(data)
     return true if data.nil?
 
     return true if data["modified"].nil?
@@ -41,6 +39,15 @@ class ImageDB
     # ~10 days * a random float
     time = Time.parse(data["modified"])
     (Time.now.utc - time) > (860_000 * rand)
+  end
+
+  def bulk_get(urls)
+    query = "SELECT * FROM `icco-cloud.inspiration.cache` WHERE url IN UNNEST(@urls)"
+    @bigquery.query query, params: { urls: urls }
+  end
+
+  def bulk_needs_update?(urls)
+    bulk_get(urls).map {|d| d[:update] = needs_update? d; d }
   end
 
   def valid_twitter_users
@@ -86,10 +93,15 @@ class ImageDB
   end
 
   def bulk_add image_urls
-    image_blobs = image_urls.map{|url| cache url }
+    needs = bulk_needs_update? image_urls
+    image_urls.delete_if do |u|
+      match = needs.select {|e| e.url == u }
+      match.size > 0 && !match.first[:update]
+    end
+
     dataset = @bigquery.dataset "inspiration", skip_lookup: true
     table = dataset.table "cache", skip_lookup: true
-    table.insert image_blobs
+    table.insert image_urls.map {|u| cache u }
   end
 
   # This goes through all services and stores the newest links.
@@ -202,8 +214,6 @@ class ImageDB
   end
 
   def cache(url)
-    return nil unless needs_update? url
-
     hash = { url: url, modified: Time.now.utc.to_s }
 
     deviant_re = /deviantart\.com/
