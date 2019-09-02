@@ -47,7 +47,7 @@ class ImageDB
   end
 
   def bulk_needs_update?(urls)
-    bulk_get(urls).map {|d| d[:update] = needs_update? d; d }
+    bulk_get(urls).map { |d| d[:update] = needs_update? d; d }
   end
 
   def valid_twitter_users
@@ -92,25 +92,21 @@ class ImageDB
     bulk_add [image_url]
   end
 
-  def bulk_add image_urls
-    if image_urls.nil?
-      return
-    end
+  def bulk_add(image_urls)
+    return if image_urls.nil?
 
-    if image_urls.empty?
-      return
-    end
+    return if image_urls.empty?
 
     needs = bulk_needs_update? image_urls
     image_urls = image_urls.delete_if do |u|
-      match = needs.select {|e| e[:url] == u }
-      match.size > 0 && !match.first[:update]
+      match = needs.select { |e| e[:url] == u }
+      !match.empty? && !match.first[:update]
     end
 
-    if image_urls.length > 0
+    unless image_urls.empty?
       dataset = @bigquery.dataset "inspiration", skip_lookup: true
       table = dataset.table "cache", skip_lookup: true
-      table.insert image_urls.map {|u| cache u }
+      table.insert image_urls.map { |u| cache u }
     end
   end
 
@@ -138,9 +134,7 @@ class ImageDB
       logging.info print_data.inspect
       open(rss_url) do |rss|
         feed = RSS::Parser.parse(rss)
-        items = feed.items.map do |item|
-          item.link
-        end
+        items = feed.items.map(&:link)
         bulk_add items
       end
     end
@@ -336,20 +330,20 @@ class ImageDB
 
   def clean
     query = <<~QUERY
-DELETE
-FROM `icco-cloud.inspiration.cache`
-WHERE (url,modified) IN (
-  SELECT (t1.url, t1.modified)
-  FROM (
-    SELECT url, MAX(modified) AS modified
-    FROM `icco-cloud.inspiration.cache`
-    GROUP BY url HAVING count(*) > 1) AS newest
-INNER JOIN
-  `icco-cloud.inspiration.cache` as t1
-ON
-  t1.url = newest.url AND
-  t1.modified != newest.modified)
-QUERY
+      DELETE
+      FROM `icco-cloud.inspiration.cache`
+      WHERE (url,modified) IN (
+        SELECT (t1.url, t1.modified)
+        FROM (
+          SELECT url, MAX(modified) AS modified
+          FROM `icco-cloud.inspiration.cache`
+          GROUP BY url HAVING count(*) > 1) AS newest
+      INNER JOIN
+        `icco-cloud.inspiration.cache` as t1
+      ON
+        t1.url = newest.url AND
+        t1.modified != newest.modified)
+    QUERY
     @bigquery.query query
   end
 end
