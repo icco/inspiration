@@ -10,9 +10,9 @@ gem "google-cloud-bigquery", require: "google/cloud/bigquery"
 gem "instagram-continued", require: "instagram"
 gem "oj"
 gem "oj_mimic_json"
+gem "rack-sassc", require: "rack/sassc"
 gem "rake"
 gem "sassc"
-gem "rack-sassc", require: "rack/sassc"
 gem "sinatra", require: ["sinatra/base"]
 gem "sinatra-contrib", require: ["sinatra/json"]
 gem "thin"
