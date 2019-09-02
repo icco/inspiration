@@ -106,7 +106,7 @@ class ImageDB
     unless image_urls.empty?
       dataset = @bigquery.dataset "inspiration", skip_lookup: true
       table = dataset.table "cache", skip_lookup: true
-      table.insert image_urls.map { |u| cache u }
+      table.insert (image_urls.map { |u| cache u })
     end
   end
 
@@ -132,7 +132,7 @@ class ImageDB
       rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
       print_data = { deviant: "calvin166", offset: offset, images: count }
       logging.info print_data.inspect
-      open(rss_url) do |rss|
+      URI.parse(rss_url).open do |rss|
         feed = RSS::Parser.parse(rss)
         items = feed.items.map(&:link)
         bulk_add items
