@@ -43,7 +43,7 @@ class ImageDB
 
   def bulk_get(urls)
     query = "SELECT * FROM `icco-cloud.inspiration.cache` WHERE url IN UNNEST(@urls)"
-    @bigquery.query query, params: { urls: urls }
+    @bigquery.query query, params: { urls: urls.to_a }
   end
 
   def bulk_needs_update?(urls)
@@ -95,7 +95,7 @@ class ImageDB
   def bulk_add image_urls
     needs = bulk_needs_update? image_urls
     image_urls.delete_if do |u|
-      match = needs.select {|e| e.url == u }
+      match = needs.select {|e| e[:url] == u }
       match.size > 0 && !match.first[:update]
     end
 
@@ -128,9 +128,10 @@ class ImageDB
       logging.info print_data.inspect
       open(rss_url) do |rss|
         feed = RSS::Parser.parse(rss)
-        bulk_add feed.items.map do |item|
+        items = feed.items.map do |item|
           item.link
         end
+        bulk_add items
       end
     end
 
