@@ -82,11 +82,14 @@ class ImageDB
   end
 
   def add(image_url)
-    image_blob = cache image_url
+    bulk_add [image_url]
+  end
+
+  def bulk_add image_urls
+    image_blobs = image_urls.map{|url| cache url }
     dataset = @bigquery.dataset "inspiration", skip_lookup: true
     table = dataset.table "cache", skip_lookup: true
-
-    table.insert [image_blob] unless image_blob.nil?
+    table.insert image_blobs
   end
 
   # This goes through all services and stores the newest links.
@@ -94,57 +97,48 @@ class ImageDB
     # Flickr Personal Favorites Set
     # NOTE: Page count verified 2015-07-22
     (1...3).each do |page|
-      print_data = { flickr: "42027916@N00", set: "72157601200827657", page: page, images: @images.count }
+      print_data = { flickr: "42027916@N00", set: "72157601200827657", page: page, images: count }
       logging.info print_data.inspect
       begin
         resp = flickr.photosets.getPhotos(photoset_id: "72157601200827657", extras: "url_n", page: page)
         favorites = resp["photo"].map { |p| "https://www.flickr.com/photos/#{resp["owner"]}/#{p["id"]}" }
-        favorites.each { |l| @images.add l }
+        bulk_add favorites
       rescue StandardError
         logging.error "Failed to get."
       end
     end
 
-    # Write to file.
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
-
     # DA Favorites
     # NOTE: Offset count verified 2015-07-22
     (0..6000).step(60) do |offset|
       rss_url = "https://backend.deviantart.com/rss.xml?q=favby%3Acalvin166%2F1422412&type=deviation&offset=#{offset}"
-      print_data = { deviant: "calvin166", offset: offset, images: @images.count }
+      print_data = { deviant: "calvin166", offset: offset, images: count }
       logging.info print_data.inspect
       open(rss_url) do |rss|
         feed = RSS::Parser.parse(rss)
-        feed.items.each do |item|
-          @images.add item.link
+        bulk_add feed.items.map do |item|
+          item.link
         end
       end
     end
-
-    # Write to file.
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
 
     # Flickr Favorites
     # http://www.flickr.com/services/api/misc.urls.html
     # NOTE: Page count verified 2015-07-22
     (1..30).each do |page|
-      print_data = { flickr: "42027916@N00", page: page, images: @images.count }
+      print_data = { flickr: "42027916@N00", page: page, images: count }
       logging.info print_data.inspect
 
       favorites = flickr.favorites.getPublicList(user_id: "42027916@N00", extras: "url_n", page: page)
       favorites = favorites.map { |p| "https://www.flickr.com/photos/#{p["owner"]}/#{p["id"]}" }
-      favorites.each { |l| @images.add l }
+      bulk_add favorites
     end
-
-    # Write to file.
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
 
     # VeryGoods.co
     domain = "https://verygoods.co/site-api-0.1"
     url = domain + "/users/icco/goods?limit=20"
     while url
-      print_data = { verygoods: url, images: @images.count }
+      print_data = { verygoods: url, images: count }
       logging.info print_data.inspect
 
       j = open url
@@ -154,11 +148,8 @@ class ImageDB
       products = data["_embedded"]["goods"].map do |g|
         "https://verygoods.co#{g["_links"]["product"]["href"].gsub(/products/, "product")}"
       end
-      products.each { |prod| @images.add prod }
+      bulk_add products
     end
-
-    # Write to file.
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
 
     # Instagram
     #
@@ -167,13 +158,13 @@ class ImageDB
     max_id = nil
     user = ImageDB.instagram_client.user.username
     loop do
-      print_data = { instagram: user, max_id: max_id, images: @images.count }
+      print_data = { instagram: user, max_id: max_id, images: count }
       logging.info print_data.inspect
 
       args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
       data = ImageDB.instagram_client.user_liked_media(args)
       data.each do |i|
-        @images.add i.link
+        add i.link
         max_id = i.id
       end
       break if data.count == 0
@@ -186,11 +177,11 @@ class ImageDB
     options = { count: 200 }
     twitter_collect_with_max_id do |t_max_id|
       options[:max_id] = t_max_id unless t_max_id.nil?
-      print_data = { twitter: "icco", max_id: t_max_id, images: @images.count }
+      print_data = { twitter: "icco", max_id: t_max_id, images: count }
       logging.info print_data.inspect
       begin
         ImageDB.twitter_client.favorites(options).each do |t|
-          @images.add t.uri.to_s if valid_twitter_users.include? t.user.screen_name.downcase
+          add t.uri.to_s if valid_twitter_users.include? t.user.screen_name.downcase
         end
       rescue Twitter::Error::TooManyRequests => e
         logging.warn "Twitter rate limit hit. Sleeping for #{e.rate_limit.reset_in + 1}"
@@ -198,12 +189,6 @@ class ImageDB
         retry
       end
     end
-
-    # Clean UP.
-    @images = @images.delete_if(&:empty?).to_a.sort
-
-    # Write to file.
-    File.open(Inspiration::LINK_FILE, "w") { |file| file.write(@images.to_a.join("\n")) }
 
     true
   end
