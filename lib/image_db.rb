@@ -47,7 +47,10 @@ class ImageDB
   end
 
   def bulk_needs_update?(urls)
-    bulk_get(urls).map { |d| d[:update] = needs_update? d; d }
+    bulk_get(urls).map do |d|
+      d[:update] = needs_update? d
+      d
+    end
   end
 
   def valid_twitter_users
