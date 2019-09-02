@@ -13,4 +13,4 @@ ENV LANG C.UTF-8
 
 COPY . .
 RUN bundle install --system --without=test development
-CMD rackup
+CMD rackup -p $PORT
