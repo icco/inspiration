@@ -93,15 +93,25 @@ class ImageDB
   end
 
   def bulk_add image_urls
+    if image_urls.nil?
+      return
+    end
+
+    if image_urls.empty?
+      return
+    end
+
     needs = bulk_needs_update? image_urls
-    image_urls.delete_if do |u|
+    image_urls = image_urls.delete_if do |u|
       match = needs.select {|e| e[:url] == u }
       match.size > 0 && !match.first[:update]
     end
 
-    dataset = @bigquery.dataset "inspiration", skip_lookup: true
-    table = dataset.table "cache", skip_lookup: true
-    table.insert image_urls.map {|u| cache u }
+    if image_urls.length > 0
+      dataset = @bigquery.dataset "inspiration", skip_lookup: true
+      table = dataset.table "cache", skip_lookup: true
+      table.insert image_urls.map {|u| cache u }
+    end
   end
 
   # This goes through all services and stores the newest links.
