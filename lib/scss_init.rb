@@ -6,6 +6,6 @@ module ScssInitializer
       syntax: :scss,
       css_location: "public/css",
       scss_location: "css",
-      create_map_file: true,
+      create_map_file: true
   end
 end
