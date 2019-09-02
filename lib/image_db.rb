@@ -323,4 +323,23 @@ class ImageDB
       hash
     end
   end
+
+  def clean
+    query = <<~QUERY
+DELETE
+FROM `icco-cloud.inspiration.cache`
+WHERE (url,modified) IN (
+  SELECT (t1.url, t1.modified)
+  FROM (
+    SELECT url, MAX(modified) AS modified
+    FROM `icco-cloud.inspiration.cache`
+    GROUP BY url HAVING count(*) > 1) AS newest
+INNER JOIN
+  `icco-cloud.inspiration.cache` as t1
+ON
+  t1.url = newest.url AND
+  t1.modified != newest.modified)
+QUERY
+    @bigquery.query query
+  end
 end
