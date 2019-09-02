@@ -106,7 +106,7 @@ class ImageDB
     unless image_urls.empty?
       dataset = @bigquery.dataset "inspiration", skip_lookup: true
       table = dataset.table "cache", skip_lookup: true
-      table.insert (image_urls.map { |u| cache u })
+      table.insert((image_urls.map { |u| cache u }))
     end
   end
 
@@ -158,7 +158,7 @@ class ImageDB
       print_data = { verygoods: url, images: count }
       logging.info print_data.inspect
 
-      j = open url
+      j = URI.parse(url).open
       data = Oj.compat_load(j)
       url = (domain + data["_links"]["next"]["href"] if data["_links"]["next"])
 
