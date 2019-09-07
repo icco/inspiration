@@ -56,12 +56,15 @@ class ImageDB
   def valid_twitter_users
     %w[
       1041uuu
+      70sscifiart
+      AceYuriBot
       CloudyConway
       EveningWaters
       FFD8FFDB
       IGeometryArt
       MoMARobot
       PastPostcard
+      Soft__Contact
       _OutToSea_
       archillect
       artfinderlatest
@@ -70,15 +73,24 @@ class ImageDB
       cooperhewittbot
       dscovr_epic
       everycolorbot
+      faith_schaffer
       ftrain
+      galaxyspeaking
+      hourlyFox
       interior
       jgilleard
+      justinrgraham
       madeofsparrows
       mattahan
       moon_rise_bot
+      mrmrs_
+      neauoire
+      russiandollnc
       softlandscapes
       tinyspires
+      trudicastle
       unsplash
+      yokotanji
       youtubeartifact
     ].map(&:downcase)
   end
