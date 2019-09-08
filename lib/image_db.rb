@@ -122,7 +122,7 @@ class ImageDB
     unless image_urls.empty?
       dataset = @bigquery.dataset "inspiration"
       table = dataset.table "cache"
-      data = image_urls.map { |u| cache u }
+      data = image_urls.map { |u| cache u }.delete_if {|a| a.nil? }
       table.insert(data)
     end
   end
@@ -313,7 +313,7 @@ class ImageDB
 
         title = data["title"]
         image_url = data["medium_image_url"]
-        size = { width: 400, height: nil } # TODO
+        size = { width: 400, height: 0 } # TODO
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
       when twitter_re
