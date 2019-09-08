@@ -287,7 +287,7 @@ class ImageDB
 
         title = data["title"]
         image_url = data["medium_image_url"]
-        size = { width: 400, height: 0 } # TODO
+        size = { width: 400, height: nil } # TODO
         attrs = { title: title, image: image_url, size: size }
         hash.merge! attrs
       when twitter_re
