@@ -66,6 +66,7 @@ class ImageDB
       PastPostcard
       Soft__Contact
       _OutToSea_
+      abstractsunday
       archillect
       artfinderlatest
       artmxsphere
