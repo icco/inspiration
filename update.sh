@@ -15,4 +15,5 @@ git ci Gemfile* -m 'bundle update'
 git push
 
 rake update
+sleep 120
 rake clean
