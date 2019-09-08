@@ -120,9 +120,10 @@ class ImageDB
     end
 
     unless image_urls.empty?
-      dataset = @bigquery.dataset "inspiration", skip_lookup: true
-      table = dataset.table "cache", skip_lookup: true
-      table.insert((image_urls.map { |u| cache u }))
+      dataset = @bigquery.dataset "inspiration"
+      table = dataset.table "cache"
+      data = image_urls.map { |u| cache u }
+      table.insert(data)
     end
   end
 
