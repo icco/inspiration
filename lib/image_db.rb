@@ -96,10 +96,6 @@ class ImageDB
     ].map(&:downcase)
   end
 
-  def self.instagram_client
-    Instagram.client(access_token: Inspiration::INSTAGRAM_TOKEN, scope: "public_content")
-  end
-
   def self.twitter_client
     Twitter::REST::Client.new(Inspiration::TWITTER_CONFIG)
   end
@@ -183,28 +179,6 @@ class ImageDB
         "https://verygoods.co#{g["_links"]["product"]["href"].gsub(/products/, "product")}"
       end
       bulk_add products
-    end
-
-    # Instagram
-    #
-    # No idea if the max_id stuff works here, all instagram likes currently fit
-    # in one page.
-    max_id = nil
-    user = ImageDB.instagram_client.user.username
-    loop do
-      print_data = { instagram: user, max_id: max_id, images: count }
-      logging.info print_data.inspect
-
-      args = { max_like_id: max_id }.delete_if { |_k, v| v.nil? }
-      data = ImageDB.instagram_client.user_liked_media(args)
-      data.each do |i|
-        add i.link
-        max_id = i.id
-      end
-      break if data.count == 0
-    rescue Instagram::BadRequest => e
-      logging.warn "Instagram Bad Request: #{e}"
-      break
     end
 
     # Twitter
