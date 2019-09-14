@@ -118,7 +118,7 @@ class ImageDB
     unless image_urls.empty?
       dataset = @bigquery.dataset "inspiration"
       table = dataset.table "cache"
-      data = image_urls.map { |u| cache u }.delete_if {|a| a.nil? }
+      data = image_urls.map { |u| cache u }.delete_if {|a| a.nil? }.flatten(1)
       table.insert(data)
     end
   end
@@ -295,11 +295,15 @@ class ImageDB
         client = ImageDB.twitter_client
         data = client.status(id)
 
-        image = data.media.first
-        title = "\"#{data.id}\" by @#{data.user.screen_name}"
-        image_url = "#{image.media_url_https}:large"
-        attrs = { title: title, image: image_url, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
-        hash.merge! attrs
+        if data.media?
+          hash = []
+          data.media.each do |image|
+            title = "\"#{data.id}\" by @#{data.user.screen_name}"
+            image_url = "#{image.media_uri_https}:large"
+            attrs = { title: title, image: image_url, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
+            hash.push attrs
+          end
+        end
       else
         logging.error "No idea what url this is: #{url}"
       end
@@ -311,11 +315,15 @@ class ImageDB
       retry
     end
 
-    if hash[:title].nil? || hash[:title].empty? || hash[:image].nil? || hash[:image].empty?
-      # Should we warn that we couldn't connect?
-      nil
-    else
+    if hash.is_a? Array
       hash
+    else
+      if hash[:title].nil? || hash[:title].empty? || hash[:image].nil? || hash[:image].empty?
+        # Should we warn that we couldn't connect?
+        nil
+      else
+        hash
+      end
     end
   end
 
