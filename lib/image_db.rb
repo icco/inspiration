@@ -121,7 +121,7 @@ class ImageDB
       data = []
       image_urls.each do |u|
         out = cache u
-        if not out.nil?
+        unless out.nil?
           if out.is_a? Hash
             data.push out
           elsif out.is_a? Array
@@ -132,9 +132,7 @@ class ImageDB
         end
       end
 
-      unless data.empty?
-        table.insert(data)
-      end
+      table.insert(data) unless data.empty?
     end
   end
 
