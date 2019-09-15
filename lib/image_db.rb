@@ -118,8 +118,23 @@ class ImageDB
     unless image_urls.empty?
       dataset = @bigquery.dataset "inspiration"
       table = dataset.table "cache"
-      data = image_urls.map { |u| cache u }.delete_if {|a| a.nil? }.flatten(1)
-      table.insert(data)
+      data = []
+      image_urls.each do |u|
+        out = cache u
+        if not out.nil?
+          if out.is_a? Hash
+            data.push out
+          elsif out.is_a? Array
+            out.each do |c|
+              data.push c
+            end
+          end
+        end
+      end
+
+      unless data.empty?
+        table.insert(data)
+      end
     end
   end
 
