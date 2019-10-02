@@ -55,6 +55,7 @@ class ImageDB
 
   def valid_twitter_users
     %w[
+      idlebirch
       1041uuu
       70sscifiart
       AceYuriBot
