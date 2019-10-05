@@ -55,6 +55,11 @@ class Inspiration < Sinatra::Base
     access_token_secret: "lvWZMoeN9YN0OeTvwhx6M4w4wCaYEYZbYwkSuvG3sf5ij",
   }.freeze
 
+  before do
+    headers "NEL" => '{"report_to":"default","max_age":2592000}'
+    headers "Report-To" => '{"group":"default","max_age":10886400,"endpoints":[{"url":"https://reportd.natwelch.com/report/inspiration"}]}'
+  end
+
   get "/about" do
     erb :about
   end
