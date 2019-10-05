@@ -58,6 +58,7 @@ class ImageDB
       1041uuu
       70sscifiart
       AceYuriBot
+      BRIANMBENDIS
       CitrusFoam
       CloudyConway
       CutTimeComic
@@ -66,7 +67,9 @@ class ImageDB
       IGeometryArt
       MoMARobot
       PastPostcard
+      RajBrueggemann
       Soft__Contact
+      _F7
       _OutToSea_
       abandonedameric
       abstractsunday
@@ -79,6 +82,7 @@ class ImageDB
       everycolorbot
       faith_schaffer
       ftrain
+      galaxyspeaking
       galaxyspeaking
       hourlyFox
       idlebirch
