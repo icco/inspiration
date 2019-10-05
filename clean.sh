@@ -10,8 +10,6 @@ fi
 source $RUBY
 
 git pull
-bundle update
-git ci Gemfile* -m 'bundle update'
-git push
+bundle install 
 
-rake update
+rake clean
