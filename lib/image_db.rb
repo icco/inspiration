@@ -16,7 +16,7 @@ class ImageDB
   end
 
   def page(n)
-    query = "SELECT * FROM `icco-cloud.inspiration.cache` ORDER BY rand() * EXTRACT(DAYOFYEAR FROM CURRENT_DATE()) LIMIT @per_page OFFSET @offset"
+    query = "SELECT * FROM `icco-cloud.inspiration.cache` WHERE url is not null ORDER BY rand() * EXTRACT(DAYOFYEAR FROM CURRENT_DATE()) LIMIT @per_page OFFSET @offset"
     @bigquery.query query, params: { per_page: @per_page, offset: @per_page * n.to_i }
   end
 
@@ -323,7 +323,7 @@ class ImageDB
           data.media.each do |image|
             title = "\"#{data.id}\" by @#{data.user.screen_name}"
             image_url = "#{image.media_uri_https}:large"
-            attrs = { title: title, image: image_url, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
+            attrs = { url: url, modified: Time.now.utc.to_s, title: title, image: image_url, size: { width: image.sizes[:large].w, height: image.sizes[:large].h } }
             hash.push attrs
           end
         end
