@@ -84,6 +84,7 @@ class ImageDB
       justinrgraham
       madeofsparrows
       mattahan
+      sirpangur
       moon_rise_bot
       mrmrs_
       neauoire
