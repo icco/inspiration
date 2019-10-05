@@ -55,11 +55,12 @@ class ImageDB
 
   def valid_twitter_users
     %w[
-      idlebirch
       1041uuu
       70sscifiart
       AceYuriBot
+      CitrusFoam
       CloudyConway
+      CutTimeComic
       EveningWaters
       FFD8FFDB
       IGeometryArt
@@ -67,6 +68,7 @@ class ImageDB
       PastPostcard
       Soft__Contact
       _OutToSea_
+      abandonedameric
       abstractsunday
       archillect
       artfinderlatest
@@ -79,20 +81,22 @@ class ImageDB
       ftrain
       galaxyspeaking
       hourlyFox
+      idlebirch
       interior
       jgilleard
       justinrgraham
       madeofsparrows
       mattahan
-      sirpangur
       moon_rise_bot
       mrmrs_
       neauoire
       russiandollnc
+      sirpangur
       softlandscapes
       tinyspires
       trudicastle
       unsplash
+      verororoni
       yokotanji
       youtubeartifact
     ].map(&:downcase)
