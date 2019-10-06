@@ -48,7 +48,9 @@ $(document).ready(function() {
   });
 
   window.onscroll = function(ev) {
-    if ((window.innerHeight + window.scrollY) - 100 >= document.body.offsetHeight) {
+    console.log(window.innerHeight, window.scrollY, document.body.offsetHeight)
+
+    if ((window.innerHeight + window.scrollY) + 500 >= document.body.offsetHeight) {
       // you're at the bottom of the page
       console.log("Bottom of the page, requesting next page.");
       page += 1;
