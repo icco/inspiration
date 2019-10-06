@@ -94,6 +94,7 @@ class ImageDB
       moon_rise_bot
       mrmrs_
       neauoire
+      oakentsun
       russiandollnc
       sirpangur
       softlandscapes
