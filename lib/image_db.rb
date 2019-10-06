@@ -80,6 +80,7 @@ class ImageDB
       cooperhewittbot
       dscovr_epic
       everycolorbot
+      faiell
       faith_schaffer
       ftrain
       galaxyspeaking
