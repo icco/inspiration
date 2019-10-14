@@ -103,6 +103,7 @@ class ImageDB
       trudicastle
       unsplash
       verororoni
+      vickisigh
       yokotanji
       youtubeartifact
     ].map(&:downcase)
