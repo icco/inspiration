@@ -354,6 +354,7 @@ class ImageDB
   end
 
   def clean
+    logging.info({ images: count }.inspect)
     query = <<~QUERY
       DELETE
       FROM `icco-cloud.inspiration.cache`
@@ -370,5 +371,6 @@ class ImageDB
         t1.modified != newest.modified)
     QUERY
     @bigquery.query query
+    logging.info({ images: count }.inspect)
   end
 end
