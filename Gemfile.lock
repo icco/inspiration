@@ -19,7 +19,7 @@ GEM
     eventmachine (1.2.7)
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.11.2)
+    ffi (1.11.3)
     flickraw (0.9.10)
     google-api-client (0.34.1)
       addressable (~> 2.5, >= 2.5.1)
