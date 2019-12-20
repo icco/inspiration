@@ -29,7 +29,7 @@ GEM
       representable (~> 3.0)
       retriable (>= 2.0, < 4.0)
       signet (~> 0.12)
-    google-cloud-bigquery (1.18.0)
+    google-cloud-bigquery (1.18.1)
       concurrent-ruby (~> 1.0)
       google-api-client (~> 0.33)
       google-cloud-core (~> 1.2)
