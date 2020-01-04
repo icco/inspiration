@@ -65,7 +65,7 @@ GEM
     minitest (5.13.0)
     multi_json (1.14.1)
     multipart-post (2.1.1)
-    mustermann (1.1.0)
+    mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     naught (1.1.0)
     oj (3.10.0)
