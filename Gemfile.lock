@@ -96,7 +96,7 @@ GEM
       uber (< 0.2.0)
     retriable (3.1.2)
     rexml (3.2.4)
-    rubocop (0.91.0)
+    rubocop (0.91.1)
       parallel (~> 1.10)
       parser (>= 2.7.1.1)
       rainbow (>= 2.2.2, < 4.0)
