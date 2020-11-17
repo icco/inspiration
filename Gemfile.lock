@@ -33,7 +33,7 @@ GEM
       retriable (>= 2.0, < 4.0)
       rexml
       signet (~> 0.12)
-    google-cloud-bigquery (1.24.0)
+    google-cloud-bigquery (1.25.0)
       concurrent-ruby (~> 1.0)
       google-api-client (~> 0.47)
       google-cloud-core (~> 1.2)
@@ -60,8 +60,8 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.1)
-      ffi-compiler (>= 1.0, < 2.0)
+    http-parser (1.2.2)
+      ffi-compiler
     http_parser.rb (0.6.0)
     httpclient (2.8.3)
     jwt (2.2.2)
