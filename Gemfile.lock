@@ -19,7 +19,7 @@ GEM
     faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
-    ffi (1.13.1)
+    ffi (1.14.0)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -89,7 +89,7 @@ GEM
       rack (>= 1.0)
       sassc (~> 2.0)
     rainbow (3.0.0)
-    rake (13.0.1)
+    rake (13.0.2)
     regexp_parser (2.0.0)
     representable (3.0.4)
       declarative (< 0.1.0)
