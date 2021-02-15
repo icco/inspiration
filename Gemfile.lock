@@ -26,7 +26,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     flickraw (0.9.10)
-    google-apis-bigquery_v2 (0.2.0)
+    google-apis-bigquery_v2 (0.3.0)
       google-apis-core (~> 0.1)
     google-apis-core (0.2.1)
       addressable (~> 2.5, >= 2.5.1)
