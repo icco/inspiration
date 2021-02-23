@@ -95,7 +95,7 @@ GEM
       sassc (~> 2.0)
     rainbow (3.0.0)
     rake (13.0.3)
-    regexp_parser (2.0.3)
+    regexp_parser (2.1.0)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
