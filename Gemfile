@@ -6,7 +6,7 @@ ruby "2.6.3"
 
 gem "erubis", "~> 2.7"
 gem "flickraw"
-gem "google-cloud-bigquery", require: "google/cloud/bigquery"
+gem "google-cloud-bigquery", ">= 1.30.0", require: "google/cloud/bigquery"
 gem "oj"
 gem "oj_mimic_json"
 gem "rack-sassc", require: "rack/sassc"
@@ -16,7 +16,7 @@ gem "sinatra", require: ["sinatra/base"]
 gem "sinatra-contrib", require: ["sinatra/json"]
 gem "thin"
 gem "tilt"
-gem "twitter"
+gem "twitter", ">= 7.0.0"
 gem "typhoeus"
 
 # For dev
