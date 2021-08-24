@@ -1,4 +1,4 @@
-From ruby:2.6.3-alpine
+From ruby:3.0.0-alpine
 
 RUN apk add --update build-base libffi-dev libcurl libcurl curl-dev
 
