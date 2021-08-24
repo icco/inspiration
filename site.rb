@@ -12,9 +12,9 @@ require "rss"
 require "set"
 require "logger"
 
-require "./lib/logging.rb"
-require "./lib/scss_init.rb"
-require "./lib/image_db.rb"
+require "./lib/logging"
+require "./lib/scss_init"
+require "./lib/image_db"
 
 class Inspiration < Sinatra::Base
   register ScssInitializer

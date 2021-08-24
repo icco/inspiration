@@ -134,13 +134,14 @@ class ImageDB
       data = []
       image_urls.each do |u|
         out = cache u
-        unless out.nil?
-          if out.is_a? Hash
-            data.push out
-          elsif out.is_a? Array
-            out.each do |c|
-              data.push c
-            end
+        next if out.nil?
+
+        case out
+        when Hash
+          data.push out
+        when Array
+          out.each do |c|
+            data.push c
           end
         end
       end
@@ -192,7 +193,7 @@ class ImageDB
 
     # VeryGoods.co
     domain = "https://verygoods.co/site-api-0.1"
-    url = domain + "/users/icco/goods?limit=20"
+    url = "#{domain}/users/icco/goods?limit=20"
     while url
       print_data = { verygoods: url, images: count }
       logging.info print_data.inspect
@@ -343,13 +344,11 @@ class ImageDB
 
     if hash.is_a? Array
       hash
+    elsif hash[:title].nil? || hash[:title].empty? || hash[:image].nil? || hash[:image].empty?
+      nil
+    # Should we warn that we couldn't connect?
     else
-      if hash[:title].nil? || hash[:title].empty? || hash[:image].nil? || hash[:image].empty?
-        # Should we warn that we couldn't connect?
-        nil
-      else
-        hash
-      end
+      hash
     end
   end
 
