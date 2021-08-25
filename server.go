@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 	"os"
 
@@ -9,6 +10,8 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/icco/gutil/logging"
 	"github.com/icco/gutil/render"
+	"github.com/icco/inspiration/views"
+	"go.uber.org/zap"
 )
 
 var (
@@ -27,11 +30,33 @@ func main() {
 	r.Use(logging.Middleware(log.Desugar(), "icco-cloud"))
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		tmpl, err := template.ParseFS(views.Assets, "layout.tmpl", "index.tmpl")
+		if err != nil {
+			log.Errorw("index page template parse fail", zap.Error(err))
+			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
+			return
+		}
 
+		if err := tmpl.Execute(w, nil); err != nil {
+			log.Errorw("index page template execute fail", zap.Error(err))
+			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
+			return
+		}
 	})
 
 	r.Get("/about", func(w http.ResponseWriter, r *http.Request) {
+		tmpl, err := template.ParseFS(views.Assets, "layout.tmpl", "about.tmpl")
+		if err != nil {
+			log.Errorw("about page template parse fail", zap.Error(err))
+			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
+			return
+		}
 
+		if err := tmpl.Execute(w, nil); err != nil {
+			log.Errorw("about page template execute fail", zap.Error(err))
+			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
+			return
+		}
 	})
 
 	r.Get("/healthz", func(w http.ResponseWriter, r *http.Request) {
