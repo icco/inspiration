@@ -65,11 +65,26 @@ func Page(ctx context.Context, n int64) ([]*Entry, error) {
 	}
 
 	query := client.Query("SELECT * FROM `icco-cloud.inspiration.cache` WHERE url is not null ORDER BY rand() * EXTRACT(DAYOFYEAR FROM CURRENT_DATE()) LIMIT @per_page OFFSET @offset")
-	_, err = query.Read(ctx)
+	it, err = query.Read(ctx)
 	if err != nil {
 		return nil, err
 	}
-	return nil, fmt.Errorf("not implemented")
+
+	var entries []*Entry
+	for {
+		var e Entry
+		err := it.Next(&e)
+		if err == iterator.Done {
+			break
+		}
+		if err != nil {
+			return 0, err
+		}
+
+		entries = append(entries, &e)
+	}
+
+	return entries, nil
 }
 
 func Get(ctx context.Context, urls []string) ([]*Entry, error) {
@@ -79,9 +94,24 @@ func Get(ctx context.Context, urls []string) ([]*Entry, error) {
 	}
 
 	query := client.Query("SELECT * FROM `icco-cloud.inspiration.cache` WHERE url IN UNNEST(@urls)")
-	_, err = query.Read(ctx)
+	it, err = query.Read(ctx)
 	if err != nil {
 		return nil, err
 	}
-	return nil, fmt.Errorf("not implemented")
+
+	var entries []*Entry
+	for {
+		var e Entry
+		err := it.Next(&e)
+		if err == iterator.Done {
+			break
+		}
+		if err != nil {
+			return 0, err
+		}
+
+		entries = append(entries, &e)
+	}
+
+	return entries, nil
 }
