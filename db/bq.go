@@ -65,7 +65,7 @@ func Page(ctx context.Context, n int64) ([]*Entry, error) {
 	}
 
 	query := client.Query("SELECT * FROM `icco-cloud.inspiration.cache` WHERE url is not null ORDER BY rand() * EXTRACT(DAYOFYEAR FROM CURRENT_DATE()) LIMIT @per_page OFFSET @offset")
-	it, err = query.Read(ctx)
+	it, err := query.Read(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -78,7 +78,7 @@ func Page(ctx context.Context, n int64) ([]*Entry, error) {
 			break
 		}
 		if err != nil {
-			return 0, err
+			return nil, err
 		}
 
 		entries = append(entries, &e)
@@ -94,7 +94,7 @@ func Get(ctx context.Context, urls []string) ([]*Entry, error) {
 	}
 
 	query := client.Query("SELECT * FROM `icco-cloud.inspiration.cache` WHERE url IN UNNEST(@urls)")
-	it, err = query.Read(ctx)
+	it, err := query.Read(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -107,7 +107,7 @@ func Get(ctx context.Context, urls []string) ([]*Entry, error) {
 			break
 		}
 		if err != nil {
-			return 0, err
+			return nil, err
 		}
 
 		entries = append(entries, &e)
