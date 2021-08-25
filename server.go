@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"net/http"
 	"os"
+	"strconv"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
@@ -71,8 +72,23 @@ func main() {
 		render.JSON(log, w, http.StatusOK, map[string]string{"status": "ok"})
 	})
 
-	r.Get("/data/:page/file.json", func(w http.ResponseWriter, r *http.Request) {
+	r.Get("/data/{page}/file.json", func(w http.ResponseWriter, r *http.Request) {
+		page, err := strconv.ParseInt(chi.URLParam(r, "page"), 10, 64)
+		if err != nil {
+			log.Errorw("failed parsing page", zap.Error(err))
+			http.Error(w, `{"error": "bad page number"}`, http.StatusBadRequest)
+			return
+		}
 
+		ctx := r.Context()
+		entries, err := db.Page(ctx, page)
+		if err != nil {
+			log.Errorw("failed getting page", zap.Error(err))
+			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
+			return
+		}
+
+		render.JSON(log, w, http.StatusOK, entries)
 	})
 
 	r.Get("/stats.json", func(w http.ResponseWriter, r *http.Request) {
