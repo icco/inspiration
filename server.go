@@ -81,7 +81,7 @@ func main() {
 		}
 
 		ctx := r.Context()
-		entries, err := db.Page(ctx, page)
+		entries, err := db.Page(ctx, page, PerPage)
 		if err != nil {
 			log.Errorw("failed getting page", zap.Error(err))
 			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
