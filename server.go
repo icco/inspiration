@@ -10,6 +10,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/icco/gutil/logging"
 	"github.com/icco/gutil/render"
+	"github.com/icco/inspiration/db"
 	"github.com/icco/inspiration/public"
 	"github.com/icco/inspiration/public/css"
 	"github.com/icco/inspiration/public/js"
@@ -19,6 +20,10 @@ import (
 
 var (
 	log = logging.Must(logging.NewLogger("inspiration"))
+)
+
+const (
+	PerPage = 100
 )
 
 func main() {
@@ -71,7 +76,21 @@ func main() {
 	})
 
 	r.Get("/stats.json", func(w http.ResponseWriter, r *http.Request) {
+		ctx := r.Context()
+		cnt, err := db.Count(ctx)
+		if err != nil {
+			log.Errorw("failed getting count", zap.Error(err))
+			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
+			return
+		}
 
+		stats := map[string]int64{
+			"per_page": PerPage,
+			"images":   cnt,
+			"pages":    cnt / PerPage,
+		}
+
+		render.JSON(log, w, http.StatusOK, stats)
 	})
 
 	r.Handle("/js/*", http.StripPrefix("/js/", http.FileServer(http.FS(js.Assets))))
