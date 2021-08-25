@@ -37,7 +37,7 @@ func main() {
 			return
 		}
 
-		if err := tmpl.Execute(w, nil); err != nil {
+		if err := tmpl.ExecuteTemplate(w, "index.tmpl", nil); err != nil {
 			log.Errorw("index page template execute fail", zap.Error(err))
 			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
 			return
@@ -52,7 +52,7 @@ func main() {
 			return
 		}
 
-		if err := tmpl.Execute(w, nil); err != nil {
+		if err := tmpl.ExecuteTemplate(w, "about.tmpl", nil); err != nil {
 			log.Errorw("about page template execute fail", zap.Error(err))
 			http.Error(w, `{"error": "server error"}`, http.StatusInternalServerError)
 			return
