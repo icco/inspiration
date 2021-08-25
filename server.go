@@ -10,6 +10,9 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/icco/gutil/logging"
 	"github.com/icco/gutil/render"
+	"github.com/icco/inspiration/public"
+	"github.com/icco/inspiration/public/css"
+	"github.com/icco/inspiration/public/js"
 	"github.com/icco/inspiration/views"
 	"go.uber.org/zap"
 )
@@ -70,6 +73,11 @@ func main() {
 	r.Get("/stats.json", func(w http.ResponseWriter, r *http.Request) {
 
 	})
+
+	r.Handle("/js/*", http.FileServer(http.FS(js.Assets)))
+	r.Handle("/css/*", http.FileServer(http.FS(css.Assets)))
+	r.Handle("/robots.txt", http.FileServer(http.FS(public.Assets)))
+	r.Handle("/favicon.ico", http.FileServer(http.FS(public.Assets)))
 
 	log.Fatal(http.ListenAndServe(":"+port, r))
 }
