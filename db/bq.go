@@ -3,7 +3,6 @@ package db
 import (
 	"context"
 	"fmt"
-	"time"
 
 	"cloud.google.com/go/bigquery"
 	"google.golang.org/api/iterator"
@@ -14,16 +13,16 @@ const (
 )
 
 type Entry struct {
-	Size     Size
-	Image    string
-	Title    string
-	Modified time.Time
-	URL      string
+	Size     Size                   `bigquery:"size" json:"size"`
+	Image    bigquery.NullString    `bigquery:"image" json:"image"`
+	Title    bigquery.NullString    `bigquery:"title" json:"title"`
+	Modified bigquery.NullTimestamp `bigquery:"modified" json:"modified"`
+	URL      bigquery.NullString    `bigquery:"url" json:"url"`
 }
 
 type Size struct {
-	Height int64
-	Width  int64
+	Height bigquery.NullInt64 `bigquery:"height" json:"height"`
+	Width  bigquery.NullInt64 `bigquery:"width" json:"width"`
 }
 
 type countResponse struct {
