@@ -42,20 +42,16 @@ func Count(ctx context.Context) (int64, error) {
 		return 0, err
 	}
 
-	for {
-		var c countResponse
-		err := it.Next(&c)
+	var c countResponse
+	if err = it.Next(&c); err != nil {
 		if err == iterator.Done {
-			break
-		}
-		if err != nil {
-			return 0, err
+			return 0, fmt.Errorf("could not get count")
 		}
 
-		return c.Cnt, nil
+		return 0, err
 	}
 
-	return 0, fmt.Errorf("got to impossible state")
+	return c.Cnt, nil
 }
 
 func Page(ctx context.Context, n int64) ([]*Entry, error) {
