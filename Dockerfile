@@ -1,17 +1,14 @@
-From ruby:3.0.0-alpine
+FROM golang:1.16-alpine
 
-RUN apk add --update build-base libffi-dev libcurl libcurl curl-dev
-
-WORKDIR /opt
+ENV GOPROXY="https://proxy.golang.org"
+ENV GO111MODULE="on"
+ENV NAT_ENV="production"
 
 EXPOSE 8080
-ENV PORT 8080
-ENV RACK_ENV production
-
-# https://github.com/docker-library/docs/blob/master/ruby/content.md#encoding
-ENV LANG C.UTF-8
-
+WORKDIR /go/src/github.com/icco/inspiration
+RUN apk add --no-cache git
 COPY . .
-RUN bundle install --system --without=test development
 
-CMD bundle exec thin -R config.ru start -p $PORT
+RUN go build -v -o /go/bin/server .
+
+CMD ["/go/bin/server"]

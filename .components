@@ -1,8 +1,0 @@
----
-:orm: none
-:test: minitest
-:mock: none
-:script: none
-:renderer: erb
-:stylesheet: scss
-:namespace: Inspiration
