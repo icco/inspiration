@@ -74,8 +74,8 @@ func main() {
 
 	})
 
-	r.Handle("/js/*", http.FileServer(http.FS(js.Assets)))
-	r.Handle("/css/*", http.FileServer(http.FS(css.Assets)))
+	r.Handle("/js/*", http.StripPrefix("/js/", http.FileServer(http.FS(js.Assets))))
+	r.Handle("/css/*", http.StripPrefix("/css/", http.FileServer(http.FS(css.Assets))))
 	r.Handle("/robots.txt", http.FileServer(http.FS(public.Assets)))
 	r.Handle("/favicon.ico", http.FileServer(http.FS(public.Assets)))
 
