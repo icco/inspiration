@@ -6,7 +6,7 @@ require (
 	cloud.google.com/go/bigquery v1.26.0
 	cloud.google.com/go/iam v0.1.0 // indirect
 	github.com/go-chi/chi/v5 v5.0.7
-	github.com/icco/gutil v0.0.0-20220115163816-b7b82159b0b6
+	github.com/icco/gutil v0.0.0-20220115170613-a57da700978e
 	go.uber.org/zap v1.20.0
 	google.golang.org/api v0.65.0
 )
