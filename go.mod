@@ -7,7 +7,7 @@ require (
 	cloud.google.com/go/iam v0.1.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/go-chi/chi/v5 v5.0.7
-	github.com/icco/gutil v0.0.0-20220220010526-7c82f1ebf02d
+	github.com/icco/gutil v0.0.0-20220221170217-9aa326c389ec
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
 	go.uber.org/zap v1.21.0
