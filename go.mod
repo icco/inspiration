@@ -3,7 +3,7 @@ module github.com/icco/inspiration
 go 1.22
 
 require (
-	cloud.google.com/go/bigquery v1.61.0
+	cloud.google.com/go/bigquery v1.62.0
 	github.com/go-chi/chi/v5 v5.1.0
 	github.com/icco/gutil v0.0.0-20231226055340-e0dfddaad70c
 	go.uber.org/zap v1.27.0
