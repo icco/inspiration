@@ -6,7 +6,7 @@ toolchain go1.23.3
 
 require (
 	cloud.google.com/go/bigquery v1.64.0
-	github.com/go-chi/chi/v5 v5.1.0
+	github.com/go-chi/chi/v5 v5.2.0
 	github.com/icco/gutil v0.0.0-20231226055340-e0dfddaad70c
 	go.uber.org/zap v1.27.0
 	google.golang.org/api v0.209.0
