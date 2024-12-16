@@ -6,9 +6,11 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"time"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/go-chi/cors"
 	"github.com/icco/gutil/logging"
 	"github.com/icco/gutil/render"
 	"github.com/icco/inspiration/db"
@@ -16,6 +18,7 @@ import (
 	"github.com/icco/inspiration/public/css"
 	"github.com/icco/inspiration/public/js"
 	"github.com/icco/inspiration/views"
+	"github.com/unrolled/secure"
 	"go.uber.org/zap"
 )
 
@@ -37,6 +40,35 @@ func main() {
 	r := chi.NewRouter()
 	r.Use(middleware.RealIP)
 	r.Use(logging.Middleware(log.Desugar(), "icco-cloud"))
+	r.Use(cors.New(cors.Options{
+		AllowCredentials:   true,
+		OptionsPassthrough: true,
+		AllowedOrigins:     []string{"*"},
+		AllowedMethods:     []string{"GET", "POST", "OPTIONS"},
+		AllowedHeaders:     []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
+		ExposedHeaders:     []string{"Link"},
+		MaxAge:             300, // Maximum value not ignored by any of major browsers
+	}).Handler)
+
+	r.Use(func(h http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			w.Header().Set("report-to", `{"group":"default","max_age":10886400,"endpoints":[{"url":"https://reportd.natwelch.com/report/reportd"}]}`)
+			w.Header().Set("reporting-endpoints", `default="https://reportd.natwelch.com/reporting/reportd"`)
+
+			h.ServeHTTP(w, r)
+		})
+	})
+
+	secureMiddleware := secure.New(secure.Options{
+		SSLRedirect:        false,
+		SSLProxyHeaders:    map[string]string{"X-Forwarded-Proto": "https"},
+		FrameDeny:          true,
+		ContentTypeNosniff: true,
+		BrowserXssFilter:   true,
+		ReferrerPolicy:     "no-referrer",
+		FeaturePolicy:      "geolocation 'none'; midi 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; fullscreen 'none'; payment 'none'; usb 'none'",
+	})
+	r.Use(secureMiddleware.Handler)
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		tmpl, err := template.ParseFS(views.Assets, "layout.tmpl", "index.tmpl")
@@ -114,5 +146,12 @@ func main() {
 	r.Handle("/robots.txt", http.FileServer(http.FS(public.Assets)))
 	r.Handle("/favicon.ico", http.FileServer(http.FS(public.Assets)))
 
-	log.Fatal(http.ListenAndServe(":"+port, r))
+	srv := &http.Server{
+		Addr:         ":" + port,
+		Handler:      r,
+		ReadTimeout:  10 * time.Second,
+		WriteTimeout: 10 * time.Second,
+	}
+
+	log.Fatal(srv.ListenAndServe())
 }
