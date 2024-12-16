@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"time"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
@@ -145,5 +146,12 @@ func main() {
 	r.Handle("/robots.txt", http.FileServer(http.FS(public.Assets)))
 	r.Handle("/favicon.ico", http.FileServer(http.FS(public.Assets)))
 
-	log.Fatal(http.ListenAndServe(":"+port, r))
+	srv := &http.Server{
+		Addr:         ":" + port,
+		Handler:      r,
+		ReadTimeout:  10 * time.Second,
+		WriteTimeout: 10 * time.Second,
+	}
+
+	log.Fatal(srv.ListenAndServe())
 }
