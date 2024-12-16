@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"errors"
 	"fmt"
 
 	"cloud.google.com/go/bigquery"
@@ -43,7 +44,7 @@ func Count(ctx context.Context) (int64, error) {
 
 	var c countResponse
 	if err = it.Next(&c); err != nil {
-		if err == iterator.Done {
+		if errors.Is(err, iterator.Done) {
 			return 0, fmt.Errorf("could not get count")
 		}
 
@@ -74,7 +75,7 @@ func Page(ctx context.Context, n, perPage int64) ([]*Entry, error) {
 	for {
 		var e Entry
 		err := it.Next(&e)
-		if err == iterator.Done {
+		if errors.Is(err, iterator.Done) {
 			break
 		}
 		if err != nil {
@@ -107,7 +108,7 @@ func Get(ctx context.Context, urls []string) ([]*Entry, error) {
 	for {
 		var e Entry
 		err := it.Next(&e)
-		if err == iterator.Done {
+		if errors.Is(err, iterator.Done) {
 			break
 		}
 		if err != nil {
