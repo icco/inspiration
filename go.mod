@@ -10,7 +10,7 @@ require (
 	github.com/go-chi/cors v1.2.1
 	github.com/icco/gutil v0.0.0-20250215014032-7b1b73930901
 	github.com/unrolled/secure v1.17.0
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.27.1
 	google.golang.org/api v0.234.0
 )
 
