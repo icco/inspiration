@@ -1,14 +1,20 @@
-FROM golang:1.24-alpine
+# Build stage
+FROM golang:1.24-alpine AS builder
 
-ENV GOPROXY="https://proxy.golang.org"
-ENV GO111MODULE="on"
-ENV NAT_ENV="production"
+WORKDIR /src
+COPY go.mod go.sum ./
+RUN go mod download
 
-EXPOSE 8080
-WORKDIR /go/src/github.com/icco/inspiration
-RUN apk add --no-cache git
 COPY . .
+RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /server .
 
-RUN go build -v -o /go/bin/server .
+# Final stage
+FROM scratch
 
-CMD ["/go/bin/server"]
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+COPY --from=builder /server /server
+
+ENV NAT_ENV="production"
+EXPOSE 8080
+
+ENTRYPOINT ["/server"]
