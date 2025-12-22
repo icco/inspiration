@@ -11,7 +11,7 @@ require (
 	github.com/icco/gutil v0.0.0-20250523221334-351f1696528b
 	github.com/unrolled/secure v1.17.0
 	go.uber.org/zap v1.27.1
-	google.golang.org/api v0.257.0
+	google.golang.org/api v0.258.0
 )
 
 require (
