@@ -11,7 +11,7 @@ require (
 	github.com/icco/gutil v0.0.0-20250523221334-351f1696528b
 	github.com/unrolled/secure v1.17.0
 	go.uber.org/zap v1.27.1
-	google.golang.org/api v0.259.0
+	google.golang.org/api v0.260.0
 )
 
 require (
@@ -30,7 +30,7 @@ require (
 	github.com/google/flatbuffers v25.12.19+incompatible // indirect
 	github.com/google/s2a-go v0.1.9 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	github.com/googleapis/enterprise-certificate-proxy v0.3.7 // indirect
+	github.com/googleapis/enterprise-certificate-proxy v0.3.9 // indirect
 	github.com/googleapis/gax-go/v2 v2.16.0 // indirect
 	github.com/icco/zapdriver v1.4.0 // indirect
 	github.com/klauspost/compress v1.18.2 // indirect
