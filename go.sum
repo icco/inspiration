@@ -182,8 +182,8 @@ golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da h1:noIWHXmPHxILtqtCOPIhS
 golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da/go.mod h1:NDW/Ps6MPRej6fsCIbMTohpP40sJ/P/vI1MoTEGwX90=
 gonum.org/v1/gonum v0.16.0 h1:5+ul4Swaf3ESvrOnidPp4GZbzf0mxVQpDCYUQE7OJfk=
 gonum.org/v1/gonum v0.16.0/go.mod h1:fef3am4MQ93R2HHpKnLk4/Tbh/s0+wqD5nfa6Pnwy4E=
-google.golang.org/api v0.264.0 h1:+Fo3DQXBK8gLdf8rFZ3uLu39JpOnhvzJrLMQSoSYZJM=
-google.golang.org/api v0.264.0/go.mod h1:fAU1xtNNisHgOF5JooAs8rRaTkl2rT3uaoNGo9NS3R8=
+google.golang.org/api v0.265.0 h1:FZvfUdI8nfmuNrE34aOWFPmLC+qRBEiNm3JdivTvAAU=
+google.golang.org/api v0.265.0/go.mod h1:uAvfEl3SLUj/7n6k+lJutcswVojHPp2Sp08jWCu8hLY=
 google.golang.org/genproto v0.0.0-20260202165425-ce8ad4cf556b h1:mJ7ODqDXbGE8alZwxCKWc9OTvpFQkXB6KRHvjnb9W8Q=
 google.golang.org/genproto v0.0.0-20260202165425-ce8ad4cf556b/go.mod h1:Tt+08/KdKEt3l8x3Pby3HLQxMB3uk/MzaQ4ZIv0ORTs=
 google.golang.org/genproto/googleapis/api v0.0.0-20260202165425-ce8ad4cf556b h1:SGYyueaEovpqmWmtTvwtVgo638V/QFE2zlTCnRrR3jg=
