@@ -9,7 +9,7 @@ require (
 	github.com/icco/gutil v0.0.0-20260119173655-5dc56862d9f6
 	github.com/unrolled/secure v1.17.0
 	go.uber.org/zap v1.27.1
-	google.golang.org/api v0.273.0
+	google.golang.org/api v0.274.0
 )
 
 require (
