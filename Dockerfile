@@ -17,4 +17,8 @@ COPY --from=builder /server /server
 ENV NAT_ENV="production"
 EXPOSE 8080
 
+# Run as the conventional nobody UID; no /etc/passwd is needed for a
+# numeric USER directive and scratch images have no useradd utility.
+USER 65534:65534
+
 ENTRYPOINT ["/server"]
