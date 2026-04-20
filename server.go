@@ -41,7 +41,13 @@ func main() {
 	r.Use(middleware.RealIP)
 	r.Use(logging.Middleware(log.Desugar(), "icco-cloud"))
 	r.Use(cors.New(cors.Options{
-		AllowCredentials:   true,
+		// AllowCredentials must be false when AllowedOrigins is ["*"].
+		// Combining a wildcard origin with credentials causes go-chi/cors to
+		// reflect the incoming Origin header, allowing any site to make
+		// credentialed cross-origin requests (CORS bypass). The inspiration
+		// service has no authentication mechanism and no endpoints that set
+		// cookies or session tokens, so credentials are not required.
+		AllowCredentials:   false,
 		OptionsPassthrough: true,
 		AllowedOrigins:     []string{"*"},
 		AllowedMethods:     []string{"GET", "POST", "OPTIONS"},
@@ -147,10 +153,12 @@ func main() {
 	r.Handle("/favicon.ico", http.FileServer(http.FS(public.Assets)))
 
 	srv := &http.Server{
-		Addr:         ":" + port,
-		Handler:      r,
-		ReadTimeout:  10 * time.Second,
-		WriteTimeout: 10 * time.Second,
+		Addr:              ":" + port,
+		Handler:           r,
+		ReadHeaderTimeout: 5 * time.Second,
+		ReadTimeout:       10 * time.Second,
+		WriteTimeout:      10 * time.Second,
+		IdleTimeout:       60 * time.Second,
 	}
 
 	log.Fatal(srv.ListenAndServe())
