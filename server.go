@@ -41,12 +41,6 @@ func main() {
 	r.Use(middleware.RealIP)
 	r.Use(logging.Middleware(log.Desugar(), "icco-cloud"))
 	r.Use(cors.New(cors.Options{
-		// AllowCredentials must be false when AllowedOrigins is ["*"].
-		// Combining a wildcard origin with credentials causes go-chi/cors to
-		// reflect the incoming Origin header, allowing any site to make
-		// credentialed cross-origin requests (CORS bypass). The inspiration
-		// service has no authentication mechanism and no endpoints that set
-		// cookies or session tokens, so credentials are not required.
 		AllowCredentials:   false,
 		OptionsPassthrough: true,
 		AllowedOrigins:     []string{"*"},
