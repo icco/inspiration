@@ -1,5 +1,5 @@
 # inspiration
 
-[![Build Status](https://travis-ci.org/icco/inspiration.svg?branch=main)](https://travis-ci.org/icco/inspiration)
-
-A mood board I guess.
+A mood board served over HTTP, backed by a BigQuery cache. Pages render
+HTML templates; `/data/{page}/file.json` and `/stats.json` expose JSON
+APIs; `/metrics` exposes OpenTelemetry HTTP server metrics.
