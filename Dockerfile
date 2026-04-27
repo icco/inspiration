@@ -15,6 +15,10 @@ RUN go build -ldflags="-s -w" -o /server .
 # Final stage
 FROM alpine:3.23
 
+LABEL org.opencontainers.image.source=https://github.com/icco/inspiration
+LABEL org.opencontainers.image.description="a little moodboard"
+LABEL org.opencontainers.image.licenses=MIT
+
 RUN apk add --no-cache ca-certificates tzdata
 RUN adduser -S -u 1001 app
 
