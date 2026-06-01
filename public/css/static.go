@@ -1,3 +1,4 @@
+// Package css embeds the site's static CSS assets.
 package css
 
 import "embed"

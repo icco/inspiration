@@ -1,3 +1,4 @@
+// Package views embeds the site's HTML templates.
 package views
 
 import "embed"
