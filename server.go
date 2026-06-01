@@ -57,7 +57,7 @@ func main() {
 	exporter, err := otelprom.New(otelprom.WithRegisterer(registry))
 	if err != nil {
 		log.Errorw("otel prometheus exporter", zap.Error(err))
-		os.Exit(1)
+		return
 	}
 	mp := sdkmetric.NewMeterProvider(sdkmetric.WithReader(exporter))
 	otel.SetMeterProvider(mp)

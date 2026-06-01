@@ -1,3 +1,4 @@
+// Package db provides BigQuery-backed access to cached inspiration entries.
 package db
 
 import (
@@ -13,6 +14,7 @@ const (
 	project = "icco-cloud"
 )
 
+// Entry is a single cached image record from the inspiration BigQuery table.
 type Entry struct {
 	Size     Size                   `bigquery:"size" json:"size"`
 	Image    bigquery.NullString    `bigquery:"image" json:"image"`
@@ -21,6 +23,7 @@ type Entry struct {
 	URL      bigquery.NullString    `bigquery:"url" json:"url"`
 }
 
+// Size holds the pixel dimensions of an Entry's image.
 type Size struct {
 	Height bigquery.NullInt64 `bigquery:"height" json:"height"`
 	Width  bigquery.NullInt64 `bigquery:"width" json:"width"`
@@ -30,6 +33,7 @@ type countResponse struct {
 	Cnt int64
 }
 
+// Count returns the total number of rows in the inspiration cache table.
 func Count(ctx context.Context) (int64, error) {
 	client, err := bigquery.NewClient(ctx, project)
 	if err != nil {
@@ -54,6 +58,8 @@ func Count(ctx context.Context) (int64, error) {
 	return c.Cnt, nil
 }
 
+// Page returns up to perPage entries from page n (1-indexed) of the cache,
+// shuffled by a per-day seed so callers get a stable order within a day.
 func Page(ctx context.Context, n, perPage int64) ([]*Entry, error) {
 	client, err := bigquery.NewClient(ctx, project)
 	if err != nil {
@@ -88,6 +94,7 @@ func Page(ctx context.Context, n, perPage int64) ([]*Entry, error) {
 	return entries, nil
 }
 
+// Get returns the cache entries whose URL matches any value in urls.
 func Get(ctx context.Context, urls []string) ([]*Entry, error) {
 	client, err := bigquery.NewClient(ctx, project)
 	if err != nil {

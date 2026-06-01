@@ -1,3 +1,4 @@
+// Package public embeds top-level static assets (robots.txt, favicon.ico, etc.).
 package public
 
 import "embed"
