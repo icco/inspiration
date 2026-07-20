@@ -4,7 +4,7 @@ go 1.26.2
 
 require (
 	cloud.google.com/go/bigquery v1.77.0
-	github.com/go-chi/chi/v5 v5.3.0
+	github.com/go-chi/chi/v5 v5.3.1
 	github.com/go-chi/cors v1.2.2
 	github.com/icco/gutil v0.0.0-20260623135256-358767fad415
 	github.com/prometheus/client_golang v1.23.2
