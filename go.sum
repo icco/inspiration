@@ -72,8 +72,8 @@ github.com/googleapis/enterprise-certificate-proxy v0.3.21 h1:OFdQ3tnCX/zaQ0Cedu
 github.com/googleapis/enterprise-certificate-proxy v0.3.21/go.mod h1:L3D/IQExI6LqEjBdXcZQ1WluSgigQmSwBboFstVPM4w=
 github.com/googleapis/gax-go/v2 v2.24.0 h1:myMaPYyF9MecEmvQqMqomIwn9t/4KCZN9qnwsS76wlg=
 github.com/googleapis/gax-go/v2 v2.24.0/go.mod h1:IaTHBDd7NHxSCiu0vEs8pQZu4dGZrWwuSoxCnk16OFM=
-github.com/icco/gutil v1.0.15 h1:3JEZExJLS0DIWfsmhQtHxSwM7phcSbxcJSGdF0Kty5s=
-github.com/icco/gutil v1.0.15/go.mod h1:ibHFg03Lqo35clThsx1/pmM/4RkhueE9jOKT4mXN+AA=
+github.com/icco/gutil v1.0.18 h1:e2+YAOAnr/pkSX/xRcOB1idda0WAFejAEQ0cul0olXk=
+github.com/icco/gutil v1.0.18/go.mod h1:5Y/MydHFbm6wPefKf+8SvQkVgR4V2BiwKg40nHjQrU8=
 github.com/klauspost/compress v1.19.2 h1:hMRETovs/pu/dVWN7zIT1PGG8t509MwT6bO7XSi26R8=
 github.com/klauspost/compress v1.19.2/go.mod h1:cwPg85FWrGar70rWktvGQj8/hthj3wpl0PGDogxkrSQ=
 github.com/klauspost/cpuid/v2 v2.4.0 h1:S6Hrbc7+ywsr0r+RLapfGBHfyefhCTwEh3A0tV913Dw=
