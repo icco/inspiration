@@ -15,11 +15,11 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
-	"github.com/icco/gutil/logging"
-	"github.com/icco/gutil/render"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/unrolled/secure"
+	"go.icco.me/gutil/logging"
+	"go.icco.me/gutil/render"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 	"go.opentelemetry.io/otel"
 	otelprom "go.opentelemetry.io/otel/exporters/prometheus"
@@ -27,11 +27,11 @@ import (
 	semconv "go.opentelemetry.io/otel/semconv/v1.40.0"
 	"go.uber.org/zap"
 
-	"github.com/icco/inspiration/db"
-	"github.com/icco/inspiration/public"
-	"github.com/icco/inspiration/public/css"
-	"github.com/icco/inspiration/public/js"
-	"github.com/icco/inspiration/views"
+	"go.icco.me/inspiration/db"
+	"go.icco.me/inspiration/public"
+	"go.icco.me/inspiration/public/css"
+	"go.icco.me/inspiration/public/js"
+	"go.icco.me/inspiration/views"
 )
 
 // serverName is the otelhttp span/metric scope.

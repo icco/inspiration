@@ -4,7 +4,7 @@ Guidance for coding agents working on inspiration.
 
 ## Project Overview
 
-Mood board web service written in Go (`github.com/icco/inspiration`), backed by BigQuery for post storage/caching and rendering HTML templates.
+Mood board web service written in Go (`go.icco.me/inspiration`), backed by BigQuery for post storage/caching and rendering HTML templates.
 
 ## Commands
 
@@ -23,6 +23,6 @@ go build .       # Build binary
 
 ## Conventions
 
-- Follow icco Go conventions (`github.com/icco/gutil` for logging and helpers).
+- Follow icco Go conventions (`go.icco.me/gutil` for logging and helpers).
 - PR titles and commits must follow Conventional Commits with lowercase subjects.
 - Ensure all tests pass before submitting PRs.
