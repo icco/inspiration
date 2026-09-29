@@ -27,11 +27,11 @@ import (
 	semconv "go.opentelemetry.io/otel/semconv/v1.40.0"
 	"go.uber.org/zap"
 
-	"github.com/icco/inspiration/db"
-	"github.com/icco/inspiration/public"
-	"github.com/icco/inspiration/public/css"
-	"github.com/icco/inspiration/public/js"
-	"github.com/icco/inspiration/views"
+	"go.icco.me/inspiration/db"
+	"go.icco.me/inspiration/public"
+	"go.icco.me/inspiration/public/css"
+	"go.icco.me/inspiration/public/js"
+	"go.icco.me/inspiration/views"
 )
 
 // serverName is the otelhttp span/metric scope.

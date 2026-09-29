@@ -4,7 +4,7 @@ Guidance for coding agents working on inspiration.
 
 ## Project Overview
 
-Mood board web service written in Go (`github.com/icco/inspiration`), backed by BigQuery for post storage/caching and rendering HTML templates.
+Mood board web service written in Go (`go.icco.me/inspiration`), backed by BigQuery for post storage/caching and rendering HTML templates.
 
 ## Commands
 

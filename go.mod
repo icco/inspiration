@@ -1,4 +1,4 @@
-module github.com/icco/inspiration
+module go.icco.me/inspiration
 
 go 1.26.2
 
