@@ -1,6 +1,6 @@
 module go.icco.me/inspiration
 
-go 1.26.2
+go 1.27.3
 
 require (
 	cloud.google.com/go/bigquery v1.85.0
