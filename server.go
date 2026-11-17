@@ -20,6 +20,7 @@ import (
 	"github.com/unrolled/secure"
 	"go.icco.me/gutil/logging"
 	"go.icco.me/gutil/render"
+	"go.icco.me/gutil/tracing"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 	"go.opentelemetry.io/otel"
 	otelprom "go.opentelemetry.io/otel/exporters/prometheus"
@@ -45,6 +46,19 @@ func main() {
 	defer func() {
 		if err := log.Sync(); err != nil {
 			log.Debugw("logger sync", zap.Error(err))
+		}
+	}()
+
+	shutdownTracing, err := tracing.Init(context.Background(), serverName)
+	if err != nil {
+		log.Errorw("failed to initialize tracing", zap.Error(err))
+		return
+	}
+	defer func() {
+		shutdownCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cancel()
+		if err := shutdownTracing(shutdownCtx); err != nil {
+			log.Warnw("failed to shutdown tracing", zap.Error(err))
 		}
 	}()
 
